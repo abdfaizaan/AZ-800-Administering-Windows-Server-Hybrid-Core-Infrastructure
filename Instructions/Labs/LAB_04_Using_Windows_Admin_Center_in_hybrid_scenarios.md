@@ -54,7 +54,7 @@ The main tasks for this exercise are as follows:
 
 1. On **SEA-ADM1**, start Microsoft Edge, browse to the Azure portal, and authenticate with your Azure credentials.
 1. In the Azure portal, open a PowerShell session in the Cloud Shell pane.
-1. Upload the **C:\\Labfiles\\Lab04\\L04-sub_template.json** file to the Cloud Shell home directory.
+1. Upload the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\L04-sub_template.json** file to the Cloud Shell home directory.
 1. From the Cloud Shell pane, run the following commands to create a resource group that will contain resources you provision in this lab. (Replace the `<Azure region>` placeholder with the name of an Azure region into which you can deploy Azure virtual machines, such as **eastus**.)
 
    >**Note**: This lab has been tested and verified using East US, so you should use that region. In general, to identify Azure regions where you can provision Azure VMs, refer to [Find Azure credit offers in your region](https://aka.ms/regions-offers).
@@ -72,7 +72,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Create an Azure VM by using an Azure Resource Manager template
 
-1. From the Cloud Shell pane, upload an Azure Resource Manager template **C:\\Labfiles\\Lab04\\L04-rg_template.json** and the corresponding Azure Resource Manager parameter file **C:\\Labfiles\\Lab04\\L04-rg_template.parameters.json**.
+1. From the Cloud Shell pane, upload an Azure Resource Manager template **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\L04-rg_template.json** and the corresponding Azure Resource Manager parameter file **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\L04-rg_template.parameters.json**.
 1. From the Cloud Shell pane, run the following command to deploy an Azure VM running Windows Server, which you'll be using in this lab:
 
    ```powershell
@@ -164,7 +164,7 @@ The main tasks for this exercise are as follows:
 
 1. On **SEA-ADM1**, switch to the browser window displaying the the Azure portal.
 1. In the Azure portal, start a PowerShell session in the Cloud Shell pane.
-1. From the Cloud Shell pane, upload the file **C:\\Labfiles\\Lab04\\Deploy-WACAzVM.ps1** into the Cloud Shell home directory.
+1. From the Cloud Shell pane, upload the file **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\Deploy-WACAzVM.ps1** into the Cloud Shell home directory.
 1. From the Cloud Shell pane, run the following command to enable the compatibility for the **AzureRm** PowerShell cmdlets that are used by the Windows Admin Center provisioning script:
 
    ```powershell
