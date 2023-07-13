@@ -44,7 +44,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
    >**Note**: If this is the first time you are starting Cloud Shell and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and then select **Create storage**.
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**, and then upload the **C:\\Labfiles\\Lab04\\L04-sub_template.json** file to the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**, and then upload the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\L04-sub_template.json** file to the Cloud Shell home directory.
 1. From the Cloud Shell pane, run the following commands to create a resource group that will contain the resources you provision in this lab. (Replace the `<Azure region>` placeholder with the name of an Azure region into which you can deploy Azure virtual machines, such as **eastus**.)
 
    >**Note**: This lab has been tested and verified using East US, so you should use that region. In general, to identify Azure regions where you can provision Azure VMs, refer to [Find Azure credit offers in your region](https://aka.ms/regions-offers).
@@ -62,7 +62,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 #### Task 2: Create an Azure VM by using an Azure Resource Manager template
 
-1. From the Cloud Shell pane, upload an Azure Resource Manager template **C:\\Labfiles\\Lab04\\L04-rg_template.json** and the corresponding Azure Resource Manager parameter file **C:\\Labfiles\\Lab04\\L04-rg_template.parameters.json**.
+1. From the Cloud Shell pane, upload an Azure Resource Manager template **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\L04-rg_template.json** and the corresponding Azure Resource Manager parameter file **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\L04-rg_template.parameters.json**.
 1. From the Cloud Shell pane, run the following command to deploy an Azure VM running Windows Server that you'll be using in this lab:
 
    ```powershell
@@ -162,7 +162,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. On **SEA-ADM1**, switch to the browser window displaying the Azure portal.
 1. Back in the Azure portal, open the Cloud Shell pane by selecting the **Cloud Shell** icon.
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**, and then upload the **C:\\Labfiles\\Lab04\\Deploy-WACAzVM.ps1** file into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**, and then upload the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\Deploy-WACAzVM.ps1** file into the Cloud Shell home directory.
 1. From the Cloud Shell pane, run the following command to enable the compatibility for the **AzureRm** PowerShell cmdlets that are used by the Windows Admin Center provisioning script:
 
    ```powershell
