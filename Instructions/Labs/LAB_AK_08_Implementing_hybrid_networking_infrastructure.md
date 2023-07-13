@@ -1,13 +1,35 @@
----
-lab:
-    title: 'Lab: Implementing Windows Server IaaS VM networking'
-    type: 'Answer Key'
-    module: 'Module 8: Implementing Windows Server IaaS VM networking'
----
+# Lab 8: Implementing hybrid networking infrastructure
 
-# Lab answer key: Implementing hybrid networking infrastructure
+## Scenario
+
+You were tasked with building a test environment in Azure, consisting of Microsoft Azure virtual machines deployed into separate virtual networks configured in the hub and spoke topology. This testing must include implementing connectivity between spokes by using user-defined routes that force traffic to flow via the hub. You also need to implement DNS name resolution for Azure virtual machines between virtual networks by using Azure private DNS zones and evaluate the use of Azure DNS zones for external name resolution.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20hybrid%20networking%20infrastructure)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
+## Objectives
+
+After completing this lab, you'll be able to:
+
+- Implement virtual network routing in Azure
+- Implement DNS name resolution in Azure
+- Deprovision the Azure environment
+
+## Estimated time: 60 minutes
+
+## Lab setup
+
+Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running. Other VMs can be running, but they aren't required for this lab.
+
+> **Note**: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1** and **SEA-ADM1**
+
+1. Select **SEA-ADM1**.
+1. Sign in using the following credentials:
+
+   - User name: **Administrator**
+   - Password: **Pa55w.rd**
+   - Domain: **CONTOSO**
+
+For this lab, you'll use the available VM environment and an Azure subscription. Before you begin the lab, ensure that you have an Azure subscription and a user account with the Owner or Contributor role in that subscription.
 
 ### Exercise 1: Implement virtual network routing in Azure
 
