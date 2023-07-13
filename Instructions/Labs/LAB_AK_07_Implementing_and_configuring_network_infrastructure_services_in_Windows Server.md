@@ -1,13 +1,34 @@
----
-lab:
-    title: 'Lab: Implementing and configuring network infrastructure services in Windows Server'
-    type: 'Answer Key'
-    module: 'Module 7: Network Infrastructure services in Windows Server'
----
+# Lab 7: Implementing and configuring network infrastructure services in Windows Server
 
-# Lab answer key: Implementing and configuring network infrastructure services in Windows Server
+## Scenario
+
+Contoso, Ltd. is a large organization with complex requirements for network services. To help meet these requirements, you will deploy and configure DHCP so that it is highly available to ensure service availability. You will also set up DNS so that Trey Research, a department within Contoso, can have its own DNS server in the testing area. Finally, you will provide remote access to Windows Admin Center and secure it with Web Application Proxy.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20and%20configuring%20network%20infrastructure%20services%20in%20Windows%20Server)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
+## Objectives
+
+After completing this lab, you'll be able to:
+
+- Deploy and configure DHCP.
+- Deploy and configure DNS.
+
+## Estimated time: 60 minutes
+
+## Lab Setup
+
+Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T00A-ADM1** must be running. Other VMs can be running, but they aren't required for this lab.
+
+> **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1**, and **SEA-ADM1**
+
+1. Select **SEA-ADM1**.
+1. Sign in using the following credentials:
+
+   - Username: **Administrator**
+   - Password: **Pa55w.rd**
+   - Domain: **CONTOSO**
+
+For this lab, you'll use the available VM environment.
 
 ## Exercise 1: Deploying and configuring DHCP
 
