@@ -1,13 +1,42 @@
----
-lab:
-    title: 'Lab: Deploying and configuring Windows Server on Azure VMs'
-    type: 'Answer Key'
-    module: 'Module 6: Deploying and Configuring Azure VMs'
----
+# Lab 6: Deploying and configuring Windows Server on Azure VMs
 
-# Lab answer key: Deploying and configuring Windows Server on Azure VMs
+## Scenario
+
+You need to address concerns regarding your current infrastructure. You have an outdated operational model, a limited use of automation, and Information Security team concerns regarding additional controls that should be applied to Azure VMs running Windows Server-based workloads. You have decided to develop and implement an automated deployment and configuration process for Azure VMs running Windows Server.
+
+The process will involve Azure Resource Manager (ARM) templates and OS configuration through Azure VM extensions. It will also incorporate additional security protection mechanisms beyond those already applied to on-premises systems, such as application allow lists through AppLocker, file integrity checks, and adaptive network/DDoS protection. You will also leverage JIT functionality to restrict administrative access to Azure VMs to public IP address ranges associated with the London headquarters.
+
+Your goal is to deploy and configure Azure VMs running Windows Server in the manner that satisfies manageability and security requirements.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Deploying%20and%20configuring%20Windows%20Server%20on%20Azure%20VMs)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
+## Objectives
+
+After completing this lab, you'll be able to:
+
+- Author ARM templates for an Azure VM deployment.
+- Modify ARM templates to include VM extension-based configuration.
+- Deploy Azure VMs running Windows Server by using ARM templates.
+- Configure administrative access to Azure VMs running Windows Server.
+- Configure Windows Server security in Azure VMs.
+- Deprovision the Azure environment.
+
+## Estimated time: 90 minutes
+
+## Lab setup
+
+Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running. Other VMs can be running, but they aren't required for this lab.
+
+> **Note**: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1** and **SEA-ADM1**.
+
+1. Select **SEA-ADM1**.
+1. Sign in using the following credentials:
+
+   - Username: **Administrator**
+   - Password: **Pa55w.rd**
+   - Domain: **CONTOSO**
+
+For this lab, you'll use the available VM environment and an Azure subscription. Before you begin the lab, ensure that you have an Azure subscription and a user account with the Owner or Contributor role in that subscription.
 
 ## Exercise 1: Authoring Azure Resource Manager (ARM) templates for Azure VM deployment
 
