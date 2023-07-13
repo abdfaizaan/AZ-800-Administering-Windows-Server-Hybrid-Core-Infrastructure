@@ -1,15 +1,39 @@
----
-lab:
-    title: 'Lab: Implementing storage solutions in Windows Server'
-    type: 'Answer Key'
-    module: 'Module 9: File servers and storage management in Windows Server'
----
+# Lab 9: Implementing storage solutions in Windows Server
 
-# Lab answer key: Implementing storage solutions in Windows Server
+## Scenario
+
+At Contoso, Ltd., you need to implement the Storage Spaces feature on the Windows Server servers to simplify storage access and provide redundancy at the storage level. Management wants you to test Data Deduplication to save storage. They also want you to implement Internet Small Computer System Interface (iSCSI) storage to provide a simpler solution for deploying storage in the organization. Additionally, the organization is exploring options for making storage highly available and researching the requirements that it must meet for high availability. You want to test the feasibility of using highly available storage, specifically Storage Spaces Direct.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20storage%20solutions%20in%20Windows%20Server)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
-> **Note**: Be sure to revert the virtual machines (VMs) between each exercise. Due to most of the VMs being Windows Server 2019 Server Core, the time it takes to revert and restart is faster than attempting to undo changes made to the storage environment in the exercises.
+## Objectives
+
+After completing this lab, you'll be able to:
+
+- Implement Data Deduplication.
+- Configure iSCSI storage.
+- Configure Storage Spaces.
+- Implement Storage Spaces Direct.
+
+## Estimated time: 90 minutes
+
+## Lab setup
+
+Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-SEA-SVR2**, **AZ-800T00A-SEA-SVR3**, and **AZ-800T00A-ADM1** must be running. 
+
+- For Exercises 1-3: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR3**, and **AZ-800T00A-SEA-ADM1**
+- For Exercise 4: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-SEA-SVR2**, **AZ-800T00A-SEA-SVR3**, and **AZ-800T00A-SEA-ADM1**
+
+> **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-SEA-SVR2**, **AZ-800T00A-SEA-SVR3**, and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1**, **SEA-SVR2**, **SEA-SVR3**, and **SEA-ADM1**, respectively.
+
+1. Select **SEA-ADM1**.
+1. Sign in using the following credentials:
+
+   - User name: **Administrator**
+   - Password: **Pa55w.rd**
+   - Domain: **CONTOSO**
+
+For this lab, you'll use the available VM environment.
 
 ## Exercise 1: Implementing Data Deduplication
 
