@@ -1,13 +1,31 @@
----
-lab:
-    title: 'Lab: Managing Windows Server'
-    type: 'Answer Key'
-    module: 'Module 3: Windows Server administration'
----
+# Lab 3: Managing Windows Server
 
-# Lab answer key: Managing Windows Server
+## Scenario
+
+Contoso, Ltd. wants to implement several new servers in their environment, and they have decided to use Server Core. They also want to implement Windows Admin Center for remote management of both these servers and other servers in the organization.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Managing%20Windows%20Server)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
+## Objectives
+
+- Implement and configure Windows Admin Center
+
+## Estimated time: 45 minutes
+
+## Lab setup
+
+Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running. Other VMs can be running, but they aren't required for this lab.
+
+> **Note**: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1** and **SEA-ADM1**.
+
+1. Select **SEA-ADM1**.
+1. Sign in using the following credentials:
+
+   - Username: **Administrator**
+   - Password: **Pa55w.rd**
+   - Domain: **CONTOSO**
+
+For this lab, you'll use the available VM environment and an Azure AD tenant. 
 
 ## Exercise 1: Implementing and using remote server administration
 
