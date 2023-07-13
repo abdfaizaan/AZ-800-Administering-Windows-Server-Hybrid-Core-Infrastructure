@@ -1,13 +1,37 @@
----
-lab:
-    title: 'Lab: Using Windows Admin Center in hybrid scenarios'
-    type: 'Answer Key'
-    module: 'Module 4: Facilitating hybrid management'
----
+# Lab 4: Using Windows Admin Center in hybrid scenarios
 
-# Lab answer key: Using Windows Admin Center in hybrid scenarios
+## Scenario
+
+To address concerns regarding the consistent operational and management model, regardless of the location of managed systems, you'll test the capabilities of Windows Admin Center in the hybrid environment containing different versions of the Windows Server operating system running on-premises and in Microsoft Azure virtual machines (VMs).
+
+Your goal is to verify that Windows Admin Center can be used in a consistent manner regardless of the location of managed systems.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Using%20Windows%20Admin%20Center%20in%20hybrid%20scenarios)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
+## Objectives
+
+After completing this lab, you'll be able to:
+
+- Test hybrid connectivity by using Azure Network Adapter.
+- Deploy Windows Admin Center gateway in Azure.
+- Verify functionality of Windows Admin Center gateway in Azure.
+
+## Estimated time: 90 minutes
+
+## Lab setup
+
+Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running. Other VMs can be running, but they aren't required for this lab.
+
+> **Note**: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-SEA-ADM1** VMs are hosting the installation of **SEA-DC1** and **SEA-ADM1**
+
+1. Select **SEA-ADM1**.
+1. Sign in using the following credentials:
+
+   - Username: **Administrator**
+   - Password: **Pa55w.rd**
+   - Domain: **CONTOSO**
+
+For this lab, you'll use the available VM environment and an Azure subscription. Before you begin the lab, ensure that you have an Azure subscription and a user account with the Owner or Contributor role in that subscription, as well as with the Global Administrator role in the Azure Active Directory (Azure AD) tenant associated with that subscription.
 
 ## Exercise 1: Provisioning Azure VMs running Windows Server
 
