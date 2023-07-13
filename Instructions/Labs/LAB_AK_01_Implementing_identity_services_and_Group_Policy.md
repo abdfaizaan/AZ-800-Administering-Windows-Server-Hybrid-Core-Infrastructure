@@ -1,13 +1,33 @@
----
-lab:
-    title: 'Lab: Implementing identity services and Group Policy'
-    type: 'Answer Key'
-    module: 'Module 1: Identity services in Windows Server'
----
 
-# Lab answer key: Implementing identity services and Group Policy
+# Lab 1: Implementing identity services and Group Policy
+
+## Scenario
+
+You are working as an administrator at Contoso Ltd. The company is expanding its business with several new locations. The Active Directory Domain Services (AD DS) Administration team is currently evaluating methods available in Windows Server for a non-interactive, remote domain controller deployment. The team is also searching for a way to automate certain AD DS administrative tasks. Additionally, the team wants to establish configuration management based on Group Policy Objects (GPO).
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20identity%20services%20and%20Group%20Policy)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
+## Objectives
+
+After completing this lab, you’ll be able to:
+
+- Deploy a new domain controller on Server Core.
+- Configure Group Policy.
+
+## Estimated time: 45 minutes
+
+## Lab setup
+
+Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-SEA-SVR1** must be running. Other VMs can be running, but they aren't required for this lab.
+
+> **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-SEA-SVR1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1**, and **SEA-ADM1**. 
+
+1. Select **SEA-ADM1**.
+1. Sign in using the following credentials:
+
+   - Username: **Administrator**
+   - Password: **Pa55w.rd**
+   - Domain: **CONTOSO**
 
 ## Exercise 1: Deploying a new domain controller on Server Core
 
