@@ -1,13 +1,37 @@
----
-lab:
-    title: 'Lab: Implementing Azure File Sync'
-    type: 'Answer Key'
-    module: 'Module 10: Implementing a hybrid file server infrastructure'
----
+# Lab 10: Implementing Azure File Sync
 
-# Lab answer key: Implementing Azure File Sync
+## Scenario
+
+To address concerns regarding Distributed File System (DFS) Replication between Contoso's London headquarters and its Seattle–based branch office, you decide to test Azure File Sync as an alternative replication mechanism between two on-premises file shares.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20Azure%20File%20Sync)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
+## Objectives
+
+After completing this lab, you'll be able to:
+
+- Implement DFS Replication in your on-premises environment.
+- Create and configure a sync group.
+- Replace DFS Replication with Azure File Sync-based replication.
+- Verify replication and enable cloud tiering.
+- Troubleshoot replication conflicts.
+
+## Estimated time: 60 minutes
+
+## Lab setup
+
+Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-SEA-SVR2**, and **AZ-800T00A-ADM1** must be running. 
+
+> **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-SEA-SVR2**, and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1**, **SEA-SVR2**, and **SEA-ADM1**, respectively.
+
+1. Select **SEA-ADM1**.
+1. Sign in using the following credentials:
+
+   - User name: **Administrator**
+   - Password: **Pa55w.rd**
+   - Domain: **CONTOSO**
+
+For this lab, you'll use the available VM environment and an Azure subscription. Before you begin the lab, ensure that you have an Azure subscription and a user account with the Owner or Contributor role in that subscription.
 
 ## Exercise 1: Implementing Distributed File System (DFS) Replication in your on-premises environment
 
