@@ -180,7 +180,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-
 
 1. On **SEA-ADM1**, in the search box on the taskbar, enter **Control Panel**. 
 1. In the **Best match** list, select **Control Panel**.
-1. Select **System and Security**, and then select **Allow an app through Windows Firewall**.
+1. Select **System and Security**, and under **Windows Defender Firewall**, select **Allow an app through Windows Firewall**.
 1. In the **Allowed apps and features** list, locate the **Remote Event Log Management** entry, select the checkbox in the **Domain** column, and then select **OK**. 
 1. Sign out, and then sign in as **CONTOSO\\Ty** with the password **Pa55w.rd**.
 1. In the search box on the taskbar, enter **Control Panel**.
