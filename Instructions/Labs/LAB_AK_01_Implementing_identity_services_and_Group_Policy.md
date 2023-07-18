@@ -77,8 +77,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-
    - Remove the line breaks.
 
 1. Now the **Install-ADDSDomainController** command and all the parameters are on one line. Place the cursor in front of the line, and then, on the **Edit** menu, select **Select All** to select the whole line. On the menu, select **Edit**, and then select **Copy**.
-
-1. When prompted for confirmation, select **Yes** to cancel the wizard.
+1. Minimize the **Notepad**.
+1. Back to **Review Options** page, select **Cancel** and when prompted for confirmation, select **Yes** to cancel the wizard.
 1. At the Windows PowerShell command prompt, enter the following command:
 
    ```powershell
