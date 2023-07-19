@@ -108,7 +108,7 @@ For this lab, you'll use the available VM environment.
    - Starting IP address: **10.100.150.50**
    - Ending IP address: **10.100.150.254**
    - DHCP client subnet mask: **255.255.255.0**
-   - Router (default gateway): **10.100.150.1**
+   - Router (default gateway): **+ Add** **10.100.150.1**
    - Lease duration for DHCP clients: **4 days**
 
 1. On **SEA-ADM1**, switch to **Server Manager**, in **Server Manager**, select **Tools**, and then select **DHCP**.
