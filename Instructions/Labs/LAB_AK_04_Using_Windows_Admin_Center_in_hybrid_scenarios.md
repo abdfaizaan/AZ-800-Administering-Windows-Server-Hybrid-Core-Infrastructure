@@ -76,7 +76,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    >**Note**: Wait for the deployment to complete before you proceed to the next exercise. The deployment should take about 5 minutes.
 
 1. In the Azure portal, close the Cloud Shell pane.
-1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select the virtual network, from the list select **az800l04-vnet** virtual network.
+1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select the virtual network, and then on the **Virtual network** page select **az800l04-vnet**.
 1. On the **az800l04-vnet** page, under **Settings** section, select **Subnets**, and then, on the **Subnets** page, select **+ Gateway subnet**.
 1. On the **Add subnet** page, set the **Subnet address range** to **10.4.3.224/27**, and then select **Save** to create the **GatewaySubnet**.
 
