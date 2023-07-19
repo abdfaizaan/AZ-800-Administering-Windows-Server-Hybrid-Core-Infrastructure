@@ -247,7 +247,7 @@ In this task, you will use the Azure portal to create resource groups and create
 #### Task 2: Configure Inbound HTTP access to an Azure VM
 
 1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the Azure VM **az800l06-vm0**.
-1. On the **az800l06-vm0** page, select **Networking**.
+1. On the **az800l06-vm0** page, under **Settings** section select **Networking**.
 1. On the **az800l06-vm0 \| Networking** page, select the link designating the network interface attached to **az800l06-vm0**.
 1. On the page displaying the network interface properties, in the vertical menu on the left side, in the **Settings** section, select **Network security group**. 
 1. On the **Network security group** page, in the drop-down list, select **az800l06-vm0-nsg1**, and then select **Save**.
