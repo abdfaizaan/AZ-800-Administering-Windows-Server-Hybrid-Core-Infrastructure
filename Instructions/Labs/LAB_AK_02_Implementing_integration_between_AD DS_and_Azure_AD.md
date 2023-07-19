@@ -333,9 +333,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 #### Task 6: Enable password protection in Azure
 
-1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal, go back to the **Azure Active Directory** page, and then, on the **Azure Active Directory** page, select **Security**.
-1. On the **Security** page, select **Authentication methods**.
-1. On the **Authentication methods** page, select **Password protection**.
+1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal, go back to the **Azure Active Directory** page, and then, on the **Azure Active Directory** page, under **Manage** section, select **Security**.
+1. On the **Security** page, under **Manage** section, select **Authentication methods**.
+1. On the **Authentication methods** page, under **Manage** section, select **Password protection**.
 1. On the **Password protection** page, change the slider for **Enforce custom list** to **Yes**.
 1. In the **Custom banned password list** text box, enter the following words (one per line):
  
