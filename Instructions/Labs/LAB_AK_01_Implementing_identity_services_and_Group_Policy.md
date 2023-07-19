@@ -22,7 +22,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-
 
 > **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-SEA-SVR1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1**, and **SEA-ADM1**. 
 
-1. Select **SEA-ADM1**.
+1. In lab VM, select **SEA-ADM1**.
 1. Sign in using the following credentials:
 
    - Username: **Administrator**
@@ -33,7 +33,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-
 
 #### Task 1: Deploy AD DS on a new Windows Server Core server
 
-1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd** (Skip if already done).
 1. On **SEA-ADM1**, select **Start**, and then select **Windows PowerShell (Admin)**.
 1. To install the AD DS server role, at the Windows PowerShell command prompt, enter the following command, and then press Enter:
 	
