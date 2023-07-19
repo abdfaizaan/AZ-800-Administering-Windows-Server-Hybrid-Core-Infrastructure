@@ -39,7 +39,7 @@ For this lab, you'll use the available VM environment.
 1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 1. On **SEA-ADM1**, select **Start**, and then select **Server Manager**.
 1. In Server Manager, select **All Servers**.
-1. In the Servers list, select the **SEA-SVR1** entry, display its context menu, and then select **Hyper-V Manager**.
+1. In the Servers list, select the **SEA-SVR1** entry, display its context menu, right click and select **Hyper-V Manager**.
 1. In Hyper-V Manager, ensure that **SEA-SVR1.CONTOSO.COM** is selected.
 1. In the Actions pane, select **Virtual Switch Manager**.
 1. In the **Virtual Switch Manager**, in the **Create virtual switch** pane, select **Private**, and then select **Create Virtual Switch**.
