@@ -138,7 +138,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 #### Task 2: Create an Azure Network Adapter
 
-1. On **SEA-ADM1**, back in the Microsoft Edge window displaying Windows Admin Center, browse to the **sea-adm1.contoso.com** page, and then select **Networks**.
+1. On **SEA-ADM1**, back in the Microsoft Edge window displaying Windows Admin Center, browse to the **sea-adm1.contoso.com** page, and then from the left pane, in the list of Tools, select **Networks**.
 1. In Windows Admin Center, on the **Networks** page, from the **Actions** menu, select the **+ Add Azure Network Adapter (Preview)** entry again.
 1. In the **Add Azure Network Adapter** settings pane, specify the following settings, and then select **Create** (leave others with their default values):
 
