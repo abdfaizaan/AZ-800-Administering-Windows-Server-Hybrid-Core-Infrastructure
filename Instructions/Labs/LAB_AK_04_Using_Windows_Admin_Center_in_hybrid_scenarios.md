@@ -232,7 +232,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 #### Task 1: Connect to the Windows Admin Center gateway running in Azure VM
 
-1. On **SEA-ADM1**, start Microsoft Edge, copy and go to the URL containing the fully qualified name of the target Azure VM hosting the Windows Admin Center installation you identified in the previous exercise-3 task-1.
+1. On **SEA-ADM1**, start Microsoft Edge, copy and browse the URL containing the fully qualified name of the target Azure VM hosting the Windows Admin Center installation you identified in the previous exercise-3 task-1.
 1. In Microsoft Edge window, disregard the message **Your connection isn't private**, select **Advanced**, and then select the link starting with the text **Continue to**.
 1. When prompted, in the **Sign in to access this site** dialog box, sign in with the **Student** username and **Pa55w.rd1234** password.
 1. On the **All connections** page of Windows Admin Center, select **az800l04-vmwac [Gateway]**.
