@@ -78,8 +78,8 @@ For this lab, you'll use the available VM environment and an Azure AD tenant.
 #### Task 3: Configure Windows Admin Center extensions
 
 1. On **SEA-ADM1**, in the upper-right corner of the Microsoft Edge window displaying Windows Admin Center, select the **Settings** icon (the cog wheel).
-1. In the left pane, select **Extensions**. Review the available extensions.
-1. Select the **Security (Preview)** extension, and then select **Install**. The extension will install and Windows Admin Center will refresh.
+1. In the left pane, under **Gateway** section, select **Extensions**. Review the available extensions.
+1. Select the **Security (Preview)** extension, then right click and select **Install**. The extension will install and Windows Admin Center will refresh.
 
    > **Note**: If the **Security (Preview)** extension is not available, choose another Microsoft extension.
 
