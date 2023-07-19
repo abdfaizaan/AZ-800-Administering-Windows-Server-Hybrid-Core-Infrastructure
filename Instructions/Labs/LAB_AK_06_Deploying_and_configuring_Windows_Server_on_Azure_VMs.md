@@ -199,7 +199,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. In the Azure portal, on the toolbar, in the **Search resources, services, and docs** text box, search for and select **Microsoft Defender for Cloud**.
 1. On the **Overview** page of Microsoft Defender for Cloud, on the vertical menu on the left side, in the **Management** section, select **Environment settings**. 
-1. On the **Environment settings** page, select the entry representing your Azure subscription.
+1. On the **Environment settings** page, expand and select the entry representing your Azure subscription.
 2. On the **Settings \| Defender plans** page, verify that the tile **Enable all Microsoft Defender for Cloud plans** is selected and, on the top side, select **Settings & monitoring**.
 3. On the **Settings & monitoring** page, in the list of extensions, to the right side of the **Log Analytics agent/Azure Monitor agent** entry, select the **Edit configuration** link.
 4. On the **Auto-provisioning configuration**, in the **Workspace selection** ensure that the **Default workspace(s)** entry is selected, select **Apply**, and back on the **Settings & monitoring** page, select **Continue**.
