@@ -213,7 +213,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. When prompted to provide the name for the local Administrator account, enter **Student**
 1. When prompted to provide the password for the local Administrator account, enter **Pa55w.rd1234**
 
-   >**Note**: Wait for the provisioning script to complete. This might take about 5 minutes.
+   >**Note**: Wait for the provisioning script to complete. This might take about 10 minutes.
 
 1. Verify that the script completed successfully and note the final message providing the URL containing the fully qualified name of the Azure VM that hosts the Windows Admin Center installation.
 
@@ -225,7 +225,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Resource groups**, and then, on the **Resource groups** page, select the **AZ800-L0401-RG** entry.
 1. On the **AZ800-L0401-RG** page, on the **Overview** page, review the list of resources, including the Azure VM **az800l04-vmwac**.
-1. In the list of resources, select the Azure VM **az800l04-vmwac** entry, and then, on the **az800l04-vmwac** page, select **Networking**.
+1. In the list of resources, select the Azure VM **az800l04-vmwac** entry, and then, on the **az800l04-vmwac** page, under **Settings** section select **Networking**.
 1. On the **az800l04-vmwac | Networking** page, on the **Inbound port rules** tab, note the entries representing the inbound port rule allowing connectivity on TCP port 5986 and the inbound rule allowing connectivity on TCP port 443.
 
 ## Exercise 4: Verifying functionality of the Windows Admin Center gateway in Azure
