@@ -113,7 +113,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    - Password: **Pa55w.rd**
 
 1. On the **All connections** page, select the **sea-adm1.contoso.com** entry. 
-1. In Windows Admin Center, select **Networks**, and then select **+ Add Azure Network Adapter (Preview)**.
+1. In Windows Admin Center, from left pane, in the list of Tools, select **Networks**, and then select **+ Add Azure Network Adapter (Preview)**.
 
    > **Note**: Depending on the screen resolution, you might need to select the **ellipsis** icon if the **Actions** menu is not available.
 
