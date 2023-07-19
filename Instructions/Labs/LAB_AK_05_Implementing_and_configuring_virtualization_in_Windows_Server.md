@@ -50,7 +50,7 @@ For this lab, you'll use the available VM environment.
 
 #### Task 2: Create a virtual hard disk
 
-1. On **SEA-ADM1**, in Hyper-V Manager connected to **SEA-SVR1**, select **New**, and then select **Hard Disk**. The **New Virtual Hard Disk Wizard** starts.
+1. On **SEA-ADM1**, in Hyper-V Manager connected to **SEA-SVR1**, under **Action** pane, select **New**, and then select **Hard Disk**. The **New Virtual Hard Disk Wizard** starts.
 1. On the **Before You Begin** page, select **Next**.
 1. On the **Choose Disk Format** page, select **VHD** and then select **Next**.
 1. On the **Choose Disk Type** page, select **Differencing**, and then select **Next**.
