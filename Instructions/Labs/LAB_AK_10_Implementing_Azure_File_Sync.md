@@ -101,7 +101,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. On **SEA-ADM1**, in the Azure portal, in the details pane, select **share1**.
 1. In the details pane, select **Upload**.
-1. On the **Upload files** tab, browse to **C:\\Labfiles\\Lab10\\File1.txt**, select **Upload**, and when the upload is complete, close the **Upload files** tab.
+1. On the **Upload files** tab, browse to **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10\File1.txt**, select **Upload**, and when the upload is complete, close the **Upload files** tab.
 1. On the **share1** page, select **Snapshots**, select **Add snapshot**, and then select **OK**.
 1. On the **share1** page, select **Overview**, select **Connect**, select **Show Script**, use the **Copy to clipboard** button to copy the script, and then close the **Connect** tab.
 1. On **SEA-ADM1**, switch to the **Windows PowerShell ISE** window, open another tab in the script pane, and paste the copied script into it.
