@@ -150,7 +150,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
     > **Note**: **10.81.0.4** represents the private IP address of **az800l08-vm1**. The test uses the **TCP** port **3389** because Remote Desktop is by default enabled on Azure virtual machines and accessible within and between virtual networks.
 
-1. Select **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
+1. Select **Run diagnostic tests** and wait until results of the connectivity check are returned. Verify that the status is **Reachable (success)**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
     > **Note**: This is expected because the hub virtual network is peered directly with the first spoke virtual network.
 
@@ -169,7 +169,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
     > **Note**: **10.82.0.4** represents the private IP address of **az800l08-vm2**. 
 
-1. Select **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
+1. Select **Run diagnostic tests** and wait until results of the connectivity check are returned. Verify that the status is **Reachable (success)**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
     > **Note**: This is expected because the hub virtual network is peered directly with the second spoke virtual network.
 
@@ -188,7 +188,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
-1. Select **Check** and wait until results of the connectivity check are returned. Note that the status is **Unreachable**.
+1. Select **Run diagnostic tests** and wait until results of the connectivity check are returned. Note that the status is **Unreachable**.
 
     > **Note**: This is expected because the two spoke virtual networks are not peered with each other and virtual network peering is not transitive.
 
