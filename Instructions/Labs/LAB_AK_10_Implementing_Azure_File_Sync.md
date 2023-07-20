@@ -45,7 +45,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    Install-WindowsFeature -Name RSAT-DFS-Mgmt-Con -IncludeManagementTools
    ```
 1. On the taskbar, select **File Explorer**.
-1. In File Explorer, browse to the **C:\\Labfiles\\Lab10** folder.
+1. In File Explorer, browse to the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10** folder.
 1. In File Explorer, in the details pane, select the file **L10_DeployDFS.ps1**, display its context-sensitive menu, and then, in the menu, select **Edit**.
 
    >**Note:** This will automatically open the file **L10_DeployDFS.ps1** in the script pane of Windows PowerShell ISE.
