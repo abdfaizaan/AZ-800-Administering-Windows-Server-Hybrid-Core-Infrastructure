@@ -71,6 +71,7 @@ In this task, you will use the Azure portal to create resource groups and create
    |Size|**Standard_D2s_v3**|
    |Username|**Student**|
    |Password|**Pa55w.rd1234**|
+   |Confirm Password|**Pa55w.rd1234**|
    |Public inbound ports|None|
    |Would you like to use an existing Windows Server license|Off|
 
