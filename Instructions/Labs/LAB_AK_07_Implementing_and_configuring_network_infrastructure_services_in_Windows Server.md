@@ -160,6 +160,9 @@ For this lab, you'll use the available VM environment.
 1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, select **Obtain an IP address automatically**, select **Obtain DNS server address automatically**, and then select **OK**.
 1. Select **Close**, and then, in the **Ethernet Status** window, select **Details**.
 1. In the **Network Connection Details** dialog box, verify that DHCP is enabled, an IP address was obtained, and that the **sea-svr1** DHCP server issued the lease.
+   
+   >**Note** If its not visiable on the Network and Sharing Center window, select Change adapter settings, select Ethernet, and double-click the Ethernet connection to display its status window and back on **Network and Sharing Center** window check the connection Ethernet.
+   
 1. Select **Close** to return to the **Ethernet Status** window. 
 1. On **SEA-ADM1**, in the **DHCP** window, expand the **172.16.10.12** node, expand the **IPv4** node, expand the **Scope [172.16.0.0] Contoso** node, and then select **Address Leases**.
 1. Verify that there is an entry representing the **SEA-ADM1.contoso.com** lease.
