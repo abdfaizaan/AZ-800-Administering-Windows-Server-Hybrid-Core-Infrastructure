@@ -141,7 +141,7 @@ For this lab, you'll use the available VM environment.
 
 1. Select **Finish**.
 1. In the **Configure Failover** dialog box, select **Close**.
-1. In the **DHCP** window, in the Actions pane, select **More Actions**, and then select **Add Server**.
+1. In the **DHCP** window, select **DHCP** and in the Actions pane, select **More Actions**, and then select **Add Server**.
 1. In the **Add Server** dialog box, select **This authorized DHCP server**, select **sea-dc1.contoso.com**, and then select **OK**.
 1. On **SEA-ADM1**, in the **DHCP** window, expand the **sea-dc1** node, select **IPv4**, and then verify that two scopes are listed.
 1. Select **Scope [172.16.0.0] Contoso**, in the Actions pane, select **More Actions**, and then select **Configure Failover**.
