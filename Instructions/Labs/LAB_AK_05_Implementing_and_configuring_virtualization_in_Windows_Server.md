@@ -166,15 +166,10 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to install the Docker Microsoft PackageManagement provider on **SEA-SVR1**:
 
    ```powershell
-   Install-Module -Name DockerMsftProvider -Repository PSGallery -Force
+   Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/microsoft/Windows-Containers/Main/helpful_tools/Install-DockerCE/install-docker-ce.ps1" -o install-docker-ce.ps1
+.\install-docker-ce.ps1
    ```
-1. At the NuGet Provider prompt, press the **Y** key, and then press Enter.
-1. In the **Windows PowerShell** console, enter the following command, and then press Enter to install the Docker runtime on **SEA-SVR1**:
-
-   ```powershell
-   Install-Package -Name docker -ProviderName DockerMsftProvider
-   ```
-1. When prompted to confirm, press the **A** key, and then press Enter.
+   
 1. After the installation completes, enter the following commands, and then press Enter to restart **SEA-SVR1**:
 
    ```powershell
@@ -184,17 +179,12 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 #### Task 2: Install and run a Windows container
 
 1. After **SEA-SVR1** restarts, use the PowerShell tool again to establish a new PowerShell Remoting session to **SEA-SVR1**.
-1. In the **Windows PowerShell** console, enter the following command, and then press Enter to verify the installed version of Docker:
 
-   ```powershell
-   Get-Package -Name Docker -ProviderName DockerMsftProvider
-   ```
 1. Enter the following command, and then press Enter to identify Docker images currently present on **SEA-SVR1**: 
 
    ```powershell
    docker images
    ```
-
    > **Note**: Verify that there are no images in the local repository store.
 
 1. Enter the following command, and then press Enter to download a Nano Server image containing an Internet Information Services (IIS) installation:
