@@ -332,7 +332,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **AZ800-L0802-RG** |
+    | Resource group | select **Create new** enter **AZ800-L0802-RG** |
     | Name | **contoso.org** |
     | Resource group location | the same Azure region into which you deploy resources in the previous exercise of this lab |
 
