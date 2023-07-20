@@ -241,7 +241,7 @@ For this lab, you'll use the available VM environment.
 #### Task 4: Configure conditional forwarding
 
 1. On **SEA-ADM1**, in **DNS Manager**, expand **SEA-SVR1.contoso.com**, and then select **Conditional Forwarders**.
-1. Select **Conditional Forwarders**, display its context-sensitive menu, and then, in the menu, select **New Conditional Forwarder**.
+1. Select **Conditional Forwarders**, display its context-sensitive menu, and then, in the menu, right click and select **New Conditional Forwarder**.
 1. In the **New Conditional Forwarder** dialog box, in the **DNS Domain** box, enter **Contoso.com**.
 1. In the **IP addresses of the master servers** box, enter **172.16.10.10**, and then select **Enter**.
 
