@@ -361,8 +361,8 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 #### Task 2: Validate Azure private DNS name resolution
 
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse back to the **Network Watcher - Connection troubleshoot** page.
-1. On the **Network Watcher - Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
+1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse back to the **Network Watcher** page.
+1. On the **Network Watcher** under **Network diagnostic tools** section, select **Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -371,12 +371,12 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Source type | **Virtual machine** |
     | Virtual machine | **az800l08-vm1** |
     | Destination | **Specify manually** |
-    | URI, FQDN or IPv4 | **az800l08-vm2.contoso.org** |
+    | URI, FQDN or IP address | **az800l08-vm2.contoso.org** |
     | Preferred IP Version | **IPv4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
-1. Select **Check** and wait until the results of the connectivity check are returned. Verify that the status is **Reachable**. 
+1. Select **Run diagnostic tests** and wait until the results of the connectivity check are returned. Verify that the status is **Reachable**. 
 
     > **Note**: This is expected because the target fully qualified domain name (FQDN) is resolvable via the Azure private DNS zone. 
 
