@@ -252,16 +252,16 @@ In this task, you will use the Azure portal to create resource groups and create
 1. On the **az800l06-vm0 \| Networking** page, select the link designating the network interface attached to **az800l06-vm0**.
 1. On the page displaying the network interface properties, in the vertical menu on the left side, in the **Settings** section, select **Network security group**. 
 1. On the **Network security group** page, in the drop-down list, select **az800l06-vm0-nsg1**, and then select **Save**.
-1. Back on the page displaying the properties of the network interface, select **IP configurations**, and then select the **ipconfig1** entry.
-1. On the **ipconfig1** page, in the **Public IP address** section, select **Associate**, and then, below the **Public IP address** drop-down list, select **Create new**.
-1. In the **Add a public IP address** window, specify the following settings, and then select **OK**:
-
+1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Public IP address**, click **Create**.
+1. On Basis tab of create public ip address specify the following and select **Review + Create** and **Create**.
+     
    |Setting|Value|
    |---|---|
    |Name|**az800l06-vm0-pip1**|
    |SKU|**Standard**|
-
-1. Back on the **ipconfig1** page, select **Save**.
+      
+1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the network interface, select **IP configurations**, and then select the **ipconfig1** entry.
+1. On the **Edit ip configuration** page, in the **Public IP address settings** section, select **Associate public ip address**, and then, below the **Public IP address** drop-down list, select **az800l06-vm0-pip1** and click **Save**.
 1. Browse back to the page displaying the network interface properties and select **Overview**. Note the value of the public IP address assigned to the interface.
 1. Open another browser tab, browse to that IP address, and verify that a webpage opens, displaying **Hello World from az800l06-vm0**.
 1. From the lab computer, start the Remote Desktop app, and try connecting to the same IP address. Verify that the connection fails.
