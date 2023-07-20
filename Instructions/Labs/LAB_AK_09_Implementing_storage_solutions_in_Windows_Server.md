@@ -268,7 +268,7 @@ For this lab, you'll use the available VM environment.
    New-Partition -DiskNumber 1 -UseMaximumSize -DriveLetter E
    Format-Volume -DriveLetter E -FileSystem ReFS
    ```
-1. Repeat the previous step to create a new drive formatted with ReFS but this time use the disk number **2** and the drive letter **F**.
+1. Repeat the previous step to create a new drive formatted with ReFS but this time replace the disk number and number with **2** and the drive letter with **F**.
 1. Switch back to the console session to **SEA-ADM1** with the **Server Manager** window active.
 1. In **Server Manager**, refresh the Disks pane in **File and Storage Services** by selecting **Refresh** in the **TASKS** menu in the upper right corner of the window. 
 1. Review the **SEA-DC1** disk configuration and verify that both drives are now **Online**.
