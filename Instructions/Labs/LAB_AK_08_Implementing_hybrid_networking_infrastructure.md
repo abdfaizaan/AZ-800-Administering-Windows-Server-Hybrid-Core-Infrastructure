@@ -313,11 +313,11 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Source type | **Virtual machine** |
     | Virtual machine | **az800l08-vm1** |
     | Destination | **Specify manually** |
-    | URI, FQDN or IPv4 | **10.82.0.4** |
+    | URI, FQDN or IP address | **10.82.0.4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
-1. Select **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the traffic was routed via **10.80.0.4**, assigned to the **az800l08-nic0** network adapter. 
+1. Select **Run diagnostic tests** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the traffic was routed via **10.80.0.4**, assigned to the **az800l08-nic0** network adapter. 
 
     > **Note**: This is expected because the traffic between spoke virtual networks is now routed via the virtual machine located in the hub virtual network, which functions as a router.
 
