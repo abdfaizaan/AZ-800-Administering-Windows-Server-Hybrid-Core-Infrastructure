@@ -166,8 +166,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to install the Docker Microsoft PackageManagement provider on **SEA-SVR1**:
 
    ```powershell
-   Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/microsoft/Windows-Containers/Main/helpful_tools/Install-DockerCE/install-docker-ce.ps1" -o install-docker-ce.ps1
-.\install-docker-ce.ps1
+   Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/microsoft/Windows-Containers/Main/helpful_tools/Install-DockerCE/install-docker-ce.ps1" -o install-docker-ce.ps1.\install-docker-ce.ps1
    ```
    
 1. After the installation completes, enter the following commands, and then press Enter to restart **SEA-SVR1**:
