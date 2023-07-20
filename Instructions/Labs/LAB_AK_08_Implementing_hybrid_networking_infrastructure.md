@@ -249,7 +249,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Setting | Value |
     | --- | --- |
     | Route name | **az800l08-route-vnet1-to-vnet2** |
-    | Address prefix destination | **IP Addresses** |
+    | Destination Type | **IP Addresses** |
     | Destination IP Address/CIDR ranges | **10.82.0.0/20** |
     | Next hop type | **Virtual appliance** |
     | Next hop address | **10.80.0.4** |
