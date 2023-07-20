@@ -134,7 +134,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 >**Note**: Before you start this task, make sure that the script you invoked in the first task of this exercise completed successfully.
 
 1. In the Azure portal, search for and select **Network Watcher**.
-1. On the **Network Watcher** page, browse to the **Connection troubleshoot**.
+1. On the **Network Watcher** page, under **Network diagnostic tools** section, select **Connection troubleshoot**.
 1. On the **Network Watcher - Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
 
     | Setting | Value |
