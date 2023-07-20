@@ -109,7 +109,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
    >**Note:** The script mounted the Azure file share to drive letter **Z**.
 
-1. On the taskbar, right-click or access the context menu for File Explorer, select **File Explorer**, and then, in the **Quick Access** text box, type **Z:\**, and then press Enter.
+1. On the taskbar, right-click or access the context menu for File Explorer, select **File Explorer**, and then, in the **Quick Access** text box, type Z:\ and then press Enter.
 1. Verify that the file **File1.txt** appears in the details pane. This is the file that you uploaded to the Azure file share.
 1. Double-click or select **File1.txt**, and then press Enter to open the file in Notepad. 
 1. Use Notepad to modify the file content by appending your name in the last line, save the change, and close Notepad.
