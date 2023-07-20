@@ -48,7 +48,7 @@ For this lab, you'll use the available VM environment.
 1. On the **Select features** page, select **Next**, and then in the **Confirm installation selections** page, select **Install**.
 1. While the role service is installing, on the taskbar, select the **File Explorer** icon.
 1. In **File Explorer**, browse to drive **C**.
-1. Select the **Labfiles** directory, and then display the context-sensitive menu. In the menu, select **Give access to**, and then, in the cascading menu, select **Specific people...**.
+1. Select the **Labfiles** directory, and then display the context-sensitive menu, right click and select **Give access to**, and then, in the cascading menu, select **Specific people...**.
 1. In the **Network access** window, in the **Type a name and then click Add, or click the arrow to find someone** text box, type **Users** and click **Add**.
 1. In the **Network access** window, select **Share**, and once you are presented with the **Your folder is shared** window, select **Done**.
 1. Switch back to the **Server Manager** window, and then, on the **Add Roles and Features Wizard installation succeeded** page, select **Close**.
