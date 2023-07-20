@@ -279,14 +279,14 @@ In this task, you will use the Azure portal to create resource groups and create
 
 #### Task 4: Connect to the Azure VM via JIT VM access
 
-1. Browse back to the **az800l06-vm0** page, select **Connect**, and then in the drop-down list, select **RDP**. 
-1. On the **az800l06-vm0 \| Connect** page, in the **Source IP** section, select **My IP**, and then select **Request access**.
-1. Wait for the notification stating that your request has been approved, select **Download RDP File** and follow prompts to connect to the target Azure VM.
-1. When prompted for credentials, specify the following values, and then select **OK**:
+1. Browse back to the **az800l06-vm0** page, select **Connect**, and
+1. On **az800l06-vm0 \| Connect** page, scroll down and click **Select** option in **Native RDP** under **Most Common** section.
+1. On **Native RDP**, select **Download RDP File**,  follow prompts to connect to the target Azure VM.
+1. When **Enter your credentials** window prompted, click **More Choices** and select **Use a different acount**, specify the following values, and then select **OK**:
 
    |Setting|Value|
    |---|---|
-   |Username|**Student**|
+   |Username|**.\Student**|
    |Password|**Pa55w.rd1234**|
 
 1. Verify that you can successfully access via Remote Desktop the operating system running in the Azure VM and close the Remote Desktop session.
