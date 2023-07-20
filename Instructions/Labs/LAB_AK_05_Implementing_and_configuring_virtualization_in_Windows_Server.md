@@ -143,6 +143,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 
 #### Task 1: Install Docker on Windows Server
 
+1. On **SEA-ADM1**, switch back to the Microsoft Edge window displaying the connection to sea-svr1.contoso.com in Windows Admin Center.
 1. On **SEA-ADM1**, in the **Tools** listing for **SEA-SVR1**, select **PowerShell**. When prompted, type **Pa55w.rd** to authenticate using the **CONTOSO\Administrator** user account, and then press Enter. 
 
    > **Note**: This establishes a PowerShell Remoting connection to SEA-SVR1.
