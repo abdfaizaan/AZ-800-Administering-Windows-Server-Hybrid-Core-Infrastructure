@@ -233,7 +233,7 @@ For this lab, you'll use the available VM environment.
 1. In Server Manager, select **Tools**, and then select **DNS**.
 1. In **DNS Manager**, select **DNS**, display its context-sensitive menu, and then, right click and select **Connect to DNS Server**.
 1. In the **Connect to DNS Server** dialog box, select **The following computer**, enter **SEA-SVR1.contoso.com**, and then select **OK**.
-1. In **DNS Manager**, select **SEA-SVR1.contoso.com**, display its context-sensitive menu, and then select **Properties**.
+1. In **DNS Manager**, select **SEA-SVR1.contoso.com**, display its context-sensitive menu, right click and select **Properties**.
 1. In the **SEA-SVR1.contoso.com Properties** dialog box, select the **Forwarders** tab, and then select **Edit**.
 1. In the **Edit Forwarders** dialog box, in the **IP addresses for forwarding servers** box, enter **131.107.0.100**, and then select **OK**.
 1. In the **SEA-SVR1.contoso.com Properties** dialog box, select **OK**.
