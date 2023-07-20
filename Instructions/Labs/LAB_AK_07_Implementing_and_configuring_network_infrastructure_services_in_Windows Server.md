@@ -203,7 +203,7 @@ For this lab, you'll use the available VM environment.
 
 #### Task 2: Create a DNS zone
 
-1. On **SEA-ADM1**, in Windows Admin Center, in the DNS pane, select **Actions** and, on the **Actions** menu, select **+ Create a new DNS zone**.
+1. On **SEA-ADM1**, in Windows Admin Center, in the DNS pane, on the **Actions** menu, select **+ Create a new DNS zone**.
 1. In the **Create a new DNS zone** dialog box, specify the following settings, and then select **Create**:
 
    - Zone type: **Primary**
