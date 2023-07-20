@@ -144,7 +144,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Source type | **Virtual machine** |
     | Virtual machine | **az800l08-vm0** |
     | Destination | **Specify manually** |
-    | URI, FQDN or IPv4 | **10.81.0.4** |
+    | URI, FQDN or IP address | **10.81.0.4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
