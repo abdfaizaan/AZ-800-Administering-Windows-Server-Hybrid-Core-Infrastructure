@@ -116,7 +116,7 @@ For this lab, you'll use the available VM environment.
 1. In the **Manage Authorized Servers** window, select **Refresh**, ensure that **sea-svr1.contoso.com** appears in the list of authorized DHCP servers, and then close the **Manage Authorized Servers** window.
 1. In the **DHCP** window, in the Actions pane, select **More Actions**, and then select **Add Server**.
 1. In the **Add Server** dialog box, select **This authorized DHCP server**, select **sea-svr1.contoso.com**, and then select **OK**.
-1. In the **DHCP** window, expand **sea-svr1 **, expand **IPv4**, expand **Scope [10.100.150.0] ContosoClients**, and then select **Scope Options**.
+1. In the **DHCP** window, expand **sea-svr1**, expand **IPv4**, expand **Scope [10.100.150.0] ContosoClients**, and then select **Scope Options**.
 1. In the Actions pane, select **More Actions**, and then select **Configure Options**.
 1. In the **Scope Options** dialog box, select the **006 DNS Servers** checkbox.
 1. In the **Server name** text box, enter **sea-dc1.contoso.com**, select **Resolve**, verify that the name resolves to **172.16.10.10**, select **Add**, and then select **OK**.
@@ -149,7 +149,7 @@ For this lab, you'll use the available VM environment.
 1. On the **Specify the partner server to use for failover** screen, in the **Partner Server** box, enter **172.16.10.12**, select the **Reuse existing failover relationships configured with this server (if any exist)** checkbox, and then select **Next**.
 1. On the **Select from failover relationships which are already configured on this server** screen, select **Next**, and then select **Finish**.
 1. In the **Configure Failover** dialog box, select **Close**.
-1. Under **sea-svr1 **, select **IPv4**, and then verify that both scopes are listed. If necessary, press the **F5** key to refresh.
+1. Under **sea-svr1**, select **IPv4**, and then verify that both scopes are listed. If necessary, press the **F5** key to refresh.
 
 #### Task 5: Verify DHCP functionality
 
