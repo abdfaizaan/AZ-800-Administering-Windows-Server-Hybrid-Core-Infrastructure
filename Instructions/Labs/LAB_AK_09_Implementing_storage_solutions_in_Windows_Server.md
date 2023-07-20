@@ -70,7 +70,7 @@ For this lab, you'll use the available VM environment.
    ```powershell
    New-PSDrive –Name 'X' –PSProvider FileSystem –Root '\\SEA-ADM1\Labfiles'
    New-Item -Type Directory -Path 'M:\Data' -Force
-   Copy-Item -Path X:\Lab09\CreateLabFiles.cmd -Destination M:\Data\ -PassThru
+   Copy-Item -Path X:\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab09\CreateLabFiles.cmd -Destination M:\Data\ -PassThru
    Start-Process -FilePath M:\Data\CreateLabFiles.cmd -PassThru
    Set-Location -Path M:\Data
    Get-ChildItem -Path .
