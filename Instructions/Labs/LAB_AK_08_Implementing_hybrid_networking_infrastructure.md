@@ -163,7 +163,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Source type | **Virtual machine** |
     | Virtual machine | **az800l08-vm0** |
     | Destination | **Specify manually** |
-    | URI, FQDN, or IPv4 | **10.82.0.4** |
+    | URI, FQDN or IP address | **10.82.0.4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
@@ -184,7 +184,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Source type | **Virtual machine** |
     | Virtual machine | **az800l08-vm1** |
     | Destination | **Specify manually** |
-    | URI, FQDN or IPv4 | **10.82.0.4** |
+    | URI, FQDN or IP address | **10.82.0.4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
@@ -198,7 +198,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. On the **Virtual machines** page, in the list of virtual machines, select **az800l08-vm0**.
 1. On the **az800l08-vm0** virtual machine page, in the **Settings** section, select **Networking**.
 1. Select the **az800l08-nic0** link next to the **Network interface** label, and then, on the **az800l08-nic0** network interface page, in the **Settings** section, select **IP configurations**.
-1. Set **IP forwarding** to **Enabled** and select **Save** to save the change.
+1. Select checkbox **Enable IP forwarding**  and select **Apply** to save the change.
 
    > **Note**: This setting is required in order for **az800l08-vm0** to function as a router, which will route traffic between two spoke virtual networks.
 
