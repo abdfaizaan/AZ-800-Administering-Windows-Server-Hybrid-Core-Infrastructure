@@ -133,7 +133,8 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    >**Note:** If you can't find the storage account, it was probably deployed to a different Azure region. You need to ensure that the storage account resides in the same region as the Storage Sync Service.
 
 1. In the **Azure File Share** drop-down list, select **share1**, and then select **Create**.
-1. On the **Storage Sync Service** page, select **Registered servers**, and verify that there are no currently registered servers.
+1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select the **Storage Sync Service**. 
+1. On the **Storage Sync Service** page, under **Sync** section, select **Registered servers**, and verify that there are no currently registered servers.
 
 ## Exercise 3: Replacing DFS Replication with File Sync-based replication
 
