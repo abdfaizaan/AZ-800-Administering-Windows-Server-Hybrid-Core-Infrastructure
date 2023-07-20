@@ -189,7 +189,7 @@ In this task, you will use the Azure portal to create resource groups and create
 1. On the **Resource groups** page, select the **AZ800-L0601-RG** entry.
 1. On the **AZ800-L0601-RG** page, on the **Overview** page, review the list of resources, including the Azure VM **az800l06-vm0**.
 1. Within the list of resources, select the Azure VM **az800l06-vm0** entry. 
-1. On the **az800l06-vm0** page, select **Extensions + applications**, and on the list of extensions, verify that the **customScriptExtension** has been provisioned successfully.
+1. On the **az800l06-vm0** page, under **Settings** section, select **Extensions + applications**, and on the list of extensions, verify that the **customScriptExtension** has been provisioned successfully.
 1. Browse back to the **AZ800-L0601-RG** page, and in the **Settings** section, select **Deployments**.
 1. On the **AZ800-L0601-RG \| Deployments** page, select the **Microsoft.Template** link.
 1. On the **Microsoft.Template \| Overview** page, select **Template**, and note that this is the same template you used for deployment.
