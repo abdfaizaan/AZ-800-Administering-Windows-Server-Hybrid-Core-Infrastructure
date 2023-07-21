@@ -147,7 +147,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. On **SEA-ADM1**, in the Azure portal, on the **FileSync1 \| Registered servers** page, select the **Azure File Sync agent** link to go to the **Azure File Sync Agent** Microsoft Downloads page.  
 1. On the **Azure File Sync Agent** Microsoft Downloads page, select **Download**, select the checkbox next to the entry for File Sync agent for Windows Server 2022 (**StorageSyncAgent_WS2022.msi**), and select **Next** to start the download. After the download is complete, close the Microsoft Edge tab that opened for the download.
 1. Use File Explorer to copy the downloaded file to the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10** folder.
-1. In File Explorer displaying the content of the **C:\\Labfiles\\Lab10** folder, in the details pane, select the file **Install-FileSyncServerCore.ps1**, display its context-sensitive menu, and then, in the menu, select **Edit**.
+1. In File Explorer displaying the content of the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10** folder, in the details pane, select the file **Install-FileSyncServerCore.ps1**, display its context-sensitive menu, and right click, in the menu, select **Edit**.
 
    >**Note:** This will automatically open the file **Install-FileSyncServerCore.ps1** in the script pane of Windows PowerShell ISE.
 
