@@ -61,7 +61,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. In the **Add Replication Groups to Display** dialog box, in the **Replication groups** section, select **Branch1**, and then select **OK**.
 1. In the navigation pane, expand the **\\\contoso.com\Root** namespace, and then select the **Data** folder.
 1. In the details pane, verify that the **Data** folder has two referrals to the **Data** folder on **SEA-SVR1** and **SEA-SVR2**.
-1. In the navigation pane, select **Branch1**.
+1. In the navigation pane, expand **Replication** and select **Branch1**.
 1. In the details pane, verify that the **S:\\Data** folder on **SEA-SVR1** and on **SEA-SVR2** are members of the **Branch1** replication group.
 
    >**Note:** DFS Replication replicates the content between the **S:\\Data** folders on **SEA-SVR1** and **SEA-SVR2**.
