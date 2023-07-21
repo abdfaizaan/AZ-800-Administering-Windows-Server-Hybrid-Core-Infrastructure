@@ -161,7 +161,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. Switch to the **Windows PowerShell ISE** window and ensure that the script completed successfully. 
 1. Switch back to the Microsoft Edge window displaying the Azure portal, and then, on the **FileSync1 \| Registered servers** page, select **Refresh** to display the current list of registered servers.
 1. Verify that the **SEA-SVR1.Contoso.com** server appears on the list of registered servers of the **FileSync1** Storage Sync Service.
-1. On **SEA-ADM1**, switch to the File Explorer window, browse to the **\\\\SEA-SVR1\\Data** share, and verify that the folder doesn't currently contain **File1.txt**.
+1. On **SEA-ADM1**, switch to the File Explorer window, in **Quick access** browse to the **\\\\SEA-SVR1\\Data** share, and verify that the folder doesn't currently contain **File1.txt**.
 1. Switch to the Microsoft Edge window displaying the Azure portal, on the **FileSync1 \| Registered servers** page, select **Sync Groups**, select **Sync1**, and then, on the **Sync1** page, select **Add server endpoint**.
 1. On the **Add server endpoint** tab, select **SEA-SVR1.Contoso.com** in the **Registered servers** list.
 1. In the **Path** text box, enter **S:\\Data**, and then select **Create**.
