@@ -116,27 +116,27 @@ For this lab, you'll use the available VM environment.
 
    >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**.
 
-2. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
+1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
-3. On the All connections pane, select **+ Add**.
-4. On the Add or create resources pane, on the **Servers** tile, select **Add**.
-5. In the **Server name** text box, enter **sea-svr3.contoso.com**. 
-6. If needed, ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
+1. On the All connections pane, select **+ Add**.
+1. On the Add or create resources pane, on the **Servers** tile, select **Add**.
+1. In the **Server name** text box, enter **sea-svr3.contoso.com**. 
+1. If needed, ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
-7. On the **sea-svr3.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\Administrator** user with **Pa55w.rd** as its password.
-8. In the **Windows PowerShell** console, enter the following command and then press Enter to trigger deduplication:
+1. On the **sea-svr3.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\Administrator** user with **Pa55w.rd** as its password.
+1. In the **Windows PowerShell** console, enter the following command and then press Enter to trigger deduplication:
 
    ```powershell
    Start-DedupJob -Volume M: -Type Optimization –Memory 50
    ```
-9.  Switch back to the console session to **SEA-SVR3**.
-10. On **SEA-SVR3**, at the **Windows PowerShell** prompt, enter the following command and press Enter to identify the available space on the volume being deduplicated:
+1. Switch back to the console session to **SEA-SVR3**.
+1. On **SEA-SVR3**, at the **Windows PowerShell** prompt, enter the following command and press Enter to identify the available space on the volume being deduplicated:
 
    ```powershell
    Get-PSDrive -Name M
@@ -144,18 +144,18 @@ For this lab, you'll use the available VM environment.
 
    > **Note**: Compare the previously displayed values with the current ones. 
 
-11. Wait for five to ten minutes to allow the deduplication job to complete and repeat the previous step.
-12. Switch back to console session to **SEA-ADM1**.
-13. On **SEA-ADM1**, in the **Windows PowerShell** console within the **Microsoft Edge** window displaying Windows Admin Center connection to **sea-svr3.contoso.com**, enter the following commands and press Enter after each to determine the status of the deduplication job:
+1. Wait for five to ten minutes to allow the deduplication job to complete and repeat the previous step.
+1. Switch back to console session to **SEA-ADM1**.
+1. On **SEA-ADM1**, in the **Windows PowerShell** console within the **Microsoft Edge** window displaying Windows Admin Center connection to **sea-svr3.contoso.com**, enter the following commands and press Enter after each to determine the status of the deduplication job:
 
    ```powershell
    Get-DedupStatus –Volume M: | fl
    Get-DedupVolume –Volume M: |fl
    Get-DedupMetadata –Volume M: |fl
    ```
-14. On **SEA-ADM1**, switch to the Disks pane in **Server Manager**, and then, in the **TASKS** menu in the upper right corner, select **Refresh**.
-15. Select the **M:** volume in the **VOLUMES** section, display its context sensitive menu, and select **Properties** from the menu. 
-16. In the **Volume (M:\\) Properties** window, review the values for **Deduplication rate** and **Deduplication savings**.
+1. On **SEA-ADM1**, switch to the Disks pane in **Server Manager**, and then, in the **TASKS** menu in the upper right corner, select **Refresh**.
+1. Select the **M:** volume in the **VOLUMES** section, display its context sensitive menu, and select **Properties** from the menu. 
+1. In the **Volume (M:\\) Properties** window, review the values for **Deduplication rate** and **Deduplication savings**.
 
 ## Exercise 2: Configuring iSCSI storage
 
