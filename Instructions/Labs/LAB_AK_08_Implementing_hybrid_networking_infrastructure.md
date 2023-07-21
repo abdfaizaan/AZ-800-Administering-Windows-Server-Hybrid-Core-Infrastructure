@@ -378,12 +378,10 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. Select **Run diagnostic tests** and wait until the results of the connectivity check are returned. Verify that the status is **Reachable**. 
 
-    > **Note**: This is expected because the target fully qualified domain name (FQDN) is resolvable via the Azure private DNS zone. 
+    >**Note**: This is expected because the target fully qualified domain name (FQDN) is resolvable via the Azure private DNS zone. 
 
 #### Task 3: Configure Azure public DNS name resolution
 
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, open a new tab and browse to **https://www.godaddy.com/domains/domain-name-search**.
-1. Use the domain name search to identify a domain name that is not currently in use.
 1. On **SEA-ADM1**, switch to the Microsoft Edge tab displaying the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **DNS zones**, and then, on the **DNS zones** page, select **+ Create**.
 1. On the **Create DNS zone** page, specify the following settings (leave others with their default values):
 
@@ -391,7 +389,9 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | **AZ800-L0802-RG** |
-    | Name | the DNS domain name you identified earlier in this task |
+    | Name | Provide unique DNS domain name |
+
+    >**Note**: Try to give unique DNS names until it shows green check mark.
 
 1. Select **Review + create**, and then select **Create**.
 
