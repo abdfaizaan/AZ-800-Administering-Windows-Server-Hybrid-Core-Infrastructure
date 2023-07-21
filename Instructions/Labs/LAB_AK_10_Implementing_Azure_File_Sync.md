@@ -182,8 +182,10 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. When prompted with a **WARNING** message to sign in, copy the nine-character code in the warning message to the Clipboard.
 1. Switch to the Microsoft Edge window displaying the Azure portal, open a new tab by selecting **+**, and then, on the new tab, browse to **https://microsoft.com/devicelogin**.
-1. In Microsoft Edge, in the **Enter code** dialog box, paste the code you copied into Clipboard, and then, if needed, sign in with your Azure credentials, on the page displaying the message 
-**Are you trying to sign in to Microsoft Azure PowerShell?**, select **Continue**, and then close the Microsoft Edge tab you opened in the previous step.
+1. In Microsoft Edge, in the **Enter code** dialog box, paste the code you copied into Clipboard, and then, if needed, sign in with your Azure credentials, on the page displaying the message.
+   
+   >**Note**: Are you trying to sign in to Microsoft Azure PowerShell?**, select **Continue**, and then close the Microsoft Edge tab you opened in the previous step.
+   
 1. Switch to the **Windows PowerShell ISE** window and ensure that the script completed successfully. 
 1. When the script completes, switch to the Microsoft Edge window displaying the Azure portal and browse back to the **FileSync1 \| Registered servers** page.
 1. Confirm that **SEA-SVR1.Contoso.com** and **SEA-SVR2.Contoso.com** are now both listed as registered servers with the **FileSync1** Storage Sync Service.
