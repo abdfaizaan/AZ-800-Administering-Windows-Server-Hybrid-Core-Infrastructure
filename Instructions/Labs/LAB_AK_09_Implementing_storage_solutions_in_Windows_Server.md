@@ -408,12 +408,13 @@ For this lab, you'll use the available VM environment.
 1. In **Server Manager**, select **Tools**, and then select **Failover Cluster Manager** to verify that its installation completed successfully.
 1. On **SEA-ADM1**, switch to the **Administrator: Windows PowerShell ISE** window, select the line in step 2 starting with **Test-Cluster**, and then press F8 to invoke cluster validation tests.
 
-   > **Note**: Wait until the tests complete. This should take about 2 minutes. Verify that none of the tests fail. Ignore any warnings since these are expected. 
+   >**Note**: Wait until the tests complete. This should take about 2 minutes. Verify that none of the tests fail. Ignore any warnings since these are expected. 
 
 1. In the **Administrator: Windows PowerShell ISE** window, select the line in step 3 starting with **New-Cluster**, and then press F8 to create a cluster.
 
-   > **Note**: Wait until the step completes. This should take about 2 minutes. 
-
+   >**Note**: Wait until the step completes. This should take about 2 minutes. 
+   >**Note**: if cluster creation fail switch to **SEA-SVR1**, **SEA-SVR2**, and **SEA-SVR3**, run **clean-ClusterNodes** command and then switch back to **SEA-ADM1** open new powershell ISE open as administrator and run step 2 and step 3 of script again. 
+   
 1. On **SEA-ADM1**, switch to the **Failover Cluster Manager** window. In the Actions pane, select **Connect to Cluster**, enter **S2DCluster.Contoso.com**, and then select **OK**.
 
 #### Task 3: Enable Storage Spaces Direct
