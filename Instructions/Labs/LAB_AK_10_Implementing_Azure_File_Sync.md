@@ -66,7 +66,10 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
    >**Note:** DFS Replication replicates the content between the **S:\\Data** folders on **SEA-SVR1** and **SEA-SVR2**.
 
-1. Open two instances of File Explorer. In the first File Explorer instance, connect to **\\\\SEA-SVR1\\Data**, and then in the second File Explorer instance, connect to **\\\\SEA-SVR2\\Data**.
+1. Open two instances of File Explorer, in the navigation pane, expand the **\\\contoso.com\Root** namespace, and then select the **Data** folder. 
+2. Select first **SEA-SVR1**, in **Action** pane under **SEA-SVR1**, select **Open in Explorer**.
+3. Select second **SEA-SVR2**, in **Action** pane under **SEA-SVR2**, select **Open in Explorer**.
+4. In the first File Explorer instance, connect to **\\\\SEA-SVR1\\Data**, and then in the second File Explorer instance, connect to **\\\\SEA-SVR2\\Data**.
 1. Create a new file with your name in **\\\\SEA-SVR1\\Data**.
 1. Verify that the file with your name replicates to **\\\\SEA-SVR2\\Data** after a few seconds. This confirms that DFS Replication is working.
 
