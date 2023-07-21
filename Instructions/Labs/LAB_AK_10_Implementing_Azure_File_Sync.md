@@ -167,6 +167,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. In the **Path** text box, enter **S:\\Data**, and then select **Create**.
 1. Switch to the File Explorer window and verify that the **\\\\SEA-SVR1\\Data** folder now contains **File1.txt**.
 
+   >**Note:** if you not able to see **File1.txt**, kindly close and open **File Explorer** window, browse for **\\\\SEA-SVR1\\Data** folder in **Quick access**.
    >**Note:** You uploaded **File1.txt** to the Azure file share, from where it was synced to **SEA-SVR1** by File Sync.
 
 ### Task 2: Register SEA-SVR2 with File Sync
