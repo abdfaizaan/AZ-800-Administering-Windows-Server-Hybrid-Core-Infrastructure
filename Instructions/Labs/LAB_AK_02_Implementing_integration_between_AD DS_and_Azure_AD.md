@@ -250,6 +250,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 1. On the **Azure AD Connect** page, under **User Sign-In**, select **Pass-through authentication**.
 1. On the **Passthrough Authentication** page, note the **SEA-ADM1** server name under **Authentication Agent**.
 
+   > **Note**: If you're not able see on-premises domain name and **SEA-ADM1** server name, kindly sign-in to azure portal in private window and perform above steps.
    > **Note**: To install the Azure AD Authentication Agent on multiple servers in your environment, you can download its binaries from the **Pass-through authentication** page in the Azure portal. 
 
 #### Task 5: Install and register the Azure AD Password Protection proxy service and DC agent
