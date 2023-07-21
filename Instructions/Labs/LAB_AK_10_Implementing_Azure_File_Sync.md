@@ -205,12 +205,8 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 ### Task 2: Enable cloud tiering
 
 1. On **SEA-ADM1**, in the Azure portal, on the **Sync1** sync group page, select **SEA-SVR2.Contoso.com** in the **server endpoints** section.
-1. In the Server Endpoint Properties pane, select **Enabled** in the **Cloud Tiering** section.
-
-   >**Note:** if you encounter **Disable** in the **Cloud Tiering** section of **SEA-SVR2.Contoso.com** on the **server endpoints** page, kindly select **Disable**
-   and click **Enable cloud tiering** checkbox and follow the next steps.
-   
-1. In the **Always preserve the specified percentage of free space on the volume** text box, enter **90** and set **Date policy** to **Enabled**. In the **Only cache files that were accessed or modified within the specified number of days** text box, enter **14**, and then select **Save**.  
+1. In the Server Endpoint Properties pane, Under **settings** section, select **Cloud Tiering Settings**. 
+1. Select **Enable cloud Tiering** In the **Always preserve the specified percentage of free space on the volume** text box, enter **90** and select **Enabled Date policy**. In the **Only cache files that were accessed or modified within the specified number of days** text box, enter **14**, and then select **Save**.  
 
    >**Note:** After some time, files on **SEA-SVR2** would be automatically tiered. You will trigger this process by using PowerShell.
 
