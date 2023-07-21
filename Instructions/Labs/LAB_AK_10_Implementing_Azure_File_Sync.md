@@ -237,7 +237,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. Select the **SEA-SVR2.Contoso.com** endpoint in the Server Endpoint Properties pane, review **Sync Activity**, and then close the pane.
 1. Select the **Files Synced** graph, and then explore how you can customize the graph by using a filter.
 1. Switch to the File Explorer window displaying the content of drive **Z** mapped to the Azure File share and verify that the drive contains the content of the **INF** folder synchronized from **\\\\SEA-SVR2\\Data**.
-1. Switch to the Azure portal displaying **Sync1** under **Monitoring** section and verify that the **INF** sync traffic is reflected in the **Files Synced** and **Bytes Synced** graphs. The **INF** folder has more than 800 files, and its size is more than 40 MB.
+1. Switch to the Azure portal displaying **Sync1** under **Monitoring** section, select status and verify that the **INF** sync traffic is reflected in the **Files Synced** and **Bytes Synced** graphs. The **INF** folder has more than 800 files, and its size is more than 40 MB.
 
    >**Note:** You might need to refresh the page displaying the Azure portal to see the updated statistics.
 
