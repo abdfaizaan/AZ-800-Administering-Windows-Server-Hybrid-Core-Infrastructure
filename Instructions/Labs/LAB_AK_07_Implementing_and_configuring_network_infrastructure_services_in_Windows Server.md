@@ -81,7 +81,7 @@ For this lab, you'll use the available VM environment.
 
 10. Refresh the **Microsoft Edge** page back on the **sea-svr1.contoso.com** page, in the **Tools** list, select **DHCP**, and then, in the details pane, select **Install** to install the DHCP PowerShell tools. 
 
-   > **Note**: If the **DHCP** entry is not available in the **Tools** list for **sea-svr1.contoso.com**, refresh the **Microsoft Edge** page and try again.
+    > **Note**: If the **DHCP** entry is not available in the **Tools** list for **sea-svr1.contoso.com**, refresh the **Microsoft Edge** page and try again.
    Depending on your network performance, it may take upto 5 minutes for the DHCP server to appear.
 
 11. Wait for a notification that the DHCP PowerShell tools are installed. If necessary, select the **Notifications** icon to verify the current status.
@@ -108,7 +108,7 @@ For this lab, you'll use the available VM environment.
    - Starting IP address: **10.100.150.50**
    - Ending IP address: **10.100.150.254**
    - DHCP client subnet mask: **255.255.255.0**
-   - Router (default gateway): **10.100.150.1**
+   - Router (default gateway): **+ Add** **10.100.150.1**
    - Lease duration for DHCP clients: **4 days**
 
 1. On **SEA-ADM1**, switch to **Server Manager**, in **Server Manager**, select **Tools**, and then select **DHCP**.
@@ -116,7 +116,7 @@ For this lab, you'll use the available VM environment.
 1. In the **Manage Authorized Servers** window, select **Refresh**, ensure that **sea-svr1.contoso.com** appears in the list of authorized DHCP servers, and then close the **Manage Authorized Servers** window.
 1. In the **DHCP** window, in the Actions pane, select **More Actions**, and then select **Add Server**.
 1. In the **Add Server** dialog box, select **This authorized DHCP server**, select **sea-svr1.contoso.com**, and then select **OK**.
-1. In the **DHCP** window, expand **sea-svr1 **, expand **IPv4**, expand **Scope [10.100.150.0] ContosoClients**, and then select **Scope Options**.
+1. In the **DHCP** window, expand **sea-svr1**, expand **IPv4**, expand **Scope [10.100.150.0] ContosoClients**, and then select **Scope Options**.
 1. In the Actions pane, select **More Actions**, and then select **Configure Options**.
 1. In the **Scope Options** dialog box, select the **006 DNS Servers** checkbox.
 1. In the **Server name** text box, enter **sea-dc1.contoso.com**, select **Resolve**, verify that the name resolves to **172.16.10.10**, select **Add**, and then select **OK**.
@@ -141,7 +141,7 @@ For this lab, you'll use the available VM environment.
 
 1. Select **Finish**.
 1. In the **Configure Failover** dialog box, select **Close**.
-1. In the **DHCP** window, in the Actions pane, select **More Actions**, and then select **Add Server**.
+1. In the **DHCP** window, select **DHCP** and in the Actions pane, select **More Actions**, and then select **Add Server**.
 1. In the **Add Server** dialog box, select **This authorized DHCP server**, select **sea-dc1.contoso.com**, and then select **OK**.
 1. On **SEA-ADM1**, in the **DHCP** window, expand the **sea-dc1** node, select **IPv4**, and then verify that two scopes are listed.
 1. Select **Scope [172.16.0.0] Contoso**, in the Actions pane, select **More Actions**, and then select **Configure Failover**.
@@ -149,7 +149,7 @@ For this lab, you'll use the available VM environment.
 1. On the **Specify the partner server to use for failover** screen, in the **Partner Server** box, enter **172.16.10.12**, select the **Reuse existing failover relationships configured with this server (if any exist)** checkbox, and then select **Next**.
 1. On the **Select from failover relationships which are already configured on this server** screen, select **Next**, and then select **Finish**.
 1. In the **Configure Failover** dialog box, select **Close**.
-1. Under **sea-svr1 **, select **IPv4**, and then verify that both scopes are listed. If necessary, press the **F5** key to refresh.
+1. Under **sea-svr1**, select **IPv4**, and then verify that both scopes are listed. If necessary, press the **F5** key to refresh.
 
 #### Task 5: Verify DHCP functionality
 
@@ -159,8 +159,11 @@ For this lab, you'll use the available VM environment.
 1. In the **Ethernet Properties** dialog box, select **Internet Protocol Version 4 (TCP/IPv4)**, and then select **Properties**.
 1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, select **Obtain an IP address automatically**, select **Obtain DNS server address automatically**, and then select **OK**.
 1. Select **Close**, and then, in the **Ethernet Status** window, select **Details**.
-1. In the **Network Connection Details** dialog box, verify that DHCP is enabled, an IP address was obtained, and that the **sea-svr1 ** DHCP server issued the lease.
-1. Select **Close** to return to the **Ethernet Status** window.
+1. In the **Network Connection Details** dialog box, verify that DHCP is enabled, an IP address was obtained, and that the **sea-svr1** DHCP server issued the lease.
+   
+   >**Note** If its not visiable on the Network and Sharing Center window, select Change adapter settings, select Ethernet, and double-click the Ethernet connection to display its status window and back on **Network and Sharing Center** window check the connection Ethernet.
+   
+1. Select **Close** to return to the **Ethernet Status** window. 
 1. On **SEA-ADM1**, in the **DHCP** window, expand the **172.16.10.12** node, expand the **IPv4** node, expand the **Scope [172.16.0.0] Contoso** node, and then select **Address Leases**.
 1. Verify that there is an entry representing the **SEA-ADM1.contoso.com** lease.
 1. On **SEA-ADM1**, in the **DHCP** window, expand the **sea-dc1** node, expand the **IPv4** node, expand the **Scope [172.16.0.0] Contoso** node, and then select **Address Leases**.
@@ -203,7 +206,7 @@ For this lab, you'll use the available VM environment.
 
 #### Task 2: Create a DNS zone
 
-1. On **SEA-ADM1**, in Windows Admin Center, in the DNS pane, select **Actions** and, on the **Actions** menu, select **+ Create a new DNS zone**.
+1. On **SEA-ADM1**, in Windows Admin Center, in the DNS pane, on the **Actions** menu, select **+ Create a new DNS zone**.
 1. In the **Create a new DNS zone** dialog box, specify the following settings, and then select **Create**:
 
    - Zone type: **Primary**
@@ -231,9 +234,9 @@ For this lab, you'll use the available VM environment.
 
 1. On **SEA-ADM1**, switch to Server Manager.
 1. In Server Manager, select **Tools**, and then select **DNS**.
-1. In **DNS Manager**, select **DNS**, display its context-sensitive menu, and then, in the menu, select **Connect to DNS Server**.
+1. In **DNS Manager**, select **DNS**, display its context-sensitive menu, and then, right click and select **Connect to DNS Server**.
 1. In the **Connect to DNS Server** dialog box, select **The following computer**, enter **SEA-SVR1.contoso.com**, and then select **OK**.
-1. In **DNS Manager**, select **SEA-SVR1.contoso.com**, display its context-sensitive menu, and then select **Properties**.
+1. In **DNS Manager**, select **SEA-SVR1.contoso.com**, display its context-sensitive menu, right click and select **Properties**.
 1. In the **SEA-SVR1.contoso.com Properties** dialog box, select the **Forwarders** tab, and then select **Edit**.
 1. In the **Edit Forwarders** dialog box, in the **IP addresses for forwarding servers** box, enter **131.107.0.100**, and then select **OK**.
 1. In the **SEA-SVR1.contoso.com Properties** dialog box, select **OK**.
@@ -241,7 +244,7 @@ For this lab, you'll use the available VM environment.
 #### Task 4: Configure conditional forwarding
 
 1. On **SEA-ADM1**, in **DNS Manager**, expand **SEA-SVR1.contoso.com**, and then select **Conditional Forwarders**.
-1. Select **Conditional Forwarders**, display its context-sensitive menu, and then, in the menu, select **New Conditional Forwarder**.
+1. Select **Conditional Forwarders**, display its context-sensitive menu, and then, in the menu, right click and select **New Conditional Forwarder**.
 1. In the **New Conditional Forwarder** dialog box, in the **DNS Domain** box, enter **Contoso.com**.
 1. In the **IP addresses of the master servers** box, enter **172.16.10.10**, and then select **Enter**.
 

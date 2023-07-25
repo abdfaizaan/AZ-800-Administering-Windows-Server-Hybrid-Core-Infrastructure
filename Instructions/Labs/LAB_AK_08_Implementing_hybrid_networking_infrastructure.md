@@ -134,7 +134,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 >**Note**: Before you start this task, make sure that the script you invoked in the first task of this exercise completed successfully.
 
 1. In the Azure portal, search for and select **Network Watcher**.
-1. On the **Network Watcher** page, browse to the **Connection troubleshoot**.
+1. On the **Network Watcher** page, under **Network diagnostic tools** section, select **Connection troubleshoot**.
 1. On the **Network Watcher - Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -144,13 +144,13 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Source type | **Virtual machine** |
     | Virtual machine | **az800l08-vm0** |
     | Destination | **Specify manually** |
-    | URI, FQDN or IPv4 | **10.81.0.4** |
+    | URI, FQDN or IP address | **10.81.0.4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
     > **Note**: **10.81.0.4** represents the private IP address of **az800l08-vm1**. The test uses the **TCP** port **3389** because Remote Desktop is by default enabled on Azure virtual machines and accessible within and between virtual networks.
 
-1. Select **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
+1. Select **Run diagnostic tests** and wait until results of the connectivity check are returned. Verify that the status is **Reachable (success)**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
     > **Note**: This is expected because the hub virtual network is peered directly with the first spoke virtual network.
 
@@ -163,13 +163,13 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Source type | **Virtual machine** |
     | Virtual machine | **az800l08-vm0** |
     | Destination | **Specify manually** |
-    | URI, FQDN, or IPv4 | **10.82.0.4** |
+    | URI, FQDN or IP address | **10.82.0.4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
     > **Note**: **10.82.0.4** represents the private IP address of **az800l08-vm2**. 
 
-1. Select **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
+1. Select **Run diagnostic tests** and wait until results of the connectivity check are returned. Verify that the status is **Reachable (success)**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
     > **Note**: This is expected because the hub virtual network is peered directly with the second spoke virtual network.
 
@@ -184,11 +184,11 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Source type | **Virtual machine** |
     | Virtual machine | **az800l08-vm1** |
     | Destination | **Specify manually** |
-    | URI, FQDN or IPv4 | **10.82.0.4** |
+    | URI, FQDN or IP address | **10.82.0.4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
-1. Select **Check** and wait until results of the connectivity check are returned. Note that the status is **Unreachable**.
+1. Select **Run diagnostic tests** and wait until results of the connectivity check are returned. Note that the status is **Unreachable**.
 
     > **Note**: This is expected because the two spoke virtual networks are not peered with each other and virtual network peering is not transitive.
 
@@ -198,7 +198,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. On the **Virtual machines** page, in the list of virtual machines, select **az800l08-vm0**.
 1. On the **az800l08-vm0** virtual machine page, in the **Settings** section, select **Networking**.
 1. Select the **az800l08-nic0** link next to the **Network interface** label, and then, on the **az800l08-nic0** network interface page, in the **Settings** section, select **IP configurations**.
-1. Set **IP forwarding** to **Enabled** and select **Save** to save the change.
+1. Select checkbox **Enable IP forwarding**  and select **Apply** to save the change.
 
    > **Note**: This setting is required in order for **az800l08-vm0** to function as a router, which will route traffic between two spoke virtual networks.
 
@@ -249,7 +249,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Setting | Value |
     | --- | --- |
     | Route name | **az800l08-route-vnet1-to-vnet2** |
-    | Address prefix destination | **IP Addresses** |
+    | Destination Type | **IP Addresses** |
     | Destination IP Address/CIDR ranges | **10.82.0.0/20** |
     | Next hop type | **Virtual appliance** |
     | Next hop address | **10.80.0.4** |
@@ -288,7 +288,8 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Setting | Value |
     | --- | --- |
     | Route name | **az800l08-route-vnet2-to-vnet1** |
-    | Address prefix | **10.81.0.0/20** |
+    | Destination Type | **IP Addresses** |
+    | Destination IP Address/CIDR ranges | **10.81.0.0/20** |
     | Next hop type | **Virtual appliance** |
     | Next hop address | **10.80.0.4** |
 
@@ -312,11 +313,11 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Source type | **Virtual machine** |
     | Virtual machine | **az800l08-vm1** |
     | Destination | **Specify manually** |
-    | URI, FQDN or IPv4 | **10.82.0.4** |
+    | URI, FQDN or IP address | **10.82.0.4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
-1. Select **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the traffic was routed via **10.80.0.4**, assigned to the **az800l08-nic0** network adapter. 
+1. Select **Run diagnostic tests** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the traffic was routed via **10.80.0.4**, assigned to the **az800l08-nic0** network adapter. 
 
     > **Note**: This is expected because the traffic between spoke virtual networks is now routed via the virtual machine located in the hub virtual network, which functions as a router.
 
@@ -331,7 +332,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **AZ800-L0802-RG** |
+    | Resource group | select **Create new** enter **AZ800-L0802-RG** |
     | Name | **contoso.org** |
     | Resource group location | the same Azure region into which you deploy resources in the previous exercise of this lab |
 
@@ -360,8 +361,8 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 #### Task 2: Validate Azure private DNS name resolution
 
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse back to the **Network Watcher - Connection troubleshoot** page.
-1. On the **Network Watcher - Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
+1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse back to the **Network Watcher** page.
+1. On the **Network Watcher** under **Network diagnostic tools** section, select **Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -370,19 +371,17 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Source type | **Virtual machine** |
     | Virtual machine | **az800l08-vm1** |
     | Destination | **Specify manually** |
-    | URI, FQDN or IPv4 | **az800l08-vm2.contoso.org** |
+    | URI, FQDN or IP address | **az800l08-vm2.contoso.org** |
     | Preferred IP Version | **IPv4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
-1. Select **Check** and wait until the results of the connectivity check are returned. Verify that the status is **Reachable**. 
+1. Select **Run diagnostic tests** and wait until the results of the connectivity check are returned. Verify that the status is **Reachable**. 
 
-    > **Note**: This is expected because the target fully qualified domain name (FQDN) is resolvable via the Azure private DNS zone. 
+    >**Note**: This is expected because the target fully qualified domain name (FQDN) is resolvable via the Azure private DNS zone. 
 
 #### Task 3: Configure Azure public DNS name resolution
 
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, open a new tab and browse to **https://www.godaddy.com/domains/domain-name-search**.
-1. Use the domain name search to identify a domain name that is not currently in use.
 1. On **SEA-ADM1**, switch to the Microsoft Edge tab displaying the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **DNS zones**, and then, on the **DNS zones** page, select **+ Create**.
 1. On the **Create DNS zone** page, specify the following settings (leave others with their default values):
 
@@ -390,7 +389,9 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | **AZ800-L0802-RG** |
-    | Name | the DNS domain name you identified earlier in this task |
+    | Name | Provide unique DNS domain name |
+
+    >**Note**: Try to give unique DNS names until it shows green check mark.
 
 1. Select **Review + create**, and then select **Create**.
 

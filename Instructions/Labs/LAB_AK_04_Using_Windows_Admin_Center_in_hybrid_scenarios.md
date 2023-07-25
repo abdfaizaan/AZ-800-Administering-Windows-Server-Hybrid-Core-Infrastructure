@@ -76,8 +76,8 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    >**Note**: Wait for the deployment to complete before you proceed to the next exercise. The deployment should take about 5 minutes.
 
 1. In the Azure portal, close the Cloud Shell pane.
-1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select the **az800l04-vnet** virtual network.
-1. On the **az800l04-vnet** page, select **Subnets**, and then, on the **Subnets** page, select **+ Gateway subnet**.
+1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select the virtual network, and then on the **Virtual network** page select **az800l04-vnet**.
+1. On the **az800l04-vnet** page, under **Settings** section, select **Subnets**, and then, on the **Subnets** page, select **+ Gateway subnet**.
 1. On the **Add subnet** page, set the **Subnet address range** to **10.4.3.224/27**, and then select **Save** to create the **GatewaySubnet**.
 
 ## Exercise 2: Implementing hybrid connectivity by using the Azure Network Adapter
@@ -113,7 +113,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    - Password: **Pa55w.rd**
 
 1. On the **All connections** page, select the **sea-adm1.contoso.com** entry. 
-1. In Windows Admin Center, select **Networks**, and then select **+ Add Azure Network Adapter (Preview)**.
+1. In Windows Admin Center, from left pane, in the list of Tools, select **Networks**, and then select **+ Add Azure Network Adapter (Preview)**.
 
    > **Note**: Depending on the screen resolution, you might need to select the **ellipsis** icon if the **Actions** menu is not available.
 
@@ -132,12 +132,13 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. When prompted **Are you trying to sign in to Windows Admin Center?**, select **Continue**.
 1. In Windows Admin Center, verify that the sign in was successful and close the newly opened tab of the Microsoft Edge window.
 1. In the **Get started with Azure in Windows Admin Center** pane, ensure that **Azure Active Directory application** is set to **Create new**, and then select **Connect**.
+>**Note**: Please wait until it successfully connected to Azure AD.
 1. In the listing of the steps of the registration procedure, select **Sign in**. This will open a pop-up window labeled **Permissions requested**.
 1. In the **Permissions requested** pop-up window, select **Consent on behalf of your organization**, and then select **Accept**.
 
 #### Task 2: Create an Azure Network Adapter
 
-1. On **SEA-ADM1**, back in the Microsoft Edge window displaying Windows Admin Center, browse to the **sea-adm1.contoso.com** page, and then select **Networks**.
+1. On **SEA-ADM1**, back in the Microsoft Edge window displaying Windows Admin Center, browse to the **sea-adm1.contoso.com** page, and then from the left pane, in the list of Tools, select **Networks**.
 1. In Windows Admin Center, on the **Networks** page, from the **Actions** menu, select the **+ Add Azure Network Adapter (Preview)** entry again.
 1. In the **Add Azure Network Adapter** settings pane, specify the following settings, and then select **Create** (leave others with their default values):
 
@@ -212,7 +213,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. When prompted to provide the name for the local Administrator account, enter **Student**
 1. When prompted to provide the password for the local Administrator account, enter **Pa55w.rd1234**
 
-   >**Note**: Wait for the provisioning script to complete. This might take about 5 minutes.
+   >**Note**: Wait for the provisioning script to complete. This might take about 10 minutes.
 
 1. Verify that the script completed successfully and note the final message providing the URL containing the fully qualified name of the Azure VM that hosts the Windows Admin Center installation.
 
@@ -224,14 +225,14 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Resource groups**, and then, on the **Resource groups** page, select the **AZ800-L0401-RG** entry.
 1. On the **AZ800-L0401-RG** page, on the **Overview** page, review the list of resources, including the Azure VM **az800l04-vmwac**.
-1. In the list of resources, select the Azure VM **az800l04-vmwac** entry, and then, on the **az800l04-vmwac** page, select **Networking**.
+1. In the list of resources, select the Azure VM **az800l04-vmwac** entry, and then, on the **az800l04-vmwac** page, under **Settings** section select **Networking**.
 1. On the **az800l04-vmwac | Networking** page, on the **Inbound port rules** tab, note the entries representing the inbound port rule allowing connectivity on TCP port 5986 and the inbound rule allowing connectivity on TCP port 443.
 
 ## Exercise 4: Verifying functionality of the Windows Admin Center gateway in Azure
 
 #### Task 1: Connect to the Windows Admin Center gateway running in Azure VM
 
-1. On **SEA-ADM1**, start Microsoft Edge and go to the URL containing the fully qualified name of the target Azure VM hosting the Windows Admin Center installation you identified in the previous exercise.
+1. On **SEA-ADM1**, start Microsoft Edge, copy and browse the URL containing the fully qualified name of the target Azure VM hosting the Windows Admin Center installation you identified in the previous exercise-3 task-1.
 1. In Microsoft Edge window, disregard the message **Your connection isn't private**, select **Advanced**, and then select the link starting with the text **Continue to**.
 1. When prompted, in the **Sign in to access this site** dialog box, sign in with the **Student** username and **Pa55w.rd1234** password.
 1. On the **All connections** page of Windows Admin Center, select **az800l04-vmwac [Gateway]**.

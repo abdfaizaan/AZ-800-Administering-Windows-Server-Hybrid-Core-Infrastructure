@@ -78,8 +78,8 @@ For this lab, you'll use the available VM environment and an Azure AD tenant.
 #### Task 3: Configure Windows Admin Center extensions
 
 1. On **SEA-ADM1**, in the upper-right corner of the Microsoft Edge window displaying Windows Admin Center, select the **Settings** icon (the cog wheel).
-1. In the left pane, select **Extensions**. Review the available extensions.
-1. Select the **Security (Preview)** extension, and then select **Install**. The extension will install and Windows Admin Center will refresh.
+1. In the left pane, under **Gateway** section, select **Extensions**. Review the available extensions.
+1. Select the **Security (Preview)** extension, then right click and select **Install**. The extension will install and Windows Admin Center will refresh.
 
    > **Note**: If the **Security (Preview)** extension is not available, choose another Microsoft extension.
 
@@ -104,7 +104,7 @@ For this lab, you'll use the available VM environment and an Azure AD tenant.
 1. In the **Remote Desktop** section, select the option **Allow remote connections to this computer** checkbox, and then select **Save**.
 1. In the left pane, in the list of **Tools**, select **Remote Desktop**.
 1. In the Remote Desktop pane, select the **Automatically connect with the certificate presented by this machine** checkbox, and then select **Connect**.
-1. When prompted, select **Confirm**, and then select **Connect**.
+1. When prompted, select **Confirm**, and enter Password: **Pa55w.rd** then select **Connect**.
 1. Verify that you successfully connected via Remote Desktop to **SEA-DC1** within the Windows Admin Center interface.
 1. Select **Disconnect**.
 1. Close the Microsoft Edge window.

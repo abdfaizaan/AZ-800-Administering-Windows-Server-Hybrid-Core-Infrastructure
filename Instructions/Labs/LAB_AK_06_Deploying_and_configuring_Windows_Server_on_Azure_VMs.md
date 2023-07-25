@@ -71,6 +71,7 @@ In this task, you will use the Azure portal to create resource groups and create
    |Size|**Standard_D2s_v3**|
    |Username|**Student**|
    |Password|**Pa55w.rd1234**|
+   |Confirm Password|**Pa55w.rd1234**|
    |Public inbound ports|None|
    |Would you like to use an existing Windows Server license|Off|
 
@@ -188,7 +189,7 @@ In this task, you will use the Azure portal to create resource groups and create
 1. On the **Resource groups** page, select the **AZ800-L0601-RG** entry.
 1. On the **AZ800-L0601-RG** page, on the **Overview** page, review the list of resources, including the Azure VM **az800l06-vm0**.
 1. Within the list of resources, select the Azure VM **az800l06-vm0** entry. 
-1. On the **az800l06-vm0** page, select **Extensions + applications**, and on the list of extensions, verify that the **customScriptExtension** has been provisioned successfully.
+1. On the **az800l06-vm0** page, under **Settings** section, select **Extensions + applications**, and on the list of extensions, verify that the **customScriptExtension** has been provisioned successfully.
 1. Browse back to the **AZ800-L0601-RG** page, and in the **Settings** section, select **Deployments**.
 1. On the **AZ800-L0601-RG \| Deployments** page, select the **Microsoft.Template** link.
 1. On the **Microsoft.Template \| Overview** page, select **Template**, and note that this is the same template you used for deployment.
@@ -199,7 +200,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. In the Azure portal, on the toolbar, in the **Search resources, services, and docs** text box, search for and select **Microsoft Defender for Cloud**.
 1. On the **Overview** page of Microsoft Defender for Cloud, on the vertical menu on the left side, in the **Management** section, select **Environment settings**. 
-1. On the **Environment settings** page, select the entry representing your Azure subscription.
+1. On the **Environment settings** page, expand and select the entry representing your Azure subscription.
 2. On the **Settings \| Defender plans** page, verify that the tile **Enable all Microsoft Defender for Cloud plans** is selected and, on the top side, select **Settings & monitoring**.
 3. On the **Settings & monitoring** page, in the list of extensions, to the right side of the **Log Analytics agent/Azure Monitor agent** entry, select the **Edit configuration** link.
 4. On the **Auto-provisioning configuration**, in the **Workspace selection** ensure that the **Default workspace(s)** entry is selected, select **Apply**, and back on the **Settings & monitoring** page, select **Continue**.
@@ -247,20 +248,20 @@ In this task, you will use the Azure portal to create resource groups and create
 #### Task 2: Configure Inbound HTTP access to an Azure VM
 
 1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the Azure VM **az800l06-vm0**.
-1. On the **az800l06-vm0** page, select **Networking**.
+1. On the **az800l06-vm0** page, under **Settings** section select **Networking**.
 1. On the **az800l06-vm0 \| Networking** page, select the link designating the network interface attached to **az800l06-vm0**.
 1. On the page displaying the network interface properties, in the vertical menu on the left side, in the **Settings** section, select **Network security group**. 
 1. On the **Network security group** page, in the drop-down list, select **az800l06-vm0-nsg1**, and then select **Save**.
-1. Back on the page displaying the properties of the network interface, select **IP configurations**, and then select the **ipconfig1** entry.
-1. On the **ipconfig1** page, in the **Public IP address** section, select **Associate**, and then, below the **Public IP address** drop-down list, select **Create new**.
-1. In the **Add a public IP address** window, specify the following settings, and then select **OK**:
-
+1. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Public IP address**, click **Create**.
+1. On Basis tab of create public ip address specify the following and select **Review + Create** and **Create**.
+     
    |Setting|Value|
    |---|---|
    |Name|**az800l06-vm0-pip1**|
    |SKU|**Standard**|
-
-1. Back on the **ipconfig1** page, select **Save**.
+      
+1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the network interface, select **IP configurations**, and then select the **ipconfig1** entry.
+1. On the **Edit ip configuration** page, in the **Public IP address settings** section, select **Associate public ip address**, and then, below the **Public IP address** drop-down list, select **az800l06-vm0-pip1** and click **Save**.
 1. Browse back to the page displaying the network interface properties and select **Overview**. Note the value of the public IP address assigned to the interface.
 1. Open another browser tab, browse to that IP address, and verify that a webpage opens, displaying **Hello World from az800l06-vm0**.
 1. From the lab computer, start the Remote Desktop app, and try connecting to the same IP address. Verify that the connection fails.
@@ -278,14 +279,14 @@ In this task, you will use the Azure portal to create resource groups and create
 
 #### Task 4: Connect to the Azure VM via JIT VM access
 
-1. Browse back to the **az800l06-vm0** page, select **Connect**, and then in the drop-down list, select **RDP**. 
-1. On the **az800l06-vm0 \| Connect** page, in the **Source IP** section, select **My IP**, and then select **Request access**.
-1. Wait for the notification stating that your request has been approved, select **Download RDP File** and follow prompts to connect to the target Azure VM.
-1. When prompted for credentials, specify the following values, and then select **OK**:
+1. Browse back to the **az800l06-vm0** page, select **Connect**, and
+1. On **az800l06-vm0 \| Connect** page, scroll down and click **Select** option in **Native RDP** under **Most Common** section.
+1. On **Native RDP**, select **Download RDP File**,  follow prompts to connect to the target Azure VM.
+1. When **Enter your credentials** window prompted, click **More Choices** and select **Use a different acount**, specify the following values, and then select **OK**:
 
    |Setting|Value|
    |---|---|
-   |Username|**Student**|
+   |Username|**.\Student**|
    |Password|**Pa55w.rd1234**|
 
 1. Verify that you can successfully access via Remote Desktop the operating system running in the Azure VM and close the Remote Desktop session.

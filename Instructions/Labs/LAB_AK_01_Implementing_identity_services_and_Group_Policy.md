@@ -22,7 +22,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-
 
 > **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-SEA-SVR1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1**, and **SEA-ADM1**. 
 
-1. Select **SEA-ADM1**.
+1. In lab VM, select **SEA-ADM1**.
 1. Sign in using the following credentials:
 
    - Username: **Administrator**
@@ -33,7 +33,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-
 
 #### Task 1: Deploy AD DS on a new Windows Server Core server
 
-1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd** (Skip if already done).
 1. On **SEA-ADM1**, select **Start**, and then select **Windows PowerShell (Admin)**.
 1. To install the AD DS server role, at the Windows PowerShell command prompt, enter the following command, and then press Enter:
 	
@@ -77,8 +77,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-
    - Remove the line breaks.
 
 1. Now the **Install-ADDSDomainController** command and all the parameters are on one line. Place the cursor in front of the line, and then, on the **Edit** menu, select **Select All** to select the whole line. On the menu, select **Edit**, and then select **Copy**.
-
-1. When prompted for confirmation, select **Yes** to cancel the wizard.
+1. Minimize the **Notepad**.
+1. Back to **Review Options** page, select **Cancel** and when prompted for confirmation, select **Yes** to cancel the wizard.
 1. At the Windows PowerShell command prompt, enter the following command:
 
    ```powershell
@@ -180,9 +180,10 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-
 
 1. On **SEA-ADM1**, in the search box on the taskbar, enter **Control Panel**. 
 1. In the **Best match** list, select **Control Panel**.
-1. Select **System and Security**, and then select **Allow an app through Windows Firewall**.
+1. Select **System and Security**, and under **Windows Defender Firewall**, select **Allow an app through Windows Firewall**.
 1. In the **Allowed apps and features** list, locate the **Remote Event Log Management** entry, select the checkbox in the **Domain** column, and then select **OK**. 
 1. Sign out, and then sign in as **CONTOSO\\Ty** with the password **Pa55w.rd**.
+   >**Note**: You can use the first symbol below to **File** menu to **unlock** the screen.
 1. In the search box on the taskbar, enter **Control Panel**.
 1. In the **Best match** list, select **Control Panel**.
 1. In the search box in Control Panel, enter **screen saver**, and then select **Change screen saver**. (It might take a few minutes for the option to display.)
@@ -194,6 +195,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-
 1. In the **Run** dialog box, in the **Open** text box, enter **regedit**, and then select **OK**. Note the error message stating **Registry editing has been disabled by your administrator**.
 1. In the **Registry Editor** dialog box, select **OK**.
 1. Sign out and then sign in back as **CONTOSO\Administrator** with the password **Pa55w.rd**.
+   >**Note**: You can use the first symbol below to **File** menu to **unlock** the screen.
 
 #### Task 4: Create and link the required GPOs
 

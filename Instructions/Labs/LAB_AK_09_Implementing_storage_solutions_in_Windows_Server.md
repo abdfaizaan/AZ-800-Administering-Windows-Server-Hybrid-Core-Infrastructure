@@ -48,11 +48,11 @@ For this lab, you'll use the available VM environment.
 1. On the **Select features** page, select **Next**, and then in the **Confirm installation selections** page, select **Install**.
 1. While the role service is installing, on the taskbar, select the **File Explorer** icon.
 1. In **File Explorer**, browse to drive **C**.
-1. Select the **Labfiles** directory, and then display the context-sensitive menu. In the menu, select **Give access to**, and then, in the cascading menu, select **Specific people...**.
+1. Select the **Labfiles** directory, and then display the context-sensitive menu, right click and select **Give access to**, and then, in the cascading menu, select **Specific people...**.
 1. In the **Network access** window, in the **Type a name and then click Add, or click the arrow to find someone** text box, type **Users** and click **Add**.
 1. In the **Network access** window, select **Share**, and once you are presented with the **Your folder is shared** window, select **Done**.
 1. Switch back to the **Server Manager** window, and then, on the **Add Roles and Features Wizard installation succeeded** page, select **Close**.
-1. Switch to the **SEA-SVR3** console session, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. From lab Vm connect to the **SEA-SVR3** console session, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 1. If presented with the **SConfig** menu, at **Enter number to select an option**, enter **15** and press Enter to exit to a **PowerShell** console session.
    
    > **Note**: To open Notepad from PowerShell, type **Notepad** and press enter.
@@ -70,7 +70,7 @@ For this lab, you'll use the available VM environment.
    ```powershell
    New-PSDrive –Name 'X' –PSProvider FileSystem –Root '\\SEA-ADM1\Labfiles'
    New-Item -Type Directory -Path 'M:\Data' -Force
-   Copy-Item -Path X:\Lab09\CreateLabFiles.cmd -Destination M:\Data\ -PassThru
+   Copy-Item -Path X:\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab09\CreateLabFiles.cmd -Destination M:\Data\ -PassThru
    Start-Process -FilePath M:\Data\CreateLabFiles.cmd -PassThru
    Set-Location -Path M:\Data
    Get-ChildItem -Path .
@@ -116,27 +116,27 @@ For this lab, you'll use the available VM environment.
 
    >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**.
 
-2. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
+1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
-3. On the All connections pane, select **+ Add**.
-4. On the Add or create resources pane, on the **Servers** tile, select **Add**.
-5. In the **Server name** text box, enter **sea-svr3.contoso.com**. 
-6. If needed, ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
+1. On the All connections pane, select **+ Add**.
+1. On the Add or create resources pane, on the **Servers** tile, select **Add**.
+1. In the **Server name** text box, enter **sea-svr3.contoso.com**. 
+1. If needed, ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
-7. On the **sea-svr3.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\Administrator** user with **Pa55w.rd** as its password.
-8. In the **Windows PowerShell** console, enter the following command and then press Enter to trigger deduplication:
+1. On the **sea-svr3.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\Administrator** user with **Pa55w.rd** as its password.
+1. In the **Windows PowerShell** console, enter the following command and then press Enter to trigger deduplication:
 
    ```powershell
    Start-DedupJob -Volume M: -Type Optimization –Memory 50
    ```
-9.  Switch back to the console session to **SEA-SVR3**.
-10. On **SEA-SVR3**, at the **Windows PowerShell** prompt, enter the following command and press Enter to identify the available space on the volume being deduplicated:
+1. Switch back to the console session to **SEA-SVR3**.
+1. On **SEA-SVR3**, at the **Windows PowerShell** prompt, enter the following command and press Enter to identify the available space on the volume being deduplicated:
 
    ```powershell
    Get-PSDrive -Name M
@@ -144,18 +144,18 @@ For this lab, you'll use the available VM environment.
 
    > **Note**: Compare the previously displayed values with the current ones. 
 
-11. Wait for five to ten minutes to allow the deduplication job to complete and repeat the previous step.
-12. Switch back to console session to **SEA-ADM1**.
-13. On **SEA-ADM1**, in the **Windows PowerShell** console within the **Microsoft Edge** window displaying Windows Admin Center connection to **sea-svr3.contoso.com**, enter the following commands and press Enter after each to determine the status of the deduplication job:
+1. Wait for five to ten minutes to allow the deduplication job to complete and repeat the previous step.
+1. Switch back to console session to **SEA-ADM1**.
+1. On **SEA-ADM1**, in the **Windows PowerShell** console within the **Microsoft Edge** window displaying Windows Admin Center connection to **sea-svr3.contoso.com**, enter the following commands and press Enter after each to determine the status of the deduplication job:
 
    ```powershell
    Get-DedupStatus –Volume M: | fl
    Get-DedupVolume –Volume M: |fl
    Get-DedupMetadata –Volume M: |fl
    ```
-14. On **SEA-ADM1**, switch to the Disks pane in **Server Manager**, and then, in the **TASKS** menu in the upper right corner, select **Refresh**.
-15. Select the **M:** volume in the **VOLUMES** section, display its context sensitive menu, and select **Properties** from the menu. 
-16. In the **Volume (M:\\) Properties** window, review the values for **Deduplication rate** and **Deduplication savings**.
+1. On **SEA-ADM1**, switch to the Disks pane in **Server Manager**, and then, in the **TASKS** menu in the upper right corner, select **Refresh**.
+1. Select the **M:** volume in the **VOLUMES** section, display its context sensitive menu, and select **Properties** from the menu. 
+1. In the **Volume (M:\\) Properties** window, review the values for **Deduplication rate** and **Deduplication savings**.
 
 ## Exercise 2: Configuring iSCSI storage
 
@@ -232,7 +232,7 @@ For this lab, you'll use the available VM environment.
    - Disk size: **5 GB**, **Dynamically Expanding**
    - iSCSI target: **iSCSIFarm**
 
-1. Switch to the **SEA-DC1** console session, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. From lab Vm connect to the **SEA-DC1** console session, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 1. If presented with the **SConfig** menu, at the **Enter number to select an option**, enter **15** and press Enter to exit to a **PowerShell** console session.
 1. At the **Windows PowerShell** prompt, enter the following commands, and press Enter after each, to start the iSCSI Initiator service and display the iSCSI Initiator configuration:
 
@@ -268,7 +268,7 @@ For this lab, you'll use the available VM environment.
    New-Partition -DiskNumber 1 -UseMaximumSize -DriveLetter E
    Format-Volume -DriveLetter E -FileSystem ReFS
    ```
-1. Repeat the previous step to create a new drive formatted with ReFS but this time use the disk number **2** and the drive letter **F**.
+1. Repeat the previous step to create a new drive formatted with ReFS but this time replace the disk number and number with **2** and the drive letter with **F**.
 1. Switch back to the console session to **SEA-ADM1** with the **Server Manager** window active.
 1. In **Server Manager**, refresh the Disks pane in **File and Storage Services** by selecting **Refresh** in the **TASKS** menu in the upper right corner of the window. 
 1. Review the **SEA-DC1** disk configuration and verify that both drives are now **Online**.
@@ -385,7 +385,7 @@ For this lab, you'll use the available VM environment.
 1. Select each of the four disks in sequence, and then display its context-sensitive menu. In the menu, select the **Bring Online** option, and then in the **Bring Disk Online** window, select **Yes**.
 1. Use the same method to bring online all disks of **SEA-SVR1** and **SEA-SVR2**.
 1. On **SEA-ADM1**, select **Start**, and in the **Start** menu, select **Windows PowerShell ISE**.
-1. In **Windows PowerShell ISE**, select the **File** menu. In the **File** menu, select **Open**, and then, in the **Open** dialog box, go to **C:\Labfiles\Lab09**.
+1. In **Windows PowerShell ISE**, select the **File** menu. In the **File** menu, select **Open**, and then, in the **Open** dialog box, go to **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab09**.
 1. Select **Implement-StorageSpacesDirect.ps1**, and then select **Open**.
 
    > **Note**: The script is divided into numbered steps. There are eight steps, and each step has a number of commands. To execute an individual line, you can place the cursor anywhere within that line and press F8 or select the **Run Selection** in the toolbar of the **Windows PowerShell ISE** window. To execute multiple lines, select all of them in their entirety, and then use either F8 or the **Run Selection** toolbar icon. The sequence of steps is described in the instructions of this exercise. Ensure that each step completes before starting the next one.
@@ -408,12 +408,13 @@ For this lab, you'll use the available VM environment.
 1. In **Server Manager**, select **Tools**, and then select **Failover Cluster Manager** to verify that its installation completed successfully.
 1. On **SEA-ADM1**, switch to the **Administrator: Windows PowerShell ISE** window, select the line in step 2 starting with **Test-Cluster**, and then press F8 to invoke cluster validation tests.
 
-   > **Note**: Wait until the tests complete. This should take about 2 minutes. Verify that none of the tests fail. Ignore any warnings since these are expected. 
+   >**Note**: Wait until the tests complete. This should take about 2 minutes. Verify that none of the tests fail. Ignore any warnings since these are expected. 
 
 1. In the **Administrator: Windows PowerShell ISE** window, select the line in step 3 starting with **New-Cluster**, and then press F8 to create a cluster.
 
-   > **Note**: Wait until the step completes. This should take about 2 minutes. 
-
+   >**Note**: Wait until the step completes. This should take about 2 minutes. 
+   >**Note**: if cluster creation fail switch to **SEA-SVR1**, **SEA-SVR2**, and **SEA-SVR3**, run **clean-ClusterNodes** command and then switch back to **SEA-ADM1** open new powershell ISE open as administrator and run step 2 and step 3 of script again. 
+   
 1. On **SEA-ADM1**, switch to the **Failover Cluster Manager** window. In the Actions pane, select **Connect to Cluster**, enter **S2DCluster.Contoso.com**, and then select **OK**.
 
 #### Task 3: Enable Storage Spaces Direct

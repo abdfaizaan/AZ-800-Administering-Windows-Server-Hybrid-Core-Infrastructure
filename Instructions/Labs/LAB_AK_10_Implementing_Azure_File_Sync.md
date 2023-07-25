@@ -45,7 +45,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    Install-WindowsFeature -Name RSAT-DFS-Mgmt-Con -IncludeManagementTools
    ```
 1. On the taskbar, select **File Explorer**.
-1. In File Explorer, browse to the **C:\\Labfiles\\Lab10** folder.
+1. In File Explorer, browse to the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10** folder.
 1. In File Explorer, in the details pane, select the file **L10_DeployDFS.ps1**, display its context-sensitive menu, and then, in the menu, select **Edit**.
 
    >**Note:** This will automatically open the file **L10_DeployDFS.ps1** in the script pane of Windows PowerShell ISE.
@@ -61,16 +61,20 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. In the **Add Replication Groups to Display** dialog box, in the **Replication groups** section, select **Branch1**, and then select **OK**.
 1. In the navigation pane, expand the **\\\contoso.com\Root** namespace, and then select the **Data** folder.
 1. In the details pane, verify that the **Data** folder has two referrals to the **Data** folder on **SEA-SVR1** and **SEA-SVR2**.
-1. In the navigation pane, select **Branch1**.
+1. In the navigation pane, expand **Replication** and select **Branch1**.
 1. In the details pane, verify that the **S:\\Data** folder on **SEA-SVR1** and on **SEA-SVR2** are members of the **Branch1** replication group.
 
    >**Note:** DFS Replication replicates the content between the **S:\\Data** folders on **SEA-SVR1** and **SEA-SVR2**.
 
-1. Open two instances of File Explorer. In the first File Explorer instance, connect to **\\\\SEA-SVR1\\Data**, and then in the second File Explorer instance, connect to **\\\\SEA-SVR2\\Data**.
+1. Open two instances of File Explorer, in the navigation pane, expand the **\\\contoso.com\Root** namespace, and then select the **Data** folder. 
+2. Select first **SEA-SVR1**, in **Action** pane under **SEA-SVR1**, select **Open in Explorer**.
+3. Select second **SEA-SVR2**, in **Action** pane under **SEA-SVR2**, select **Open in Explorer**.
+4. In the first File Explorer instance, connect to **\\\\SEA-SVR1\\Data**, and then in the second File Explorer instance, connect to **\\\\SEA-SVR2\\Data**.
 1. Create a new file with your name in **\\\\SEA-SVR1\\Data**.
 1. Verify that the file with your name replicates to **\\\\SEA-SVR2\\Data** after a few seconds. This confirms that DFS Replication is working.
 
    >**Note:** Wait until the files are replicated and both the File Explorer windows record the same content.
+   >**Note:** Kindly try to close and reopen two file explorer instance to see replicated files.
 
 ## Exercise 2: Creating and configuring a sync group
 
@@ -101,7 +105,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. On **SEA-ADM1**, in the Azure portal, in the details pane, select **share1**.
 1. In the details pane, select **Upload**.
-1. On the **Upload files** tab, browse to **C:\\Labfiles\\Lab10\\File1.txt**, select **Upload**, and when the upload is complete, close the **Upload files** tab.
+1. On the **Upload files** tab, browse to **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10\File1.txt**, select **Upload**, and when the upload is complete, close the **Upload files** tab.
 1. On the **share1** page, select **Snapshots**, select **Add snapshot**, and then select **OK**.
 1. On the **share1** page, select **Overview**, select **Connect**, select **Show Script**, use the **Copy to clipboard** button to copy the script, and then close the **Connect** tab.
 1. On **SEA-ADM1**, switch to the **Windows PowerShell ISE** window, open another tab in the script pane, and paste the copied script into it.
@@ -109,7 +113,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
    >**Note:** The script mounted the Azure file share to drive letter **Z**.
 
-1. On the taskbar, right-click or access the context menu for File Explorer, select **File Explorer**, and then, in the **Quick Access** text box, type **Z:\**, and then press Enter.
+1. On the taskbar, right-click or access the context menu for File Explorer, select **File Explorer**, and then, in the **Quick Access** text box, type Z:\ and then press Enter.
 1. Verify that the file **File1.txt** appears in the details pane. This is the file that you uploaded to the Azure file share.
 1. Double-click or select **File1.txt**, and then press Enter to open the file in Notepad. 
 1. Use Notepad to modify the file content by appending your name in the last line, save the change, and close Notepad.
@@ -133,7 +137,8 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    >**Note:** If you can't find the storage account, it was probably deployed to a different Azure region. You need to ensure that the storage account resides in the same region as the Storage Sync Service.
 
 1. In the **Azure File Share** drop-down list, select **share1**, and then select **Create**.
-1. On the **Storage Sync Service** page, select **Registered servers**, and verify that there are no currently registered servers.
+1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select the **Storage Sync Service**. 
+1. On the **Storage Sync Service** page, under **Sync** section, select **Registered servers**, and verify that there are no currently registered servers.
 
 ## Exercise 3: Replacing DFS Replication with File Sync-based replication
 
@@ -141,8 +146,8 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. On **SEA-ADM1**, in the Azure portal, on the **FileSync1 \| Registered servers** page, select the **Azure File Sync agent** link to go to the **Azure File Sync Agent** Microsoft Downloads page.  
 1. On the **Azure File Sync Agent** Microsoft Downloads page, select **Download**, select the checkbox next to the entry for File Sync agent for Windows Server 2022 (**StorageSyncAgent_WS2022.msi**), and select **Next** to start the download. After the download is complete, close the Microsoft Edge tab that opened for the download.
-1. Use File Explorer to copy the downloaded file to the **C:\\Labfiles\\Lab10** folder.
-1. In File Explorer displaying the content of the **C:\\Labfiles\\Lab10** folder, in the details pane, select the file **Install-FileSyncServerCore.ps1**, display its context-sensitive menu, and then, in the menu, select **Edit**.
+1. Use File Explorer to copy the downloaded file to the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10** folder.
+1. In File Explorer displaying the content of the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10** folder, in the details pane, select the file **Install-FileSyncServerCore.ps1**, display its context-sensitive menu, and right click, in the menu, select **Edit**.
 
    >**Note:** This will automatically open the file **Install-FileSyncServerCore.ps1** in the script pane of Windows PowerShell ISE.
 
@@ -152,17 +157,20 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. When prompted with a **WARNING** message to sign in, copy the nine-character code in the warning message to the Clipboard.
 1. Switch to the Microsoft Edge window displaying the Azure portal, open a new tab by selecting **+**, and then, on the new tab, browse to **https://microsoft.com/devicelogin**.
-1. In Microsoft Edge, in the **Enter code** dialog box, paste the code you copied into Clipboard, and then, if needed, sign in with your Azure credentials, on the page displaying the message 
-**Are you trying to sign in to Microsoft Azure PowerShell?**, select **Continue**, and then close the Microsoft Edge tab you opened in the previous step.
+1. In Microsoft Edge, in the **Enter code** dialog box, paste the code you copied into Clipboard, and then, if needed, sign in with your Azure credentials, on the page displaying the message.
+   
+   >**Note**: Are you trying to sign in to Microsoft Azure PowerShell?**, select **Continue**, and then close the Microsoft Edge tab you opened in the previous step.
+   
 1. Switch to the **Windows PowerShell ISE** window and ensure that the script completed successfully. 
 1. Switch back to the Microsoft Edge window displaying the Azure portal, and then, on the **FileSync1 \| Registered servers** page, select **Refresh** to display the current list of registered servers.
 1. Verify that the **SEA-SVR1.Contoso.com** server appears on the list of registered servers of the **FileSync1** Storage Sync Service.
-1. On **SEA-ADM1**, switch to the File Explorer window, browse to the **\\\\SEA-SVR1\\Data** share, and verify that the folder doesn't currently contain **File1.txt**.
-1. Switch to the Microsoft Edge window displaying the Azure portal, on the **FileSync1 \| Registered servers** page, select **Sync Groups**, select **Sync1**, and then, on the **Sync1** page, select **Add server endpoint**.
+1. On **SEA-ADM1**, switch to the File Explorer window, in **Quick access** browse to the **\\\\SEA-SVR1\\Data** share, and verify that the folder doesn't currently contain **File1.txt**.
+1. Switch to the Microsoft Edge window displaying the Azure portal, on the **FileSync1 \| Registered servers** page, under **Sync** section, select **Sync Groups**, select **Sync1**, and then, on the **Sync1** page, select **Add server endpoint**.
 1. On the **Add server endpoint** tab, select **SEA-SVR1.Contoso.com** in the **Registered servers** list.
 1. In the **Path** text box, enter **S:\\Data**, and then select **Create**.
 1. Switch to the File Explorer window and verify that the **\\\\SEA-SVR1\\Data** folder now contains **File1.txt**.
 
+   >**Note:** if you not able to see **File1.txt**, kindly close and open **File Explorer** window, browse for **\\\\SEA-SVR1\\Data** folder in **Quick access**.
    >**Note:** You uploaded **File1.txt** to the Azure file share, from where it was synced to **SEA-SVR1** by File Sync.
 
 ### Task 2: Register SEA-SVR2 with File Sync
@@ -174,8 +182,10 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. When prompted with a **WARNING** message to sign in, copy the nine-character code in the warning message to the Clipboard.
 1. Switch to the Microsoft Edge window displaying the Azure portal, open a new tab by selecting **+**, and then, on the new tab, browse to **https://microsoft.com/devicelogin**.
-1. In Microsoft Edge, in the **Enter code** dialog box, paste the code you copied into Clipboard, and then, if needed, sign in with your Azure credentials, on the page displaying the message 
-**Are you trying to sign in to Microsoft Azure PowerShell?**, select **Continue**, and then close the Microsoft Edge tab you opened in the previous step.
+1. In Microsoft Edge, in the **Enter code** dialog box, paste the code you copied into Clipboard, and then, if needed, sign in with your Azure credentials, on the page displaying the message.
+   
+   >**Note**: Are you trying to sign in to Microsoft Azure PowerShell?**, select **Continue**, and then close the Microsoft Edge tab you opened in the previous step.
+   
 1. Switch to the **Windows PowerShell ISE** window and ensure that the script completed successfully. 
 1. When the script completes, switch to the Microsoft Edge window displaying the Azure portal and browse back to the **FileSync1 \| Registered servers** page.
 1. Confirm that **SEA-SVR1.Contoso.com** and **SEA-SVR2.Contoso.com** are now both listed as registered servers with the **FileSync1** Storage Sync Service.
@@ -200,8 +210,8 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 ### Task 2: Enable cloud tiering
 
 1. On **SEA-ADM1**, in the Azure portal, on the **Sync1** sync group page, select **SEA-SVR2.Contoso.com** in the **server endpoints** section.
-1. In the Server Endpoint Properties pane, select **Enabled** in the **Cloud Tiering** section.
-1. In the **Always preserve the specified percentage of free space on the volume** text box, enter **90** and set **Date policy** to **Enabled**. In the **Only cache files that were accessed or modified within the specified number of days** text box, enter **14**, and then select **Save**.
+1. In the Server Endpoint Properties pane, Under **settings** section, select **Cloud Tiering Settings**. 
+1. Select **Enable cloud Tiering** In the **Always preserve the specified percentage of free space on the volume** text box, enter **90** and select **Enabled Date policy**. In the **Only cache files that were accessed or modified within the specified number of days** text box, enter **14**, and then select **Save**.  
 
    >**Note:** After some time, files on **SEA-SVR2** would be automatically tiered. You will trigger this process by using PowerShell.
 
@@ -232,7 +242,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. Select the **SEA-SVR2.Contoso.com** endpoint in the Server Endpoint Properties pane, review **Sync Activity**, and then close the pane.
 1. Select the **Files Synced** graph, and then explore how you can customize the graph by using a filter.
 1. Switch to the File Explorer window displaying the content of drive **Z** mapped to the Azure File share and verify that the drive contains the content of the **INF** folder synchronized from **\\\\SEA-SVR2\\Data**.
-1. Switch to the Azure portal and verify that the **INF** sync traffic is reflected in the **Files Synced** and **Bytes Synced** graphs. The **INF** folder has more than 800 files, and its size is more than 40 MB.
+1. Switch to the Azure portal displaying **Sync1** under **Monitoring** section, select status and verify that the **INF** sync traffic is reflected in the **Files Synced** and **Bytes Synced** graphs. The **INF** folder has more than 800 files, and its size is more than 40 MB.
 
    >**Note:** You might need to refresh the page displaying the Azure portal to see the updated statistics.
 
