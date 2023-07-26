@@ -244,7 +244,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal and go back to the **Azure Active Directory** page.
 1. On the **Azure Active Directory** page in the Azure portal, select **Azure AD Connect**.
-1. On the **Azure AD Connect** page, review the information under **User Sign-In**.
+1. On the **Azure AD Connect** page, in left navigation pane select **Connect Sync** and review the information under **User Sign-In**.
 1. Under **User Sign-In**, select **Seamless single sign-on**.
 1. On the **Seamless single sign-on** page, note the on-premises domain name.
 1. In Microsoft Edge, go back to the **Azure AD Connect** page.
