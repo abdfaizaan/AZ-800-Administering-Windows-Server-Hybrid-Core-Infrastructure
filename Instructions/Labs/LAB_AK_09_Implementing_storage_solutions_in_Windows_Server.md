@@ -317,7 +317,7 @@ For this lab, you'll use the available VM environment.
 1. On the **Specify the provisioning type** page, select **Thin**, and then select **Next**.
 1. On the **Specify the size of the virtual disk** page, in the **Specify size** text box, enter **25**, and then select **Next**.
 1. On the **Confirm selections** page, review the settings, and then select **Create**.
-1. On the **View results** page, clear the **Create a volume when this wizard closes** check box, and then select **Close**.
+1. On the **View results** page, **clear** the **Create a volume when this wizard closes** check box, and then select **Close**.
 1. In **Server Manager**, in the navigation pane, ensure that the **Volumes** entry is selected.
 1. In the **VOLUMES** area, select **TASKS**, and then select **New Volume**.
 1. In the **New Volume Wizard**, on the **Before you begin** page, select **Next**.
