@@ -196,7 +196,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 1. Browse to the **All products** page and select **Azure Active Directory Premium P2**.
 1. On the **Azure Active Directory Premium P2 \| Licensed users** page, select **+ Assign**.
 1. On the **Assign license** page, select **+ Add users and groups**.
-1. On the **Add users and groups** page, search for **admin**, select the **admin** account from the list of results, and then select **Select**.
+1. On the **Add users and groups** page, search for **admin1**, select the **admin1** account from the list of results, and then select **Select**.
 1. Back on the **Assign license** page, select **Review + assign**, and then select **Assign**.
 
    > **Note**: This is necessary in order to implement Azure AD password protection later in this lab.
