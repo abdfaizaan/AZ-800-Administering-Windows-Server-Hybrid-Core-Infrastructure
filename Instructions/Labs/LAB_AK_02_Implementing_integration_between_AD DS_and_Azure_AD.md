@@ -53,16 +53,17 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 #### Task 2: Create a user with the Global Administrator role
 
 1. On **SEA-ADM1**, on the **Azure Active Directory** page in the Azure portal, select **Users**.
-1. On the **All Users** page, select **New User**.
-1. On the **New User** page, under **Identity**, in the **User name** and **Name** text boxes, enter **admin**.
+1. On the **Users** page, select **New User** and in drop down select **Create new user**
+1. On the **Create new User** page, under **Basics**, in the **User principal name** and **Display Name** text boxes, enter **admin1**.
 
    > **Note**: Ensure the domain name drop-down menu for the **User name** lists the default domain name ending with `onmicrosoft.com`.
 
-1. Under **Password**, select the **Show Password** checkbox. Record the password as you'll use it later in this lab.
-1. Under **Groups and roles**, next to **Roles**, select **User**.
-1. On the **Directory roles** page, from the list of roles, select **Global administrator**, and then select **Select**.
-1. Back on the **New user** page, in the **Usage location** drop-down list, select **United States**.
-1. On the **New user** page, select **Create**.
+1. Under **Password**, select the **Auto generate** checkbox. Record the password as you'll use it later in this lab.
+1. Select **Next:Properties>**
+1. Under **settings** in the **Usage location** drop-down list, select **United States**.
+1. Select **Next:Assignments>**
+1. Under **Assignments** tab , select **+ Add role** and on **Directory roles** page, from the list of roles, select **Global administrator**, and then select **Select**.
+1. On the **Create new user** page, select **Review + Create** and **Create**.
 
 #### Task 3: Change the password for the user with the Global Administrator role
 
@@ -99,8 +100,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to **Azure Active Directory**.
 1. On the **Azure Active Directory** page, select **Azure AD Connect**.
-1. On the **Azure AD Connect** page, select **Download Azure AD Connect**.
-1. On the **Microsoft Azure Active Directory Connect** page, select **Download**.
+1. On the  **AAD Connect** Get Started page, click **Manage** tab and select **Download Connect Sync Agent**.
+1. On the **Azure AD Connect Agent** page, select **Accept teams & download**
 1. On the status bar, select **Open file**.
 1. On the **Microsoft Azure Active Directory Connect** page, select the **I agree to the license terms and privacy notice** checkbox, and then select **Continue**.
 1. On the **Express Settings** page, select **Use express settings**.
@@ -195,7 +196,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 1. Browse to the **All products** page and select **Azure Active Directory Premium P2**.
 1. On the **Azure Active Directory Premium P2 \| Licensed users** page, select **+ Assign**.
 1. On the **Assign license** page, select **+ Add users and groups**.
-1. On the **Add users and groups** page, search for **admin**, select the **admin** account from the list of results, and then select **Select**.
+1. On the **Add users and groups** page, search for **admin1**, select the **admin1** account from the list of results, and then select **Select**.
 1. Back on the **Assign license** page, select **Review + assign**, and then select **Assign**.
 
    > **Note**: This is necessary in order to implement Azure AD password protection later in this lab.
@@ -243,7 +244,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal and go back to the **Azure Active Directory** page.
 1. On the **Azure Active Directory** page in the Azure portal, select **Azure AD Connect**.
-1. On the **Azure AD Connect** page, review the information under **User Sign-In**.
+1. On the **Azure AD Connect** page, in left navigation pane select **Connect Sync** and review the information under **User Sign-In**.
 1. Under **User Sign-In**, select **Seamless single sign-on**.
 1. On the **Seamless single sign-on** page, note the on-premises domain name.
 1. In Microsoft Edge, go back to the **Azure AD Connect** page.

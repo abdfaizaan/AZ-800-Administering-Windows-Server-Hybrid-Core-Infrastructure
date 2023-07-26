@@ -144,7 +144,7 @@ For this lab, you'll use the available VM environment.
 
    > **Note**: Compare the previously displayed values with the current ones. 
 
-1. Wait for five to ten minutes to allow the deduplication job to complete and repeat the previous step.
+1. Wait for **five to ten minutes** to allow the deduplication job to complete and repeat the previous step.
 1. Switch back to console session to **SEA-ADM1**.
 1. On **SEA-ADM1**, in the **Windows PowerShell** console within the **Microsoft Edge** window displaying Windows Admin Center connection to **sea-svr3.contoso.com**, enter the following commands and press Enter after each to determine the status of the deduplication job:
 
@@ -154,7 +154,7 @@ For this lab, you'll use the available VM environment.
    Get-DedupMetadata –Volume M: |fl
    ```
 1. On **SEA-ADM1**, switch to the Disks pane in **Server Manager**, and then, in the **TASKS** menu in the upper right corner, select **Refresh**.
-1. Select the **M:** volume in the **VOLUMES** section, display its context sensitive menu, and select **Properties** from the menu. 
+1. Select the **M:** volume in the **VOLUMES** section, right-click and select **Properties** from the menu. 
 1. In the **Volume (M:\\) Properties** window, review the values for **Deduplication rate** and **Deduplication savings**.
 
 ## Exercise 2: Configuring iSCSI storage
@@ -212,6 +212,9 @@ For this lab, you'll use the available VM environment.
    > **Note**: **SEA-DC1** has only a single disk hosting the boot and system volumes.
 
 1. In **Server Manager**, in **File and Storage Services**, select **iSCSI**, select **Tasks**, and then, in the drop-down menu, select **New iSCSI Virtual Disk**.
+
+   >**Note**: Kindly refresh the page if you don't find option.
+   
 1. In the **New iSCSI Virtual Disk Wizard**, on the **Select iSCSI virtual disk location** page, under the **SEA-SVR3** server, select the **E:** volume, and then select **Next**.
 1. In the **Specify iSCSI virtual disk name** page, in the **Name** text box, enter **iSCSIDisk1**, and then select **Next**.
 1. On the **Specify iSCSI virtual disk size** page, in the **Size** text box, enter **5**. Leave all other settings with their default values and then select **Next**.
@@ -231,7 +234,8 @@ For this lab, you'll use the available VM environment.
    - Name: **iSCSIDisk2**
    - Disk size: **5 GB**, **Dynamically Expanding**
    - iSCSI target: **iSCSIFarm**
-
+   - On **Assign ISCSI Target**: select **Existing ISCSI target**
+     
 1. From lab Vm connect to the **SEA-DC1** console session, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 1. If presented with the **SConfig** menu, at the **Enter number to select an option**, enter **15** and press Enter to exit to a **PowerShell** console session.
 1. At the **Windows PowerShell** prompt, enter the following commands, and press Enter after each, to start the iSCSI Initiator service and display the iSCSI Initiator configuration:
@@ -313,7 +317,7 @@ For this lab, you'll use the available VM environment.
 1. On the **Specify the provisioning type** page, select **Thin**, and then select **Next**.
 1. On the **Specify the size of the virtual disk** page, in the **Specify size** text box, enter **25**, and then select **Next**.
 1. On the **Confirm selections** page, review the settings, and then select **Create**.
-1. On the **View results** page, clear the **Create a volume when this wizard closes** check box, and then select **Close**.
+1. On the **View results** page, **clear** the **Create a volume when this wizard closes** check box, and then select **Close**.
 1. In **Server Manager**, in the navigation pane, ensure that the **Volumes** entry is selected.
 1. In the **VOLUMES** area, select **TASKS**, and then select **New Volume**.
 1. In the **New Volume Wizard**, on the **Before you begin** page, select **Next**.
@@ -382,7 +386,7 @@ For this lab, you'll use the available VM environment.
 1. In **Server Manager**, in the navigation pane, select **File and Storage Services**, and then select **Disks**.
 1. With the Disks pane selected, in its upper right corner, in the **TASKS** menu, select **Refresh**.
 1. In the Disks pane, scroll down to the listing of **SEA-SVR3** disks 1 through 4, and verify that their respective entries in the **Partition** column are listed as **Unknown**.
-1. Select each of the four disks in sequence, and then display its context-sensitive menu. In the menu, select the **Bring Online** option, and then in the **Bring Disk Online** window, select **Yes**.
+1. Select each of the four disks in sequence, and right-click. In the menu, select the **Bring Online** option, and then in the **Bring Disk Online** window, select **Yes**.
 1. Use the same method to bring online all disks of **SEA-SVR1** and **SEA-SVR2**.
 1. On **SEA-ADM1**, select **Start**, and in the **Start** menu, select **Windows PowerShell ISE**.
 1. In **Windows PowerShell ISE**, select the **File** menu. In the **File** menu, select **Open**, and then, in the **Open** dialog box, go to **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab09**.
@@ -412,7 +416,8 @@ For this lab, you'll use the available VM environment.
 
 1. In the **Administrator: Windows PowerShell ISE** window, select the line in step 3 starting with **New-Cluster**, and then press F8 to create a cluster.
 
-   >**Note**: Wait until the step completes. This should take about 2 minutes. 
+   >**Note**: Wait until the step completes. This should take about 2 minutes.
+   
    >**Note**: if cluster creation fail switch to **SEA-SVR1**, **SEA-SVR2**, and **SEA-SVR3**, run **clean-ClusterNodes** command and then switch back to **SEA-ADM1** open new powershell ISE open as administrator and run step 2 and step 3 of script again. 
    
 1. On **SEA-ADM1**, switch to the **Failover Cluster Manager** window. In the Actions pane, select **Connect to Cluster**, enter **S2DCluster.Contoso.com**, and then select **OK**.
@@ -450,7 +455,10 @@ For this lab, you'll use the available VM environment.
    > **Note**: Wait until the step completes. This should take less than 1 minute. 
 
 1. Verify that the output of the command includes definition of a file share, with the attribute **Path** set to **C:\\ClusterStorage\\CSV\\VM01**. This validates that the command completed successfully.
-1. In the **Failover Cluster Manager** window, in the **Roles** pane, select **S2D-SOFS** under the **Name** column, and then select the **Shares** tab.
+1. In the **Failover Cluster Manager** window, in the **Roles** pane, select **S2D-SOFS** under the **Name** column, and then select the **Shares** tab below.
+
+   ![](../media/az-800-1.png)
+     
 1. Verify the existence of the share named **VM01**. This also verifies that the command completed successfully.
 
 #### Task 5: Verify Storage Spaces Direct functionality
@@ -474,12 +482,12 @@ For this lab, you'll use the available VM environment.
 1. Browse to the All connections pane and select **+ Add**.
 1. In the **Add or create resources** pane, in the **Server clusters** pane, select **Add**.
 1. In the **Cluster name** text box, enter **S2DCluster.Contoso.com**.
-1. Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Connect with account**:
+1. Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with Credential**:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
    
-1. Clear **Also add servers in the cluster** and select **Add**.
+1. Select checkbox **Add the server name exactly as enter** and select **Add**.
 1. Back on the **All connections** page, select **s2dcluster.contoso.com**.
 1. Verify that when the page loads, the Dashboard pane has an alert indicating that **SEA-SVR3** is not reachable. 
 1. Switch to the console session to **SEA-SVR3** and start it. 

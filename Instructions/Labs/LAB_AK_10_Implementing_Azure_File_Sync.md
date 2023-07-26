@@ -74,6 +74,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. Verify that the file with your name replicates to **\\\\SEA-SVR2\\Data** after a few seconds. This confirms that DFS Replication is working.
 
    >**Note:** Wait until the files are replicated and both the File Explorer windows record the same content.
+   
    >**Note:** Kindly try to close and reopen two file explorer instance to see replicated files.
 
 ## Exercise 2: Creating and configuring a sync group
