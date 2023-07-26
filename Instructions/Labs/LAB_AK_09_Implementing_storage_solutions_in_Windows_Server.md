@@ -386,7 +386,7 @@ For this lab, you'll use the available VM environment.
 1. In **Server Manager**, in the navigation pane, select **File and Storage Services**, and then select **Disks**.
 1. With the Disks pane selected, in its upper right corner, in the **TASKS** menu, select **Refresh**.
 1. In the Disks pane, scroll down to the listing of **SEA-SVR3** disks 1 through 4, and verify that their respective entries in the **Partition** column are listed as **Unknown**.
-1. Select each of the four disks in sequence, and then display its context-sensitive menu. In the menu, select the **Bring Online** option, and then in the **Bring Disk Online** window, select **Yes**.
+1. Select each of the four disks in sequence, and right-click. In the menu, select the **Bring Online** option, and then in the **Bring Disk Online** window, select **Yes**.
 1. Use the same method to bring online all disks of **SEA-SVR1** and **SEA-SVR2**.
 1. On **SEA-ADM1**, select **Start**, and in the **Start** menu, select **Windows PowerShell ISE**.
 1. In **Windows PowerShell ISE**, select the **File** menu. In the **File** menu, select **Open**, and then, in the **Open** dialog box, go to **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab09**.
@@ -455,6 +455,8 @@ For this lab, you'll use the available VM environment.
 
 1. Verify that the output of the command includes definition of a file share, with the attribute **Path** set to **C:\\ClusterStorage\\CSV\\VM01**. This validates that the command completed successfully.
 1. In the **Failover Cluster Manager** window, in the **Roles** pane, select **S2D-SOFS** under the **Name** column, and then select the **Shares** tab.
+
+   image    
 1. Verify the existence of the share named **VM01**. This also verifies that the command completed successfully.
 
 #### Task 5: Verify Storage Spaces Direct functionality
@@ -478,12 +480,12 @@ For this lab, you'll use the available VM environment.
 1. Browse to the All connections pane and select **+ Add**.
 1. In the **Add or create resources** pane, in the **Server clusters** pane, select **Add**.
 1. In the **Cluster name** text box, enter **S2DCluster.Contoso.com**.
-1. Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Connect with account**:
+1. Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with Credential**:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
    
-1. Clear **Also add servers in the cluster** and select **Add**.
+1. Select checkbox **Add the server name exactly as enter** and select **Add**.
 1. Back on the **All connections** page, select **s2dcluster.contoso.com**.
 1. Verify that when the page loads, the Dashboard pane has an alert indicating that **SEA-SVR3** is not reachable. 
 1. Switch to the console session to **SEA-SVR3** and start it. 
