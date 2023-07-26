@@ -3,7 +3,7 @@ $rgName = 'AZ800-L1001-RG'
 $fsName = 'FileSync1'
 
 New-Item -Type Directory -Path "\\$srvName\c$\Temp" -Force
-Copy-Item -Path C:\Labfiles\Lab10\StorageSyncAgent_WS2022.msi -Destination "\\$srvName\c$\Temp\" -PassThru
+Copy-Item -Path C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10\StorageSyncAgent_WS2022.msi -Destination "\\$srvName\c$\Temp\" -PassThru
 
 Invoke-Command -ComputerName $srvName -ArgumentList ($rgName, $fsName) {
 	param($rgName, $fsName)
