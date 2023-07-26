@@ -455,9 +455,9 @@ For this lab, you'll use the available VM environment.
    > **Note**: Wait until the step completes. This should take less than 1 minute. 
 
 1. Verify that the output of the command includes definition of a file share, with the attribute **Path** set to **C:\\ClusterStorage\\CSV\\VM01**. This validates that the command completed successfully.
-1. In the **Failover Cluster Manager** window, in the **Roles** pane, select **S2D-SOFS** under the **Name** column, and then select the **Shares** tab.
+1. In the **Failover Cluster Manager** window, in the **Roles** pane, select **S2D-SOFS** under the **Name** column, and then select the **Shares** tab below.
 
-    ![](../media/az-800-1.png)
+   ![](../media/az-800-1.png)
      
 1. Verify the existence of the share named **VM01**. This also verifies that the command completed successfully.
 
