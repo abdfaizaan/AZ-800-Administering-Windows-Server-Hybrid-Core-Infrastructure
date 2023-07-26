@@ -54,7 +54,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On **SEA-ADM1**, on the **Azure Active Directory** page in the Azure portal, select **Users**.
 1. On the **Users** page, select **New User** and in drop down select **Create new user**
-1. On the ** Create new User** page, under **Basics**, in the **User principal name** and **Display Name** text boxes, enter **admin1**.
+1. On the **Create new User** page, under **Basics**, in the **User principal name** and **Display Name** text boxes, enter **admin1**.
 
    > **Note**: Ensure the domain name drop-down menu for the **User name** lists the default domain name ending with `onmicrosoft.com`.
 
@@ -100,8 +100,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to **Azure Active Directory**.
 1. On the **Azure Active Directory** page, select **Azure AD Connect**.
-1. On the **Azure AD Connect** page, select **Download Azure AD Connect**.
-1. On the **Microsoft Azure Active Directory Connect** page, select **Download**.
+1. On the  **AAD Connect** Get Started page, click **Manage** tab and select **Download Connect Sync Agent**.
+1. On the **Azure AD Connect Agent** page, select **Accept teams & download**
 1. On the status bar, select **Open file**.
 1. On the **Microsoft Azure Active Directory Connect** page, select the **I agree to the license terms and privacy notice** checkbox, and then select **Continue**.
 1. On the **Express Settings** page, select **Use express settings**.
