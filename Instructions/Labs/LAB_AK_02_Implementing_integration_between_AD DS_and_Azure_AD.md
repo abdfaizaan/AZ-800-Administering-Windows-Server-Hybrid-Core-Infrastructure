@@ -53,16 +53,17 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 #### Task 2: Create a user with the Global Administrator role
 
 1. On **SEA-ADM1**, on the **Azure Active Directory** page in the Azure portal, select **Users**.
-1. On the **All Users** page, select **New User**.
-1. On the **New User** page, under **Identity**, in the **User name** and **Name** text boxes, enter **admin**.
+1. On the **Users** page, select **New User** and in drop down select **Create new user**
+1. On the ** Create new User** page, under **Basics**, in the **User principal name** and **Display Name** text boxes, enter **admin1**.
 
    > **Note**: Ensure the domain name drop-down menu for the **User name** lists the default domain name ending with `onmicrosoft.com`.
 
-1. Under **Password**, select the **Show Password** checkbox. Record the password as you'll use it later in this lab.
-1. Under **Groups and roles**, next to **Roles**, select **User**.
-1. On the **Directory roles** page, from the list of roles, select **Global administrator**, and then select **Select**.
-1. Back on the **New user** page, in the **Usage location** drop-down list, select **United States**.
-1. On the **New user** page, select **Create**.
+1. Under **Password**, select the **Auto generate** checkbox. Record the password as you'll use it later in this lab.
+1. Select **Next:Properties>**
+1. Under **settings** in the **Usage location** drop-down list, select **United States**.
+1. Select **Next:Assignments>**
+1. Under **Assignments** tab , select **+ Add role** and on **Directory roles** page, from the list of roles, select **Global administrator**, and then select **Select**.
+1. On the **Create new user** page, select **Review + Create** and **Create**.
 
 #### Task 3: Change the password for the user with the Global Administrator role
 
