@@ -144,7 +144,7 @@ For this lab, you'll use the available VM environment.
 
    > **Note**: Compare the previously displayed values with the current ones. 
 
-1. Wait for five to ten minutes to allow the deduplication job to complete and repeat the previous step.
+1. Wait for **five to ten minutes** to allow the deduplication job to complete and repeat the previous step.
 1. Switch back to console session to **SEA-ADM1**.
 1. On **SEA-ADM1**, in the **Windows PowerShell** console within the **Microsoft Edge** window displaying Windows Admin Center connection to **sea-svr3.contoso.com**, enter the following commands and press Enter after each to determine the status of the deduplication job:
 
@@ -154,7 +154,7 @@ For this lab, you'll use the available VM environment.
    Get-DedupMetadata –Volume M: |fl
    ```
 1. On **SEA-ADM1**, switch to the Disks pane in **Server Manager**, and then, in the **TASKS** menu in the upper right corner, select **Refresh**.
-1. Select the **M:** volume in the **VOLUMES** section, display its context sensitive menu, and select **Properties** from the menu. 
+1. Select the **M:** volume in the **VOLUMES** section, right-click and select **Properties** from the menu. 
 1. In the **Volume (M:\\) Properties** window, review the values for **Deduplication rate** and **Deduplication savings**.
 
 ## Exercise 2: Configuring iSCSI storage
@@ -212,6 +212,9 @@ For this lab, you'll use the available VM environment.
    > **Note**: **SEA-DC1** has only a single disk hosting the boot and system volumes.
 
 1. In **Server Manager**, in **File and Storage Services**, select **iSCSI**, select **Tasks**, and then, in the drop-down menu, select **New iSCSI Virtual Disk**.
+
+   >**Note**: Kindly refresh the page if you don't find option.
+   
 1. In the **New iSCSI Virtual Disk Wizard**, on the **Select iSCSI virtual disk location** page, under the **SEA-SVR3** server, select the **E:** volume, and then select **Next**.
 1. In the **Specify iSCSI virtual disk name** page, in the **Name** text box, enter **iSCSIDisk1**, and then select **Next**.
 1. On the **Specify iSCSI virtual disk size** page, in the **Size** text box, enter **5**. Leave all other settings with their default values and then select **Next**.
@@ -231,7 +234,8 @@ For this lab, you'll use the available VM environment.
    - Name: **iSCSIDisk2**
    - Disk size: **5 GB**, **Dynamically Expanding**
    - iSCSI target: **iSCSIFarm**
-
+   - On **Assign ISCSI Target**: select **Existing ISCSI target**
+     
 1. From lab Vm connect to the **SEA-DC1** console session, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 1. If presented with the **SConfig** menu, at the **Enter number to select an option**, enter **15** and press Enter to exit to a **PowerShell** console session.
 1. At the **Windows PowerShell** prompt, enter the following commands, and press Enter after each, to start the iSCSI Initiator service and display the iSCSI Initiator configuration:
