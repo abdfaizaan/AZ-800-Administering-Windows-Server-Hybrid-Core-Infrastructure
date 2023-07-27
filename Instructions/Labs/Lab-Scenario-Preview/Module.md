@@ -2,12 +2,14 @@
 
 ### Lab overview
 
-In this lab, you will learn how to assess existing physical and virtual desktop environments and plan for Azure Virtual Desktop client deployments.
+In this lab, you will learn the core concepts and functionalities related to administering Windows Server in a hybrid environment and how to integrate on-premises and cloud environments. 
 
 ## Objectives
   
 After completing this lab, you will be able to:
 
-- Deploy an Active Directory Domain Services (AD DS) single-domain forest by using Azure VMs
-- Integrate an AD DS forest with an Azure Active Directory (Azure AD) tenant
+-Deploy and manage Active Directory Domain Services (AD DS) in on-premises and cloud environments
+-Manage Windows Servers and workloads in a hybrid environment
+-Implement and manage an on-premises and hybrid networking infrastructure
+-Manage storage and file services.
 
