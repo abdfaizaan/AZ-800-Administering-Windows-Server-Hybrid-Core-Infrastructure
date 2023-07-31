@@ -15,5 +15,5 @@ After completing this lab, you will be able to:
 
 ## Architecture Diagram
 
-   ![](./media/Instr5.png)   
+   ![](../media/Instr5.png)   
 
