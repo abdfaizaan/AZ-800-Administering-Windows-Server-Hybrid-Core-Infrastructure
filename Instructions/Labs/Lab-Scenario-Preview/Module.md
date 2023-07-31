@@ -13,3 +13,7 @@ After completing this lab, you will be able to:
 -Implement and manage an on-premises and hybrid networking infrastructure
 -Manage storage and file services.
 
+## Architecture Diagram
+
+   ![](./media/Instr5.png)   
+
