@@ -1,6 +1,6 @@
 # Lab 5: Implementing and configuring virtualization in Windows Server
 
-## Scenario
+## Lab scenario
 
 Contoso is a global engineering and manufacturing company with its head office in Seattle, USA. An IT office and data center are in Seattle to support the Seattle location and other locations. Contoso recently deployed a Windows Server server and client infrastructure. 
 
@@ -8,9 +8,8 @@ Because of many physical servers being currently underutilized, the company plan
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20and%20configuring%20virtualization%20in%20Windows%20Server)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
-## Objectives
-
-After completing this lab, you'll be able to:
+## Lab objectives
+In this lab, you will perform:
 
 - Create and configure VMs.
 - Install and configure containers.
@@ -105,15 +104,15 @@ For this lab, you'll use the available VM environment.
 
    >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**.
    
-2. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
+1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
-3. On the **All connections** pane, select **+ Add**.
-4. On the **Add or create resources** pane, on the **Servers** tile, select **Add**.
-5. In the **Server name** text box, enter **sea-svr1.contoso.com**.
-6. Ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
+1. On the **All connections** pane, select **+ Add**.
+1. On the **Add or create resources** pane, on the **Servers** tile, select **Add**.
+1. In the **Server name** text box, enter **sea-svr1.contoso.com**.
+1. Ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
@@ -122,18 +121,18 @@ For this lab, you'll use the available VM environment.
 
    > **Note**: To perform single sign-on, you would need to set up Kerberos constrained delegation.
 
-7. On the **sea-svr1.contoso.com** page, in the **Tools** list, select **Virtual machines**, select the **Summary** tab, and then review its content.
-8. Select the **Inventory** tab and verify that it contains SEA-VM1.
-9.  Select **SEA-VM1** and review its Properties pane.
-10. Select **Settings**, and then select **Disks**.
-11. Scroll to the bottom of the pane and select **+ Add disk**.
-12. Select **New Virtual Hard Disk**.
-13. On the **New Virtual Hard Disk** pane, in the **Size (GB)** text box, type **5**, leave other settings with their default values, and then select **Create**.
-14. Select **Save disks settings**, and then select **Close**.
-15. Back on the **Properties** pane of **SEA-VM1**, select **Power**, and then select **Start** to start **SEA-VM1**.
-16. Scroll down and display the statistics for the running VM.
-17. Refresh the page, select **Power**, select **Shut down**, and then select **Yes** to confirm.
-18. In the **Tools** list, select **Virtual switches** and identify the existing switches.
+1. On the **sea-svr1.contoso.com** page, in the **Tools** list, select **Virtual machines**, select the **Summary** tab, and then review its content.
+1. Select the **Inventory** tab and verify that it contains SEA-VM1.
+1.  Select **SEA-VM1** and review its Properties pane.
+1. Select **Settings**, and then select **Disks**.
+1. Scroll to the bottom of the pane and select **+ Add disk**.
+1. Select **New Virtual Hard Disk**.
+1. On the **New Virtual Hard Disk** pane, in the **Size (GB)** text box, type **5**, leave other settings with their default values, and then select **Create**.
+1. Select **Save disks settings**, and then select **Close**.
+1. Back on the **Properties** pane of **SEA-VM1**, select **Power**, and then select **Start** to start **SEA-VM1**.
+1. Scroll down and display the statistics for the running VM.
+1. Refresh the page, select **Power**, select **Shut down**, and then select **Yes** to confirm.
+1. In the **Tools** list, select **Virtual switches** and identify the existing switches.
 
 ### Exercise 1 results
 
@@ -243,3 +242,11 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 ### Exercise 2 results
 
 After this exercise, you should have installed Docker on Windows Server, downloaded a Windows container image containing web services, and verified its functionality.
+
+### Review
+In this lab, you have completed:
+- Create a Hyper-V virtual switch
+- Create a virtual hard disk and virtual machine
+- Manage virtual machines using Windows Admin Center
+- Install Docker on Windows Server and run a Windows container
+- Use Windows Admin Center to manage containers

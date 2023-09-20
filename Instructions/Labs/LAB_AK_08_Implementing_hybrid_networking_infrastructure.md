@@ -1,14 +1,14 @@
 # Lab 8: Implementing hybrid networking infrastructure
 
-## Scenario
+## Lab scenario
 
 You were tasked with building a test environment in Azure, consisting of Microsoft Azure virtual machines deployed into separate virtual networks configured in the hub and spoke topology. This testing must include implementing connectivity between spokes by using user-defined routes that force traffic to flow via the hub. You also need to implement DNS name resolution for Azure virtual machines between virtual networks by using Azure private DNS zones and evaluate the use of Azure DNS zones for external name resolution.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20hybrid%20networking%20infrastructure)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
-## Objectives
+## Lab objectives
 
-After completing this lab, you'll be able to:
+In this lab, you will perform:
 
 - Implement virtual network routing in Azure
 - Implement DNS name resolution in Azure
@@ -452,3 +452,12 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    ```
 
    >**Note**: The command executes asynchronously (as determined by the *-AsJob* parameter), so while you'll be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+
+### Review
+In this lab, you have completed:
+- Provision lab infrastructure resources
+- Configure the hub and spoke network topology
+- Test transitivity of virtual network peering
+- Configure routing in the hub and spoke topology
+- Configure Azure private and Azure public DNS name resolution
+- Validate Azure private and Azure public DNS name resolution

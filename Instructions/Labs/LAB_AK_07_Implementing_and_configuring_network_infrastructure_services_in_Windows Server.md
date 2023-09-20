@@ -1,14 +1,14 @@
 # Lab 7: Implementing and configuring network infrastructure services in Windows Server
 
-## Scenario
+## Lab scenario
 
 Contoso, Ltd. is a large organization with complex requirements for network services. To help meet these requirements, you will deploy and configure DHCP so that it is highly available to ensure service availability. You will also set up DNS so that Trey Research, a department within Contoso, can have its own DNS server in the testing area. Finally, you will provide remote access to Windows Admin Center and secure it with Web Application Proxy.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20and%20configuring%20network%20infrastructure%20services%20in%20Windows%20Server)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
-## Objectives
+## Lab objectives
 
-After completing this lab, you'll be able to:
+In this lab, you will perform:
 
 - Deploy and configure DHCP.
 - Deploy and configure DNS.
@@ -58,33 +58,33 @@ For this lab, you'll use the available VM environment.
 
    >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**.
 
-2. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
+1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
-3. In the All connections pane, select **+ Add**.
-4. In the Add or create resources pane, on the **Servers** tile, select **Add**.
-5. In the **Server name** text box, enter **sea-svr1.contoso.com**. 
-6. Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
+1. In the All connections pane, select **+ Add**.
+1. In the Add or create resources pane, on the **Servers** tile, select **Add**.
+1. In the **Server name** text box, enter **sea-svr1.contoso.com**. 
+1. Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
    > **Note**: To perform single sign-on, you would need to set up a Kerberos constrained delegation.
 
-7. On the **sea-svr1.contoso.com** page, in the **Tools** list, select **Roles & features**.
-8. In the Roles and features pane, select the **DHCP Server** checkbox, and then select **+ Install**.
-9. In the Install Roles and Features pane, select **Yes**.
+1. On the **sea-svr1.contoso.com** page, in the **Tools** list, select **Roles & features**.
+1. In the Roles and features pane, select the **DHCP Server** checkbox, and then select **+ Install**.
+1. In the Install Roles and Features pane, select **Yes**.
 
    > **Note**: Wait until the notification indicating that the DHCP role is installed. If necessary, select the **Notifications** icon to verify the current status.
 
-10. Refresh the **Microsoft Edge** page back on the **sea-svr1.contoso.com** page, in the **Tools** list, select **DHCP**, and then, in the details pane, select **Install** to install the DHCP PowerShell tools. 
+1. Refresh the **Microsoft Edge** page back on the **sea-svr1.contoso.com** page, in the **Tools** list, select **DHCP**, and then, in the details pane, select **Install** to install the DHCP PowerShell tools. 
 
     > **Note**: If the **DHCP** entry is not available in the **Tools** list for **sea-svr1.contoso.com**, refresh the **Microsoft Edge** page and try again.
    Depending on your network performance, it may take upto 5 minutes for the DHCP server to appear.
 
-11. Wait for a notification that the DHCP PowerShell tools are installed. If necessary, select the **Notifications** icon to verify the current status.
+1. Wait for a notification that the DHCP PowerShell tools are installed. If necessary, select the **Notifications** icon to verify the current status.
 
 #### Task 2: Authorize the DHCP server
 
@@ -318,3 +318,12 @@ For this lab, you'll use the available VM environment.
 1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, change the currently assigned IP address (**172.16.11.11**) to its original value (**172.16.10.11**) and select **OK**.
 1. Select **Close** twice.
 1. Close all open windows.
+
+### Review
+In this lab, you have completed:
+- Install the DHCP role and authorize the DHCP server
+- Create a scope
+- Configure DHCP Failover and verify DHCP functionality
+- Install and create a the DNS role
+- Configure forwarding and conditional forwarding
+- Configure DNS policies and verify DNS policy functionality

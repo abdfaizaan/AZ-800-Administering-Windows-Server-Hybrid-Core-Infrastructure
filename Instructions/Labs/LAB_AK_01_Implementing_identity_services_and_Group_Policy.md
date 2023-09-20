@@ -1,20 +1,24 @@
 
 # Lab 1: Implementing identity services and Group Policy
 
-## Scenario
+## Lab scenario
 
 You are working as an administrator at Contoso Ltd. The company is expanding its business with several new locations. The Active Directory Domain Services (AD DS) Administration team is currently evaluating methods available in Windows Server for a non-interactive, remote domain controller deployment. The team is also searching for a way to automate certain AD DS administrative tasks. Additionally, the team wants to establish configuration management based on Group Policy Objects (GPO).
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20identity%20services%20and%20Group%20Policy)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
-## Objectives
+## Lab objectives
 
-After completing this lab, you’ll be able to:
+In this lab, you will perform:
 
 - Deploy a new domain controller on Server Core.
 - Configure Group Policy.
 
 ## Estimated time: 45 minutes
+
+## Architecture Diagram
+
+   ![](media/architecture-az-800.png)  
 
 ## Lab setup
 
@@ -242,18 +246,25 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-
 1. In **Group Policy Modeling Wizard**, select **Next**.
 1. On the **Domain Controller Selection** page, accept the default settings, and then select **Next**.
 1. On the **User and Computer Selection** page, in the **User information** section, select **User**, and then, in the **User** text box, enter **CONTOSO\Ty** or use the **Browse** command button to locate the **Ty** user account.
-2. On the **User and Computer Selection** page, in the **Computer information** section, select **Computer**, and then, in the **Computer** text box, enter **CONTOSO\SEA-ADM1** or use the **Browse** command button to locate the **SEA-ADM1** computer.
-3. On the **User and Computer Selection** page, select **Next**.
-4. On the **Advanced Simulation Options** page, accept the default settings, and then select **Next**.
-5. On the **Alternate Active Directory Paths** page, note the user and computer locations, and then select **Next**.
-6. On the **User Security Groups** page, verify that the list of groups includes **CONTOSO\\SeattleBranchUsers**, and then select **Next**.
-7. On the **Computer Security Groups** page, select **Next**.
-8. On the **WMI Filters for Users** page, accept the default settings, and then select **Next**.
-9. On the **WMI Filters for Computers** page, accept the default settings, and then select **Next**.
-10. On the **Summary of Selections** page, select **Next**.
-11. Select **Finish** when prompted.
-12. In the details pane, select the **Details** tab, and then select **show all**.
-13. In the report, scroll down until you locate the **User Details** section, and then locate the **Control Panel/Personalization** section. Note that the **Screen saver timeout** settings are disabled and the winning GPO is set to Seattle Application Override GPO.
-14. Close the **Group Policy Management** console.
+1. On the **User and Computer Selection** page, in the **Computer information** section, select **Computer**, and then, in the **Computer** text box, enter **CONTOSO\SEA-ADM1** or use the **Browse** command button to locate the **SEA-ADM1** computer.
+1. On the **User and Computer Selection** page, select **Next**.
+1. On the **Advanced Simulation Options** page, accept the default settings, and then select **Next**.
+1. On the **Alternate Active Directory Paths** page, note the user and computer locations, and then select **Next**.
+1. On the **User Security Groups** page, verify that the list of groups includes **CONTOSO\\SeattleBranchUsers**, and then select **Next**.
+1. On the **Computer Security Groups** page, select **Next**.
+1. On the **WMI Filters for Users** page, accept the default settings, and then select **Next**.
+1. On the **WMI Filters for Computers** page, accept the default settings, and then select **Next**.
+1. On the **Summary of Selections** page, select **Next**.
+1. Select **Finish** when prompted.
+1. In the details pane, select the **Details** tab, and then select **show all**.
+1. In the report, scroll down until you locate the **User Details** section, and then locate the **Control Panel/Personalization** section. Note that the **Screen saver timeout** settings are disabled and the winning GPO is set to Seattle Application Override GPO.
+1. Close the **Group Policy Management** console.
 
 **Results**: After this exercise, you should have successfully created and configured GPOs.
+
+### Review
+In this lab, you have completed:
+- Deploy AD DS on a new Windows Server Core server.
+- Manage AD DS objects with GUI tools and with Windows PowerShell.
+- Create and edit GPO settings.
+- Apply and verify settings on the client computer.
