@@ -18,7 +18,7 @@ In this lab, you will perform:
 
 ## Architecture Diagram
 
-   ![](../media/architecture-az-800.png)  
+   ![](media/architecture-az-800.png)  
 
 ## Lab setup
 
