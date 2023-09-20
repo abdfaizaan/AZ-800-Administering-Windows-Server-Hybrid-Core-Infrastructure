@@ -8,7 +8,7 @@ You were tasked with building a test environment in Azure, consisting of Microso
 
 ## Lab objectives
 
-After completing this lab, you'll be able to:
+In this lab, you will perform:
 
 - Implement virtual network routing in Azure
 - Implement DNS name resolution in Azure
