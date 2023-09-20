@@ -1,15 +1,15 @@
 
 # Lab 1: Implementing identity services and Group Policy
 
-## Scenario
+## Lab scenario
 
 You are working as an administrator at Contoso Ltd. The company is expanding its business with several new locations. The Active Directory Domain Services (AD DS) Administration team is currently evaluating methods available in Windows Server for a non-interactive, remote domain controller deployment. The team is also searching for a way to automate certain AD DS administrative tasks. Additionally, the team wants to establish configuration management based on Group Policy Objects (GPO).
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20identity%20services%20and%20Group%20Policy)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
-## Objectives
+## Lab objectives
 
-After completing this lab, you’ll be able to:
+In this lab, you will perform:
 
 - Deploy a new domain controller on Server Core.
 - Configure Group Policy.
@@ -257,3 +257,10 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-
 14. Close the **Group Policy Management** console.
 
 **Results**: After this exercise, you should have successfully created and configured GPOs.
+
+### Review
+In this lab, you have completed:
+- Deploy AD DS on a new Windows Server Core server.
+- Manage AD DS objects with GUI tools and with Windows PowerShell.
+- Create and edit GPO settings.
+- Apply and verify settings on the client computer.
