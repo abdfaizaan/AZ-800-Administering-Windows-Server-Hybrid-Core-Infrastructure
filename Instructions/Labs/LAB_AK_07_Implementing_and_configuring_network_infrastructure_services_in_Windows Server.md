@@ -8,7 +8,7 @@ Contoso, Ltd. is a large organization with complex requirements for network serv
 
 ## Lab objectives
 
-After completing this lab, you'll be able to:
+In this lab, you will perform:
 
 - Deploy and configure DHCP.
 - Deploy and configure DNS.
