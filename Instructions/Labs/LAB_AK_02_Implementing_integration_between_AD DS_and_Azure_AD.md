@@ -1,6 +1,6 @@
 # Lab 2: Implementing integration between AD DS and Azure AD
 
-## Scenario
+## Lab scenario
 
 To address concerns regarding management and monitoring overhead resulting from using Microsoft Azure Active Directory (Azure AD) to authenticate and authorize access to Azure resources, you decide to test integration between on-premises Active Directory Domain Services (AD DS) and Azure AD to verify that this will address business concerns about managing multiple user accounts by using a mix of on-premises and cloud resources.
 
@@ -10,9 +10,9 @@ Your goal is to implement pass-through authentication between on-premises AD DS 
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20integration%20between%20AD%20DS%20and%20Azure%20AD)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
-## Objectives
+## Lab objectives
 
-After completing this lab, you'll be able to:
+In this lab, you will perform:
 
 - Prepare Azure AD for integration with on-premises AD DS, including adding and verifying a custom domain.
 - Prepare on-premises AD DS for integration with Azure AD, including running IdFix DirSync Error Remediation Tool.
@@ -387,3 +387,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
    Set-MsolDirSyncEnabled -EnableDirSync $false
    ```
 1. When prompted to confirm, enter **Y**, and then press Enter.
+
+### Review
+In this lab, you have completed:
+- Preparing Azure AD for AD DS integration
+- Preparing on-premises AD DS for Azure AD integration
+- Downloading, installing, and configuring Azure AD Connect
+- Verifying integration between AD DS and Azure AD
+- Implementing Azure AD integration features in AD DS
