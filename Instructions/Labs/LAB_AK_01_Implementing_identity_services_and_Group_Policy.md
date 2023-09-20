@@ -16,6 +16,10 @@ In this lab, you will perform:
 
 ## Estimated time: 45 minutes
 
+## Architecture Diagram
+
+   ![](../media/architecture-az-800.png)  
+
 ## Lab setup
 
 Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-SEA-SVR1** must be running. Other VMs can be running, but they aren't required for this lab.
