@@ -1,14 +1,14 @@
 # Lab 9: Implementing storage solutions in Windows Server
 
-## Scenario
+## Lab scenario
 
 At Contoso, Ltd., you need to implement the Storage Spaces feature on the Windows Server servers to simplify storage access and provide redundancy at the storage level. Management wants you to test Data Deduplication to save storage. They also want you to implement Internet Small Computer System Interface (iSCSI) storage to provide a simpler solution for deploying storage in the organization. Additionally, the organization is exploring options for making storage highly available and researching the requirements that it must meet for high availability. You want to test the feasibility of using highly available storage, specifically Storage Spaces Direct.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20storage%20solutions%20in%20Windows%20Server)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
-## Objectives
+## Lab objectives
 
-After completing this lab, you'll be able to:
+In this lab, you will perform:
 
 - Implement Data Deduplication.
 - Configure iSCSI storage.
@@ -495,3 +495,10 @@ For this lab, you'll use the available VM environment.
    > **Note**: It may take a few minutes for the alert to be automatically removed.
 
 1. Refresh the browser page displaying Windows Admin Center and verify that all servers are healthy.
+
+### Review
+In this lab, you have completed:
+- Tested the implementation of Data Deduplication
+- Installed and configured iSCSI storage
+- Configured redundant Storage Spaces
+- Tested the implementation of Storage Spaces Direct
