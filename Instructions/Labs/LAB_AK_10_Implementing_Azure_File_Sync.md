@@ -1,14 +1,14 @@
 # Lab 10: Implementing Azure File Sync
 
-## Scenario
+## Lab scenario
 
 To address concerns regarding Distributed File System (DFS) Replication between Contoso's London headquarters and its Seattle–based branch office, you decide to test Azure File Sync as an alternative replication mechanism between two on-premises file shares.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20Azure%20File%20Sync)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
-## Objectives
+## Lab objectives
 
-After completing this lab, you'll be able to:
+In this lab, you will perform:
 
 - Implement DFS Replication in your on-premises environment.
 - Create and configure a sync group.
@@ -284,3 +284,13 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. In the Delete Resources pane, select **Delete**, enter **yes** in a text box, and then select **Delete**.
 1. In the navigation pane, select **Resource groups**.
 1. In the details pane, select **AZ800-L1001-RG**, select **Delete resource group**, enter **AZ800-L1001-RG**, and then select **Delete**.
+
+### Review
+In this lab, you have completed:
+- Deploy and test DFS deployment
+- Create and use an Azure file share
+- Deploy Storage Sync Service and a File Sync group
+- Add SEA-SVR1 as a server endpoint and register SEA-SVR2 with File Sync
+- Remove DFS Replication and add SEA-SVR2 as a server endpoint
+- Verify File Sync and enable cloud tiering
+- Monitor File Sync replication and test replication conflict resolution
