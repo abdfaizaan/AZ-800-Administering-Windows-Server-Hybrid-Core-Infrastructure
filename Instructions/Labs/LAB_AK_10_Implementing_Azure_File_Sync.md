@@ -294,3 +294,5 @@ In this lab, you have completed:
 - Remove DFS Replication and add SEA-SVR2 as a server endpoint
 - Verify File Sync and enable cloud tiering
 - Monitor File Sync replication and test replication conflict resolution
+
+### You have successfully completed the lab
