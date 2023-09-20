@@ -1,12 +1,12 @@
 # Lab 3: Managing Windows Server
 
-## Scenario
+## Lab scenario
 
 Contoso, Ltd. wants to implement several new servers in their environment, and they have decided to use Server Core. They also want to implement Windows Admin Center for remote management of both these servers and other servers in the organization.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Managing%20Windows%20Server)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
-## Objectives
+## Lab objective
 
 - Implement and configure Windows Admin Center
 
@@ -141,3 +141,11 @@ For this lab, you'll use the available VM environment and an Azure AD tenant.
 ### Results
 
 After completing this exercise, you will have installed Windows Admin Center and connected it to the servers in your lab environment. You performed a number of remote management tasks including installing a feature as well as enabling and testing Remote Desktop connectivity. Finally, you used PowerShell Remoting to check the status of a service and then to start it.
+
+### Review
+In this lab, you have completed:
+- Install Windows Admin Center
+- Add servers for remote administration
+- Configure Windows Admin Center extensions
+- Verify remote administration
+- Administer servers with Remote PowerShell
