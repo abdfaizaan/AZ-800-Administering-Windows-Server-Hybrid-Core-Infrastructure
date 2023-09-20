@@ -1,6 +1,6 @@
 # Lab 6: Deploying and configuring Windows Server on Azure VMs
 
-## Scenario
+## Lab scenario
 
 You need to address concerns regarding your current infrastructure. You have an outdated operational model, a limited use of automation, and Information Security team concerns regarding additional controls that should be applied to Azure VMs running Windows Server-based workloads. You have decided to develop and implement an automated deployment and configuration process for Azure VMs running Windows Server.
 
@@ -10,9 +10,9 @@ Your goal is to deploy and configure Azure VMs running Windows Server in the man
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Deploying%20and%20configuring%20Windows%20Server%20on%20Azure%20VMs)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
-## Objectives
+## Lab objectives
 
-After completing this lab, you'll be able to:
+In this lab, you will perform:
 
 - Author ARM templates for an Azure VM deployment.
 - Modify ARM templates to include VM extension-based configuration.
@@ -313,3 +313,16 @@ In this task, you will use the Azure portal to create resource groups and create
    Get-AzResourceGroup -Name 'AZ800-L06*' | Remove-AzResourceGroup -Force -AsJob
    ```
    >**Note**: The command executes asynchronously (as determined by the *-AsJob* parameter). So, while you will be able to run another PowerShell command immediately after within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+
+### Review
+In this lab, you have completed:
+- Connect to your Azure subscription and enable enhanced security of Microsoft Defender for Cloud.
+- Generate and download an ARM template and parameters files by using the Azure portal.
+- Review the ARM template and parameters files for Azure VM deployment.
+- Add an Azure VM extension section to the existing template.
+- Deploy an Azure VM by using an ARM template.
+- Verify the status of Azure Microsoft Defender for Cloud.
+- Review Just in time VM access settings.
+- Create and configure an NSG and inbound HTTP access to an Azure VM.
+  Trigger re-evaluation of the JIT status of an Azure VM.
+- Connect to the Azure VM via JIT VM access.
