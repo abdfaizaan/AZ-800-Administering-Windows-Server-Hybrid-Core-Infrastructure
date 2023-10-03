@@ -23,6 +23,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 > **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1** and **SEA-ADM1**
 
 1. Select **SEA-ADM1**.
+
 1. Sign in using the following credentials:
 
    - User name: **Administrator**
@@ -36,12 +37,19 @@ For this lab, you'll use the available VM environment.
 #### Task 1: Create a Hyper-V virtual switch
 
 1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+
 1. On **SEA-ADM1**, select **Start**, and then select **Server Manager**.
+
 1. In Server Manager, select **All Servers**.
+
 1. In the Servers list, select the **SEA-SVR1** entry, display its context menu, right click and select **Hyper-V Manager**.
+
 1. In Hyper-V Manager, ensure that **SEA-SVR1.CONTOSO.COM** is selected.
+
 1. In the Actions pane, select **Virtual Switch Manager**.
+
 1. In the **Virtual Switch Manager**, in the **Create virtual switch** pane, select **Private**, and then select **Create Virtual Switch**.
+
 1. In the **Virtual Switch Properties** box, specify the following settings, and then select **OK**:
 
    - Name: **Contoso Private Switch**
@@ -50,33 +58,52 @@ For this lab, you'll use the available VM environment.
 #### Task 2: Create a virtual hard disk
 
 1. On **SEA-ADM1**, in Hyper-V Manager connected to **SEA-SVR1**, under **Action** pane, select **New**, and then select **Hard Disk**. The **New Virtual Hard Disk Wizard** starts.
+
 1. On the **Before You Begin** page, select **Next**.
+
 1. On the **Choose Disk Format** page, select **VHD** and then select **Next**.
+
 1. On the **Choose Disk Type** page, select **Differencing**, and then select **Next**.
+
 1. On the **Specify Name and Location** page, specify the following settings, and then select **Next**:
 
    - Name: **SEA-VM1**
    - Location: **C:\Base**
 
 1. On the **Configure Disk** page, in the **Location** box, enter **C:\Base\BaseImage.vhd**, and then select **Next**.
+
 1. On the **Summary** page, select **Finish**.
 
 #### Task 3: Create a virtual machine
 
 1. On **SEA-ADM1**, in Hyper-V Manager, select **New**, and then select **Virtual Machine**. The **New Virtual Machine Wizard** starts.
+
 1. On the **Before You Begin** page, select **Next**.
+
 1. On the **Specify Name and Location** page, enter **SEA-VM1**, and then select the check box next to **Store the virtual machine in a different location**.
+
 1. In the **Location** box, enter **C:\Base**, and then select **Next**.
+
 1. On the **Specify Generation** page, select **Generation 1**, and then select **Next**.
+
 1. On the **Assign Memory** page, enter **4096**, and then select **Next**.
+
 1. On the **Configure Networking** page, select the Connection drop-down menu, select **Contoso Private Switch**, and then select **Next**.
+
 1. On the **Connect Virtual Hard Disk** page, select **Use an existing virtual hard disk**, and then select **Browse**.
+
 1. Browse to **C:\Base**, select **SEA-VM1.vhd**, select **Open**, and then select **Next**.
+
 1. On the **Summary** page, select **Finish**. Notice that **SEA-VM1** displays in the Virtual Machines list.
+
 1. Select **SEA-VM1**, and then in the Actions pane, under **SEA-VM1**, select **Settings**.
+
 1. In the **Hardware** list, select **Memory**.
+
 1. In the **Dynamic Memory** section, select the check box next to **Enable Dynamic Memory**.
+
 1. Next to **Maximum RAM**, enter **4096**, and then select **OK**.
+
 1. Close Hyper-V Manager.
 
 #### Task 4: Manage Virtual Machines using Windows Admin Center
@@ -110,8 +137,11 @@ For this lab, you'll use the available VM environment.
    - Password: **Pa55w.rd**
 
 1. On the **All connections** pane, select **+ Add**.
+
 1. On the **Add or create resources** pane, on the **Servers** tile, select **Add**.
+
 1. In the **Server name** text box, enter **sea-svr1.contoso.com**.
+
 1. Ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
 
    - Username: **CONTOSO\Administrator**
@@ -122,16 +152,27 @@ For this lab, you'll use the available VM environment.
    > **Note**: To perform single sign-on, you would need to set up Kerberos constrained delegation.
 
 1. On the **sea-svr1.contoso.com** page, in the **Tools** list, select **Virtual machines**, select the **Summary** tab, and then review its content.
+
 1. Select the **Inventory** tab and verify that it contains SEA-VM1.
+
 1.  Select **SEA-VM1** and review its Properties pane.
+
 1. Select **Settings**, and then select **Disks**.
+
 1. Scroll to the bottom of the pane and select **+ Add disk**.
+
 1. Select **New Virtual Hard Disk**.
+
 1. On the **New Virtual Hard Disk** pane, in the **Size (GB)** text box, type **5**, leave other settings with their default values, and then select **Create**.
+
 1. Select **Save disks settings**, and then select **Close**.
+
 1. Back on the **Properties** pane of **SEA-VM1**, select **Power**, and then select **Start** to start **SEA-VM1**.
+
 1. Scroll down and display the statistics for the running VM.
+
 1. Refresh the page, select **Power**, select **Shut down**, and then select **Yes** to confirm.
+
 1. In the **Tools** list, select **Virtual switches** and identify the existing switches.
 
 ### Exercise 1 results
@@ -143,6 +184,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 #### Task 1: Install Docker on Windows Server
 
 1. On **SEA-ADM1**, switch back to the Microsoft Edge window displaying the connection to sea-svr1.contoso.com in Windows Admin Center.
+
 1. On **SEA-ADM1**, in the **Tools** listing for **SEA-SVR1**, select **PowerShell**. When prompted, type **Pa55w.rd** to authenticate using the **CONTOSO\Administrator** user account, and then press Enter. 
 
    > **Note**: This establishes a PowerShell Remoting connection to SEA-SVR1.
@@ -157,12 +199,14 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
    Install-Module PowerShellGet -RequiredVersion 2.2.4 -SkipPublisherCheck
    ```
 1. When prompted to confirm the installation of modules from an untrusted repository, press the **A** key, and then press Enter.
+
 1. After the installation completes, enter the following command, and then press Enter to restart **SEA-SVR1**:
 
    ```powershell
    Restart-Computer -Force
    ```
 1. After **SEA-SVR1** restarts, use the **PowerShell** tool again to establish a new PowerShell Remoting session to **SEA-SVR1**.
+
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to install the Docker Microsoft PackageManagement provider on **SEA-SVR1**:
 
    ```powershell
@@ -216,6 +260,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
    > **Note**: Identify the IPv4 address of the Ethernet adapter named vEthernet (nat). This is the address of the new container. Next, identify the IPv4 address of the Ethernet adapter named **Ethernet**. This is the IP address of the host (**SEA-SVR1**) and is set to **172.16.10.12**.
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge window, open another tab and go to **http://172.16.10.12**. Verify that the browser displays the default IIS page.
+
 1. On **SEA-ADM1**, switch back to the PowerShell Remoting session to **SEA-SVR1**, and then, in the **Windows PowerShell** console, enter the following command, and then press Enter to list running containers:
 
    ```powershell
@@ -237,6 +282,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 #### Task 3: Use Windows Admin Center to manage containers
 
 1. On **SEA-ADM1**, in the Windows Admin Center, in the Tools menu of **sea-svr1.contoso.com**, select **Containers**. When prompted to close the **PowerShell** session, select **Continue**.
+
 1. In the Containers pane, browse through the **Overview**, **Containers**, **Images**, **Networks**, and **Volumes** tabs.
 
 ### Exercise 2 results
