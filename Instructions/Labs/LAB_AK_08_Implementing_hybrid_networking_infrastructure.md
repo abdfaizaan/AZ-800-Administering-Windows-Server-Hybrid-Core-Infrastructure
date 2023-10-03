@@ -23,6 +23,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 > **Note**: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1** and **SEA-ADM1**
 
 1. Select **SEA-ADM1**.
+
 1. Sign in using the following credentials:
 
    - User name: **Administrator**
@@ -36,8 +37,11 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 #### Task 1: Provision lab infrastructure resources
 
 1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+
 1. On **SEA-ADM1**, start Microsoft Edge, go to the **[Azure portal](https://portal.azure.com)**, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
+
 1. In the Azure portal, open the Cloud Shell pane by selecting the toolbar icon next to the search text box.
+
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
    >**Note**: If this is the first time you are starting Cloud Shell and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and then select **Create storage**.
@@ -52,6 +56,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     $rgName = 'AZ800-L0801-RG'
     New-AzResourceGroup -Name $rgName -Location $location
     ```
+
 1. From the Cloud Shell pane, run the following command to create the three virtual networks and four Azure VMs into them by using the template and parameter files you uploaded:
 
    ```powershell
@@ -87,9 +92,13 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 #### Task 2: Configure the hub and spoke network topology
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, open another tab and browse to the **[Azure portal](https://portal.azure.com)**.
+
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Virtual networks**.
+
 1. In the list of virtual networks, select **az800l08-vnet0**.
+
 1. On the **az800l08-vnet0** virtual network page, in the **Settings** section, select **Peerings**, and then select **+ Add**.
+
 1. Specify the following settings (leave others with their default values), and then select **Add**:
 
     | Setting | Value |
@@ -112,6 +121,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     >**Note**: **Allow forwarded traffic** needs to be enabled in order to facilitate routing between spoke virtual networks, which you will implement later in this lab.
 
 1. On the **az800l08-vnet0** virtual network page, in the **Settings** section, select **Peerings**, and then select **+ Add**.
+
 1. Specify the following settings (leave others with their default values), and then select **Add**:
 
     | Setting | Value |
@@ -134,7 +144,9 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 >**Note**: Before you start this task, make sure that the script you invoked in the first task of this exercise completed successfully.
 
 1. In the Azure portal, search for and select **Network Watcher**.
+
 1. On the **Network Watcher** page, under **Network diagnostic tools** section, select **Connection troubleshoot**.
+
 1. On the **Network Watcher - Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -195,9 +207,13 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 #### Task 4: Configure routing in the hub and spoke topology
 
 1. In the Azure portal, search and select **Virtual machines**.
+
 1. On the **Virtual machines** page, in the list of virtual machines, select **az800l08-vm0**.
+
 1. On the **az800l08-vm0** virtual machine page, in the **Settings** section, select **Networking**.
+
 1. Select the **az800l08-nic0** link next to the **Network interface** label, and then, on the **az800l08-nic0** network interface page, in the **Settings** section, select **IP configurations**.
+
 1. Select checkbox **Enable IP forwarding**  and select **Apply** to save the change.
 
    > **Note**: This setting is required in order for **az800l08-vm0** to function as a router, which will route traffic between two spoke virtual networks.
@@ -205,7 +221,9 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    > **Note**: Now you need to configure the operating system of the **az800l08-vm0** virtual machine to support routing.
 
 1. In the Azure portal, browse back to the **az800l08-vm0** Azure virtual machine page.
+
 1. On the **az800l08-vm0** page, in the **Operations** section, select **Run command**, and then, in the list of commands, select **RunPowerShellScript**.
+
 1. On the **Run Command Script** page, enter the following command, and then select **Run** to install the Remote Access Windows Server role.
 
    ```powershell
@@ -228,6 +246,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    > **Note**: Now you need to create and configure user-defined routes on the spoke virtual networks.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Route tables**, and then, on the **Route tables** page, select **+ Create**.
+
 1. Create a route table with the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -243,7 +262,9 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    > **Note**: Wait for the route table to be created. This should take about 1 minute.
 
 1. Select **Go to resource**.
+
 1. On the **az800l08-rt12** route table page, in the **Settings** section, select **Routes**, and then select **+ Add**.
+
 1. Add a new route with the following settings:
 
     | Setting | Value |
@@ -257,7 +278,9 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     > **Note**: **10.80.0.4** represents the private IP address of **az800l08-vm0**. 
 
 1. Select **Add**.
+
 1. Back on the **az800l08-rt12** route table page, in the **Settings** section, select **Subnets**, and then select **+ Associate**.
+
 1. Associate the route table **az800l08-rt12** with the following subnet:
 
     | Setting | Value |
@@ -266,7 +289,9 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Subnet | **subnet0** |
 
 1. Select **OK**.
+
 1. Browse back to **Route tables** page and select **+ Create**.
+
 1. Create a route table with the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -282,7 +307,9 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    > **Note**: Wait for the route table to be created. This should take about 3 minutes.
 
 1. Select **Go to resource**.
+
 1. On the **az800l08-rt21** route table page, in the **Settings** section, select **Routes**, and then select **+ Add**.
+
 1. Add a new route with the following settings:
 
     | Setting | Value |
@@ -294,7 +321,9 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Next hop address | **10.80.0.4** |
 
 1. Select **Add**.
+
 1. Back on the **az800l08-rt21** route table page, in the **Settings** section, select **Subnets**, and then select **+ Associate**.
+
 1. Associate the route table **az800l08-rt21** with the following subnet:
 
     | Setting | Value |
@@ -303,7 +332,9 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Subnet | **subnet0** |
 
 1. Select **OK**.
+
 1. In the Azure portal, browse back to the **Network Watcher - Connection troubleshoot** page.
+
 1. On the **Network Watcher - Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -327,6 +358,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 #### Task 1: Configure Azure private DNS name resolution
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Private DNS zones**, and then, on the **Private DNS zones** page, select **+ Create**.
+
 1. Create a private DNS zone with the following settings:
 
     | Setting | Value |
@@ -341,7 +373,9 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     >**Note**: Wait for the private DNS zone to be created. This should take about 2 minutes.
 
 1. Select **Go to resource** to open the **contoso.org** DNS private zone page.
+
 1. On the **contoso.org** private DNS zone page, in the **Settings** section, select **Virtual network links**.
+
 1. On the **contoso.org \| Virtual network links** page, select **+ Add**, specify the following settings (leave others with their default values), and select **OK** to create a virtual network link for the first virtual network you created in the previous exercise:
 
     | Setting | Value |
@@ -354,7 +388,9 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     >**Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
 
 1. Repeat the previous step to create virtual network links (with auto registration enabled) named **az800l08-vnet1-link** and **az800l08-vnet2-link** for the virtual networks **az800l08-vnet1** and **az800l08-vnet2**, respectively.
+
 1. On the **contoso.org** private DNS zone page, in the vertical menu on the left, select **Overview**.
+
 1. In the **Overview** section of the **contoso.org** private DNS zone page, review the listing of DNS record sets and verify that the **A** records of **az800l08-vm0**, **az800l08-vm1**, and **az800l08-vm2** appear in the list as **Auto registered**.
 
     >**Note:** You might need to wait a few minutes and refresh the page if the record sets are not listed.
@@ -362,6 +398,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 #### Task 2: Validate Azure private DNS name resolution
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse back to the **Network Watcher** page.
+
 1. On the **Network Watcher** under **Network diagnostic tools** section, select **Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -383,6 +420,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 #### Task 3: Configure Azure public DNS name resolution
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge tab displaying the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **DNS zones**, and then, on the **DNS zones** page, select **+ Create**.
+
 1. On the **Create DNS zone** page, specify the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -398,7 +436,9 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     >**Note**: Wait for the DNS zone to be created. This should take about 1 minute.
 
 1. Select **Go to resource** to open the page of the newly created DNS zone.
+
 1. On the DNS zone page, select **+ Record set**.
+
 1. In the Add a record set pane, specify the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -413,6 +453,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     >**Note**: The IP address and the corresponding name are entirely arbitrary. They are meant to provide a very simple example illustrating implementing public DNS records, rather than emulate a real world scenario, which would require purchasing a namespace from a DNS registrar. 
 
 1. Select **OK**
+
 1. On the DNS zone page, identify the full name of **Name server 1**.
 
     >**Note**: Record the full name of **Name server 1**. You will need it in the next task.
@@ -420,6 +461,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 #### Task 4: Validate Azure public DNS name resolution
 
 1. On **SEA-ADM1**, on the **Start** menu, select **Windows PowerShell**.
+
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to test external name resolution of the **www** DNS record set in the newly created DNS zone (replace the placeholder `<Name server 1>` with the name of **Name server 1** you noted earlier in this task and the `<domain name>` placeholder with the name of the DNS domain you created earlier in this task):
 
    ```powershell
@@ -435,6 +477,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 #### Task 1: Start a PowerShell session in Cloud Shell
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal.
+
 1. In the Microsoft Edge window displaying the Azure portal, open the Cloud Shell pane by selecting the Cloud Shell icon.
 
 #### Task 2: Identify all Azure resources provisioned in the lab
