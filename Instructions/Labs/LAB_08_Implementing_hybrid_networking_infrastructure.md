@@ -14,7 +14,7 @@ You were tasked with building a test environment in Azure, consisting of Microso
 
 ## Objectives
 
-After completing this lab, you'll be able to:
+In this lab you will perform:
 
 - Implement virtual network routing in Azure
 - Implement DNS name resolution in Azure
@@ -29,6 +29,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 > **Note**: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1** and **SEA-ADM1**
 
 1. Select **SEA-ADM1**.
+
 1. Sign in using the following credentials:
 
    - User name: **Administrator**
@@ -48,8 +49,11 @@ You will start by deploying core network infrastructure using an Azure Resource 
 The main tasks for this exercise are as follows:
 
 1. Provision lab infrastructure resources
+
 1. Configure the hub and spoke network topology
+
 1. Test transitivity of virtual network peering
+
 1. Configure routing in the hub and spoke topology
 
 #### Task 1: Provision lab infrastructure resources
@@ -57,9 +61,14 @@ The main tasks for this exercise are as follows:
 In this task, you will deploy three virtual machines into the same Azure region but into separate virtual networks. The first virtual network will serve as a hub, while the other two will form spokes. These resources will serve as the basis for the lab infrastructure.
 
 1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\\Administrator** with a password of **Pa55w.rd**.
-1. On **SEA-ADM1**, start Microsoft Edge, browse to the **[Azure portal](https://portal.azure.com)**, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
+
+1. On **SEA-ADM1**, start Microsoft Edge, browse to the **[Azure portal](https://portal.azure.com)**, and sign in by using the credentials of a user account with the Owner
+role in the subscription you'll be using in this lab.
+
 1. In the Azure portal, open a PowerShell session in the Cloud Shell pane.
+
 1. Upload the files **C:\\Labfiles\\Lab08\\L08-rg_template.json** and **C:\\Labfiles\\Lab08\\L08-rg_template.parameters.json** into the Cloud Shell home directory.
+
 1. From the Cloud Shell pane, run the following commands to create the first resource group that will be hosting the lab environment (replace the `<Azure_region>` placeholder with the name of an Azure region that you intend to use for the deployment):
 
    >**Note**: You can run the **(Get-AzLocation).Location** command to list the names of available Azure regions:
@@ -106,7 +115,9 @@ In this task, you will deploy three virtual machines into the same Azure region 
 In this task, you will configure local peering between the virtual networks you deployed in the previous tasks to create a hub and spoke network topology.
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, open another tab and browse to the **[Azure portal](https://portal.azure.com)**.
+
 1. In the Azure portal, browse to the **az800l08-vnet0** virtual network page.
+
 1. From the **az800l08-vnet0** virtual network page, create a peering with the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -152,6 +163,7 @@ In this task, you will test connectivity across virtual network peerings by usin
 >**Note**: Before you start this task, make sure that the script you invoked in the first task of this exercise completed successfully.
 
 1. In the Azure portal, browse to the **Network Watcher** page.
+
 1. From the **Network Watcher - Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -214,7 +226,9 @@ In this task, you will test connectivity across virtual network peerings by usin
 In this task, you will configure and test routing between the two spoke virtual networks by enabling IP forwarding on the network interface of the **az800l08-vm1** virtual machine, enabling routing within its operating system, and configuring user-defined routes on the spoke virtual network.
 
 1. In the Azure portal, browse to the page of the **az800l08-vm0** virtual machine.
+
 1. On the **az800l08-vm0** virtual machine page, browse to the page displaying settings of its network interface **az800l08-nic0**.
+
 1. On the **az800l08-nic0** network interface page, display its **IP configurations** page and enable **IP forwarding**.
 
    > **Note**: This setting is required for **az800l08-vm0** to function as a router, which will route traffic between two spoke virtual networks.
@@ -327,8 +341,11 @@ With the custom routing successfully tested, now it's time to implement DNS name
 The main tasks for this exercise are as follows:
 
 1. Configure Azure private DNS name resolution
+
 1. Validate Azure private DNS name resolution
+
 1. Configure Azure public DNS name resolution
+
 1. Validate Azure public DNS name resolution
 
 #### Task 1: Configure Azure private DNS name resolution
@@ -336,6 +353,7 @@ The main tasks for this exercise are as follows:
 In this task, you will configure DNS name resolution between virtual networks by using an Azure private DNS zone.
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to the **Private DNS zones** page. 
+
 1. Create a private DNS zone with the following settings:
 
     | Setting | Value |
@@ -348,6 +366,7 @@ In this task, you will configure DNS name resolution between virtual networks by
     >**Note**: Wait for the private DNS zone to be created. This should take about 2 minutes.
 
 1. Browse to the **contoso.org** DNS private zone page.
+
 1. On the **contoso.org** private DNS zone page, add a virtual network link to the first virtual network you created in the previous exercise with the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -360,6 +379,7 @@ In this task, you will configure DNS name resolution between virtual networks by
     >**Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
 
 1. Repeat the previous step to create virtual network links (with auto registration enabled) named **az800l08-vnet1-link** and **az800l08-vnet2-link** for the virtual networks **az800l08-vnet1** and **az800l08-vnet2**, respectively.
+
 1. On the **contoso.org** private DNS zone page, browse to the **Overview** pane of the **contoso.org** private DNS zone page, review the listing of DNS record sets and verify that the **A** records of **az800l08-vm0**, **az800l08-vm1**, and **az800l08-vm2** appear in the list as **Auto registered**.
 
     >**Note:** You might need to wait a few minutes and refresh the page if the record sets are not listed.
@@ -369,6 +389,7 @@ In this task, you will configure DNS name resolution between virtual networks by
 In this task, you will validate Azure private DNS name resolution.
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse back to the **Network Watcher - Connection troubleshoot** page.
+
 1. Initiate a check with the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -392,8 +413,11 @@ In this task, you will validate Azure private DNS name resolution.
 In this task, you will configure external DNS name resolution by using Azure public DNS zones.
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, open a new tab and browse to **https://www.godaddy.com/domains/domain-name-search**.
+
 1. Use the domain name search to identify a domain name which is not currently in use.
+
 1. On **SEA-ADM1**, switch to the Microsoft Edge tab displaying the Azure portal and browse to the **DNS zones** page.
+
 1. Create a DNS zone with the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -405,6 +429,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
     >**Note**: Wait for the DNS zone to be created. This should take about 1 minute.
 
 1. Browse to the page of the newly created DNS zone.
+
 1. Add a record set with the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -427,6 +452,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
 In this task, you will validate external DNS name resolution by using Azure public DNS zones.
 
 1. On **SEA-ADM1**, on the **Start** menu, select **Windows PowerShell**.
+
 1. In the **Windows PowerShell** console, run the following command to test the external name resolution of the **www** DNS record set in the newly created DNS zone (replace the placeholder `<Name server 1>` with the name of **Name server 1** you noted earlier in this task and the `<domain name>` placeholder with the name of the DNS domain you created earlier in this task):
 
    ```powershell
@@ -442,6 +468,7 @@ In this task, you will validate external DNS name resolution by using Azure publ
 #### Task 1: Start a PowerShell session in Cloud Shell
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal.
+
 1. From the Azure portal, open a PowerShell session in the Cloud Shell pane.
 
 #### Task 2: Identify all Azure resources provisioned in the lab
@@ -460,9 +487,9 @@ In this task, you will validate external DNS name resolution by using Azure publ
 
    >**Note**: The command executes asynchronously (as determined by the *-AsJob* parameter), so while you'll be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
-### Results
+### Review
 
-After completing this lab, you will have:
+In this lab you have performed:
 
 - Provisioned the lab environment.
 - Configured the hub and spoke network topology.

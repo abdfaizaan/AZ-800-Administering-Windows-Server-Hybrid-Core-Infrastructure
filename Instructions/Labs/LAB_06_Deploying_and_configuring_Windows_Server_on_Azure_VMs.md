@@ -36,6 +36,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 > **Note**: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1** and **SEA-ADM1**.
 
 1. Select **SEA-ADM1**.
+
 1. Sign in using the following credentials:
 
    - Username: **Administrator**
@@ -53,7 +54,9 @@ To streamline Azure-based operations, you decide to develop and implement an aut
 The main tasks for this exercise are as follows:
 
 1. Connect to your Azure subscription and enable enhanced security of Microsoft Defender for Cloud.
+
 1. Generate an ARM template and parameters files by using the Azure portal.
+
 1. Download the ARM template and parameters files from the Azure portal.
 
 #### Task 1: Connect to your Azure subscription and enable enhanced security of Microsoft Defender for Cloud
@@ -61,11 +64,13 @@ The main tasks for this exercise are as follows:
 In this task, you will connect to your Azure subscription and enable the enhanced security features of Microsoft Defender for Cloud.
 
 1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\\Administrator** with a password of **Pa55w.rd**.
+
 1. On **SEA-ADM1**, start Microsoft Edge, go to the [Azure portal](https://portal.azure.com), and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
 
 >**Note**: Skip the remaining steps in this task and proceed directly to the next one if you have already enabled Microsoft Defender for Cloud in your Azure subscription.
 
 1. In the Azure portal, browse to the **Microsoft Defender for Cloud** page.
+
 1. From the **Microsoft Defender for Cloud \| Getting started** page, enable enhanced security of Microsoft Defender for Cloud and enable automatic Microsoft Defender for Cloud agent installation.
 
 #### Task 2: Generate an ARM template and parameters files by using the Azure portal
@@ -104,6 +109,7 @@ In this task, you will connect to your Azure subscription and enable the enhance
 #### Task 3: Download the ARM template and parameters files from the Azure portal
 
 1. From the **Review + Create** tab of the **Create a virtual machine** page, download the template for automation and copy it to the **C:\\Labfiles\\Mod06** folder on the lab VM.
+
 1. In the Azure portal, close the **Create a virtual machine** page.
 
 ## Exercise 2: Modifying ARM templates to include VM extension-based configuration
@@ -115,12 +121,15 @@ In addition to automated Azure resources deployments, you also want to ensure th
 The main tasks for this exercise are as follows:
 
 1. Review the ARM template and parameters files for Azure VM deployment.
+
 1. Add an Azure VM extension section to the existing template.
 
 #### Task 1: Review the ARM template and parameters files for Azure VM deployment
 
 1. Extract the contents of the downloaded archive into the **C:\\Labfiles\\Mod06** folder.
+
 1. Open the **template.json** file in Notepad and review the contents. Keep the Notepad window open.
+
 1. Open the **C:\\Labfiles\\Mod06\\parameters.json** file in Notepad, review it, and close the Notepad window.
 
 #### Task 2: Add an Azure VM extension section to the existing template
@@ -160,12 +169,15 @@ With the ARM templates configured, you will verify their functionality by perfor
 The main tasks for this exercise are as follows:
 
 1. Deploy an Azure VM by using an ARM template.
+
 1. Review results of the Azure VM deployment.
 
 #### Task 1: Deploy an Azure VM by using an ARM template
 
 1. On **SEA-ADM1**, in the Azure portal, browse to the **Custom deployment** page, and then select the option to **Build your own template in the editor**.
+
 1. Load the template file and the parameter file into the **Custom deployment** page.
+
 1. Deploy the template with the following settings, leaving all other settings with their default values:
 
    |Setting|Value|
@@ -182,7 +194,9 @@ The main tasks for this exercise are as follows:
 #### Task 2: Review results of the Azure VM deployment
 
 1. In the Azure portal, browse to the **AZ800-L0601-RG** resource group page and review the list of its resources, particularly the Azure VM **az800l06-vm0**.
+
 1. Browse to the **az800l06-vm0** Azure VM page and verify that the **customScriptExtension** has been provisioned successfully.
+
 1. Browse back to the **AZ800-L0601-RG** resource group page, review its deployments, and review the **Microsoft.Template** that was used to deploy it to confirm that it matches the template you used for deployment.
 
 ## Exercise 4: Configuring administrative access to Azure VMs running Windows Server
@@ -194,16 +208,19 @@ With the Azure VMs running Windows Server in place, you want to test the ability
 The main tasks for this exercise are as follows:
 
 1. Verify the status of Azure Microsoft Defender for Cloud.
+
 1. Review Just in time VM access settings.
 
 #### Task 1: Verify the status of Azure Microsoft Defender for Cloud
 
 1. In the Azure portal, browse to the **Microsoft Defender for Cloud** page.
+
 1. Verify that the enhanced security features of Microsoft Defender for Cloud are enabled.
 
 #### Task 2: Review the Just-in-time VM access settings
 
 1. In the Azure portal, browse to the **Microsoft Defender for Cloud \| Workload protections** page and review **Just in time VM access** settings.
+
 1. On the **Just-in-time VM access** page, review the **Configured**, **Not Configured**, and **Unsupported** tabs.
 
    >**Note**: It might take up to 24 hours for the newly deployed VM to appear in the **Unsupported** tab. Rather than wait, continue to the next exercise.
@@ -217,8 +234,11 @@ With the Azure VMs running Windows Server in place, you want to test the ability
 The main tasks for this exercise are as follows:
 
 1. Create and configure an NSG.
+
 1. Configure inbound HTTP access to an Azure VM.
+
 1. Trigger re-evaluation of the JIT status of an Azure VM.
+
 1. Connect to the Azure VM via JIT VM access.
 
 #### Task 1: Create and configure an NSG
@@ -247,6 +267,7 @@ The main tasks for this exercise are as follows:
 #### Task 2: Configure inbound HTTP access to an Azure VM
 
 1. In the Azure portal, browse to the page of the network interface attached to the **az800l06-vm0** Azure VM, and associate it with the network security group you created in the previous task.
+
 1. In the Azure portal, browse to the IP configuration of the network interface attached to the **az800l06-vm0** Azure VM, and associate it with a new, public IP address with the following settings, leaving all others with their default values:
 
    |Setting|Value|
@@ -255,6 +276,7 @@ The main tasks for this exercise are as follows:
    |SKU|**Standard**|
 
 1. From the lab VM, open a browser tab, browse to the newly created public IP address, and verify that the page displays the message, **Hello World from az800l06-vm0**.
+
 1. From the lab VM, try to establish a Remote Desktop connection to the same IP address and verify that the connection attempt fails.
 
    >**Note**: This is expected because the Azure VM is currently not accessible from the Internet via TCP port 3389. It is accessible only via TCP port 80.
@@ -264,14 +286,19 @@ The main tasks for this exercise are as follows:
 >**Note**: This task is necessary to trigger a re-evaluation of the JIT status of the Azure VM. By default, this might take up to 24 hours.
 
 1. In the Azure portal, browse back to the **az800l06-vm0** page.
+
 1. On the **az800l06-vm0** page, select **Configuration**. 
+
 1. On the **az800l06-vm0 \| Configuration** page, select **Enable just-in-time** VM access and select the **Open Microsoft Defender for Cloud** link.
+
 1. On the **Just-in-time VM access** page, verify that the entry representing the **az800l06-vm0** Azure VM appears on the **Configured** tab.
 
 #### Task 4: Connect to the Azure VM via JIT VM access
 
 1. From the **az800l06-vm0** page in the Azure portal, request JIT VM access.
+
 1. When the request is approved, initiate a Remote Desktop session to the target Azure VM.
+
 1. When prompted for credentials, specify the following values:
    
    |Setting|Value|
@@ -290,11 +317,13 @@ To minimize Azure-related charges, you want to deprovision the Azure resources p
 The main tasks for this exercise are as follows:
 
 1. Start a PowerShell session in Cloud Shell.
+
 1. Identify all Azure resources provisioned in the lab.
 
 #### Task 1: Start a PowerShell session in Cloud Shell
 
 1. From the Azure portal, open a PowerShell session in the Azure Cloud Shell pane.
+
 1. If this is the first time you're starting **Cloud Shell**, accept the default settings.
 
 #### Task 2: Identify all Azure resources provisioned in the lab

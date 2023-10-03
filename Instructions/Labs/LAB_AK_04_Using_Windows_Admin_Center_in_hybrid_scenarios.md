@@ -24,6 +24,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 > **Note**: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-SEA-ADM1** VMs are hosting the installation of **SEA-DC1** and **SEA-ADM1**
 
 1. Select **SEA-ADM1**.
+
 1. Sign in using the following credentials:
 
    - Username: **Administrator**
@@ -37,13 +38,17 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 #### Task 1: Create an Azure resource group by using an Azure Resource Manager template
 
 1. Connect to **SEA-ADM1**, and if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+
 1. On **SEA-ADM1**, start Microsoft Edge, go to the [Azure portal](https://portal.azure.com), and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
+
 1. In the Azure portal, open the Cloud Shell pane by selecting the toolbar icon directly next to the search text box.
+
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
    >**Note**: If this is the first time you are starting Cloud Shell and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and then select **Create storage**.
 
 1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**, and then upload the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\L04-sub_template.json** file to the Cloud Shell home directory.
+
 1. From the Cloud Shell pane, run the following commands to create a resource group that will contain the resources you provision in this lab. (Replace the `<Azure region>` placeholder with the name of an Azure region into which you can deploy Azure virtual machines, such as **eastus**.)
 
    >**Note**: This lab has been tested and verified using East US, so you should use that region. In general, to identify Azure regions where you can provision Azure VMs, refer to [Find Azure credit offers in your region](https://aka.ms/regions-offers).
@@ -62,6 +67,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 #### Task 2: Create an Azure VM by using an Azure Resource Manager template
 
 1. From the Cloud Shell pane, upload an Azure Resource Manager template **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\L04-rg_template.json** and the corresponding Azure Resource Manager parameter file **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\L04-rg_template.parameters.json**.
+
 1. From the Cloud Shell pane, run the following command to deploy an Azure VM running Windows Server that you'll be using in this lab:
 
    ```powershell
@@ -75,8 +81,11 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    >**Note**: Wait for the deployment to complete before you proceed to the next exercise. The deployment should take about 5 minutes.
 
 1. In the Azure portal, close the Cloud Shell pane.
+
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select the virtual network, and then on the **Virtual network** page select **az800l04-vnet**.
+
 1. On the **az800l04-vnet** page, under **Settings** section, select **Subnets**, and then, on the **Subnets** page, select **+ Gateway subnet**.
+
 1. On the **Add subnet** page, set the **Subnet address range** to **10.4.3.224/27**, and then select **Save** to create the **GatewaySubnet**.
 
 ## Exercise 2: Implementing hybrid connectivity by using the Azure Network Adapter
@@ -112,6 +121,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    - Password: **Pa55w.rd**
 
 1. On the **All connections** page, select the **sea-adm1.contoso.com** entry. 
+
 1. In Windows Admin Center, from left pane, in the list of Tools, select **Networks**, and then select **+ Add Azure Network Adapter (Preview)**.
 
    > **Note**: Depending on the screen resolution, you might need to select the **ellipsis** icon if the **Actions** menu is not available.
@@ -121,24 +131,34 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    >**Note**: This will automatically display the Azure pane on the **Settings** page within Windows Admin Center.
 
 1. In Windows Admin Center, in the Azure pane, on the **Settings** page, select **Register**.
+
 1. In the **Get started with Azure in Windows Admin Center** pane, select **Copy** to copy the code displayed in the listing of the steps of the registration procedure. 
+
 1. In the listing of step of the registration procedure, select the **Enter the code** link.
 
    >**Note**: This will open another tab in the Microsoft Edge window displaying the **Enter code** page.
 
 1. In the **Enter code** text box, paste the code you copied into Clipboard, and then select **Next**.
+
 1. On the **Sign in** page, provide the same username that you used to sign into your Azure subscription in the previous exercise, select **Next**, provide the corresponding password, and then select **Sign in**.
+
 1. When prompted **Are you trying to sign in to Windows Admin Center?**, select **Continue**.
+
 1. In Windows Admin Center, verify that the sign in was successful and close the newly opened tab of the Microsoft Edge window.
+
 1. In the **Get started with Azure in Windows Admin Center** pane, ensure that **Azure Active Directory application** is set to **Create new**, and then select **Connect**.
 >**Note**: Please wait until it successfully connected to Azure AD.
+
 1. In the listing of the steps of the registration procedure, select **Sign in**. This will open a pop-up window labeled **Permissions requested**.
+
 1. In the **Permissions requested** pop-up window, select **Consent on behalf of your organization**, and then select **Accept**.
 
 #### Task 2: Create an Azure Network Adapter
 
 1. On **SEA-ADM1**, back in the Microsoft Edge window displaying Windows Admin Center, browse to the **sea-adm1.contoso.com** page, and then from the left pane, in the list of Tools, select **Networks**.
+
 1. In Windows Admin Center, on the **Networks** page, from the **Actions** menu, select the **+ Add Azure Network Adapter (Preview)** entry again.
+
 1. In the **Add Azure Network Adapter** settings pane, specify the following settings, and then select **Create** (leave others with their default values):
 
    |Setting|Value|
@@ -152,6 +172,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    |Authentication Certificate|Auto-generated Self-signed root and client Certificate|
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Virtual network gateways**.
+
 1. On the **Virtual network gateways** page, select **Refresh** and verify that the new entry with the name starting with **WAC-Created-vpngw-ID_NO** appears in the list of virtual network gateways.
 
 >**Note**: The provisioning of the Azure virtual network gateway can take up to 45 minutes. Do not wait for the provisioning to complete but instead proceed to the next exercise.
@@ -161,8 +182,11 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 #### Task 1: Install Windows Admin Center gateway in Azure
 
 1. On **SEA-ADM1**, switch to the browser window displaying the Azure portal.
+
 1. Back in the Azure portal, open the Cloud Shell pane by selecting the **Cloud Shell** icon.
+
 1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**, and then upload the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\Deploy-WACAzVM.ps1** file into the Cloud Shell home directory.
+
 1. From the Cloud Shell pane, run the following command to enable the compatibility for the **AzureRm** PowerShell cmdlets that are used by the Windows Admin Center provisioning script:
 
    ```powershell
@@ -210,6 +234,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    ```
 
 1. When prompted to provide the name for the local Administrator account, enter **Student**
+
 1. When prompted to provide the password for the local Administrator account, enter **Pa55w.rd1234**
 
    >**Note**: Wait for the provisioning script to complete. This might take about 10 minutes.
@@ -223,8 +248,11 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 #### Task 2: Review results of the script provisioning
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Resource groups**, and then, on the **Resource groups** page, select the **AZ800-L0401-RG** entry.
+
 1. On the **AZ800-L0401-RG** page, on the **Overview** page, review the list of resources, including the Azure VM **az800l04-vmwac**.
+
 1. In the list of resources, select the Azure VM **az800l04-vmwac** entry, and then, on the **az800l04-vmwac** page, under **Settings** section select **Networking**.
+
 1. On the **az800l04-vmwac | Networking** page, on the **Inbound port rules** tab, note the entries representing the inbound port rule allowing connectivity on TCP port 5986 and the inbound rule allowing connectivity on TCP port 443.
 
 ## Exercise 4: Verifying functionality of the Windows Admin Center gateway in Azure
@@ -232,16 +260,23 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 #### Task 1: Connect to the Windows Admin Center gateway running in Azure VM
 
 1. On **SEA-ADM1**, start Microsoft Edge, copy and browse the URL containing the fully qualified name of the target Azure VM hosting the Windows Admin Center installation you identified in the previous exercise-3 task-1.
+
 1. In Microsoft Edge window, disregard the message **Your connection isn't private**, select **Advanced**, and then select the link starting with the text **Continue to**.
+
 1. When prompted, in the **Sign in to access this site** dialog box, sign in with the **Student** username and **Pa55w.rd1234** password.
+
 1. On the **All connections** page of Windows Admin Center, select **az800l04-vmwac [Gateway]**.
+
 1. Examine the Overview pane of Windows Admin Center.
 
 #### Task 2: Enable PowerShell Remoting on an Azure VM
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal, and then, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Virtual machines**.
+
 1. On the **Virtual machines** page, select **az800l04-vm0**.
+
 1. On the **az800l04-vm0** page, in the **Operations** section, select **Run command**, and then select **RunPowerShellScript**.
+
 1. If Windows Remote Management is disabled, on the **Run Command Script** page, in the **PowerShell Script** section, enter the following command, and then select **Run** to enable it.
 
    ```powershell
@@ -263,11 +298,17 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 #### Task 3: Connect to an Azure VM by using the Windows Admin Center gateway running in Azure VM
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the interface of the Windows Admin Center gateway running on the **az800l04-vmwac** Azure VM, select **Windows Admin Center**.
+
 1. On the **All connections** page, select **+ Add**.
+
 1. On the **Add or create resources** page, in the **Servers** section, select **Add**.
+
 1. In the **Server name** text box, enter **az800l04-vm0**.
+
 1. Select the **Use another account for this connection** option, provide the **Student** username and **Pa55w.rd1234** password, and then select **Add with Credentials**.
+
 1. In the list of connections, select **az800l04-vm0**
+
 1. After successfully connecting to the Azure VM, examine the Overview pane of the **az800l04-vmwac** Azure VM in Windows Admin Center.
 
 ## Exercise 5: Deprovisioning the Azure environment
@@ -275,6 +316,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 #### Task 1: Start a PowerShell session in Cloud Shell
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal.
+
 1. In the Microsoft Edge window displaying the Azure portal, open the Cloud Shell pane by selecting the Cloud Shell icon.
 
 #### Task 2: Identify all Azure resources provisioned in the lab

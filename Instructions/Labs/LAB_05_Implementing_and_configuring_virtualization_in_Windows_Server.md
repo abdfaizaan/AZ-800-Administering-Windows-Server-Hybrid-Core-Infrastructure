@@ -30,6 +30,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 > **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1** and **SEA-ADM1**
 
 1. Select **SEA-ADM1**.
+
 1. Sign in using the following credentials:
 
    - User name: **Administrator**
@@ -47,15 +48,21 @@ In this exercise, you will use Hyper-V Manager and Windows Admin Center to creat
 The main tasks for this exercise are as follows:
 
 1. Create a Hyper-V virtual switch
+
 1. Create a virtual hard disk
+
 1. Create a virtual machine
+
 1. Manage virtual machines using Windows Admin Center
 
 #### Task 1: Create a Hyper-V virtual switch
 
 1. On **SEA-ADM1**, open **Server Manager**. 
+
 1. In Server Manager, select **All Servers**. 
+
 1. In the Servers list, select **SEA-SVR1** and use its context-sensitive menu to start **Hyper-V Manager** targeting that server. 
+
 1. In **Hyper-V Manager**, use the **Virtual Switch Manager** to create on **SEA-SVR1** a virtual switch with the following settings:
 
    - Name: **Contoso Private Switch**
@@ -83,6 +90,7 @@ The main tasks for this exercise are as follows:
    - Hard disk: **C:\Base\SEA-VM1.vhd**
 
 1. Open the **Settings** window for **SEA-VM1** and enable **Dynamic Memory** with a Maximum RAM value of **4096**.
+
 1. Close Hyper-V Manager.
 
 #### Task 4: Manage Virtual Machines using Windows Admin Center
@@ -96,6 +104,7 @@ The main tasks for this exercise are as follows:
    ```powershell
    Start-BitsTransfer -Source https://aka.ms/WACDownload -Destination "$env:USERPROFILE\Downloads\WindowsAdminCenter.msi"
    ```
+
 1. Enter the following command, and then press Enter to install Windows Admin Center:
 	
    ```powershell
@@ -105,17 +114,24 @@ The main tasks for this exercise are as follows:
    > **Note**: Wait until the installation completes. This should take about 2 minutes.
 
 1. On **SEA-ADM1**, start Microsoft Edge and connect to the local instance of Windows Admin Center at `https://SEA-ADM1.contoso.com`. 
+
 1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
    - Username: **CONTOSO\\Administrator**
    - Password: **Pa55w.rd**
 
 1. In Windows Admin Center, add a connection to **sea-svr1.contoso.com** and connect to it as **CONTOSO\\Administrator** with the password of **Pa55w.rd**. 
+
 1. In the **Tools** list, select **Virtual Machines** and review the **Summary** pane.
+
 1. In the **Inventory** pane open **SEA-VM1** and review the **Setting**.
+
 1. Use Windows Admin Center to create a new disk, 5 GB in size.
+
 1. Use Windows Admin Center to start **SEA-VM1**, and then display the statistics for the running VM.
+
 1. Use Windows Admin Center to shut down **SEA-VM1**.
+
 1. In the **Tools** list, select **Virtual switches** and identify the existing switches.
 
 ### Exercise 1 results
@@ -131,7 +147,9 @@ In this exercise, you will use Docker to install and run Windows containers. You
 The main tasks for this exercise are as follows:
 
 1. Install Docker on Windows Server
+
 1. Install and run a Windows container
+
 1. Use Windows Admin Center to manage containers
 
 #### Task 1: Install Docker on Windows Server
@@ -173,6 +191,7 @@ The main tasks for this exercise are as follows:
 #### Task 2: Install and run a Windows container
 
 1. After **SEA-SVR1** restarts, use the **PowerShell** tool again to establish a new PowerShell Remoting session to **SEA-SVR1**.
+
 1. In the **Windows PowerShell** console, run the following command to verify the installed version of Docker:
 
    ```powershell
@@ -216,6 +235,7 @@ The main tasks for this exercise are as follows:
    > **Note**: Identify the IPv4 address of the Ethernet adapter named vEthernet (nat). This is the address of the new container. Next, identify the IPv4 address of the Ethernet adapter named **Ethernet**. This is the IP address of the host (**SEA-SVR1**) and is set to **172.16.10.12**.
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge window, open another tab and go to **http://172.16.10.12**. Verify that the browser displays the default IIS page.
+
 1. On **SEA-ADM1**, switch back to the PowerShell Remoting session to **SEA-SVR1** and, in the **Windows PowerShell** console, run the following command to list running containers:
 
    ```powershell
@@ -237,6 +257,7 @@ The main tasks for this exercise are as follows:
 #### Task 3: Use Windows Admin Center to manage containers
 
 1. On **SEA-ADM1**, in Windows Admin Center, in the **Tools** menu of **sea-svr1.contoso.com**, select **Containers**. When prompted to close the **PowerShell** session, select **Continue**.
+
 1. In the Containers pane, browse through the **Overview**, **Containers**, **Images**, **Networks**, and **Volumes** tabs.
 
 ### Exercise 2 results
