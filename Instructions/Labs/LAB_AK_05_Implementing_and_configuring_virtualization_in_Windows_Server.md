@@ -296,3 +296,5 @@ In this lab, you have completed:
 - Manage virtual machines using Windows Admin Center
 - Install Docker on Windows Server and run a Windows container
 - Use Windows Admin Center to manage containers
+
+### Proceed to next exercise
