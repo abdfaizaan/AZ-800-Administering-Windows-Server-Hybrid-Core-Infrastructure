@@ -360,3 +360,6 @@ In this lab, you have completed:
 - Manage AD DS objects with GUI tools and with Windows PowerShell.
 - Create and edit GPO settings.
 - Apply and verify settings on the client computer.
+
+### Proceed to next exercise
+
