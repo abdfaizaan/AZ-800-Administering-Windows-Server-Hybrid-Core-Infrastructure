@@ -508,3 +508,5 @@ In this lab, you have completed:
 - Downloading, installing, and configuring Azure AD Connect
 - Verifying integration between AD DS and Azure AD
 - Implementing Azure AD integration features in AD DS
+
+### Proceed to next exercise

@@ -177,3 +177,5 @@ In this lab, you have completed:
 - Configure Windows Admin Center extensions
 - Verify remote administration
 - Administer servers with Remote PowerShell
+
+### Proceed to next exercise

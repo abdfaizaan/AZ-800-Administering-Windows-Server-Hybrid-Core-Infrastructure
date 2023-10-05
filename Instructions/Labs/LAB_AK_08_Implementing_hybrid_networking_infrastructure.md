@@ -504,3 +504,5 @@ In this lab, you have completed:
 - Configure routing in the hub and spoke topology
 - Configure Azure private and Azure public DNS name resolution
 - Validate Azure private and Azure public DNS name resolution
+
+### Proceed to next exercise
