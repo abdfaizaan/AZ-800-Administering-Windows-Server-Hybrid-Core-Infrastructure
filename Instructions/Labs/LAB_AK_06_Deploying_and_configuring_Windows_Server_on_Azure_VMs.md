@@ -383,3 +383,5 @@ In this lab, you have completed:
 - Create and configure an NSG and inbound HTTP access to an Azure VM.
   Trigger re-evaluation of the JIT status of an Azure VM.
 - Connect to the Azure VM via JIT VM access.
+
+### Proceed to next exercise
