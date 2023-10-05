@@ -652,3 +652,5 @@ In this lab, you have completed:
 - Installed and configured iSCSI storage
 - Configured redundant Storage Spaces
 - Tested the implementation of Storage Spaces Direct
+
+### Proceed to next exercise
