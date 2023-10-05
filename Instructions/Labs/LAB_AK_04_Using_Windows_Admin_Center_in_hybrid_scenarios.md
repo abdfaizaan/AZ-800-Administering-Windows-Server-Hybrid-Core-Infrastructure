@@ -336,8 +336,12 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you'll be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 ### Review
+
 In this lab, you have completed:
+
 - Provisioning Azure VMs running Windows Server
 - Implementing hybrid connectivity by using the Azure Network Adapter
 - Deploying Windows Admin Center gateway in Azure
 - Verifying functionality of the Windows Admin Center gateway in Azure
+
+### Proceed to next exercise
