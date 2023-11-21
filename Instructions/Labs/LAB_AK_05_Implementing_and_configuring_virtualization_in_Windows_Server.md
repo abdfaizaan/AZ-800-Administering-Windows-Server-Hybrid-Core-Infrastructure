@@ -223,7 +223,12 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 
 #### Task 2: Install and run a Windows container
 
-1. After **SEA-SVR1** restarts, use the PowerShell tool again to establish a new PowerShell Remoting session to **SEA-SVR1**.
+1. After **SEA-SVR1** restarts, use the below PowerShell command again to establish a new PowerShell Remoting session to **SEA-SVR1**.
+   
+   ```powershell
+    Enter-PSSession -ComputerName SEA-SVR1
+   ```
+
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to verify the installed version of Docker:
 
    ```powershell
