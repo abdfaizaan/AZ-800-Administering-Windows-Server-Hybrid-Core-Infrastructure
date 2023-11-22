@@ -15,22 +15,6 @@ In this lab, you will perform:
 
 ## Estimated time: 60 minutes
 
-## Lab Setup
-
-Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T00A-ADM1** must be running. Other VMs can be running, but they aren't required for this lab.
-
-> **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1**, and **SEA-ADM1**
-
-1. Select **SEA-ADM1**.
-
-1. Sign in using the following credentials:
-
-   - Username: **Administrator**
-   - Password: **Pa55w.rd**
-   - Domain: **CONTOSO**
-
-For this lab, you'll use the available VM environment.
-
 ## Exercise 1: Deploying and configuring DHCP
 
 #### Task 1: Install the DHCP role
@@ -206,7 +190,7 @@ For this lab, you'll use the available VM environment.
    
 1. Select **Close** to return to the **Ethernet Status** window. 
 
-1. On **SEA-ADM1**, in the **DHCP** window, expand the **172.16.10.12** node, expand the **IPv4** node, expand the **Scope [172.16.0.0] Contoso** node, and then select **Address Leases**.
+1. On **SEA-ADM1**, in the **DHCP** window, expand the **172.16.10.12(sea-svr1)** node, expand the **IPv4** node, expand the **Scope [172.16.0.0] Contoso** node, and then select **Address Leases**.
 
 1. Verify that there is an entry representing the **SEA-ADM1.contoso.com** lease.
 
@@ -413,4 +397,4 @@ In this lab, you have completed:
 - Configure forwarding and conditional forwarding
 - Configure DNS policies and verify DNS policy functionality
 
-### Proceed to next exercise
+### Proceed to next Lab
