@@ -17,22 +17,6 @@ In this lab, you will perform:
 
 ## Estimated time: 90 minutes
 
-## Lab setup
-
-Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running. Other VMs can be running, but they aren't required for this lab.
-
-> **Note**: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-SEA-ADM1** VMs are hosting the installation of **SEA-DC1** and **SEA-ADM1**
-
-1. Select **SEA-ADM1**.
-
-1. Sign in using the following credentials:
-
-   - Username: **Administrator**
-   - Password: **Pa55w.rd**
-   - Domain: **CONTOSO**
-
-For this lab, you'll use the available VM environment and an Azure subscription. Before you begin the lab, ensure that you have an Azure subscription and a user account with the Owner or Contributor role in that subscription, as well as with the Global Administrator role in the Azure Active Directory (Azure AD) tenant associated with that subscription.
-
 ## Exercise 1: Provisioning Azure VMs running Windows Server
 
 #### Task 1: Create an Azure resource group by using an Azure Resource Manager template
@@ -146,7 +130,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. In Windows Admin Center, verify that the sign in was successful and close the newly opened tab of the Microsoft Edge window.
 
-1. In the **Get started with Azure in Windows Admin Center** pane, ensure that **Azure Active Directory application** is set to **Create new**, and then select **Connect**.
+1. In the **Get started with Azure in Windows Admin Center** pane, ensure that **Microsoft Entra application** is set to **Create new**, and then select **Connect**.
 >**Note**: Please wait until it successfully connected to Azure AD.
 
 1. In the listing of the steps of the registration procedure, select **Sign in**. This will open a pop-up window labeled **Permissions requested**.
@@ -259,7 +243,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 #### Task 1: Connect to the Windows Admin Center gateway running in Azure VM
 
-1. On **SEA-ADM1**, start Microsoft Edge, copy and browse the URL containing the fully qualified name of the target Azure VM hosting the Windows Admin Center installation you identified in the previous exercise-3 task-1.
+1. On **SEA-ADM1**, start Microsoft Edge, go to the URL containing the fully qualified name of the target Azure VM hosting the Windows Admin Center installation you identified in the previous exercise-3 task-1.
 
 1. In Microsoft Edge window, disregard the message **Your connection isn't private**, select **Advanced**, and then select the link starting with the text **Continue to**.
 
@@ -344,4 +328,4 @@ In this lab, you have completed:
 - Deploying Windows Admin Center gateway in Azure
 - Verifying functionality of the Windows Admin Center gateway in Azure
 
-### Proceed to next exercise
+### Proceed to next Lab
