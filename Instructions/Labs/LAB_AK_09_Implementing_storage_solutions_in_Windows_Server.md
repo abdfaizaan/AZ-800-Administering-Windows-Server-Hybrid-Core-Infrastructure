@@ -17,25 +17,6 @@ In this lab, you will perform:
 
 ## Estimated time: 90 minutes
 
-## Lab setup
-
-Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-SEA-SVR2**, **AZ-800T00A-SEA-SVR3**, and **AZ-800T00A-ADM1** must be running. 
-
-- For Exercises 1-3: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR3**, and **AZ-800T00A-SEA-ADM1**
-- For Exercise 4: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-SEA-SVR2**, **AZ-800T00A-SEA-SVR3**, and **AZ-800T00A-SEA-ADM1**
-
-> **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-SEA-SVR2**, **AZ-800T00A-SEA-SVR3**, and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1**, **SEA-SVR2**, **SEA-SVR3**, and **SEA-ADM1**, respectively.
-
-1. Select **SEA-ADM1**.
-
-1. Sign in using the following credentials:
-
-   - User name: **Administrator**
-   - Password: **Pa55w.rd**
-   - Domain: **CONTOSO**
-
-For this lab, you'll use the available VM environment.
-
 ## Exercise 1: Implementing Data Deduplication
 
 #### Task 1: Install the Data Deduplication role service
@@ -66,7 +47,7 @@ For this lab, you'll use the available VM environment.
 
 1. Switch back to the **Server Manager** window, and then, on the **Add Roles and Features Wizard installation succeeded** page, select **Close**.
 
-1. From lab Vm connect to the **SEA-SVR3** console session, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. Switch to the **SEA-SVR3** console session, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 
 1. If presented with the **SConfig** menu, at **Enter number to select an option**, enter **15** and press Enter to exit to a **PowerShell** console session.
    
@@ -293,7 +274,7 @@ using the following settings:
    - iSCSI target: **iSCSIFarm**
    - On **Assign ISCSI Target**: select **Existing ISCSI target**
      
-1. From lab Vm connect to the **SEA-DC1** console session, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. Switch to the **SEA-DC1** console session, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 
 1. If presented with the **SConfig** menu, at the **Enter number to select an option**, enter **15** and press Enter to exit to a **PowerShell** console session.
 
@@ -337,8 +318,13 @@ using the following settings:
    New-Partition -DiskNumber 1 -UseMaximumSize -DriveLetter E
    Format-Volume -DriveLetter E -FileSystem ReFS
    ```
-1. Repeat the previous step to create a new drive formatted with ReFS but this time replace the disk number and number with **2** and the drive letter with **F**.
+1. Repeat the previous step to create a new drive formatted with ReFS but this time replace the disk number with **2** and the drive letter with **F**. It should look as below:
 
+   ```powershell
+   Initialize-Disk -Number 2
+   New-Partition -DiskNumber 2 -UseMaximumSize -DriveLetter F
+   Format-Volume -DriveLetter F -FileSystem ReFS
+   ```
 1. Switch back to the console session to **SEA-ADM1** with the **Server Manager** window active.
 
 1. In **Server Manager**, refresh the Disks pane in **File and Storage Services** by selecting **Refresh** in the **TASKS** menu in the upper right corner of the window. 
@@ -653,4 +639,4 @@ In this lab, you have completed:
 - Configured redundant Storage Spaces
 - Tested the implementation of Storage Spaces Direct
 
-### Proceed to next exercise
+### Proceed to next Lab
