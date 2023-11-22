@@ -20,26 +20,13 @@ In this lab, you will perform:
 
    ![](media/architecture-az-800.png)  
 
-## Lab setup
-
-Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-SEA-SVR1** must be running. Other VMs can be running, but they aren't required for this lab.
-
-> **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-SEA-SVR1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1**, and **SEA-ADM1**. 
-
-1. In lab VM, select **SEA-ADM1**.
-1. Sign in using the following credentials:
-
-   - Username: **Administrator**
-   - Password: **Pa55w.rd**
-   - Domain: **CONTOSO**
-
 ## Exercise 1: Deploying a new domain controller on Server Core
 
 #### Task 1: Deploy AD DS on a new Windows Server Core server
 
-1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd** (Skip if already done).
+1. Switch to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd** (Skip if already done).
 
-1. On **SEA-ADM1**, select **Start**, and then select **Windows PowerShell (Admin)**.
+1. On **SEA-ADM1**, right click **Start**, and then select **Windows PowerShell (Admin)**.
 
 1. To install the AD DS server role, at the Windows PowerShell command prompt, enter the following command, and then press Enter:
 	
@@ -237,7 +224,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-
 1. In the **Allowed apps and features** list, locate the **Remote Event Log Management** entry, select the checkbox in the **Domain** column, and then select **OK**. 
 
 1. Sign out, and then sign in as **CONTOSO\\Ty** with the password **Pa55w.rd**.
-   >**Note**: You can use the first symbol below to **File** menu to **unlock** the screen.
+
 1. In the search box on the taskbar, enter **Control Panel**.
 
 1. In the **Best match** list, select **Control Panel**.
@@ -255,7 +242,6 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-
 1. In the **Registry Editor** dialog box, select **OK**.
 
 1. Sign out and then sign in back as **CONTOSO\Administrator** with the password **Pa55w.rd**.
-   >**Note**: You can use the first symbol below to **File** menu to **unlock** the screen.
 
 #### Task 4: Create and link the required GPOs
 
@@ -361,5 +347,5 @@ In this lab, you have completed:
 - Create and edit GPO settings.
 - Apply and verify settings on the client computer.
 
-### Proceed to next exercise
+### Proceed to next Lab.
 
