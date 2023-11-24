@@ -44,9 +44,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On **SEA-ADM1**, start Microsoft Edge, browse to the Azure portal, and authenticate with your Azure credentials.
 
-1. In the Azure portal, browse to **Azure Active Directory**.
+1. In the Azure portal, browse to **Microsoft Entra ID**.
 
-1. On the **Azure Active Directory** page, select **Custom domain names**.
+1. On the **Microsoft Entra ID** page, select **Custom domain names**.
 
 1. On the **Custom domain names** page, select **Add custom domain**.
 
