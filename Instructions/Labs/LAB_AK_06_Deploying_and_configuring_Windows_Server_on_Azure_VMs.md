@@ -47,7 +47,13 @@ In this task, you will connect to your Azure subscription and enable enhanced se
 
 1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 
-1. On **SEA-ADM1**, start Microsoft Edge, go to the [Azure portal](https://portal.azure.com), and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
+1. On **SEA-ADM1**, start Microsoft Edge, go to the [Azure portal](https://portal.azure.com).
+
+1. In the **Sign in** dialog box, copy and paste * Email/Username: <inject key="AzureAdUserEmail"></inject> and then select Next.
+
+1. In the **Enter password** dialog box, copy and paste * Password: <inject key="AzureAdUserPassword"></inject> and then select **Sign in**.
+
+1. On the **Stay signed in?** dialog box, select the Don’t show this again check box and then select **No**.
 
 >**Note**: Skip the remaining steps in this task and proceed directly to the next one if you have already enabled Microsoft Defender for Cloud in your Azure subscription.
 
@@ -124,7 +130,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. Select the ellipsis button next to the **template.zip**, and then in the pop-up menu, select **Show in folder**. This will automatically open File Explorer displaying the content of the **Downloads** folder.
 
-1. In File Explorer, copy **template.zip** to the **C:\\Labfiles\\Lab06** folder on **SEA-ADM1** (create a new folder if needed).
+1. In File Explorer, copy **template.zip** to the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab06** folder on **SEA-ADM1** (create a new folder if needed).
 
 1. From the **Template** page, browse back to the **Create a virtual machine** page, and close it without completing the deployment.
 
@@ -132,13 +138,13 @@ In this task, you will use the Azure portal to create resource groups and create
 
 #### Task 1: Review the ARM template and parameters files for Azure VM deployment
 
-1. On **SEA-ADM1**, start File Explorer, and then browse to the **C:\\Labfiles\\Lab06** folder.
+1. On **SEA-ADM1**, start File Explorer, and then browse to the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab06** folder.
 
 1. Extract the content of the **template.zip** file into the same folder.
 
 1. Open the **template.json** file in Notepad, and review its content. Keep the Notepad window open.
 
-1. From File Explorer, open the **C:\\Labfiles\\Lab06\\parameters.json** file in Notepad and review its content.
+1. From File Explorer, open the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab06\\parameters.json** file in Notepad and review its content.
 
 1. Close the Notepad window displaying the **parameters.json** file.
 
