@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Lab: Deploying and configuring Windows Server on Azure VMs'
-    module: 'Module 6: Deploying and Configuring Azure VMs'
----
-
 # Lab: Deploying and configuring Windows Server on Azure VMs
 
 ## Scenario
