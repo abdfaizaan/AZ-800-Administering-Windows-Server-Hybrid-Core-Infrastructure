@@ -295,9 +295,9 @@ security rules**.
 
 1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the Azure VM **az800l06-vm0**.
 
-1. On the **az800l06-vm0** page, under **Settings** section select **Networking**.
+1. On the **az800l06-vm0** page, under **Networking** section select **Network Settings**.
 
-1. On the **az800l06-vm0 \| Networking** page, select the link designating the network interface attached to **az800l06-vm0**.
+1. On the **az800l06-vm0 \| Network settings** page, select the link designating the network interface attached to **az800l06-vm0**.
 
 1. On the page displaying the network interface properties, in the vertical menu on the left side, in the **Settings** section, select **Network security group**. 
 
@@ -309,6 +309,7 @@ security rules**.
      
    |Setting|Value|
    |---|---|
+   |Resource group|**AZ800-L0601-RG**|
    |Name|**az800l06-vm0-pip1**|
    |SKU|**Standard**|
       
@@ -342,6 +343,8 @@ security rules**.
 
 1. On **az800l06-vm0 \| Connect** page, scroll down and click **Select** option in **Native RDP** under **Most Common** section.
 
+1. Select the check box under the **Configure prerequisites for Native RDP** and click on **Configured** and wait for the configuration to be completed.
+
 1. On **Native RDP**, select **Download RDP File**,  follow prompts to connect to the target Azure VM.
 
 1. When **Enter your credentials** window prompted, click **More Choices** and select **Use a different acount**, specify the following values, and then select **OK**:
@@ -352,30 +355,6 @@ security rules**.
    |Password|**Pa55w.rd1234**|
 
 1. Verify that you can successfully access via Remote Desktop the operating system running in the Azure VM and close the Remote Desktop session.
-
-## Exercise 6: Deprovisioning the Azure environment
-
-#### Task 1: Start a PowerShell session in Cloud Shell
-
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, open the Azure Cloud Shell pane by selecting the Cloud Shell icon.
-
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
-
-   >**Note**: If this is the first time you're starting Cloud Shell and you're presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and then select **Create storage**.
-
-#### Task 2: Identify all Azure resources provisioned in the lab
-
-1. From the Cloud Shell pane, run the following command to list all resource groups created throughout this lab:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'AZ800-L06*'
-   ```
-1. Run the following command to delete all resource groups created throughout this lab:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'AZ800-L06*' | Remove-AzResourceGroup -Force -AsJob
-   ```
-   >**Note**: The command executes asynchronously (as determined by the *-AsJob* parameter). So, while you will be able to run another PowerShell command immediately after within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 ### Review
 In this lab, you have completed:
