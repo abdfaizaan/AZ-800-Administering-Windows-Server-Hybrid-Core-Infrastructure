@@ -223,6 +223,8 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. On the **AZ800-L0601-RG \| Deployments** page, select the **Microsoft.Template** link.
 
+   ![](media/template.png)
+
 1. On the **Microsoft.Template \| Overview** page, select **Template**, and note that this is the same template you used for deployment.
 
 ## Exercise 4: Configuring administrative access to Azure VMs running Windows Server
@@ -235,13 +237,17 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. On the **Environment settings** page, expand and select the entry representing your Azure subscription.
 
-2. On the **Settings \| Defender plans** page, verify that the tile **Enable all Microsoft Defender for Cloud plans** is selected and, on the top side, select **Settings & monitoring**.
+   ![](media/sub.png)
 
-3. On the **Settings & monitoring** page, in the list of extensions, to the right side of the **Log Analytics agent/Azure Monitor agent** entry, select the **Edit configuration** link.
+1. On the **Settings \| Defender plans** page, verify that the tile **Enable all Microsoft Defender for Cloud plans** is selected and, on the top side, select **Settings & monitoring**.
 
-4. On the **Auto-provisioning configuration**, in the **Workspace selection** ensure that the **Default workspace(s)** entry is selected, select **Apply**, and back on the **Settings & monitoring** page, select **Continue**.
+1. On the **Settings & monitoring** page, in the list of extensions, to the right side of the **Log Analytics agent/Azure Monitor agent** entry, select the **Edit configuration** link.
 
-5. On the **Settings \| Defender plans** page, select **Save**.
+   ![](media/configuration.png)
+
+1. On the **Auto-provisioning configuration**, in the **Workspace selection** ensure that the **Default workspace(s)** entry is selected, select **Apply**, and back on the **Settings & monitoring** page, select **Continue**.
+
+1. On the **Settings \| Defender plans** page, select **Save**.
 
 #### Task 2: Review the Just-in-time VM access settings
 
@@ -249,7 +255,11 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. On the **Microsoft Defender for Cloud \| Workload protections** page, select **Just-in-time VM access**.
 
+   ![](media/time.png)
+
 1. On the **Just-in-time VM access** page, review the **Configured**, **Not Configured**, and **Unsupported** tabs.
+
+   ![](media/vm.png)
 
    >**Note**: It might take up to 24 hours for the newly deployed VM to appear on the **Unsupported** tab. Rather than wait, continue to the next exercise.
 
@@ -321,6 +331,8 @@ security rules**.
 
 1. Open another browser tab, browse to that IP address, and verify that a webpage opens, displaying **Hello World from az800l06-vm0**.
 
+   ![](media/hello.png)
+
 1. From the lab computer, start the Remote Desktop app, and try connecting to the same IP address. Verify that the connection fails.
 
    >**Note**: This is expected because the Azure VM is currently not accessible from the Internet via TCP port 3389. It is accessible only via TCP port 80.
@@ -335,6 +347,8 @@ security rules**.
 
 1. On the **az800l06-vm0 \| Configuration** page, select **Enable just-in-time** VM access and select the **Open Microsoft Defender for Cloud** link.
 
+   ![](media/just.png)
+
 1. On the **Just-in-time VM access** page, verify that the entry representing the **az800l06-vm0** Azure VM appears on the **Configured** tab.
 
 #### Task 4: Connect to the Azure VM via JIT VM access
@@ -344,6 +358,8 @@ security rules**.
 1. On **az800l06-vm0 \| Connect** page, scroll down and click **Select** option in **Native RDP** under **Most Common** section.
 
 1. Select the check box under the **Configure prerequisites for Native RDP** and click on **Configured** and wait for the configuration to be completed.
+
+   ![](media/check-box.png)
 
 1. On **Native RDP**, select **Download RDP File**,  follow prompts to connect to the target Azure VM.
 
@@ -368,5 +384,3 @@ In this lab, you have completed:
 - Create and configure an NSG and inbound HTTP access to an Azure VM.
   Trigger re-evaluation of the JIT status of an Azure VM.
 - Connect to the Azure VM via JIT VM access.
-
-### Proceed to next exercise
