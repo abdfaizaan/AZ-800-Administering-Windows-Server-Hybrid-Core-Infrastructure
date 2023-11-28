@@ -130,7 +130,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. Select the ellipsis button next to the **template.zip**, and then in the pop-up menu, select **Show in folder**. This will automatically open File Explorer displaying the content of the **Downloads** folder.
 
-1. In File Explorer, copy **template.zip** to the **C:\\Labfiles\\Lab06** folder on **SEA-ADM1** (create a new folder if needed).
+1. In File Explorer, copy **template.zip** to the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab06** folder on **SEA-ADM1** (create a new folder if needed).
 
 1. From the **Template** page, browse back to the **Create a virtual machine** page, and close it without completing the deployment.
 
@@ -138,13 +138,13 @@ In this task, you will use the Azure portal to create resource groups and create
 
 #### Task 1: Review the ARM template and parameters files for Azure VM deployment
 
-1. On **SEA-ADM1**, start File Explorer, and then browse to the **C:\\Labfiles\\Lab06** folder.
+1. On **SEA-ADM1**, start File Explorer, and then browse to the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab06** folder.
 
 1. Extract the content of the **template.zip** file into the same folder.
 
 1. Open the **template.json** file in Notepad, and review its content. Keep the Notepad window open.
 
-1. From File Explorer, open the **C:\\Labfiles\\Lab06\\parameters.json** file in Notepad and review its content.
+1. From File Explorer, open the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab06\\parameters.json** file in Notepad and review its content.
 
 1. Close the Notepad window displaying the **parameters.json** file.
 
@@ -217,7 +217,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. Within the list of resources, select the Azure VM **az800l06-vm0** entry. 
 
-1. On the **az800l06-vm0** page, under **Settings** section, select **Extensions + applications**, and on the list of extensions, verify that the **customScriptExtension** has been provisioned successfully.
+1. On the **az800l06-vm0** page, under **Settings** section, select **Extensions + applications**, and on the list of extensions, verify that the **customScriptExtension** has been **provisioned successfully**.
 
 1. Browse back to the **AZ800-L0601-RG** page, and in the **Settings** section, select **Deployments**.
 
