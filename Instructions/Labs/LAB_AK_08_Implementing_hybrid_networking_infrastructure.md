@@ -38,7 +38,13 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 
-1. On **SEA-ADM1**, start Microsoft Edge, go to the **[Azure portal](https://portal.azure.com)**, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
+1. On **SEA-ADM1**, start Microsoft Edge, go to the [Azure portal](https://portal.azure.com).
+
+1. In the **Sign in** dialog box, copy and paste * Email/Username: <inject key="AzureAdUserEmail"></inject> and then select Next.
+
+1. In the **Enter password** dialog box, copy and paste * Password: <inject key="AzureAdUserPassword"></inject> and then select **Sign in**.
+
+1. On the **Stay signed in?** dialog box, select the Don’t show this again check box and then select **No**.
 
 1. In the Azure portal, open the Cloud Shell pane by selecting the toolbar icon next to the search text box.
 
@@ -429,7 +435,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Resource Group | **AZ800-L0802-RG** |
     | Name | Provide unique DNS domain name |
 
-    >**Note**: Try to give unique DNS names until it shows green check mark.
+    >**Note**: Try to give unique DNS names like dns.com.
 
 1. Select **Review + create**, and then select **Create**.
 
@@ -471,30 +477,6 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. Verify that the output of the command includes the public IP address of **20.30.40.50**.
 
     >**Note**: The name resolution works as expected because the **nslookup** command allows you to specify the IP address of the DNS server to query for a record (which, in this case, is `<Name server 1>`). For the name resolution to work when querying any publicly accessible DNS server, you would need to register the domain name with a DNS registrar and configure the name servers listed on the public DNS zone page in the Azure portal as authoritative for the namespace corresponding to that domain.
-
-## Exercise 3: Deprovisioning the Azure environment
-
-#### Task 1: Start a PowerShell session in Cloud Shell
-
-1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal.
-
-1. In the Microsoft Edge window displaying the Azure portal, open the Cloud Shell pane by selecting the Cloud Shell icon.
-
-#### Task 2: Identify all Azure resources provisioned in the lab
-
-1. From the Cloud Shell page, run the following command to list all the resource groups created throughout this lab:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'AZ800-L08*'
-   ```
-
-1. Run the following command to delete all resource groups you created throughout this lab:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'AZ800-L08*' | Remove-AzResourceGroup -Force -AsJob
-   ```
-
-   >**Note**: The command executes asynchronously (as determined by the *-AsJob* parameter), so while you'll be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 ### Review
 In this lab, you have completed:
