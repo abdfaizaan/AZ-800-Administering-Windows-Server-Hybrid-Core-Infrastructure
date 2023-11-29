@@ -83,14 +83,18 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 2. Select first **SEA-SVR1**, in **Action** pane under **SEA-SVR1**, select **Open in Explorer**.
 
-3. Select second **SEA-SVR2**, in **Action** pane under **SEA-SVR2**, select **Open in Explorer**.
+   ![](media/svr.png)
 
-4. In the first File Explorer instance, connect to **\\\\SEA-SVR1\\Data**, and then in the second File Explorer instance, connect to **\\\\SEA-SVR2\\Data**.
+4. Select second **SEA-SVR2**, in **Action** pane under **SEA-SVR2**, select **Open in Explorer**.
+
+5. In the first File Explorer instance, connect to **\\\\SEA-SVR1\\Data**, and then in the second File Explorer instance, connect to **\\\\SEA-SVR2\\Data**.
 
 1. Create a new file with your name in **\\\\SEA-SVR1\\Data**.
 
 1. Verify that the file with your name replicates to **\\\\SEA-SVR2\\Data** after a few seconds. This confirms that DFS Replication is working.
 
+    ![](media/svr2.png)
+   
    >**Note:** Wait until the files are replicated and both the File Explorer windows record the same content.
    
    >**Note:** Kindly try to close and reopen two file explorer instance to see replicated files.
@@ -213,7 +217,9 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    
    >**Note**: Are you trying to sign in to Microsoft Azure PowerShell?**, select **Continue**, and then close the Microsoft Edge tab you opened in the previous step.
    
-1. Switch to the **Windows PowerShell ISE** window and ensure that the script completed successfully. 
+1. Switch to the **Windows PowerShell ISE** window and ensure that the script completed successfully.
+
+   ![](media/script.png)
 
 1. Switch back to the Microsoft Edge window displaying the Azure portal, and then, on the **FileSync1 \| Registered servers** page, select **Refresh** to display the current list of registered servers.
 
@@ -282,7 +288,9 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. In the Server Endpoint Properties pane, Under **settings** section, select **Cloud Tiering Settings**. 
 
-1. Select **Enable cloud Tiering** In the **Always preserve the specified percentage of free space on the volume** text box, enter **90** and select **Enabled Date policy**. In the **Only cache files that were accessed or modified within the specified number of days** text box, enter **14**, and then select **Save**.  
+1. Select **Enable cloud Tiering** In the **Always preserve the specified percentage of free space on the volume** text box, enter **90** and select **Enabled Date policy**. In the **Only cache files that were accessed or modified within the specified number of days** text box, enter **14**, and then select **Save**.
+
+    ![](media/policy.png)
 
    >**Note:** After some time, files on **SEA-SVR2** would be automatically tiered. You will trigger this process by using PowerShell.
 
