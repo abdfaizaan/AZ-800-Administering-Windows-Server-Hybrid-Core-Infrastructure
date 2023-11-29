@@ -120,6 +120,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Traffic forwarded from remote virtual network | **Allow (default)** |
     | Virtual network gateway | **None (default)** |
 
+    ![](media/peering.png)
     >**Note**: Wait for the operation to complete.
 
     >**Note**: This step establishes two peerings - one from **az800l08-vnet0** to **az800l08-vnet1** and the other from **az800l08-vnet1** to **az800l08-vnet0**.
@@ -398,6 +399,8 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. On the **contoso.org** private DNS zone page, in the vertical menu on the left, select **Overview**.
 
 1. In the **Overview** section of the **contoso.org** private DNS zone page, review the listing of DNS record sets and verify that the **A** records of **az800l08-vm0**, **az800l08-vm1**, and **az800l08-vm2** appear in the list as **Auto registered**.
+
+    ![](media/contoso.png)
 
     >**Note:** You might need to wait a few minutes and refresh the page if the record sets are not listed.
 
