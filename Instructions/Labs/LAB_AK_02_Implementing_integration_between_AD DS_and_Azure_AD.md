@@ -471,4 +471,4 @@ In this lab, you have completed:
 - Verifying integration between AD DS and Microsoft Entra ID
 - Implementing Azure AD integration features in AD DS
 
-### Proceed to next exercise
+## You have successfully completed this lab.
