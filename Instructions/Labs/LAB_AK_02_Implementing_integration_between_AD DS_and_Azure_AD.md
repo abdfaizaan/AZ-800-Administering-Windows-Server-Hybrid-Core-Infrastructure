@@ -44,7 +44,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On **SEA-ADM1**, double-click on the Azure portal, and authenticate with your Azure credentials.
 
-1. In the Azure portal, browse to **Microsoft Entra ID**.
+1. On the Azure portal, from the **Search resources, Services, and docs(G+/)** blade, search for and select **Microsoft Entra ID**.
 
 1. On the **Microsoft Entra ID** page, from the left-hand navigation pane, select **Custom domain names**.
 
@@ -54,7 +54,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On the `contoso.com` custom domain name page, review the Domain Name System (DNS) record types that you would use to verify the domain.
 
-1. Close the pane without verifying the domain name.
+1. Close the pane without **verifying** the domain name.
 
    > **Note**: While, in general, you would use DNS records to verify a domain, this lab doesn't require the use of a verified domain.
 
@@ -68,7 +68,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    > **Note**: Ensure the domain name drop-down menu for the **User name** lists the default domain name ending with `onmicrosoft.com`.
 
-1. Under **Password**, select the **Auto generate** checkbox. Record the password as you'll use it later in this lab.
+1. Under **Password**, select the **Auto generate** checkbox. Record the user name and password as you'll use it later in this lab.
 
 1. Select **Next: Properties>**
 
@@ -195,7 +195,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 #### Task 3: Update a user account in Active Directory
 
-1. On **SEA-ADM1**, in Server Manager, on the **Tools** menu, select **Active Directory Users and Computers**.
+1. On **SEA-ADM1**, search and select **Server Manager**, click on the **Tools** menu from top right, select **Active Directory Users and Computers**.
+
+   ![](media/server.png) 
 
 1. In **Active Directory Users and Computers**, expand the **Sales**, and then open the properties for **Sumesh Rajan** by right clicking on the user.
 
