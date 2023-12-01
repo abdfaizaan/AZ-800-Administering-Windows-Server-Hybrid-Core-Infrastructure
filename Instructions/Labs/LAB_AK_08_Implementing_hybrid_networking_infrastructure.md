@@ -38,11 +38,13 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 
-1. On **SEA-ADM1**, start Microsoft Edge, go to the [Azure portal](https://portal.azure.com).
+1. On **SEA-ADM1**, double-click on Azure portal.
 
-1. In the **Sign in** dialog box, copy and paste * Email/Username: <inject key="AzureAdUserEmail"></inject> and then select Next.
+1. In the **Sign in** dialog box, copy and paste 
+    - Email/Username: <inject key="AzureAdUserEmail"></inject> and then select Next.
 
-1. In the **Enter password** dialog box, copy and paste * Password: <inject key="AzureAdUserPassword"></inject> and then select **Sign in**.
+1. In the **Enter password** dialog box, copy and paste 
+    - Password: <inject key="AzureAdUserPassword"></inject> and then select **Sign in**.
 
 1. On the **Stay signed in?** dialog box, select the Don’t show this again check box and then select **No**.
 
@@ -50,17 +52,24 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-   >**Note**: If this is the first time you are starting Cloud Shell and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and then select **Create storage**.
+   >**Note**: If this is the first time you are starting Cloud Shell and you are presented with the **You have no storage mounted** message, select **Show advanced settings**. Now, fill out the details, and select **Create storage**:-
+
+   |Settings|Value|
+   |--------|-----|
+   |Resource group| **Use existing > AZ800-L0801-RG**|
+   |Storage account| **Create new > blob<inject key="DeploymentID" enableCopy="false"/>**|
+   |File share| **Create new > fs<inject key="DeploymentID" enableCopy="false"/>**|
 
 1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**, and upload the files **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab08\L08-rg_template.json** and **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab08\L08-rg_template.parameters.json** into the Cloud Shell home directory.
 
 1. From the Cloud Shell pane, run the following command to create the three virtual networks and four Azure VMs into them by using the template and parameter files you uploaded:
 
    ```powershell
-   New-AzResourceGroupDeployment `
-      -ResourceGroupName $rgName `
-      -TemplateFile $HOME/L08-rg_template.json `
-      -TemplateParameterFile $HOME/L08-rg_template.parameters.json
+   $rgName = "AZ800-L0801-RG"
+    New-AzResourceGroupDeployment `
+   -ResourceGroupName $rgName `
+   -TemplateFile $HOME/L08-rg_template.json `
+   -TemplateParameterFile $HOME/L08-rg_template.parameters.json
    ```
 
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 3 minutes.
@@ -84,7 +93,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    }
    ```
 
-    >**Note**: Do not wait for the deployment to complete but instead proceed to the next step. The installation of the Network Watcher extension should take about 5 minutes.
+    >**Note**: Do not wait for the deployment to complete, proceed to the next step. The installation of the Network Watcher extension should take about 5 minutes.
 
 #### Task 2: Configure the hub and spoke network topology
 
@@ -94,46 +103,45 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. In the list of virtual networks, select **az800l08-vnet0**.
 
-1. On the **az800l08-vnet0** virtual network page, in the **Settings** section, select **Peerings**, and then select **+ Add**.
+1. On the **az800l08-vnet0** virtual network page, from the left navigation pane, under the **Settings** section, select **Peerings**, and then select **+ Add**.
 
 1. Specify the following settings (leave others with their default values), and then select **Add**:
 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az800l08-vnet0_to_az800l08-vnet1** |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Allow (default)** |
-    | Virtual network gateway or Route Server | **None (default)** |
+    | Allow 'az800l08-vnet0' to access the peered virtual network | **Select the checkbox** |
+    |Allow 'az800l08-vnet0' to receive forwarded traffic from the peered virtual network| **Select the checkbox** |
     | Remote virtual network: Peering link name | **az800l08-vnet1_to_az800l08-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | Remote virtual network: Virtual network | **az800l08-vnet1** |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Allow (default)** |
-    | Virtual network gateway | **None (default)** |
+    | Allow the peered virtual network to access 'az800l08-vnet0' | **Select the checkbox** |
+    | Allow the peered virtual network to receive forwarded traffic from 'az800l08-vnet0'| **Select the checkbox** |
 
-    ![](media/peering.png)
+    ![](media/peering1.png)
+
+    ![](media/peering2.png)
+
     >**Note**: Wait for the operation to complete.
 
     >**Note**: This step establishes two peerings - one from **az800l08-vnet0** to **az800l08-vnet1** and the other from **az800l08-vnet1** to **az800l08-vnet0**.
 
     >**Note**: **Allow forwarded traffic** needs to be enabled in order to facilitate routing between spoke virtual networks, which you will implement later in this lab.
 
-1. On the **az800l08-vnet0** virtual network page, in the **Settings** section, select **Peerings**, and then select **+ Add**.
+1. On the **az800l08-vnet0 | Peerings** virtual network page, select **+ Add**.
 
 1. Specify the following settings (leave others with their default values), and then select **Add**:
 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az800l08-vnet0_to_az800l08-vnet2** |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Allow (default)** |
-    | Virtual network gateway | **None (default)** |
+    | Allow 'az800l08-vnet1' to access the peered virtual network | **Select the checkbox**|
+    | Allow 'az800l08-vnet1' to receive forwarded traffic from the peered virtual network| **Select the checkbox** |
     | Remote virtual network: Peering link name | **az800l08-vnet2_to_az800l08-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | Remote virtual network: Virtual network | **az800l08-vnet2** |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Allow (default)** |
-    | Virtual network gateway | **None (default)** |
+    | Allow 'az800l08-vnet2' to access 'az800l08-vnet1'| **Select the checkbox**|
+    |Allow 'az800l08-vnet2' to receive forwarded traffic from 'az800l08-vnet1' | **Select the checkbox** |
 
     >**Note**: This step establishes two peerings - one from **az800l08-vnet0** to **az800l08-vnet2** and the other from **az800l08-vnet2** to **az800l08-vnet0**. This completes setting up the hub and spoke topology (with the **az800l08-vnet0** virtual network serving the role of the hub, while **az800l08-vnet1** and **az800l08-vnet2** are its spokes).
 
@@ -141,16 +149,14 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 >**Note**: Before you start this task, make sure that the script you invoked in the first task of this exercise completed successfully.
 
-1. In the Azure portal, search for and select **Network Watcher**.
+1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Network Watcher**.
 
-1. On the **Network Watcher** page, under **Network diagnostic tools** section, select **Connection troubleshoot**.
+1. On the **Network Watcher** page, from the left navigation pane under **Network diagnostic tools** section, select **Connection troubleshoot**.
 
-1. On the **Network Watcher - Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
+1. On the **Network Watcher | Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **AZ800-L0801-RG** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az800l08-vm0** |
     | Destination | **Specify manually** |
@@ -168,8 +174,6 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **AZ800-L0801-RG** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az800l08-vm0** |
     | Destination | **Specify manually** |
@@ -189,8 +193,6 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **AZ800-L0801-RG** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az800l08-vm1** |
     | Destination | **Specify manually** |
@@ -204,13 +206,13 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 #### Task 4: Configure routing in the hub and spoke topology
 
-1. In the Azure portal, search and select **Virtual machines**.
+1. In the Azure portal, In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Virtual machines**.
 
 1. On the **Virtual machines** page, in the list of virtual machines, select **az800l08-vm0**.
 
-1. On the **az800l08-vm0** virtual machine page, in the **Settings** section, select **Networking**.
+1. On the **az800l08-vm0** virtual machine page, from the left navigation pane, under the **Networking** section, select **Networking settings**.
 
-1. Select the **az800l08-nic0** link next to the **Network interface** label, and then, on the **az800l08-nic0** network interface page, in the **Settings** section, select **IP configurations**.
+1. Select the **az800l08-nic0** link next to the **Network interface** label, and then, on the **az800l08-nic0** network interface page, from the left navigation pane, under **Settings** section, select **IP configurations**.
 
 1. Select checkbox **Enable IP forwarding**  and select **Apply** to save the change.
 
@@ -220,7 +222,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. In the Azure portal, browse back to the **az800l08-vm0** Azure virtual machine page.
 
-1. On the **az800l08-vm0** page, in the **Operations** section, select **Run command**, and then, in the list of commands, select **RunPowerShellScript**.
+1. On the **az800l08-vm0** page, from the left navigation pane, under the **Operations** section, select **Run command**, and then, in the list of commands, select **RunPowerShellScript**.
 
 1. On the **Run Command Script** page, enter the following command, and then select **Run** to install the Remote Access Windows Server role.
 
@@ -261,7 +263,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. Select **Go to resource**.
 
-1. On the **az800l08-rt12** route table page, in the **Settings** section, select **Routes**, and then select **+ Add**.
+1. On the **az800l08-rt12** route table page, from the left-navigation menu, under the **Settings** section, select **Routes**, and then select **+ Add**.
 
 1. Add a new route with the following settings:
 
@@ -277,7 +279,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. Select **Add**.
 
-1. Back on the **az800l08-rt12** route table page, in the **Settings** section, select **Subnets**, and then select **+ Associate**.
+1. Back on the **az800l08-rt12** route table page, from the left-navigation menu, under the **Settings** section, select **Subnets**, and then select **+ Associate**.
 
 1. Associate the route table **az800l08-rt12** with the following subnet:
 
@@ -306,7 +308,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. Select **Go to resource**.
 
-1. On the **az800l08-rt21** route table page, in the **Settings** section, select **Routes**, and then select **+ Add**.
+1. On the **az800l08-rt21** route table page, from the left-navigation pane, under the **Settings** section, select **Routes**, and then select **+ Add**.
 
 1. Add a new route with the following settings:
 
@@ -320,7 +322,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. Select **Add**.
 
-1. Back on the **az800l08-rt21** route table page, in the **Settings** section, select **Subnets**, and then select **+ Associate**.
+1. Back on the **az800l08-rt21** route table page, from the left navigation pane, under the **Settings** section, select **Subnets**, and then select **+ Associate**.
 
 1. Associate the route table **az800l08-rt21** with the following subnet:
 
@@ -337,8 +339,6 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **AZ800-L0801-RG** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az800l08-vm1** |
     | Destination | **Specify manually** |
@@ -350,6 +350,11 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
     > **Note**: This is expected because the traffic between spoke virtual networks is now routed via the virtual machine located in the hub virtual network, which functions as a router.
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Exercise 2: Implement DNS name resolution in Azure
 
@@ -366,7 +371,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Name | **contoso.org** |
     | Resource group location | the same Azure region into which you deploy resources in the previous exercise of this lab |
 
-1. Select **Review and Create**, and then select **Create**.
+1. Select **Review create**, and then select **Create**.
 
     >**Note**: Wait for the private DNS zone to be created. This should take about 2 minutes.
 
@@ -471,6 +476,12 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 1. Verify that the output of the command includes the public IP address of **20.30.40.50**.
 
     >**Note**: The name resolution works as expected because the **nslookup** command allows you to specify the IP address of the DNS server to query for a record (which, in this case, is `<Name server 1>`). For the name resolution to work when querying any publicly accessible DNS server, you would need to register the domain name with a DNS registrar and configure the name servers listed on the public DNS zone page in the Azure portal as authoritative for the namespace corresponding to that domain.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Review
 In this lab, you have completed:
