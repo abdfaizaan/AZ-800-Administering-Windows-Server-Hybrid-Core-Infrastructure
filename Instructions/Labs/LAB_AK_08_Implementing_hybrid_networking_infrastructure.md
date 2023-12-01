@@ -53,15 +53,6 @@ For this lab, you'll use the available VM environment and an Azure subscription.
    >**Note**: If this is the first time you are starting Cloud Shell and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and then select **Create storage**.
 
 1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**, and upload the files **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab08\L08-rg_template.json** and **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab08\L08-rg_template.parameters.json** into the Cloud Shell home directory.
-1. From the Cloud Shell pane, run the following commands to create the first resource group that will be hosting the lab environment (replace the `<Azure_region>` placeholder with the name of an Azure region you intend to use for the deployment):
-
-   >**Note**: You can run the **(Get-AzLocation).Location** command to list the names of available Azure regions:
-
-    ```powershell 
-    $location = '<Azure_region>'
-    $rgName = 'AZ800-L0801-RG'
-    New-AzResourceGroup -Name $rgName -Location $location
-    ```
 
 1. From the Cloud Shell pane, run the following command to create the three virtual networks and four Azure VMs into them by using the template and parameter files you uploaded:
 
