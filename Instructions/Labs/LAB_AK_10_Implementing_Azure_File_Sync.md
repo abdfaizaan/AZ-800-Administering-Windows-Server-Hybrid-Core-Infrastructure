@@ -24,16 +24,6 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 > **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-SEA-SVR2**, and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1**, **SEA-SVR2**, and **SEA-ADM1**, respectively.
 
-1. Select **SEA-ADM1**.
-
-1. Sign in using the following credentials:
-
-   - User name: **Administrator**
-   - Password: **Pa55w.rd**
-   - Domain: **CONTOSO**
-
-For this lab, you'll use the available VM environment and an Azure subscription. Before you begin the lab, ensure that you have an Azure subscription and a user account with the Owner or Contributor role in that subscription.
-
 ## Exercise 1: Implementing Distributed File System (DFS) Replication in your on-premises environment
 
 ### Task 1: Deploy DFS
@@ -417,11 +407,13 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
    >**Note:** You might need to wait a few minutes for the sync conflict to occur.
 
-  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation tab.
-   > - Hit the Validate button for the corresponding task.
-   > - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+  
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+
 
 ### Review
 In this lab, you have completed:

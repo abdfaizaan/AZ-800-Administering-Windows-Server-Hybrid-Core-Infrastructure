@@ -22,16 +22,6 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 > **Note**: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1** and **SEA-ADM1**
 
-1. Select **SEA-ADM1**.
-
-1. Sign in using the following credentials:
-
-   - User name: **Administrator**
-   - Password: **Pa55w.rd**
-   - Domain: **CONTOSO**
-
-For this lab, you'll use the available VM environment and an Azure subscription. Before you begin the lab, ensure that you have an Azure subscription and a user account with the Owner or Contributor role in that subscription.
-
 ### Exercise 1: Implement virtual network routing in Azure
 
 #### Task 1: Provision lab infrastructure resources
@@ -50,15 +40,25 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. In the Azure portal, open the Cloud Shell pane by selecting the toolbar icon next to the search text box.
 
+   ![](media/mod823.png)
+
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-   >**Note**: If this is the first time you are starting Cloud Shell and you are presented with the **You have no storage mounted** message, select **Show advanced settings**. Now, fill out the details, and select **Create storage**:-
+   ![](media/mod822.png)
+
+   >**Note**: If this is the first time you are starting Cloud Shell and you are presented with the **You have no storage mounted** message, select **Show advanced settings**. 
+
+   ![](media/mod821.png)
+
+1. Now, fill out the details, and select **Create storage**:-
 
    |Settings|Value|
    |--------|-----|
-   |Resource group| **Use existing > AZ800-L0801-RG**|
-   |Storage account| **Create new > blob<inject key="DeploymentID" enableCopy="false"/>**|
-   |File share| **Create new > fs<inject key="DeploymentID" enableCopy="false"/>**|
+   |Resource group| **Use existing > AZ800-L0801-RG (1)**|
+   |Storage account| **Create new > blob<inject key="DeploymentID" enableCopy="false"/> (2)**|
+   |File share| **Create new > fs<inject key="DeploymentID" enableCopy="false"/> (3)**|
+
+   ![](media/mod820.png)
 
 1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**.
 
@@ -151,8 +151,8 @@ For this lab, you'll use the available VM environment and an Azure subscription.
     | Remote virtual network: Peering link name | **az800l08-vnet2_to_az800l08-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | Remote virtual network: Virtual network | **az800l08-vnet2** |
-    | Allow 'az800l08-vnet2' to access 'az800l08-vnet0'| **Select the checkbox**|
-    |Allow 'az800l08-vnet2' to receive forwarded traffic from 'az800l08-vnet0' | **Select the checkbox** |
+    | Allow 'az800l08-vnet2' to access 'az800l08-vnet1'| **Select the checkbox**|
+    |Allow 'az800l08-vnet2' to receive forwarded traffic from 'az800l08-vnet1' | **Select the checkbox** |
 
     >**Note**: This step establishes two peerings - one from **az800l08-vnet0** to **az800l08-vnet2** and the other from **az800l08-vnet2** to **az800l08-vnet0**. This completes setting up the hub and spoke topology (with the **az800l08-vnet0** virtual network serving the role of the hub, while **az800l08-vnet1** and **az800l08-vnet2** are its spokes).
 
@@ -377,11 +377,12 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
     > **Note**: This is expected because the traffic between spoke virtual networks is now routed via the virtual machine located in the hub virtual network, which functions as a router.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+
 
 ### Exercise 2: Implement DNS name resolution in Azure
 
@@ -518,11 +519,12 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
     >**Note**: The name resolution works as expected because the **nslookup** command allows you to specify the IP address of the DNS server to query for a record (which, in this case, is `<Name server 1>`). For the name resolution to work when querying any publicly accessible DNS server, you would need to register the domain name with a DNS registrar and configure the name servers listed on the public DNS zone page in the Azure portal as authoritative for the namespace corresponding to that domain.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+
 
 ### Review
 In this lab, you have completed:
@@ -533,4 +535,4 @@ In this lab, you have completed:
 - Configure Azure private and Azure public DNS name resolution
 - Validate Azure private and Azure public DNS name resolution
 
-### Proceed to next exercise
+### You have successfully completed the lab
