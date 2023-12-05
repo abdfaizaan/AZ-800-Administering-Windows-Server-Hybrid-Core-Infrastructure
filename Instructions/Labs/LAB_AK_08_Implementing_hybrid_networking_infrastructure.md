@@ -10,9 +10,8 @@ You were tasked with building a test environment in Azure, consisting of Microso
 
 In this lab, you will perform:
 
-- Implement virtual network routing in Azure
-- Implement DNS name resolution in Azure
-- Deprovision the Azure environment
+- Exercise 1: Implement virtual network routing in Azure
+-  Exercise 2: Implement DNS name resolution in Azure
 
 ## Estimated time: 60 minutes
 
@@ -528,11 +527,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 ### Review
 In this lab, you have completed:
-- Provision lab infrastructure resources
-- Configure the hub and spoke network topology
-- Test transitivity of virtual network peering
-- Configure routing in the hub and spoke topology
-- Configure Azure private and Azure public DNS name resolution
-- Validate Azure private and Azure public DNS name resolution
+- Provisioned lab infrastructure resources.
+- Configured the hub and spoke network topology.
+- Test transitivity of virtual network peering.
+- Configured routing in the hub and spoke topology.
+- Configured Azure private and Azure public DNS name resolution.
+- Validated Azure private and Azure public DNS name resolution.
 
 ### You have successfully completed the lab

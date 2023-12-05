@@ -10,11 +10,11 @@ To address concerns regarding Distributed File System (DFS) Replication between 
 
 In this lab, you will perform:
 
-- Implement DFS Replication in your on-premises environment.
-- Create and configure a sync group.
-- Replace DFS Replication with Azure File Sync-based replication.
-- Verify replication and enable cloud tiering.
-- Troubleshoot replication conflicts.
+- Exercise 1: Implementing Distributed File System (DFS) Replication in your on-premises environment
+- Exercise 2: Creating and configuring a sync group
+- Exercise 3: Replacing DFS Replication with File Sync-based replication
+- Exercise 4: Verifying replication and enabling cloud tiering
+- Exercise 5: Troubleshooting replication issues
 
 ## Estimated time: 60 minutes
 
@@ -417,12 +417,12 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 ### Review
 In this lab, you have completed:
-- Deploy and test DFS deployment
-- Create and use an Azure file share
-- Deploy Storage Sync Service and a File Sync group
-- Add SEA-SVR1 as a server endpoint and register SEA-SVR2 with File Sync
-- Remove DFS Replication and add SEA-SVR2 as a server endpoint
-- Verify File Sync and enable cloud tiering
-- Monitor File Sync replication and test replication conflict resolution
+- Deployed and tested DFS deployments.
+- Created and used an Azure file share.
+- Deployed Storage Sync Service and a File Sync group.
+- Added SEA-SVR1 as a server endpoint and registered SEA-SVR2 with File Sync.
+- Removed DFS Replication and add SEA-SVR2 as a server endpoint.
+- Verified File Sync and enable cloud tiering.
+- Monitored File Sync replication and test replication conflict resolution.
 
 ### You have successfully completed the lab
