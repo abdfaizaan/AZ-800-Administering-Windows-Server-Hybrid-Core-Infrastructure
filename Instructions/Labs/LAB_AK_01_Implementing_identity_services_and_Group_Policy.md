@@ -11,14 +11,14 @@ You are working as an administrator at Contoso Ltd. The company is expanding its
 
 In this lab, you will perform:
 
-- Deploy a new domain controller on Server Core.
-- Configure Group Policy.
+- Exercise 1: Deploy a new domain controller on Server Core.
+- Exercise 2: Configure Group Policy.
 
 ## Estimated time: 45 minutes
 
 ## Architecture Diagram
 
-   ![](media/architecture-az-800.png)  
+   ![](media/mod1art.png)  
 
 ## Exercise 1: Deploying a new domain controller on Server Core
 

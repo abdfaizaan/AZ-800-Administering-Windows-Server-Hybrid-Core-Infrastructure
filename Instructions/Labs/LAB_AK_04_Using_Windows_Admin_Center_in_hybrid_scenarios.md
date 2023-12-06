@@ -11,11 +11,16 @@ Your goal is to verify that Windows Admin Center can be used in a consistent man
 ## Lab objectives
 In this lab, you will perform:
 
-- Test hybrid connectivity by using Azure Network Adapter.
-- Deploy Windows Admin Center gateway in Azure.
-- Verify functionality of Windows Admin Center gateway in Azure.
+- Exercise 1:  Provisioning Azure VMs running Windows Server
+- Exercise 2: Implementing hybrid connectivity by using the Azure Network Adapter
+- Exercise 3: Deploying Windows Admin Center gateway in Azure
+- Exercise 4: Verifying functionality of the Windows Admin Center gateway in Azure
 
 ## Estimated time: 90 minutes
+
+## Architecture Diagram
+
+  ![](media/mod4art.png)  
 
 ## Exercise 1: Provisioning Azure VMs running Windows Server
 

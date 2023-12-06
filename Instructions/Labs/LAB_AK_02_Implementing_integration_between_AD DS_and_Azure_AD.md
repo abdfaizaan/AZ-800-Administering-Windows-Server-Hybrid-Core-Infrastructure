@@ -14,13 +14,17 @@ Your goal is to implement pass-through authentication between on-premises AD DS 
 
 In this lab, you will perform:
 
-- Prepare Azure AD for integration with on-premises AD DS, including adding and verifying a custom domain.
-- Prepare on-premises AD DS for integration with Azure AD, including running IdFix DirSync Error Remediation Tool.
-- Install and configure Microsoft Entra Connect.
-- Verify integration between AD DS and Azure AD by testing the synchronization process.
-- Implementing Azure AD integration features in Active Directory, including Azure AD Password Protection for Windows Server Active Directory and SSPR with password writeback.
+- Exercise 1: Prepare Azure AD for integration with on-premises AD DS, including adding and verifying a custom domain.
+- Exercise 2: Prepare on-premises AD DS for integration with Azure AD, including running IdFix DirSync Error Remediation Tool.
+- Exercise 3: Install and configure Microsoft Entra Connect.
+- Exercise 4: Verify integration between AD DS and Azure AD by testing the synchronization process.
+- Exercise 5: Implementing Azure AD integration features in Active Directory, including Azure AD Password Protection for Windows Server Active Directory and SSPR with password writeback.
 
 ## Estimated time: 60 minutes
+
+## Architecture Diagram
+
+   ![](media/mod2art.png)  
 
 ## Lab setup
 

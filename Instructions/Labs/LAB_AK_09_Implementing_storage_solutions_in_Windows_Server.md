@@ -10,12 +10,16 @@ At Contoso, Ltd., you need to implement the Storage Spaces feature on the Window
 
 In this lab, you will perform:
 
-- Implement Data Deduplication.
-- Configure iSCSI storage.
-- Configure Storage Spaces.
-- Implement Storage Spaces Direct.
+- Exercise 1: Implement Data Deduplication.
+- Exercise 2: Configure iSCSI storage.
+- Exercise 3: Configure Storage Spaces.
+- Exercise 4: Implement Storage Spaces Direct.
 
 ## Estimated time: 90 minutes
+
+## Architecture Diagram
+
+   ![](media/mod9art.png)  
 
 ## Exercise 1: Implementing Data Deduplication
 

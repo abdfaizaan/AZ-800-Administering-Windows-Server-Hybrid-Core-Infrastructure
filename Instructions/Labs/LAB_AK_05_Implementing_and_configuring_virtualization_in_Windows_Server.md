@@ -16,6 +16,10 @@ In this lab, you will perform:
 
 ## Estimated time: 60 minutes
 
+## Architecture Diagram
+
+   ![](media/mod5art.png)  
+
 ### Exercise 1: Creating and configuring VMs
 
 #### Task 1: Create a Hyper-V virtual switch
