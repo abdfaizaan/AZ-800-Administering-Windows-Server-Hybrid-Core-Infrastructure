@@ -14,12 +14,11 @@ Your goal is to deploy and configure Azure VMs running Windows Server in the man
 
 In this lab, you will perform:
 
-- Author ARM templates for an Azure VM deployment.
-- Modify ARM templates to include VM extension-based configuration.
-- Deploy Azure VMs running Windows Server by using ARM templates.
-- Configure administrative access to Azure VMs running Windows Server.
-- Configure Windows Server security in Azure VMs.
-- Deprovision the Azure environment.
+- Author ARM templates for an Azure VM deployment
+- Modify ARM templates to include VM extension-based configuration
+- Deploy Azure VMs running Windows Server by using ARM templates
+- Configure administrative access to Azure VMs running Windows Server
+- Configure Windows Server security in Azure VMs
 
 ## Estimated time: 90 minutes
 
