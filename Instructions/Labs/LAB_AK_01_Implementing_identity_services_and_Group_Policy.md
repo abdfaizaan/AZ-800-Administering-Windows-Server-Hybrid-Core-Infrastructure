@@ -18,7 +18,7 @@ In this lab, you will perform:
 
 ## Architecture Diagram
 
-   ![](media/architecture-az-800.png)  
+   ![](media/mod1art.png)  
 
 ## Exercise 1: Deploying a new domain controller on Server Core
 

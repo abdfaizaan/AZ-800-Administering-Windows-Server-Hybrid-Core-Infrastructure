@@ -15,6 +15,10 @@ In this lab, you will perform:
 
 ## Estimated time: 60 minutes
 
+## Architecture Diagram
+
+   ![](media/mod7art.png)  
+
 ## Exercise 1: Deploying and configuring DHCP
 
 #### Task 1: Install the DHCP role

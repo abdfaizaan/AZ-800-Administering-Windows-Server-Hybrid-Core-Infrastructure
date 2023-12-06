@@ -18,6 +18,10 @@ In this lab, you will perform:
 
 ## Estimated time: 90 minutes
 
+## Architecture Diagram
+
+  ![](media/mod4art.png)  
+
 ## Exercise 1: Provisioning Azure VMs running Windows Server
 
 #### Task 1: Create an Azure resource group by using an Azure Resource Manager template

@@ -15,6 +15,10 @@ In this lab, you will perform:
 
 ## Estimated time: 60 minutes
 
+## Architecture Diagram
+
+   ![](media/mod8art.png)  
+
 ## Lab setup
 
 Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running. Other VMs can be running, but they aren't required for this lab.

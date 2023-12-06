@@ -17,6 +17,10 @@ In this lab, you will perform:
 
 ## Estimated time: 90 minutes
 
+## Architecture Diagram
+
+   ![](media/mod9art.png)  
+
 ## Exercise 1: Implementing Data Deduplication
 
 #### Task 1: Install the Data Deduplication role service
