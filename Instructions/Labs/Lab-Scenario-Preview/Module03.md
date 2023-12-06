@@ -12,7 +12,7 @@ After completing this lab, you will be able to:
   - Task 2: Add servers for remote administration
   - Task 3: Configure Windows Admin Center extensions
   - Task 4: Verify remote administration
-  - Task 5:Administer servers with Remote PowerShell
+  - Task 5: Administer servers with Remote PowerShell
 
 ## Architecture Diagram
 
