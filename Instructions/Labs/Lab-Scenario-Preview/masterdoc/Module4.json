@@ -1,0 +1,14 @@
+[
+    {
+      "Name": "Lab Scenario Preview: AZ-800: Administering-Windows-Server-Hybrid-Core-Infrastructure",
+      "Language": "English",
+      "BaseURL": "https://github.com/CloudLabs-MOC/AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure/tree/master",
+      "Files": [
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure/selfpaced/Instructions/Labs/Lab-Scenario-Preview/Module04.md",
+          "Order": 1
+        }
+      ]
+    }
+  ]
+  
