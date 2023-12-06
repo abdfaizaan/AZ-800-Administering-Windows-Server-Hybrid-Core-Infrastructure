@@ -9,9 +9,17 @@ Contoso, Ltd. wants to implement several new servers in their environment, and t
 ## Lab objective
 In this lab, you will perform:
 
-- Implement and configure Windows Admin Center
+  - Task 1: Install Windows Admin Center
+  - Task 2: Add servers for remote administration
+  - Task 3: Configure Windows Admin Center extensions
+  - Task 4: Verify remote administration
+  - Task 5:Administer servers with Remote PowerShell
 
 ## Estimated time: 45 minutes
+
+## Architecture Diagram
+
+   ![](media/mod3art.png)  
 
 ## Lab setup
 

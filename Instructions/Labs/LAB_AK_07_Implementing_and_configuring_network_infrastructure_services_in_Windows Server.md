@@ -10,8 +10,8 @@ Contoso, Ltd. is a large organization with complex requirements for network serv
 
 In this lab, you will perform:
 
-- Deploy and configure DHCP.
-- Deploy and configure DNS.
+- Exercise 1: Deploy and configure DHCP.
+- Exercise 2: Deploy and configure DNS.
 
 ## Estimated time: 60 minutes
 
