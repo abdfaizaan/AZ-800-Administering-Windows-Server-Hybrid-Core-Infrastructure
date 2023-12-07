@@ -401,4 +401,4 @@ In this lab, you have completed:
 - Configure forwarding and conditional forwarding
 - Configure DNS policies and verify DNS policy functionality
 
-### Proceed to next Lab
+## You have successfully completed this lab.
