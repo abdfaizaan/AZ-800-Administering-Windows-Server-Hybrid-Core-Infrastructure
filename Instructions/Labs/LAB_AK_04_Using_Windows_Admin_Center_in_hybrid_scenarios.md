@@ -333,4 +333,4 @@ In this lab, you have completed:
 - Deploying Windows Admin Center gateway in Azure
 - Verifying functionality of the Windows Admin Center gateway in Azure
 
-### Proceed to next Lab
+ ## You have successfully completed this lab
