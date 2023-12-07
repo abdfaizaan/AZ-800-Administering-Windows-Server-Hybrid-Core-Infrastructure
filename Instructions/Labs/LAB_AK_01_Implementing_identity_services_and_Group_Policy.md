@@ -347,5 +347,5 @@ In this lab, you have completed:
 - Create and edit GPO settings.
 - Apply and verify settings on the client computer.
 
-### Proceed to next Lab.
+## You have successfully completed this lab.
 
