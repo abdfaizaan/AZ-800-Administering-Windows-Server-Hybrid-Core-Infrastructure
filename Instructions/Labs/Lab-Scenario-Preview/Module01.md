@@ -1,4 +1,4 @@
-# Lab Scenario Preview: AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure
+# Lab Scenario Preview: Lab 1: Implementing identity services and Group Policy
 
 ### Lab overview
 
