@@ -186,4 +186,4 @@ In this lab, you have completed:
 - Verify remote administration
 - Administer servers with Remote PowerShell
 
-### Proceed to next exercise
+## You have successfully completed this lab.

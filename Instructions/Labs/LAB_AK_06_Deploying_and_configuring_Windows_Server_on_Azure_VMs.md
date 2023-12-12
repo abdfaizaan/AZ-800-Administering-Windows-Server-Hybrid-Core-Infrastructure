@@ -229,6 +229,14 @@ In this task, you will use the Azure portal to create resource groups and create
    ![](media/template.png)
 
 1. On the **Microsoft.Template \| Overview** page, select **Template**, and note that this is the same template you used for deployment.
+   
+
+ > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 
 ## Exercise 4: Configuring administrative access to Azure VMs running Windows Server
 
@@ -375,6 +383,13 @@ security rules**.
 
 1. Verify that you can successfully access via Remote Desktop the operating system running in the Azure VM and close the Remote Desktop session.
 
+ > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
 ### Review
 In this lab, you have completed:
 - Connect to your Azure subscription and enable enhanced security of Microsoft Defender for Cloud.
@@ -387,3 +402,5 @@ In this lab, you have completed:
 - Create and configure an NSG and inbound HTTP access to an Azure VM.
   Trigger re-evaluation of the JIT status of an Azure VM.
 - Connect to the Azure VM via JIT VM access.
+
+## You have successfully completed this lab.
