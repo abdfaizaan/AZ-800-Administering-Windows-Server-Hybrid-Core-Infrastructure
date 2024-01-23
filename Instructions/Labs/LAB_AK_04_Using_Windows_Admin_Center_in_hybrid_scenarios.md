@@ -45,9 +45,9 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-   ![storage](media/az-800lab4.1.png)
+   ![storage](media/L4E1T1S4.1.png)
 
- >**Note**: When prompted, select Show advanced settings and then select Use existing and choose resource group **AZ-800-L0401-RG** Then select Create new against Storage account **storage-<inject key="DeploymentID" enableCopy="false"/>** as well as File Share **file-<inject key="DeploymentID" enableCopy="false"/>** and then click on Create storage, and wait for the Azure Cloud Shell to initialize.
+ >**Note**: When prompted, select Show advanced settings and then select Use existing and choose resource group **AZ-800** Then select Create new against Storage account **storage<inject key="DeploymentID" enableCopy="false"/>** as well as File Share **file<inject key="DeploymentID" enableCopy="false"/>** and then click on Create storage, and wait for the Azure Cloud Shell to initialize.
 
 1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**, and then upload the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\L04-sub_template.json** file to the Cloud Shell home directory.
 
@@ -57,7 +57,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
    ```powershell
    $location = '<Azure region>'
-   $rgName = 'AZ800-L0401-RG'
+   $rgName = 'AZ800'
    New-AzSubscriptionDeployment `
      -Location $location `
      -Name az800l04subDeployment `
