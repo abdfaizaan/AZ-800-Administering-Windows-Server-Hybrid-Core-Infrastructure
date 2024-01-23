@@ -1,12 +1,12 @@
-# Lab 2: Implementing integration between AD DS and Azure AD
+# Lab 2: Implementing integration between AD DS and Entra ID
 
 ## Lab scenario
 
-To address concerns regarding management and monitoring overhead resulting from using Microsoft Azure Active Directory (Azure AD) to authenticate and authorize access to Azure resources, you decide to test integration between on-premises Active Directory Domain Services (AD DS) and Azure AD to verify that this will address business concerns about managing multiple user accounts by using a mix of on-premises and cloud resources.
+To address concerns regarding management and monitoring overhead resulting from using Microsoft Microsoft Entra ID (Entra ID) to authenticate and authorize access to Azure resources, you decide to test integration between on-premises Active Directory Domain Services (AD DS) and Entra ID to verify that this will address business concerns about managing multiple user accounts by using a mix of on-premises and cloud resources.
 
-Additionally, you want to make sure that your approach addresses the Information Security team's concerns and preserves existing controls applied to Active Directory users, such as sign-in hours and password policies. Finally, you want to identify Azure AD integration features that allow you to further enhance on-premises Active Directory security and minimize its management overhead, including Azure AD Password Protection for Windows Server Active Directory and Self-Service Password Reset (SSPR) with password writeback.
+Additionally, you want to make sure that your approach addresses the Information Security team's concerns and preserves existing controls applied to Active Directory users, such as sign-in hours and password policies. Finally, you want to identify Entra ID integration features that allow you to further enhance on-premises Active Directory security and minimize its management overhead, including Entra ID Password Protection for Windows Server Active Directory and Self-Service Password Reset (SSPR) with password writeback.
 
-Your goal is to implement pass-through authentication between on-premises AD DS and Azure AD.
+Your goal is to implement pass-through authentication between on-premises AD DS and Entra ID.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20integration%20between%20AD%20DS%20and%20Azure%20AD)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
@@ -14,11 +14,11 @@ Your goal is to implement pass-through authentication between on-premises AD DS 
 
 In this lab, you will perform:
 
-- Prepare Azure AD for integration with on-premises AD DS, including adding and verifying a custom domain.
-- Prepare on-premises AD DS for integration with Azure AD, including running IdFix DirSync Error Remediation Tool.
+- Prepare Entra ID for integration with on-premises AD DS, including adding and verifying a custom domain.
+- Prepare on-premises AD DS for integration with Entra ID, including running IdFix DirSync Error Remediation Tool.
 - Install and configure Azure AD Connect.
-- Verify integration between AD DS and Azure AD by testing the synchronization process.
-- Implementing Azure AD integration features in Active Directory, including Azure AD Password Protection for Windows Server Active Directory and SSPR with password writeback.
+- Verify integration between AD DS and Entra ID by testing the synchronization process.
+- Implementing Entra ID integration features in Active Directory, including Entra ID Password Protection for Windows Server Active Directory and SSPR with password writeback.
 
 ## Estimated time: 60 minutes
 
@@ -36,7 +36,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
    - Password: **Pa55w.rd**
    - Domain: **CONTOSO**
 
-## Exercise 1: Preparing Azure AD for AD DS integration
+## Exercise 1: Preparing Entra ID for AD DS integration
 
 #### Task 1: Create a custom domain in Azure
 
@@ -44,9 +44,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On **SEA-ADM1**, start Microsoft Edge, browse to the Azure portal, and authenticate with your Azure credentials.
 
-1. In the Azure portal, browse to **Azure Active Directory**.
+1. In the Azure portal, browse to **Microsoft Entra ID**.
 
-1. On the **Azure Active Directory** page, select **Custom domain names**.
+1. On the **Microsoft Entra ID** page, select **Custom domain names**.
 
 1. On the **Custom domain names** page, select **Add custom domain**.
 
@@ -60,7 +60,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 #### Task 2: Create a user with the Global Administrator role
 
-1. On **SEA-ADM1**, on the **Azure Active Directory** page in the Azure portal, select **Users**.
+1. On **SEA-ADM1**, on the **Microsoft Entra ID** page in the Azure portal, select **Users**.
 
 1. On the **Users** page, select **New User** and in drop down select **Create new user**
 
@@ -94,7 +94,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    > **Note**: Record the complex password you used as you'll use it later in this lab.
 
-## Exercise 2: Preparing on-premises AD DS for Azure AD integration
+## Exercise 2: Preparing on-premises AD DS for Entra ID integration
 
 #### Task 1: Install IdFix
 
@@ -126,17 +126,17 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 #### Task 1: Install and configure Azure AD Connect
 
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to **Azure Active Directory**.
+1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to **Microsoft Entra ID**.
 
-1. On the **Azure Active Directory** page, select **Azure AD Connect**.
+1. On the **Microsoft Entra ID** page, select **Microsoft Entra Connect**.
 
-1. On the  **AAD Connect** Get Started page, click **Manage** tab and select **Download Connect Sync Agent**.
+1. On the  **Microsoft Entra Connect** Get Started page, click **Manage** tab and select **Download Connect Sync Agent**.
 
-1. On the **Azure AD Connect Agent** page, select **Accept teams & download**
+1. On the **Microsoft Entra Connect Agent** page, select **Accept teams & download**
 
 1. On the status bar, select **Open file**.
 
-1. On the **Microsoft Azure Active Directory Connect** page, select the **I agree to the license terms and privacy notice** checkbox, and then select **Continue**.
+1. On the **Microsoft Microsoft Entra ID Connect** page, select the **I agree to the license terms and privacy notice** checkbox, and then select **Continue**.
 
 1. On the **Express Settings** page, select **Use express settings**.
 
@@ -157,23 +157,23 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On the **Configuration complete** page, select **Exit**.
 
-## Exercise 4: Verifying integration between AD DS and Azure AD
+## Exercise 4: Verifying integration between AD DS and Microsoft Entra ID
 
 #### Task 1: Verify synchronization in the Azure portal
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal. 
 
-1. Refresh the **Azure AD Connect** page and review the information under **Provision from Active Directory**.
+1. Refresh the **Microsoft Entra Connect** page and review the information under **Provision from Active Directory**.
 
-1. On the **Azure Active Directory** page, select **Users**.
+1. On the **Microsoft Entra ID** page, select **Users**.
 
 1. Note that the user list includes users synced from Active Directory.
 
-   > **Note**: After the directory synchronization starts, it can take 15 minutes for Active Directory objects to appear in the Azure AD portal.
+   > **Note**: After the directory synchronization starts, it can take 15 minutes for Active Directory objects to appear in the Microsoft Entra ID portal.
 
-1. In Microsoft Edge, go back to the **Azure Active Directory** page.
+1. In Microsoft Edge, go back to the **Microsoft Entra ID** page.
 
-1. On the **Azure Active Directory** page, select **Groups**.
+1. On the **Microsoft Entra ID** page, select **Groups**.
 
 1. Note the list of groups synced from Active Directory. 
 
@@ -185,7 +185,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. Select the **Connectors** tab and note the two connectors.
 
-   > **Note**: One connector is for AD DS and the other is for the Azure AD tenant. 
+   > **Note**: One connector is for AD DS and the other is for the Microsoft Entra ID tenant. 
 
 1. Close the **Synchronization Service Manager** window.
 
@@ -213,7 +213,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. Select **Finish**.
 
-#### Task 5: Sync changes to Azure AD
+#### Task 5: Sync changes to Microsoft Entra ID
 
 1. On **SEA-ADM1**, on the **Start** menu, select **Windows PowerShell**.
 
@@ -223,13 +223,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
    Start-ADSyncSyncCycle
    ```
 
-   > **Note**: Once the synchronization cycle starts, it can take 15 minutes for Active Directory objects to appear in the Azure AD portal.
+   > **Note**: Once the synchronization cycle starts, it can take 15 minutes for Active Directory objects to appear in the Microsoft Entra ID portal.
 
-#### Task 6: Verify changes in Azure AD
+#### Task 6: Verify changes in Microsoft Entra ID
 
-1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal and go back to the **Azure Active Directory** page.
+1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal and go back to the **Microsoft Entra ID** page.
 
-1. On the **Azure Active Directory** page, select **Users**.
+1. On the **Microsoft Entra ID** page, select **Users**.
 
 1. On the **All Users** page, search for the user **Sumesh**.
 
@@ -241,23 +241,23 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. Open the properties page of the user **Jordan Mitchell** and review the attributes of the user account that was synced from Active Directory.
 
-## Exercise 5: Implementing Azure AD integration features in AD DS
+## Exercise 5: Implementing Microsoft Entra ID integration features in AD DS
 
 #### Task 1: Enable self-service password reset in Azure
 
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to the **Azure Active Directory** page.
+1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to the **Microsoft Entra ID** page.
 
-1. On the **Azure Active Directory** page, select **Licenses**.
+1. On the **Microsoft Entra ID** page, select **Licenses**.
 
 1. On the **Licenses** page, select **All products**.
 
 1. On the **All products** page, select **+ Try/Buy**.
 
-1. On the **Activate** page, under **AZURE AD PREMIUM P2**, select **Free trial**, and then select **Activate**.
+1. On the **Activate** page, under **Microsoft Entra ID PREMIUM P2**, select **Free trial**, and then select **Activate**.
 
-1. Browse to the **All products** page and select **Azure Active Directory Premium P2**.
+1. Browse to the **All products** page and select **Microsoft Entra ID Premium P2**.
 
-1. On the **Azure Active Directory Premium P2 \| Licensed users** page, select **+ Assign**.
+1. On the **Microsoft Entra ID Premium P2 \| Licensed users** page, select **+ Assign**.
 
 1. On the **Assign license** page, select **+ Add users and groups**.
 
@@ -265,11 +265,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. Back on the **Assign license** page, select **Review + assign**, and then select **Assign**.
 
-   > **Note**: This is necessary in order to implement Azure AD password protection later in this lab.
+   > **Note**: This is necessary in order to implement Microsoft Entra ID password protection later in this lab.
 
-1. Go back to the **Azure Active Directory** page.
+1. Go back to the **Microsoft Entra ID** page.
 
-1. On the **Azure Active Directory** page, select **Password reset**.
+1. On the **Microsoft Entra ID** page, select **Password reset**.
 
 1. On the **Password reset** page, note that you can select the scope of users to which to apply the configuration.
 
@@ -279,11 +279,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On **SEA-ADM1**, on the **Start** menu, expand **Azure AD Connect**, and then select **Azure AD Connect**.
 
-1. In the **Microsoft Azure Active Directory Connect** window, select **Configure**.
+1. In the **Azure AD Connect** window, select **Configure**.
 
 1. On the **Additional tasks** page, select **Customize synchronization options**, and then select **Next**.
 
-1. On the **Connect to Azure AD** page, enter the username and password of the Azure AD Global Administrator user account you created in exercise 1, and then select **Next**.
+1. On the **Connect to Azure AD** page, enter the username and password of the Microsoft Entra ID Global Administrator user account you created in exercise 1, and then select **Next**.
 
 1. On the **Connect your directories** page, select **Next**.
 
@@ -291,7 +291,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On the **Optional features** page, select **Password writeback**, and then select **Next**.
 
-   > **Note**: Password writeback is required for self-service password reset of Active Directory users. This allows passwords changed by users in Azure AD to sync to the Active Directory.
+   > **Note**: Password writeback is required for self-service password reset of Active Directory users. This allows passwords changed by users in Microsoft Entra ID to sync to the Active Directory.
 
 1. On the **Ready to configure** page, review the list of actions to be performed, and then select **Configure**.
 
@@ -301,11 +301,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On **SEA-ADM1**, on the **Start** menu, expand **Azure AD Connect**, and then select **Azure AD Connect**.
 
-1. In the **Microsoft Azure Active Directory Connect** window, select **Configure**.
+1. In the **Microsoft Microsoft Entra ID Connect** window, select **Configure**.
 
 1. On the **Additional tasks** page, select **Change user sign-in**, then select **Next**.
 
-1. On the **Connect to Azure AD** page, enter the username and password of the Azure AD Global Administrator user account you created in exercise 1, and then select **Next**.
+1. On the **Connect to Azure AD** page, enter the username and password of the Microsoft Entra ID Global Administrator user account you created in exercise 1, and then select **Next**.
 
 1. On the **User sign-in** page, select **Pass-through authentication**.
 
@@ -326,28 +326,28 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 #### Task 4: Verify pass-through authentication in Azure
 
-1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal and go back to the **Azure Active Directory** page.
+1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal and go back to the **Microsoft Entra ID** page.
 
-1. On the **Azure Active Directory** page in the Azure portal, select **Azure AD Connect**.
+1. On the **Microsoft Entra ID** page in the Azure portal, select **Microsoft Entra Connect**.
 
-1. On the **Azure AD Connect** page, in left navigation pane select **Connect Sync** and review the information under **User Sign-In**.
+1. On the **Microsoft Entra Connect** page, in left navigation pane select **Connect Sync** and review the information under **User Sign-In**.
 
 1. Under **User Sign-In**, select **Seamless single sign-on**.
 
 1. On the **Seamless single sign-on** page, note the on-premises domain name.
 
-1. In Microsoft Edge, go back to the **Azure AD Connect** page.
+1. In Microsoft Edge, go back to the **Microsoft Entra Connect** page.
 
-1. On the **Azure AD Connect** page, under **User Sign-In**, select **Pass-through authentication**.
+1. On the **Microsoft Entra Connect** page, under **User Sign-In**, select **Pass-through authentication**.
 
 1. On the **Passthrough Authentication** page, note the **SEA-ADM1** server name under **Authentication Agent**.
 
    > **Note**: If you're not able see on-premises domain name and **SEA-ADM1** server name, kindly sign-in to azure portal in private window and perform above steps.
-   > **Note**: To install the Azure AD Authentication Agent on multiple servers in your environment, you can download its binaries from the **Pass-through authentication** page in the Azure portal. 
+   > **Note**: To install the Microsoft Entra ID Authentication Agent on multiple servers in your environment, you can download its binaries from the **Pass-through authentication** page in the Azure portal. 
 
-#### Task 5: Install and register the Azure AD Password Protection proxy service and DC agent
+#### Task 5: Install and register the Microsoft Entra ID Password Protection proxy service and DC agent
 
-1. On **SEA-ADM1**, start Microsoft Edge, go to the Microsoft Downloads website, browse to the **Azure AD Password Protection for Windows Server Active Directory** page where you can download installers, and then select **Download**.
+1. On **SEA-ADM1**, start Microsoft Edge, go to the Microsoft Downloads website, browse to the **Microsoft Entra ID Password Protection for Windows Server Active Directory** page where you can download installers, and then select **Download**.
 
 1. On the **Azure AD Password Protection for Windows Server Active Directory** page, select the **AzureADPasswordProtectionProxySetup.exe** and the **AzureADPasswordProtectionDCAgentSetup.msi** files, and then select **Next**.
 
@@ -355,7 +355,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. In the **Download multiple files** dialog box, select **Allow**.
 
-   > **Note**: We recommend installing the proxy service on a server that isn't a domain controller. In addition, the proxy service should not be installed on the same server as the Azure AD Connect agent. You will install the proxy service on **SEA-SVR1** and the Password Protection DC Agent on **SEA-DC1**.
+   > **Note**: We recommend installing the proxy service on a server that isn't a domain controller. In addition, the proxy service should not be installed on the same server as the Microsoft Entra Connect agent. You will install the proxy service on **SEA-SVR1** and the Password Protection DC Agent on **SEA-DC1**.
 
 1. On **SEA-ADM1**, switch to the **Windows PowerShell** console window.
 
@@ -402,7 +402,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. As instructed, open another Microsoft Edge window, browse to **https://microsoft.com/devicelogin** and when prompted, enter the code included in the message displayed in the PowerShell Remoting session. 
 
-1. When prompted, authenticate by using the Azure AD Global Administrator user account you created in exercise 1, and then select **Continue**.
+1. When prompted, authenticate by using the Microsoft Entra ID Global Administrator user account you created in exercise 1, and then select **Continue**.
 
 1. Switch back to the PowerShell Remoting session, enter the following command and press Enter to exit the PowerShell Remoting session to **SEA-SVR1**:
 
@@ -416,7 +416,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
    Enter-PSSession -ComputerName SEA-DC1
    ```
 
-1. From the **[SEA-DC1]** prompt, enter the following command and press Enter to register the proxy service with Active Directory (replace the `<Azure_AD_Global_Admin>` placeholder with the fully-qualified user principal name of the Azure AD Global Administrator user account you created in exercise 1):
+1. From the **[SEA-DC1]** prompt, enter the following command and press Enter to register the proxy service with Active Directory (replace the `<Azure_AD_Global_Admin>` placeholder with the fully-qualified user principal name of the Microsoft Entra ID Global Administrator user account you created in exercise 1):
 
    ```powershell
    Register-AzureADPasswordProtectionForest -AccountUpn <Azure_AD_Global_Admin> -AuthenticateUsingDeviceCode
@@ -424,7 +424,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. As instructed, open another Microsoft Edge window, browse to **https://microsoft.com/devicelogin** and when prompted, enter the code included in the message displayed in the PowerShell Remoting session. 
 
-1. When prompted, authenticate by using the Azure AD Global Administrator user account you created in exercise 1, and then select **Continue**.
+1. When prompted, authenticate by using the Microsoft Entra ID Global Administrator user account you created in exercise 1, and then select **Continue**.
 
 1. Switch back to the PowerShell Remoting session, enter the following command, and then press Enter to exit the PowerShell Remoting session to **SEA-DC1**:
 
@@ -434,7 +434,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 #### Task 6: Enable password protection in Azure
 
-1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal, go back to the **Azure Active Directory** page, and then, on the **Azure Active Directory** page, under **Manage** section, select **Security**.
+1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal, go back to the **Microsoft Entra ID** page, and then, on the **Microsoft Entra ID** page, under **Manage** section, select **Security**.
 
 1. On the **Security** page, under **Manage** section, select **Authentication methods**.
 
@@ -482,14 +482,14 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. When prompted to install the modules from an untrusted repository, enter **A**, and then press Enter.
 
-1. In the **Windows PowerShell** console, enter the following command, and then press Enter to store Azure AD credentials in a variable:
+1. In the **Windows PowerShell** console, enter the following command, and then press Enter to store Microsoft Entra ID credentials in a variable:
 
    ```powershell
    $msolCred = Get-Credential
    ```
-1. In the **Windows PowerShell credential request** dialog box, enter the credentials of the Azure AD Global Administrator user account you created in exercise 1, and then select **OK**.
+1. In the **Windows PowerShell credential request** dialog box, enter the credentials of the Microsoft Entra ID Global Administrator user account you created in exercise 1, and then select **OK**.
 
-1. In the **Windows PowerShell** console, enter the following command, and then press Enter to authenticate to the Azure AD tenant:
+1. In the **Windows PowerShell** console, enter the following command, and then press Enter to authenticate to the Microsoft Entra ID tenant:
 
    ```powershell
    Connect-MsolService -Credential $msolCred
@@ -503,10 +503,10 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 ### Review
 In this lab, you have completed:
-- Preparing Azure AD for AD DS integration
-- Preparing on-premises AD DS for Azure AD integration
+- Preparing Microsoft Entra ID for AD DS integration
+- Preparing on-premises AD DS for Microsoft Entra ID integration
 - Downloading, installing, and configuring Azure AD Connect
-- Verifying integration between AD DS and Azure AD
-- Implementing Azure AD integration features in AD DS
+- Verifying integration between AD DS and Microsoft Entra ID
+- Implementing Microsoft Entra ID integration features in AD DS
 
 ### Proceed to next exercise
