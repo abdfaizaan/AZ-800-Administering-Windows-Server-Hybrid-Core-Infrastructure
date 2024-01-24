@@ -1,4 +1,4 @@
-# Lab 2: Implementing integration between AD DS and Azure AD
+# Lab 2: Implementing integration between AD DS and Microsoft Entra ID
 
 ## Lab scenario
 
@@ -14,11 +14,11 @@ Your goal is to implement pass-through authentication between on-premises AD DS 
 
 In this lab, you will perform:
 
-- Exercise 1: Prepare Azure AD for integration with on-premises AD DS, including adding and verifying a custom domain.
-- Exercise 2: Prepare on-premises AD DS for integration with Azure AD, including running IdFix DirSync Error Remediation Tool.
+- Exercise 1: Prepare Entra ID for integration with on-premises AD DS, including adding and verifying a custom domain.
+- Exercise 2: Prepare on-premises AD DS for integration with Entra ID, including running IdFix DirSync Error Remediation Tool.
 - Exercise 3: Install and configure Microsoft Entra Connect.
-- Exercise 4: Verify integration between AD DS and Azure AD by testing the synchronization process.
-- Exercise 5: Implementing Azure AD integration features in Active Directory, including Azure AD Password Protection for Windows Server Active Directory and SSPR with password writeback.
+- Exercise 4: Verify integration between AD DS and Entra ID by testing the synchronization process.
+- Exercise 5: Implementing Entra ID integration features in Active Directory, including Entra ID Password Protection for Windows Server Active Directory and SSPR with password writeback.
 
 ## Estimated time: 60 minutes
 
@@ -327,7 +327,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On the **Configuration complete** page, select **Exit**.
 
-#### Task 3: Enable pass-through authentication in Azure AD Connect
+#### Task 3: Enable pass-through authentication in Microsoft Entra Connect
 
 1. On **SEA-ADM1**, on the **Start** menu, expand **Azure AD Connect**, and then select **Azure AD Connect**.
 
