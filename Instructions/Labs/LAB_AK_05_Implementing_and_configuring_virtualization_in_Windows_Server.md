@@ -20,6 +20,23 @@ In this lab, you will perform:
 
    ![](media/mod5art.png)  
 
+## Lab Setup
+
+Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T00A-ADM1** must be running. Other VMs can be running, but they aren't required for this lab.
+
+> **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1** and **SEA-ADM1**
+
+1. Select **SEA-ADM1**.
+
+1. Sign in using the following credentials:
+
+   - User name: **Administrator**
+   - Password: **Pa55w.rd**
+   - Domain: **CONTOSO**
+
+For this lab, you'll use the available VM environment.
+
+
 ### Exercise 1: Creating and configuring VMs
 
 #### Task 1: Create a Hyper-V virtual switch
