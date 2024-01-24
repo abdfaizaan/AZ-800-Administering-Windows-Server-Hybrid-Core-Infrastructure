@@ -57,7 +57,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
    ```powershell
    $location = '<Azure region>'
-   $rgName = 'AZ800'
+   $rgName = 'AZ800-L0401-RG'
    New-AzSubscriptionDeployment `
      -Location $location `
      -Name az800l04subDeployment `
