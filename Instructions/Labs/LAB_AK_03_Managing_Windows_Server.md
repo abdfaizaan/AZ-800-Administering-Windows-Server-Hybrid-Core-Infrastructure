@@ -117,7 +117,7 @@ For this lab, you'll use the available VM environment and an Azure AD tenant.
 
 1. In the **Install Roles and Features** pane, select **Yes** and wait for the message confirming that Telnet Client was installed successfully.
 
-1. At the very bottom of the left pane, below the list of **Tools**, select **Settings**.
+1. At the top of the left pane, above the list of **Tools**, select **Settings**.
 
 1. In the **Settings** section on the right side, select **Remote Desktop**.
 
