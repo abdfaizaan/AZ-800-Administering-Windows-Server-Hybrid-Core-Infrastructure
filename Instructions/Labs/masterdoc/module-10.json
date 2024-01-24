@@ -1,6 +1,6 @@
 [
   {
-    "Name": "AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure",
+    "Name": "Module 10: Implementing Azure File Sync",
     "Language": "English",
     "Files": [
       {
@@ -8,43 +8,8 @@
          "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure/prod/Instructions/Labs/LAB_AK_01_Implementing_identity_services_and_Group_Policy.md",
-        "Order": 2
-      },
-      {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure/prod/Instructions/Labs/LAB_AK_02_Implementing_integration_between_AD%20DS_and_Azure_AD.md",
-        "Order": 3
-      },
-      {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure/prod/Instructions/Labs/LAB_AK_03_Managing_Windows_Server.md",
-        "Order": 3
-      },
-      {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure/prod/Instructions/Labs/LAB_AK_04_Using_Windows_Admin_Center_in_hybrid_scenarios.md",
-        "Order": 5
-      },
-      {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure/prod/Instructions/Labs/LAB_AK_05_Implementing_and_configuring_virtualization_in_Windows_Server.md",
-        "Order": 6
-      },
-      {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure/prod/Instructions/Labs/LAB_AK_06_Deploying_and_configuring_Windows_Server_on_Azure_VMs.md",
-        "Order": 7
-      },{
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure/prod/Instructions/Labs/LAB_AK_07_Implementing_and_configuring_network_infrastructure_services_in_Windows%20Server.md",
-        "Order": 8
-      },
-      {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure/prod/Instructions/Labs/LAB_AK_08_Implementing_hybrid_networking_infrastructure.md",
-        "Order": 9
-      },
-      {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure/prod/Instructions/Labs/LAB_AK_09_Implementing_storage_solutions_in_Windows_Server.md",
-        "Order": 10
-      },
-      {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure/prod/Instructions/Labs/LAB_AK_10_Implementing_Azure_File_Sync.md",
-        "Order": 11
+        "Order": 2
       }
     ]
   }
