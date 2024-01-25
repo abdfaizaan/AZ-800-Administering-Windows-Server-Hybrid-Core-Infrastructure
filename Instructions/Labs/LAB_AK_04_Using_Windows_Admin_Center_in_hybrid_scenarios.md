@@ -116,7 +116,15 @@ In this lab, you will perform:
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
-1. On the **All connections** page, select the **sea-adm1.contoso.com** entry. 
+1. In **Windows Admin Center**, select **Settings** (from the upper-right corner of the page) > **Extensions**. Then select **Extensions**:
+
+   ![](media/extended-network.png) 
+
+1. On the **Available extensions** tab, select **Extended network**, and then select **Install**.
+
+   >**Note**: After a few seconds you should see a message indicating a successful installation.
+
+1. Navigate to **All connections** page, select the **sea-adm1.contoso.com** entry. 
 
 1. In Windows Admin Center, from left pane, in the list of Tools, select **Networks**, and then select **+ Add Azure Network Adapter (Preview)**.
 
