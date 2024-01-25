@@ -277,15 +277,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On the **Microsoft Entra ID** page, from the left-hand navigation pane, select **Licenses**.
 
-1. On the **Licenses** page, select **All products**.
+1. On the **Licenses** page, select **All products** under **Manage**.
 
-1. On the **All products** page, select **+ Try/Buy**.
-
-1. On the **Activate** page, under **Microsoft Entra ID PREMIUM P2**, select **Free trial**, and then select **Activate**.
-
-1. Browse to the **All products** page and select **Microsoft Entra ID Premium P2**.
-
-1. On the **Microsoft Entra ID Premium P2 \| Licensed users** page, select **+ Assign**.
+1. Browse to the **All products** page and select **Microsoft Entra ID Premium P2** and click on **+ Assign**.
 
 1. On the **Assign license** page, select **+ Add users and groups**.
 
