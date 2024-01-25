@@ -129,6 +129,8 @@ In this lab, you will perform:
 
 1. In the **Server name** text box, enter **sea-dc1.contoso.com**, select **Resolve**, verify that the name resolves to **172.16.10.10**, select **Add**, and then select **OK**.
 
+ >**Note**: Check for the two servers thats being showed up under **manage authorized servers** ,i.e **sea-svr1.contoso.com** and **sea-dc1.contoso.com**
+
 #### Task 4: Configure DHCP Failover
 
 1. On **SEA-ADM1**, in the **DHCP** window, select **IPv4**, in the Actions pane, select **More Actions**, and then select **Configure Failover**.
@@ -249,6 +251,8 @@ In this lab, you will perform:
    > **Note**: If the **DNS** entry is not available in the **Tools** list for **sea-svr1.contoso.com**, refresh the **Microsoft Edge** page and try again.
 
 1. Wait until a notification appears indicating that the DNS PowerShell tools are installed. If necessary, select the **Notifications** icon to verify the current status.
+
+  >**Note**: If prompted **DNS powershell tools are  not installed** , click on **install**.
 
 #### Task 2: Create a DNS zone
 
