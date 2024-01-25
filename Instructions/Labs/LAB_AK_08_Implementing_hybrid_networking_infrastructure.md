@@ -230,7 +230,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. On the **Virtual machines** page, in the list of virtual machines, select **az800l08-vm0**.
 
-1. On the **az800l08-vm0** virtual machine page, from the left navigation pane, under the **Networking** section, select **Networking settings**.
+1. On the **az800l08-vm0** virtual machine page, from the left navigation pane, under the **Networking** section, select **Network settings**.
 
 1. Select the **az800l08-nic0** link next to the **Network interface** label, and then, on the **az800l08-nic0** network interface page, from the left navigation pane, under **Settings** section, select **IP configurations**.
 
@@ -439,12 +439,10 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse back to the **Network Watcher** page.
 
-1. On the **Network Watcher** under **Network diagnostic tools** section, select **Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
+1. On the **Network Watcher** under **Network diagnostic tools** section, select **Connection troubleshoot** option, initiate a check with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **AZ800-L0801-RG** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az800l08-vm1** |
     | Destination | **Specify manually** |
