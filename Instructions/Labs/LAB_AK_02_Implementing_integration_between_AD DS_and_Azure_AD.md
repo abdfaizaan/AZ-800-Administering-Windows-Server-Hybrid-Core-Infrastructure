@@ -299,9 +299,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 #### Task 2: Enable password writeback in Microsoft Entra Connect
 
-1. On **SEA-ADM1**, on the **Start** menu, expand **Microsoft Entra Connect**, and then select **Microsoft Entra Connect**.
+1. On **SEA-ADM1**, on the **Start** menu, expand **Azure AD Connect**, and then select **Azure AD Connect**.
 
-1. In the **Microsoft Microsoft Entra ID Connect** window, select **Configure**.
+1. In the **Azure AD Connect** window, select **Configure**.
 
 1. On the **Additional tasks** page, select **Customize synchronization options**, and then select **Next**.
 
@@ -325,7 +325,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On **SEA-ADM1**, on the **Start** menu, expand **Azure AD Connect**, and then select **Azure AD Connect**.
 
-1. In the **Microsoft Microsoft Entra ID Connect** window, select **Configure**.
+1. In the **Azure AD Connect** window, select **Configure**.
 
 1. On the **Additional tasks** page, select **Change user sign-in**, then select **Next**.
 
