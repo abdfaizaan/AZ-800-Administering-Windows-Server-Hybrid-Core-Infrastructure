@@ -58,7 +58,7 @@ In this task, you will connect to your Azure subscription and enable enhanced se
 
 1. On the **Stay signed in?** dialog box, select the Don’t show this again check box and then select **No**.
 
->**Note**: Skip the remaining steps in this task and proceed directly to the next one if you have already enabled Microsoft Defender for Cloud in your Azure subscription.
+   >**Note**: Skip the remaining steps in this task and proceed directly to the next one if you have already enabled Microsoft Defender for Cloud in your Azure subscription.
 
 3. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Microsoft Defender for Cloud**.
 
@@ -147,7 +147,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. Open the **template.json** file in Notepad, and review its content. Keep the Notepad window open.
 
-1. From File Explorer, open the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab06\\parameters.json** file in Notepad and review its content.
+1. From File Explorer, open the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab06\\template\\parameters.json** file in Notepad and review its content.
 
 1. Close the Notepad window displaying the **parameters.json** file.
 
@@ -250,7 +250,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
    ![](media/sub.png)
 
-1. On the **Settings \| Defender plans** page, verify that the tile **Enable all Microsoft Defender for Cloud plans** is selected and, on the top side, select **Settings & monitoring**.
+1. On the **Settings \| Defender plans** page, select **Settings & monitoring**.
 
 1. On the **Settings & monitoring** page, in the list of extensions, to the right side of the **Log Analytics agent/Azure Monitor agent** entry, select the **Edit configuration** link.
 
@@ -316,9 +316,9 @@ security rules**.
 
 1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the Azure VM **az800l06-vm0**.
 
-1. On the **az800l06-vm0** page, under **Networking** section select **Network Settings**.
+1. On the **az800l06-vm0** page, under **Settings** section select **Networking**.
 
-1. On the **az800l06-vm0 \| Network settings** page, select the link designating the network interface attached to **az800l06-vm0**.
+1. On the **az800l06-vm0 \| Network settings** page, select the link designating the network interface attached to **az800l06-vm0*****.
 
 1. On the page displaying the network interface properties, in the vertical menu on the left side, in the **Settings** section, select **Network security group**. 
 
@@ -334,6 +334,8 @@ security rules**.
    |Name|**az800l06-vm0-pip1**|
    |SKU|**Standard**|
       
+1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select **az800106-vm0-pip1**, click on **Associate**, select **Resource Type** as **Network interface** and select **Network interface** as **az800106-vm0*****, click **OK**.
+
 1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the network interface, select **IP configurations**, and then select the **ipconfig1** entry.
 
 1. On the **Edit ip configuration** page, in the **Public IP address settings** section, select **Associate public ip address**, and then, below the **Public IP address** drop-down list, select **az800l06-vm0-pip1** and click **Save**.
@@ -354,7 +356,7 @@ security rules**.
 
 1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the Azure VM **az800l06-vm0**.
 
-1. On the **az800l06-vm0** page, select **Configuration**. 
+1. On the **az800l06-vm0** page, under **Settings** section select **Configuration**. 
 
 1. On the **az800l06-vm0 \| Configuration** page, select **Enable just-in-time** VM access and select the **Open Microsoft Defender for Cloud** link.
 
