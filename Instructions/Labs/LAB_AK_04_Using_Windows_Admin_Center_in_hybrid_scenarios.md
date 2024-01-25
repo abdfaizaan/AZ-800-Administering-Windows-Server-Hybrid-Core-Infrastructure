@@ -247,24 +247,44 @@ In this lab, you will perform:
 
 1. When prompted to provide the password for the local Administrator account, enter **Pa55w.rd1234**
 
-   >**Note**: Wait for the provisioning script to complete. This might take about 10 minutes.
-
-1. Verify that the script completed successfully and note the final message providing the URL containing the fully qualified name of the Azure VM that hosts the Windows Admin Center installation.
-
-   >**Note**: Record the fully qualified name of the Azure VM. You will need it later in this lab.
+   >**Note**: Wait for the provisioning script to complete. This might take about 10 minutes. If the script displays warnings such as the one below, you can proceed to the next task.
 
 1. Close the Cloud Shell pane.
 
-#### Task 2: Review results of the script provisioning
+#### Task 2: Manual installation of WAC on the az800l04-vmwac
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Resource groups**, and then, on the **Resource groups** page, select the **AZ800-L0401-RG** entry.
+1. Navigate to Virtual machines in the Azure portal and select **az800l04-vmwac**.
 
-1. On the **AZ800-L0401-RG** page, on the **Overview** page, review the list of resources, including the Azure VM **az800l04-vmwac**.
+1. On the left under **Settings**, click **Connect**.
 
-1. In the list of resources, select the Azure VM **az800l04-vmwac** entry, and then, on the **az800l04-vmwac** page, under **Settings** section select **Networking**.
+1. Click on **Download RDP file**.
+
+1. Select **Open File**, then proceed by clicking **Connect** in the warning popup window.
+
+1. Enter the password as **Pa55w.rd1234** and click **OK**.Then, proceed by selecting **Yes**.
+
+1. Once logged in, Select **NO** in the Network blue pane, and subsequently, **close** any open windows.
+
+1. Click the **Start** button and type **Edge**, click **Microsoft edge** and complete the Edge setup wizard.
+
+1. Enter **Windows Admin Center** in the URL field of Microsoft Edge, then click on the first link displayed in the search results.
+
+1. Select the **Download Windows Admin Center** button, then choose **Open file**. Close the Microsoft Edge browser. Proceed by checking the **I accept these terms** box, click **Next** five times, followed by **Install**. Finally, click **Finish** to complete the installation.
+
+   ![](media/windows_admin_center.png) 
+
+1. Navigate to the **Start** menu, right-click, go to **Shut down** or **sign out**," and select **Disconnect**.
+
+#### Task 3: Review results of the script provisioning
+
+1. From **SEA-ADM1**, Navigate to Azure portal and locate the vm named **az800l04-vmwac**.
+
+1. Copy the **DNS name** from the Overview page and open edge browser, right-click on the URL field, select Paste, add "https://" at the beginning of the URL, like this **https://azxxxx-vmwac-134d25.eastus.cloudapp.azure.com/** and press **Enter**.
+
+1. Navigate back to Azure portal, select the Azure VM **az800l04-vmwac** entry, and then, on the **az800l04-vmwac** page, under **Settings** section select **Networking**.
 
 1. On the **az800l04-vmwac | Networking** page, on the **Inbound port rules** tab, note the entries representing the inbound port rule allowing connectivity on TCP port 5986 and the inbound rule allowing connectivity on TCP port 443.
-   
+
  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
