@@ -43,7 +43,9 @@ For this lab, you'll use the available VM environment.
 
 1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 
-1. On **SEA-ADM1**, select **Start**, and then select **Server Manager**.
+1. On **SEA-ADM1**, select **Start (1)**, and then select **Server Manager (2)**.
+
+   ![](media/servermanager.png) 
 
 1. In Server Manager, select **All Servers**.
 
@@ -51,55 +53,71 @@ For this lab, you'll use the available VM environment.
 
 1. In Hyper-V Manager, ensure that **SEA-SVR1.CONTOSO.COM** is selected.
 
+   ![](media/hyper-v-manager.png) 
+
 1. In the Actions pane, select **Virtual Switch Manager**.
 
-1. In the **Virtual Switch Manager**, in the **Create virtual switch** pane, select **Private**, and then select **Create Virtual Switch**.
+   ![](media/hypervmanager1.png) 
 
-1. In the **Virtual Switch Properties** box, specify the following settings, and then select **OK**:
+1. In the **Virtual Switch Manager**, in the **Create virtual switch** pane, select **Private (1)**, and then select **Create Virtual Switch (2)**.
 
-   - Name: **Contoso Private Switch**
-   - Connection type: **Private network**
+   ![](media/privateswitch1.png) 
+
+1. In the **Virtual Switch Properties** box, specify the following settings, and then select **OK (3)**:
+
+   - Name: **Contoso Private Switch (1)**
+   - Connection type: **Private network (2)**
+
+      ![](media/privateswitch.png) 
 
 #### Task 2: Create a virtual hard disk
 
 1. On **SEA-ADM1**, in Hyper-V Manager connected to **SEA-SVR1**, under **Action** pane, select **New**, and then select **Hard Disk**. The **New Virtual Hard Disk Wizard** starts.
 
-1. On the **Before You Begin** page, select **Next**.
+1. On the **Before You Begin** page, select **Next >**.
 
-1. On the **Choose Disk Format** page, select **VHD** and then select **Next**.
+1. On the **Choose Disk Format** page, select **VHD** and then select **Next >**.
 
-1. On the **Choose Disk Type** page, select **Differencing**, and then select **Next**.
+1. On the **Choose Disk Type** page, select **Differencing**, and then select **Next >**.
 
-1. On the **Specify Name and Location** page, specify the following settings, and then select **Next**:
+1. On the **Specify Name and Location** page, specify the following settings, and then select **Next >**:
 
    - Name: **SEA-VM1**
    - Location: **C:\Base**
 
-1. On the **Configure Disk** page, in the **Location** box, enter **C:\Base\BaseImage.vhd**, and then select **Next**.
+1. On the **Configure Disk** page, in the **Location** box, enter **C:\Base\BaseImage.vhd**, and then select **Next >**.
 
 1. On the **Summary** page, select **Finish**.
+
+   ![](media/finish.png) 
 
 #### Task 3: Create a virtual machine
 
 1. On **SEA-ADM1**, in Hyper-V Manager, select **New**, and then select **Virtual Machine**. The **New Virtual Machine Wizard** starts.
 
-1. On the **Before You Begin** page, select **Next**.
+1. On the **Before You Begin** page, select **Next >**.
 
-1. On the **Specify Name and Location** page, enter **SEA-VM1**, and then select the check box next to **Store the virtual machine in a different location**.
+   ![](media/next1.png) 
 
-1. In the **Location** box, enter **C:\Base**, and then select **Next**.
+1. On the **Specify Name and Location** page, enter **SEA-VM1 (1)**, and then select the check box next to **Store the virtual machine in a different location (2)**.
 
-1. On the **Specify Generation** page, select **Generation 1**, and then select **Next**.
+1. In the **Location** box, enter **C:\Base (3)**, and then select **Next > (4)**.
 
-1. On the **Assign Memory** page, enter **4096**, and then select **Next**.
+   ![](media/next2.png)
 
-1. On the **Configure Networking** page, select the Connection drop-down menu, select **Contoso Private Switch**, and then select **Next**.
+1. On the **Specify Generation** page, select **Generation 1**, and then select **Next >**.
+
+1. On the **Assign Memory** page, enter **4096**, and then select **Next >**.
+
+1. On the **Configure Networking** page, select the Connection drop-down menu, select **Contoso Private Switch**, and then select **Next >**.
 
 1. On the **Connect Virtual Hard Disk** page, select **Use an existing virtual hard disk**, and then select **Browse**.
 
-1. Browse to **C:\Base**, select **SEA-VM1.vhd**, select **Open**, and then select **Next**.
+1. Browse to **C:\Base**, select **SEA-VM1.vhd**, select **Open**, and then select **Next >**.
 
 1. On the **Summary** page, select **Finish**. Notice that **SEA-VM1** displays in the Virtual Machines list.
+
+   ![](media/seavm1.png)
 
 1. Select **SEA-VM1**, and then in the Actions pane, under **SEA-VM1**, select **Settings**.
 
@@ -128,7 +146,7 @@ For this lab, you'll use the available VM environment.
    Start-Process msiexec.exe -Wait -ArgumentList "/i $env:USERPROFILE\Downloads\WindowsAdminCenter.msi /qn /L*v log.txt REGISTRY_REDIRECT_PORT_80=1 SME_PORT=443 SSL_CERTIFICATE_OPTION=generate"
    ```
 
-   > **Note**: Wait until the installation completes. This should take about 2 minutes. If the web page does not respond, open **services.msc** and verify that the Windows Admin Center server is **Started**.
+   > **Note**: Wait until the installation completes. This should take about 2 minutes. If the web page does not respond, open **services.msc** and verify that the Windows Admin Center Service is **Started**.
 
 1. On **SEA-ADM1**, start Microsoft Edge, and then go to `https://SEA-ADM1.contoso.com`. 
    
@@ -141,7 +159,13 @@ For this lab, you'll use the available VM environment.
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
+   >**Note:** Close **Successfully installed version 2311** pop-up.
+
+   >**Note:** Select **OK**, on the **Successfully updated your extensions** pop-up.
+
 1. On the **All connections** pane, select **+ Add**.
+
+   ![](media/add1.png)
 
 1. On the **Add or create resources** pane, on the **Servers** tile, select **Add**.
 
@@ -156,7 +180,9 @@ For this lab, you'll use the available VM environment.
 
    > **Note**: To perform single sign-on, you would need to set up Kerberos constrained delegation.
 
-1. On the **sea-svr1.contoso.com** page, in the **Tools** list, select **Virtual machines**, select the **Summary** tab, and then review its content.
+1. Select **sea-svr1.contoso.com**, from the left navigation menu, in the **Tools** list, select **Virtual machines (1)**, select the **Summary (2)** tab, and then review its content.
+
+   ![](media/virtualmachines1.png)
 
 1. Select the **Inventory** tab and verify that it contains SEA-VM1.
 
@@ -172,13 +198,17 @@ For this lab, you'll use the available VM environment.
 
 1. Select **Save disks settings**, and then select **Close**.
 
-1. Back on the **Properties** pane of **SEA-VM1**, select **Power**, and then select **Start** to start **SEA-VM1**.
+1. Back on the **Inventory** page, select **SEA-VM1**.
+
+1. On the **Properties** pane of **SEA-VM1**, select **Power**, and then select **Start** to start **SEA-VM1**.
 
 1. Scroll down and display the statistics for the running VM.
 
 1. Refresh the page, select **Power**, select **Shut down**, and then select **Yes** to confirm.
 
-1. In the **Tools** list, select **Virtual switches** and identify the existing switches.
+1. From the lefy navigation menu, in the **Tools** list, select **Virtual switches (1)** and identify the **existing switches (2)**.
+
+   ![](media/virtualswitch.png)
 
 ### Exercise 1 results
 
@@ -201,6 +231,9 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
    Install-PackageProvider -Name NuGet -Force
    Install-Module PowerShellGet -RequiredVersion 2.2.4 -SkipPublisherCheck
    ```
+
+1. When prompted to install NuGet, press the **Y** key, and then press Enter.
+
 1. When prompted to confirm the installation of modules from an untrusted repository, press the **A** key, and then press Enter.
 
 1. After the installation completes, enter the following command, and then press Enter to restart **SEA-SVR1**:
@@ -225,7 +258,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 
    ```powershell
    Restart-Computer -Force
-
+   ```
 #### Task 2: Install and run a Windows container
 
 1. After **SEA-SVR1** restarts, use the below PowerShell command again to establish a new PowerShell Remoting session to **SEA-SVR1**.
@@ -238,7 +271,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 
    ```powershell
    Get-Package -Name Docker -ProviderName DockerProvider
-
+   ```
 1. Enter the following command, and then press Enter to identify Docker images currently present on **SEA-SVR1**: 
 
    ```powershell
@@ -277,6 +310,8 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge window, open another tab and go to **http://172.16.10.12**. Verify that the browser displays the default IIS page.
 
+   ![](media/IPaddress.png)
+
 1. On **SEA-ADM1**, switch back to the PowerShell Remoting session to **SEA-SVR1**, and then, in the **Windows PowerShell** console, enter the following command, and then press Enter to list running containers:
 
    ```powershell
@@ -297,7 +332,9 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 
 #### Task 3: Use Windows Admin Center to manage containers
 
-1. On **SEA-ADM1**, in the Windows Admin Center, in the Tools menu of **sea-svr1.contoso.com**, select **Containers**. If prompted to close the **PowerShell** session, select **Continue**.
+1. On **SEA-ADM1**, in the Windows Admin Center, in the Tools menu of **sea-svr1.contoso.com**, select **Containers**. 
+
+   >**Note:** If prompted to close the **PowerShell** session, select **Continue**.
 
 1. In the Containers pane, browse through the **Overview**, **Containers**, **Images**, **Networks**, and **Volumes** tabs.
 
@@ -313,4 +350,4 @@ In this lab, you have completed:
 - Install Docker on Windows Server and run a Windows container
 - Use Windows Admin Center to manage containers
 
-### Proceed to next Lab
+### You have successfully completed the lab
