@@ -273,7 +273,7 @@ In this lab, you will perform:
 
    ![](media/windows_admin_center.png) 
 
-1. Navigate to the **Start** menu, right-click, go to **Shut down** or **sign out**," and select **Disconnect**.
+1. Navigate to the **Start** menu, right-click, go to **Shut down** or **sign out**, and select **Disconnect**.
 
 #### Task 3: Review results of the script provisioning
 
