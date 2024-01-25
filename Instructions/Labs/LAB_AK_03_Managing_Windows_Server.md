@@ -98,7 +98,7 @@ For this lab, you'll use the available VM environment and an Azure AD tenant.
 
 1. In the left pane, under **Gateway** section, select **Extensions**. Review the available extensions.
 
-1. Select the **Security (Preview)** extension, then right click and select **Install**. The extension will install and Windows Admin Center will refresh.
+1. Select the **Security (Preview) and DNS** extension, then right click and select **Install**. The extension will install and Windows Admin Center will refresh.
 
    > **Note**: If the **Security (Preview)** extension is not available, choose another Microsoft extension.
 
