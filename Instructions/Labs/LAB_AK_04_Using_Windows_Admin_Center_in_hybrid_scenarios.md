@@ -279,7 +279,7 @@ In this lab, you will perform:
 
 1. From **SEA-ADM1**, Navigate to Azure portal and locate the vm named **az800l04-vmwac**.
 
-1. Copy the **DNS name** from the Overview page and open edge browser, right-click on the URL field, select Paste, add "https://" at the beginning of the URL, like this **https://azxxxx-vmwac-134d25.eastus.cloudapp.azure.com/** and press **Enter**.
+1. Copy the **Public IP Address** displayed on the Overview page. Next, open the Edge browser, right-click on the URL field, and choose the paste option. Ensure to prepend "https://" to the URL, and append the port number you configured for WAC, such as **443**. The resulting final URL should resemble this: **https://20.232.18.205:443/**. Finally, press the **Enter** key.
 
 1. Navigate back to Azure portal, select the Azure VM **az800l04-vmwac** entry, and then, on the **az800l04-vmwac** page, under **Settings** section select **Networking**.
 
