@@ -247,7 +247,9 @@ In this lab, you will perform:
 
 1. When prompted to provide the password for the local Administrator account, enter **Pa55w.rd1234**
 
-   >**Note**: Wait for the provisioning script to complete. This might take about 10 minutes. If the script displays warnings such as the one below, you can proceed to the next task.
+   >**Note**: Wait for the provisioning script to complete. This might take about 10 minutes. If the script displays errors such as the one below, you can proceed to the next task.
+
+    ![](media/error.png)  
 
 1. Close the Cloud Shell pane.
 
