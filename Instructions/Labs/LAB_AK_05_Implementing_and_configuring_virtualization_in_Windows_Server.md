@@ -231,6 +231,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
    Install-PackageProvider -Name NuGet -Force
    Install-Module PowerShellGet -RequiredVersion 2.2.4 -SkipPublisherCheck
    ```
+   **Note:** Coopy and execute the commands one by one.
 
 1. When prompted to install NuGet, press the **Y** key, and then press Enter.
 
@@ -242,6 +243,11 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
    Restart-Computer -Force
    ```
 1. After **SEA-SVR1** restarts, use the **PowerShell** tool again to establish a new PowerShell Remoting session to **SEA-SVR1**.
+
+   ```powershell
+    Enter-PSSession -ComputerName SEA-SVR1
+   ```  
+   
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to install the Docker Microsoft PackageManagement provider on **SEA-SVR1**:
 
    ```powershell
