@@ -204,7 +204,7 @@ In this lab, you will perform:
 
 1. Verify that here as well there is an entry representing the **SEA-ADM1.contoso.com** lease.
 
-1. Select **sea-svr1 **, in the Actions pane, select **More Actions**, select **All tasks**, and then select **Stop**.
+1. Select **sea-svr1**, in the Actions pane, select **More Actions**, select **All tasks**, and then select **Stop**.
 
 1. On **SEA-ADM1**, switch back to the **Ethernet Status** window, and then select **Disable**.
 
