@@ -197,6 +197,8 @@ In this lab, you will perform:
 1. Select **Close**, and then, in the **Ethernet Status** window, select **Details**.
 
 1. In the **Network Connection Details** dialog box, verify that DHCP is enabled, an IP address was obtained, and that the **sea-svr1** DHCP server issued the lease.
+
+   >**Note**: It may take some time to view the list of IP address was obtained. Please proceed with the next steps and return to review the list of **IP address** afterward.
    
    >**Note** If its not visiable on the Network and Sharing Center window, select Change adapter settings, select Ethernet, and double-click the Ethernet connection to display its status window and back on **Network and Sharing Center** window check the connection Ethernet.
    
@@ -209,6 +211,8 @@ In this lab, you will perform:
 1. On **SEA-ADM1**, in the **DHCP** window, expand the **sea-dc1** node, expand the **IPv4** node, expand the **Scope [172.16.0.0] Contoso** node, and then select **Address Leases**.
 
 1. Verify that here as well there is an entry representing the **SEA-ADM1.contoso.com** lease.
+
+   >**Note**: It may take some time to view the list of **Address Leases**. Please proceed with the next steps and  return to review the list of **Address Leases** afterward.
 
 1. Select **sea-svr1**, in the Actions pane, select **More Actions**, select **All tasks**, and then select **Stop**.
 
