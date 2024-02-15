@@ -254,24 +254,24 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. In the **Windows PowerShell ISE** script pane, clear the existing script and add the below script.
 
- ```
-   $srvName = 'SEA-SVR1'
-   $rgName = 'AZ800-L1001-RG'
-   $fsName = 'FileSync1'
-   
-   New-Item -Type Directory -Path "\\$srvName\c$\Temp" -Force
-   Copy-Item -Path C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10\StorageSyncAgent_WS2022.msi -Destination "\\$srvName\c$\Temp\" -PassThru
-   
-   Invoke-Command -ComputerName $srvName -ArgumentList ($rgName, $fsName) {
-   	param($rgName, $fsName)
-   	Install-PackageProvider -Name NuGet -Force; 
-   	Install-Module az.StorageSync -Force;
-   	Start-Process -FilePath "C:\Temp\StorageSyncAgent_WS2022.msi" -ArgumentList "/quiet" -Wait;
-   	Connect-AzAccount -UseDeviceAuthentication; 
-   	Register-AzStorageSyncServer -ResourceGroupName $rgName -StorageSyncServiceName $fsName | Out-Null;
-   	Write-Output "Script finished"
-}
-```
+    ```
+      $srvName = 'SEA-SVR1'
+      $rgName = 'AZ800-L1001-RG'
+      $fsName = 'FileSync1'
+      
+      New-Item -Type Directory -Path "\\$srvName\c$\Temp" -Force
+      Copy-Item -Path C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10\StorageSyncAgent_WS2022.msi -Destination "\\$srvName\c$\Temp\" -PassThru
+      
+      Invoke-Command -ComputerName $srvName -ArgumentList ($rgName, $fsName) {
+      	param($rgName, $fsName)
+      	Install-PackageProvider -Name NuGet -Force; 
+      	Install-Module az.StorageSync -Force;
+      	Start-Process -FilePath "C:\Temp\StorageSyncAgent_WS2022.msi" -ArgumentList "/quiet" -Wait;
+      	Connect-AzAccount -UseDeviceAuthentication; 
+      	Register-AzStorageSyncServer -ResourceGroupName $rgName -StorageSyncServiceName $fsName | Out-Null;
+      	Write-Output "Script finished"
+   }
+   ```
 
 1. Review the script, and then execute it by selecting the **Run Script** icon in the toolbar or by pressing F5. 
 
