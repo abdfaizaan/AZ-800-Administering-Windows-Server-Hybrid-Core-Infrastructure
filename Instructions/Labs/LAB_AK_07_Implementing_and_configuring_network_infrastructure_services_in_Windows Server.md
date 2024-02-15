@@ -80,7 +80,7 @@ In this lab, you will perform:
 
     > **Note**: If the **DHCP** entry is not available in the **Tools** list for **sea-svr1.contoso.com**, refresh the **Microsoft Edge** page and try again. Depending on your network performance, it may take upto 5 minutes for the DHCP server to appear.
 
-1. If prompted to sign in Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
+1. If prompted to sign in ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
