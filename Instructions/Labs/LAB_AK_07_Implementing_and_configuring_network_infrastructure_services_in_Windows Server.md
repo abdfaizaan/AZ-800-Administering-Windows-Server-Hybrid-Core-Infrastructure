@@ -66,6 +66,8 @@ In this lab, you will perform:
 
    > **Note**: To perform single sign-on, you would need to set up a Kerberos constrained delegation.
 
+1.  In **All connections** pane, select **sea-svr1.contoso.com**.
+   
 1. On the **sea-svr1.contoso.com** page, in the **Tools** list, select **Roles & features**.
 
 1. In the Roles and features pane, select the **DHCP Server** checkbox, and then select **+ Install**.
@@ -76,8 +78,12 @@ In this lab, you will perform:
 
 1. Refresh the **Microsoft Edge** page back on the **sea-svr1.contoso.com** page, in the **Tools** list, select **DHCP**, and then, in the details pane, select **Install** to install the DHCP PowerShell tools. 
 
-    > **Note**: If the **DHCP** entry is not available in the **Tools** list for **sea-svr1.contoso.com**, refresh the **Microsoft Edge** page and try again.
-   Depending on your network performance, it may take upto 5 minutes for the DHCP server to appear.
+    > **Note**: If the **DHCP** entry is not available in the **Tools** list for **sea-svr1.contoso.com**, refresh the **Microsoft Edge** page and try again. Depending on your network performance, it may take upto 5 minutes for the DHCP server to appear.
+
+1. If prompted to sign in Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
+
+   - Username: **CONTOSO\Administrator**
+   - Password: **Pa55w.rd**
 
 1. Wait for a notification that the DHCP PowerShell tools are installed. If necessary, select the **Notifications** icon to verify the current status.
 
@@ -106,9 +112,9 @@ In this lab, you will perform:
    - Protocol: **IPv4**
    - Name: **ContosoClients**
    - Starting IP address: **10.100.150.50**
-   - Ending IP address: **10.100.150.254**
+   - End IP address: **10.100.150.254**
    - DHCP client subnet mask: **255.255.255.0**
-   - Router (default gateway): **+ Add** **10.100.150.1**
+   - Router (default gateway): select **+ Add** enter **10.100.150.1**
    - Lease duration for DHCP clients: **4 days**
 
 1. On **SEA-ADM1**, switch to **Server Manager**, in **Server Manager**, select **Tools**, and then select **DHCP**.
@@ -266,7 +272,7 @@ In this lab, you will perform:
    - Zone file name: **TreyResearch.net.dns**
    - Dynamic update: **Do not allow dynamic update**
 
-1. Back in the DNS pane, select **TreyResearch.net**, and then select **+ Create a new DNS record**.
+1. Back in the DNS pane, under **Record - TreyResearch.net**, select **+ Create a new DNS record** (you need to scroll down).
 
 1. In the **Create a new DNS record** pane, specify the following settings, and then select **Create**:
 
