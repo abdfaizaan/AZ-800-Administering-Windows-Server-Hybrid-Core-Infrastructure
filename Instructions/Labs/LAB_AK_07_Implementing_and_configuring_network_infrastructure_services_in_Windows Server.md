@@ -204,16 +204,6 @@ In this lab, you will perform:
    
 1. Select **Close** to return to the **Ethernet Status** window. 
 
-1. On **SEA-ADM1**, in the **DHCP** window, expand the **172.16.10.12(sea-svr1)** node, expand the **IPv4** node, expand the **Scope [172.16.0.0] Contoso** node, and then select **Address Leases**.
-
-1. Verify that there is an entry representing the **SEA-ADM1.contoso.com** lease.
-
-1. On **SEA-ADM1**, in the **DHCP** window, expand the **sea-dc1** node, expand the **IPv4** node, expand the **Scope [172.16.0.0] Contoso** node, and then select **Address Leases**.
-
-1. Verify that here as well there is an entry representing the **SEA-ADM1.contoso.com** lease.
-
-   >**Note**: It may take some time to view the list of **Address Leases**. Please proceed with the next steps and  return to review the list of **Address Leases** afterward.
-
 1. Select **sea-svr1**, in the Actions pane, select **More Actions**, select **All tasks**, and then select **Stop**.
 
 1. On **SEA-ADM1**, switch back to the **Ethernet Status** window, and then select **Disable**.
@@ -240,7 +230,19 @@ In this lab, you will perform:
 
 1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, select **Use the following DNS server addresses**, set the **Preferred DNS server** to **172.16.10.10**, and then select **OK**.
 
-   > **Note**: Leave the **Ethernet Status** window open. You will need it later in this lab. 
+   > **Note**: Leave the **Ethernet Status** window open. You will need it later in this lab.
+
+1. On **SEA-ADM1**, in the **DHCP** window, select **sea-svr1**, in the Actions pane, select **More Actions**, select **All tasks**, and then select **Start**.
+
+1. On **SEA-ADM1**, in the **DHCP** window, expand the **sea-svr1** node, expand the **IPv4** node, expand the **Scope [172.16.0.0] Contoso** node, and then select **Address Leases**.
+
+1. Verify that there is an entry representing the **SEA-ADM1.contoso.com** lease.
+
+1. On **SEA-ADM1**, in the **DHCP** window, expand the **sea-dc1** node, expand the **IPv4** node, expand the **Scope [172.16.0.0] Contoso** node, and then select **Address Leases**.
+
+1. Verify that here as well there is an entry representing the **SEA-ADM1.contoso.com** lease.
+
+1. On **SEA-ADM1**, in the **DHCP** window, select **sea-svr1**, in the Actions pane, select **More Actions**, select **All tasks**, and then select **Stop**.
 
 ## Exercise 2: Deploying and configuring DNS
 
