@@ -278,7 +278,7 @@ In this lab, you will perform:
    - Zone file name: **TreyResearch.net.dns**
    - Dynamic update: **Do not allow dynamic update**
 
-1. Back in the DNS pane, under **Record - TreyResearch.net**, select **+ Create a new DNS record** (you need to scroll down).
+1. Back in the DNS pane, select **TreyResearch.net** then under **Record - TreyResearch.net**, select **+ Create a new DNS record** (you need to scroll down).
 
 1. In the **Create a new DNS record** pane, specify the following settings, and then select **Create**:
 
