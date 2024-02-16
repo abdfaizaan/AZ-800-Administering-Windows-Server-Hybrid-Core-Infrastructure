@@ -48,6 +48,9 @@ In this lab, you will perform:
 
    >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**.
 
+   >**Note**: When **Close Successfully installed version 2311** prompted close the window.
+   
+
 1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
    - Username: **CONTOSO\Administrator**
@@ -80,10 +83,10 @@ In this lab, you will perform:
 
     > **Note**: If the **DHCP** entry is not available in the **Tools** list for **sea-svr1.contoso.com**, refresh the **Microsoft Edge** page and try again. Depending on your network performance, it may take upto 5 minutes for the DHCP server to appear.
 
-1. If prompted to sign in ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
+    >**Note**: If prompted to sign in ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Continue**:
 
-   - Username: **CONTOSO\Administrator**
-   - Password: **Pa55w.rd**
+	   - Username: **CONTOSO\Administrator**
+	   - Password: **Pa55w.rd**
 
 1. Wait for a notification that the DHCP PowerShell tools are installed. If necessary, select the **Notifications** icon to verify the current status.
 
