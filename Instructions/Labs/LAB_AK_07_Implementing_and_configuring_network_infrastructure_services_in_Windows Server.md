@@ -201,7 +201,7 @@ In this lab, you will perform:
 
 1. In the **Network Connection Details** dialog box, verify that DHCP is enabled, an IP address was obtained, and that the **sea-svr1** DHCP server issued the lease.
 
-   >**Note**: It may take some time to view the list of IP address was obtained. Please proceed with the next steps and return to review the list of **IP address** afterward.
+   >**Note**: It may take some time to view the list of IP address was obtained. Please proceed with the next steps and return to review the list of **IP address** afterward or else try to turn off and start svr1 machine from hyper-v manager.
    
    >**Note** If its not visiable on the Network and Sharing Center window, select Change adapter settings, select Ethernet, and double-click the Ethernet connection to display its status window and back on **Network and Sharing Center** window check the connection Ethernet.
    
