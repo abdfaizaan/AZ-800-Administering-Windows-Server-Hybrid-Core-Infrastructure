@@ -301,8 +301,6 @@ In this lab, you will perform:
 
 1. In Server Manager, select **Tools**, and then select **DNS**.
 
-1. In **DNS Manager**, select **DNS**, display its context-sensitive menu, and then, right click and select **Connect to DNS Server**.
-
 1. In the **Connect to DNS Server** dialog box, select **The following computer**, enter **SEA-SVR1.contoso.com**, and then select **OK**.
 
 1. In **DNS Manager**, select **SEA-SVR1.contoso.com**, display its context-sensitive menu, right click and select **Properties**.
