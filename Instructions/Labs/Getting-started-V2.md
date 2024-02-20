@@ -46,8 +46,21 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
    ![Manage Your Virtual Machine](media/gext2.png)
 
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click 
-   **OK** to proceed. 
+3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click  **OK** to proceed. 
+
+## Workaround for Copying PowerShell Commands
+
+If you encounter any difficulties with copy-pasting PowerShell commands directly, you can use the following workaround:
+
+1. Open a text editor such as Notepad on your local machine.
+
+2. Copy the PowerShell commands from the lab guide and paste them into the text editor.
+
+3. Ensure that the formatting of the commands remains intact.
+
+4. Copy the commands from the text editor and paste them into your virtual machine's terminal or PowerShell window.
+
+By following this workaround, you can ensure accurate execution of the PowerShell commands in your lab environment.
 
 ## Let's Get Started with Azure Portal
  
