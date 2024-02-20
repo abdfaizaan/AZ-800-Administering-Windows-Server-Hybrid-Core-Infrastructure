@@ -85,8 +85,8 @@ In this lab, you will perform:
 
     >**Note**: If prompted to sign in ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Continue**:
 
-	   - Username: **CONTOSO\Administrator**
-	   - Password: **Pa55w.rd**
+   - Username: **CONTOSO\Administrator**
+   - Password: **Pa55w.rd**
 
 1. Wait for a notification that the DHCP PowerShell tools are installed. If necessary, select the **Notifications** icon to verify the current status.
 
