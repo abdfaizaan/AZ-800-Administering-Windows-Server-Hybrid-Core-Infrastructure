@@ -48,22 +48,31 @@ In this lab, you will perform:
 
 1.  On **SEA-ADM1**, on the **Start** menu, select **Server Manager**, and then, in **Server Manager**, select the **All Servers** view.
 
-1. On the **Manage** menu, select **Add Servers**.
+1. On the **Manage(1)** menu, select **Add Servers(2)**.
 
-1. In the **Add Servers** dialog box, maintain the default settings, and then select **Find Now**.
+   ![](media/update1.png)
+
+1. In the **Add Servers** dialog box, maintain the default settings, and then select **Find Now(1)**.
 
 1. In the **Active Directory** list of servers, select **SEA-SVR1**, select the arrow to add it to the **Selected** list, and then select **OK**.
 
-1. On **SEA-ADM1**, ensure that the installation of the AD DS role on **SEA-SRV1** is complete and that the server was added to **Server Manager**. Then select the **Notifications** flag symbol.
+1. On **SEA-ADM1**, ensure that the installation of the AD DS role on **SEA-SRV1(1)** is complete and that the server was added to **Server Manager**. Then select the **Notifications(2)** flag symbol.
+   ![](media/update3.png)
 1. Note the post-deployment configuration of **SEA-SVR1**, and then select the **Promote this server to a domain controller** link.
+   
+   ![](media/update4.png)
 
-1. In the **Active Directory Domain Services Configuration Wizard**, on the **Deployment Configuration** page, under **Select the deployment operation**, verify that **Add a domain controller to an existing domain** is selected.
+1. In the **Active Directory Domain Services Configuration Wizard**, on the **Deployment Configuration** page, under **Select the deployment operation**, verify that **Add a domain controller to an existing domain(1)** is selected.
 
-1. Ensure that the `Contoso.com` domain is specified, and then in the **Supply the credentials to perform this operation** section, select **Change**.
+1. Ensure that the `Contoso.com`(2) domain is specified, and then in the **Supply the credentials to perform this operation** section, select **Change(3)**.
 
-1. In the **Credentials for deployment operation** dialog box, in the **User name** box, enter **CONTOSO\Administrator**, and then in the **Password** box, enter **Pa55w.rd**.
+   ![](media/update5.png)
 
-1. Select **OK**, and then select **Next**.
+1. In the **Credentials for deployment operation** dialog box, in the **User name(1)** box, enter **CONTOSO\Administrator**, and then in the **Password(2)** box, enter **Pa55w.rd**.
+
+1. Select **OK(3)**, and then select **Next**.
+
+   ![](media/update6.png)
 
 1. On the **Domain Controller Options** page, ensure that the **Domain Name System (DNS) server** and **Global Catalog (GC)** checkboxes are selected. Ensure that the **Read-only domain controller (RODC)** checkbox is cleared.
 
@@ -71,7 +80,11 @@ In this lab, you will perform:
 
 1. On the **DNS Options** page, select **Next**.
 
+   ![](media/update8.png)
+
 1. On the **Additional Options** page, select **Next**.
+
+   ![](media/update9.png)
 
 1. On the **Paths** page, keep the default path settings for the **Database** folder, **Log files** folder, and **SYSVOL** folder, and then select **Next**.
 
@@ -144,6 +157,8 @@ In this lab, you will perform:
 
 1. When you receive a prompt to repeat the password, enter **Pa55w.rd**, and then press Enter.
 
+   ![](media/update15.png)
+
 1. To enable the account, enter the following command, and then press Enter:
 
    ```powershell
@@ -178,7 +193,9 @@ In this lab, you will perform:
 
 #### Task 1: Create and edit a GPO
 
-1. On **SEA-ADM1**, from Server Manager, select **Tools**, and then select **Group Policy Management**.
+1. On **SEA-ADM1**, from Server Manager, select **Tools(1)**, and then select **Group Policy Management(2)**.
+
+   ![](media/update21.png)
 
 1. If necessary, switch to the **Group Policy Management** window.
 
@@ -186,20 +203,28 @@ In this lab, you will perform:
 
 1. In the navigation pane, right-click or access the context menu for the **Group Policy Objects** container, and then select **New**.
 
+   ![](media/update22.png)
+
 1. In the **Name** text box, enter **CONTOSO Standards**, and then select **OK**.
 
 1. In the details pane, right-click or access the context menu for the **CONTOSO Standards** Group Policy Object (GPO), and then select **Edit**.
+
+   ![](media/update24.png)
 
 1. In the **Group Policy Management Editor** window, in the navigation pane, expand **User Configuration**, expand **Policies**, expand **Administrative Templates**, and then select **System**.
 1. Double-click the **Prevent access to registry editing tools** policy setting or select the setting, and then press Enter.
 
 1. In the **Prevent access to registry editing tools** dialog box, select **Enabled**, and then select **OK**.
 
+   ![](media/update27.png)
+
 1. In the navigation pane, expand **User** **Configuration**, expand **Policies**, expand **Administrative Templates**, expand **Control Panel**, and then select **Personalization**.
 
 1. In the details pane, double-click or select the **Screen saver timeout** policy setting, and then press Enter.
 
-1. In the **Screen saver timeout** dialog box, select **Enabled**. In the **Seconds** text box, enter **600**, and then select **OK**. 
+1. In the **Screen saver timeout** dialog box, select **Enabled(1)**. In the **Seconds** text box, enter **600(2)**, and then select **OK(3)**.
+
+   ![](media/updateb28.png)
 
 1. Double-click or select the **Password protect the screen saver** policy setting, and then press Enter.
 
@@ -210,6 +235,8 @@ In this lab, you will perform:
 #### Task 2: Link the GPO
 
 1. In the **Group Policy Management** window, in the navigation pane, right-click or access the context menu for the `Contoso.com` domain, and then select **Link an Existing GPO**.
+
+   ![](media/update30.png)
 
 1. In the **Select GPO** dialog box, select **CONTOSO Standards**, and then select **OK**.
 
