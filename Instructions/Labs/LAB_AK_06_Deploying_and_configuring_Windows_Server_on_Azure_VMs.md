@@ -376,12 +376,20 @@ security rules**.
 
 1. On **Native RDP**, select **Download RDP File**,  follow prompts to connect to the target Azure VM.
 
-1. When **Enter your credentials** window prompted, click **More Choices** and select **Use a different acount**, specify the following values, and then select **OK**:
+>**Note**: If you receive a pop-up asking if you want to keep the file while downloading the RDP file, select the **Keep** option.
+
+1. Open the RDP file you downloaded in the previous step and select the **Connect** option in the Remote Desktop Connection tab.
+
+   ![](media/az-800-lab06-05.png)
+
+1. When **Enter your credentials** window prompted, click **More Choices** and select **Use a different acount**, specify the following values, and then select **OK** and then select **Yes** from the Remote Desktop Connection tab:
 
    |Setting|Value|
    |---|---|
    |Username|**.\Student**|
    |Password|**Pa55w.rd1234**|
+
+   ![](media/az-800-lab06-06.png)
 
 1. Verify that you can successfully access via Remote Desktop the operating system running in the Azure VM and close the Remote Desktop session.
 
