@@ -60,14 +60,16 @@ In this lab, you will perform:
 
 1. In the Add or create resources pane, on the **Servers** tile, select **Add**.
 
-1. In the **Server name** text box, enter **sea-svr1.contoso.com**. 
+1. In the **Server name** text box, enter **sea-svr1.contoso.com (1)**. 
 
-1. Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
+1. Ensure that **Use another account for this connection (2)** option is selected, enter the following credentials, and then select **Add with credentials (5)**:
 
-   - Username: **CONTOSO\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: **CONTOSO\Administrator (3)**
+   - Password: **Pa55w.rd (4)**
 
-   > **Note**: To perform single sign-on, you would need to set up a Kerberos constrained delegation.
+      > **Note**: To perform single sign-on, you would need to set up a Kerberos constrained delegation.
+
+      ![](media/addcreds.png)
 
 1.  In **All connections** pane, select **sea-svr1.contoso.com**.
    
@@ -126,6 +128,8 @@ In this lab, you will perform:
 
 1. In the **Manage Authorized Servers** window, select **Refresh**, ensure that **sea-svr1.contoso.com** appears in the list of authorized DHCP servers, and then close the **Manage Authorized Servers** window.
 
+   ![](media/authorizedserver.png)
+
 1. In the **DHCP** window, in the Actions pane, select **More Actions**, and then select **Add Server**.
 
 1. In the **Add Server** dialog box, select **This authorized DHCP server**, select **sea-svr1.contoso.com**, and then select **OK**.
@@ -134,11 +138,13 @@ In this lab, you will perform:
 
 1. In the Actions pane, select **More Actions**, and then select **Configure Options**.
 
-1. In the **Scope Options** dialog box, select the **006 DNS Servers** checkbox.
+1. In the **Scope Options (1)** dialog box, select the **006 DNS Servers (2)** checkbox.
+
+   ![](media/scopeoptions.png)
 
 1. In the **Server name** text box, enter **sea-dc1.contoso.com**, select **Resolve**, verify that the name resolves to **172.16.10.10**, select **Add**, and then select **OK**.
 
- >**Note**: Check for the two servers thats being showed up under **manage authorized servers** ,i.e **sea-svr1.contoso.com** and **sea-dc1.contoso.com**
+   >**Note**: Check for the two servers thats being showed up under **manage authorized servers** ,i.e **sea-svr1.contoso.com** and **sea-dc1.contoso.com**
 
 #### Task 4: Configure DHCP Failover
 
@@ -185,6 +191,8 @@ In this lab, you will perform:
 
 1. Under **sea-svr1**, select **IPv4**, and then verify that both scopes are listed. If necessary, press the **F5** key to refresh.
 
+   ![](media/scopes.png)
+
 #### Task 5: Verify DHCP functionality
 
 1. On **SEA-ADM1**, select **Start**, and then select **Settings**.
@@ -199,6 +207,8 @@ In this lab, you will perform:
 
 1. Select **Close**, and then, in the **Ethernet Status** window, select **Details**.
 
+   ![](media/details.png)
+
 1. In the **Network Connection Details** dialog box, verify that DHCP is enabled, an IP address was obtained, and that the **sea-svr1** DHCP server issued the lease.
 
    >**Note**: It may take some time to view the list of IP address was obtained. Please proceed with the next steps and return to review the list of **IP address** afterward or else try to turn off and start svr1 machine from hyper-v manager.
@@ -207,7 +217,7 @@ In this lab, you will perform:
    
 1. Select **Close** to return to the **Ethernet Status** window. 
 
-1. Select **sea-svr1**, in the Actions pane, select **More Actions**, select **All tasks**, and then select **Stop**.
+1. On **DHCP** page, select **sea-svr1**, in the Actions pane, select **More Actions**, select **All tasks**, and then select **Stop**.
 
 1. On **SEA-ADM1**, switch back to the **Ethernet Status** window, and then select **Disable**.
 
@@ -231,9 +241,9 @@ In this lab, you will perform:
    - Subnet mask: **255.255.0.0**
    - Default gateway: **172.16.10.1**
 
-1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, select **Use the following DNS server addresses**, set the **Preferred DNS server** to **172.16.10.10**, and then select **OK**.
+1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, select **Use the following DNS server addresses**, set the **Preferred DNS server** to **172.16.10.10**, and then select **OK** twice.
 
-   > **Note**: Leave the **Ethernet Status** window open. You will need it later in this lab.
+   >**Note**: Leave the **Ethernet Status** window open. You will need it later in this lab.
 
 1. On **SEA-ADM1**, in the **DHCP** window, select **sea-svr1**, in the Actions pane, select **More Actions**, select **All tasks**, and then select **Start**.
 
