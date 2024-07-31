@@ -79,12 +79,16 @@ By following this workaround, you can ensure accurate execution of the PowerShel
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
       ![Enter Your Password](media/sc900-image-2.png)
+
+4.If **Action required** pop-up window appears, click on **Ask later**
+
+   ![](media/getting_started_ask_later_sc.png)
+       
+5. If prompted to stay signed in, you can click "No."
  
-4. If prompted to stay signed in, you can click "No."
+6. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
  
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
- 
-6. Click "Next" from the bottom right corner to embark on your Lab journey!
+7. Click "Next" from the bottom right corner to embark on your Lab journey!
  
     ![Start Your Azure Journey](media/sc900-image(3).png)
  
