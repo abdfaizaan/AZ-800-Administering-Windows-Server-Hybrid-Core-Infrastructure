@@ -88,7 +88,7 @@ In this lab, you will perform:
 
 1. In the Disks pane, browse to the list of disks of **SEA-SVR3** and select the entry representing the disk number **1**, which you configured in the previous task.
 
-1. In the Volumes pane, display the context-sensitive menu of the **M:** volume, and then, in the menu, select **Configure Data Deduplication**.
+1. In the Volumes pane, display the context-sensitive menu of the **M:** volume, and by right clicking on **M:** volume ,select **Configure Data Deduplication**.
 
 1. In the **Volume (M:\\) Deduplication Settings** window, in the **Data deduplication** drop-down list, select the **General purpose file server** setting.
 
@@ -358,7 +358,7 @@ using the following settings:
 
 1. In the Disks pane, scroll down, and note that the **SEA-SVR3** disks 1 through 4 are listed with **Unknown** partitions and the **Offline** status. 
 
-1. Select each of the four disks in sequence, display its context-sensitive menu, select the **Bring Online** option in the menu, and then in the **Bring Disk Online** window, select **Yes**.
+1. Select each of the four disks in sequence, display its context-sensitive menu by right clicking on disk and select the **Bring Online** option in the menu, and then in the **Bring Disk Online** window, select **Yes**.
 
 1. Verify that all disks are listed with the **Online** status. In **Server Manager**, in the navigation pane, select **Storage Pools**.
 
