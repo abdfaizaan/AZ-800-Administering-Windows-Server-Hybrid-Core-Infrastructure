@@ -34,9 +34,9 @@ In this lab, you will perform:
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-   >**Note**: If this is the first time you are starting Cloud Shell and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and then select **Create storage**.
+   >**Note**: If this is the first time you are starting Cloud Shell and you are presented with the **Getting started** page, select the subscription you are using in this lab, and then select **No storage account required**.
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**, and then upload the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\L04-sub_template.json** file to the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, select the **Manage Files** icon, in the drop-down menu, select **Upload**, and then upload the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\L04-sub_template.json** file to the Cloud Shell home directory.
 
 1. From the Cloud Shell pane, run the following commands to create a resource group that will contain the resources you provision in this lab. (Replace the `<Azure region>` placeholder with the name of an Azure region into which you can deploy Azure virtual machines, such as **eastus**.)
 
@@ -75,7 +75,7 @@ In this lab, you will perform:
 
 1. On the **az800l04-vnet** page, under **Settings** section, select **Subnets**, and then, on the **Subnets** page, select **+ Gateway subnet**.
 
-1. On the **Add subnet** page, set the **Subnet address range** to **10.4.3.224/27**, and then select **Save** to create the **GatewaySubnet**.
+1. On the **Add subnet** page, set the **Starting address** to **10.4.3.224/27**, and then select **Save** to create the **GatewaySubnet**.
 
  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -120,11 +120,11 @@ In this lab, you will perform:
 
    ![](media/extended-network.png) 
 
-1. On the **Available extensions** tab, select **Extended network**, and then select **Install**.
+1. On the **Available extensions** tab, select **Azure Extended network**, and then select **Install**.
 
    >**Note**: After a few seconds you should see a message indicating a successful installation.
 
-1. Navigate to **All connections** page, select the **sea-adm1.contoso.com** entry. 
+1. Navigate to **All connections** page from dropdown, select the **sea-adm1.contoso.com** entry. 
 
 1. In Windows Admin Center, from left pane, in the list of Tools, select **Networks**, and then select **+ Add Azure Network Adapter (Preview)**.
 
@@ -297,11 +297,11 @@ In this lab, you will perform:
 
 #### Task 1: Connect to the Windows Admin Center gateway running in Azure VM
 
-1. On **SEA-ADM1**, start Microsoft Edge, go to the URL containing the fully qualified name of the target Azure VM hosting the Windows Admin Center installation you identified in the previous exercise-3 task-1.
+1. On **SEA-ADM1**, start Microsoft Edge, go to the URL containing the fully qualified name of the target Azure VM hosting the Windows Admin Center installation you identified in the previous exercise-3 task-1 or task-2.
 
 1. In Microsoft Edge window, disregard the message **Your connection isn't private**, select **Advanced**, and then select the link starting with the text **Continue to**.
 
-1. When prompted, in the **Sign in to access this site** dialog box, sign in with the **Student** username and **Pa55w.rd1234** password.
+1. When prompted, in the **Sign in to access this site** dialog box, sign in with the **Student** as username and **Pa55w.rd** as password.
 
 1. On the **All connections** page of Windows Admin Center, select **az800l04-vmwac [Gateway]**.
 
