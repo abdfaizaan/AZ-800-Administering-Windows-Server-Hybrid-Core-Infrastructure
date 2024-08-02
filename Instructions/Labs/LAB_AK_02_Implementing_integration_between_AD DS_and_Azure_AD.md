@@ -48,17 +48,43 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On **SEA-ADM1**, double-click on the Azure portal, and authenticate with your Azure credentials.
 
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+ 
+     ![Enter Your Username](./media/signin.png)
+ 
+3. Next, provide your password:
+ 
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+ 
+     ![Enter Your Password](./media/signin1.png)   
+
+1. If you see the pop-up **Action Required**, click **Ask Later**.
+
+   ![](media/action.png) 
+ 
+4. If prompted to stay signed in, you can click **No**.
+
+5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+
 1. On the Azure portal, from the **Search resources, Services, and docs(G+/)** blade, search for and select **Microsoft Entra ID**.
 
-1. On the **Microsoft Entra ID** page, from the left-hand navigation pane, select **Custom domain names**.
+1. On the **Microsoft Entra ID** page, from the left-hand navigation pane, under **Manage** select **Custom domain names**.
 
 1. On the **Custom domain names** page, select **+ Add custom domain**.
 
+   ![](media/azz1.png) 
+
 1. In the **Custom domain name** pane, in the **Custom domain name** text box, enter **contoso.com**, and then select **Add domain**.
+
+   ![](media/azz4.png)
 
 1. On the `contoso.com` custom domain name page, review the Domain Name System (DNS) record types that you would use to verify the domain.
 
 1. Close the pane without **verifying** the domain name.
+
+1. Here you can see the created Custom domain.   
+
+   ![](media/azz5.png)
 
    > **Note**: While, in general, you would use DNS records to verify a domain, this lab doesn't require the use of a verified domain.
 
@@ -72,7 +98,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On **SEA-ADM1**, navigate back to the **Microsoft Entra ID** page in the Azure portal, from the left-hand navigation pane select **Users**.
 
+   ![](media/azz22.png)
+
 1. On the **Users** page, select **+ New User** and in drop down select **Create new user**
+
+   ![](media/azz7.png)
 
 1. On the **Create new User** page, under **Basics**, in the **User principal name** and **Display Name** text boxes, enter **admin1**.
 
@@ -80,15 +110,27 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. Under **Password**, select the **Auto generate** checkbox. Record the user name and password as you'll use it later in this lab.
 
+   ![](media/azz8.png)
+
 1. Select **Next: Properties>**
 
 1. Under **settings** in the **Usage location** drop-down list, select **United States**.
+
+   ![](media/azz23.png)
 
 1. Select **Next: Assignments>**
 
 1. Under **Assignments** tab , select **+ Add role** and on **Directory roles** page, from the list of roles, select **Global administrator**, and then select **Select**.
 
+   ![](media/azz10.png)
+
 1. On the **Create new user** page, select **Next: Review + Create** and **Create**.
+
+   ![](media/azz11.png)
+
+1. Once created you can see the created user in the **Users** page.
+
+   ![](media/azz2.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -112,7 +154,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    > **Note**: Record the complex password you used as you'll use it later in this lab.
 
-1. On the **Reduce the risk of attack**, select **Ask later**.
+1. If you see the pop-up **Action Required**, click **Ask Later**.
+ 
+4. If prompted to stay signed in, you can click **No**.
+
+5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
 ## Exercise 2: Preparing on-premises AD DS for Microsoft Entra ID integration
 
@@ -122,9 +168,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On the **Github** page, you have to scroll down, and under **ClickOnce Launch**, select **launch**.
 
+   ![](media/azz12.png)
+
 1. On the status bar, select **Open file**.
 
 1. In the **Application Install - Security Warning** dialog box, select **Install**.
+
+   ![](media/azz13.png)
 
 1. In the **IdFix Privacy Statement** dialog box, review the disclaimer, and then select **OK**.
 
@@ -136,9 +186,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. Review the list of objects from Microsoft Entra ID, and observe the **ERROR** and **ATTRIBUTE** columns. In this scenario, the value of **displayName** for **ContosoAdmin** is blank, and the tool's recommended new value appears in the **UPDATE** column.
 
-1. In the **IdFix** window, from the **ACTION** drop-down menu, select **Edit**, and then select **Apply** to automatically implement the recommended changes.
+1. In the **IdFix** window, from the **ACTION** drop-down menu **(1)**, select **Edit(2)**, and then select **Apply(3)** to automatically implement the recommended changes.
+
+   ![](media/azz24.png)
 
 1. In the **Apply Pending** dialog box, select **Yes**.
+
+   ![](media/azz15.png)
 
 1. Close the IdFix tool.
 
@@ -148,9 +202,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to **Microsoft Entra ID**.
 
-1. On the **Microsoft Entra ID** page, from the left-hand navigation pane, select **Microsoft Entra Connect**.
+1. On the **Microsoft Entra ID** page, from the left-hand navigation pane, under the **Manage** select **Microsoft Entra Connect**.
+
+   ![](media/azz16.png)
 
 1. On the  **Microsoft Entra Connect | Get started** Get Started page, select **Manage** tab and under **Manage from on-premises: Connect Sync**, select **Download Connect Sync Agent**.
+
+   ![](media/azz3.png)
 
 1. On the **Microsoft Entra Connect Agent** page, select **Accept terms & download**
 
@@ -158,14 +216,20 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On the **Microsoft Microsoft Entra ID Connect** page, select the **I agree to the license terms and privacy notice** checkbox, and then select **Continue**.
 
+   ![](media/azz17.png)
+
 1. On the **Express Settings** page, select **Use express settings**.
 
 1. On the **Connect to Azure AD** page, enter the username and password of the Azure AD Global Administrator user account you created in exercise 1, and then select **Next**.
+
+   ![](media/azz18.png)
 
 1. On the **Connect to AD DS** page, enter the following credentials, and then select **Next**:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
+     
+   ![](media/azz19.png)
 
 1. On the **Azure AD sign-in configuration** page, note that the new domain you added is in the list of Active Directory UPN Suffixes, but its status is listed as **Not verified**.
 
@@ -173,7 +237,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. Select the **Continue without matching all UPN suffixes to verified domains** checkbox, and then select **Next**.
 
+   ![](media/azz20.png)
+
 1. On the **Ready to configure** page, review the list of actions, and then select **Install**.
+
+   ![](media/azz21.png)
 
    >**Note:** Wait for the installation to get completed.
 
