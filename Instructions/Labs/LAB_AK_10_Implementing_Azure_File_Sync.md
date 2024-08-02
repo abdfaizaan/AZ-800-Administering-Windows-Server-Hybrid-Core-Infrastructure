@@ -174,13 +174,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
    >**Note:** The script mounted the Azure file share to drive letter **Z**.
 
-   ![](.\media\str.png)
+   ![](./media/str.png)
 
 1. On the taskbar, right-click or access the context menu for File Explorer, select **File Explorer**, and then, in the **Quick Access** text box, type Z:\ and then press Enter.
 
 1. Verify that the file **File1.txt** appears in the details pane. This is the file that you uploaded to the Azure file share.
 
-   ![](.\media\file1.png)
+   ![](./media/file1.png)
 
 1. Double-click or select **File1.txt**, and then press Enter to open the file in Notepad. 
 
@@ -190,7 +190,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. Verify that one previous file version is available. Select that version (**File1.txt**), select **Restore** twice, and then select **OK** twice.
 
-   ![](.\media\re.png)
+   ![](./media/re.png)
 
 1. Double-click or select **File1.txt**, select Enter, and then confirm that it doesn't include your name. This is because you restored the snapshot created before you modified the file.
 
@@ -208,13 +208,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. On the **Basics** tab of the **Deploy File Sync** page, select **Review + Create** and **Create**.
 
-     ![](.\media\sy.png)
+     ![](./media/sy.png)
 
 1. On the **Deployment** blade, once the File Sync is provisioned, select **Go to resource**.
 
 1. On the **FileSync1** **Storage Sync Service** page, select **Sync groups**, and then select **+ Sync group** to create a new File Sync group.
 
-    ![](.\media\sy1.png)
+    ![](./media/sy1.png)
 
 1. On the **Sync group** page, enter **Sync1 (1)** in the **Sync group name** text box.
 
@@ -224,7 +224,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. In the **Azure File Share** drop-down list, select **share1 (4)**, and then select **Create (5)**.
 
-   ![](.\media\sy2.png)
+   ![](./media/sy2.png)
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select the **Storage Sync Service**. 
 
@@ -236,15 +236,15 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. On **SEA-ADM1**, in the Azure portal, on the **FileSync1 \| Registered servers** page, select the **Azure File Sync agent** link to go to the **Azure File Sync Agent** Microsoft Downloads page.  
 
-    ![](.\media\sy3.png)
+    ![](./media/sy3.png)
 
 1. On the **Azure File Sync Agent** Microsoft Downloads page, select **Download**.
 
-    ![](.\media\sy4.png)
+    ![](./media/sy4.png)
 
 1. Select the checkbox next to the entry for File Sync agent for Windows Server 2022 (**StorageSyncAgent_WS2022.msi**), and select **Next** to start the download. After the download is complete, close the Microsoft Edge tab that opened for the download.
 
-    ![](.\media\sy5.png)
+    ![](./media/sy5.png)
 
 1. Use File Explorer to copy the downloaded file to the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10** folder.
 
@@ -303,11 +303,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. In the **Path** text box, enter **S:\\Data (2)**, and then select **Create (3)**.
 
-   ![](.\media\s1.png)
+   ![](./media/s1.png)
 
 1. Switch to the File Explorer window and verify that the **\\\\SEA-SVR1\\Data** folder now contains **File1.txt**.
 
-      ![](.\media\file2.png)
+    ![](./media/file2.png)
 
    >**Note:** if you not able to see **File1.txt**, kindly close and open **File Explorer** window, browse for **\\\\SEA-SVR1\\Data** folder in **Quick access**.
    >**Note:** You uploaded **File1.txt** to the Azure file share, from where it was synced to **SEA-SVR1** by File Sync.
@@ -338,7 +338,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. Confirm that **SEA-SVR1.Contoso.com** and **SEA-SVR2.Contoso.com** are now both listed as registered servers with the **FileSync1** Storage Sync Service.
 
-   ![](.\media\rs.png)
+   ![](./media/rs.png)
 
 ### Task 3: Remove DFS Replication and add SEA-SVR2 as a server endpoint
 
