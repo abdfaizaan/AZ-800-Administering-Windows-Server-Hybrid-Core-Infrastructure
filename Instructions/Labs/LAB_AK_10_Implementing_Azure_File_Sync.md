@@ -89,7 +89,6 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
    ![](./media/dfs6.png)
 
-
    >**Note:** DFS Replication replicates the content between the **S:\\Data** folders on **SEA-SVR1** and **SEA-SVR2**.
 
 1. Open two instances of File Explorer, in the navigation pane, expand the **\\\contoso.com\Root** namespace, and then select the **Data** folder. 
