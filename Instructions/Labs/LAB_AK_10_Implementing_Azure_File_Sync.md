@@ -94,17 +94,16 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. Open two instances of File Explorer, in the navigation pane, expand the **\\\contoso.com\Root** namespace, and then select the **Data** folder. 
 
-2. Select first **SEA-SVR1**, in **Action** pane under **SEA-SVR1**, select **Open in Explorer**.
+1. Select first **SEA-SVR1**, in **Action** pane under **SEA-SVR1**, select **Open in Explorer**.
 
    ![](./media/dfs7.png)
 
-
-3. Select second **SEA-SVR2**, in **Action** pane under **SEA-SVR2**, select **Open in Explorer**.
+1. Select second **SEA-SVR2**, in **Action** pane under **SEA-SVR2**, select **Open in Explorer**.
 
    ![](./media/dfs8.png)
 
 
-4. In the first File Explorer instance, connect to **\\\\SEA-SVR1\\Data**, and then in the second File Explorer instance, connect to **\\\\SEA-SVR2\\Data**.
+1. In the first File Explorer instance, connect to **\\\\SEA-SVR1\\Data**, and then in the second File Explorer instance, connect to **\\\\SEA-SVR2\\Data**.
 
 1. Create a new file with your name in **\\\\SEA-SVR1\\Data**.
 
