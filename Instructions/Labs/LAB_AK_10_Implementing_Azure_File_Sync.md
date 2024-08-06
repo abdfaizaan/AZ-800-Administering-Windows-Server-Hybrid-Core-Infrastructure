@@ -87,24 +87,22 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. In the details pane, verify that the **S:\\Data** folder on **SEA-SVR1** and on **SEA-SVR2** are members of the **Branch1** replication group.
 
-   ![](./media/dfs6.png)
-
+    ![](./media/dfs6.png)
 
    >**Note:** DFS Replication replicates the content between the **S:\\Data** folders on **SEA-SVR1** and **SEA-SVR2**.
 
 1. Open two instances of File Explorer, in the navigation pane, expand the **\\\contoso.com\Root** namespace, and then select the **Data** folder. 
 
-2. Select first **SEA-SVR1**, in **Action** pane under **SEA-SVR1**, select **Open in Explorer**.
+1. Select first **SEA-SVR1**, in **Action** pane under **SEA-SVR1**, select **Open in Explorer**.
 
    ![](./media/dfs7.png)
 
-
-3. Select second **SEA-SVR2**, in **Action** pane under **SEA-SVR2**, select **Open in Explorer**.
+1. Select second **SEA-SVR2**, in **Action** pane under **SEA-SVR2**, select **Open in Explorer**.
 
    ![](./media/dfs8.png)
 
 
-4. In the first File Explorer instance, connect to **\\\\SEA-SVR1\\Data**, and then in the second File Explorer instance, connect to **\\\\SEA-SVR2\\Data**.
+1. In the first File Explorer instance, connect to **\\\\SEA-SVR1\\Data**, and then in the second File Explorer instance, connect to **\\\\SEA-SVR2\\Data**.
 
 1. Create a new file with your name in **\\\\SEA-SVR1\\Data**.
 
@@ -134,17 +132,17 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
    - Redundancy: **Locally-redundant storage (LRS)**
 
-1. Accept the default values for all other settings, select **Review**, and then select **Create**.
+1. Accept the default values for all other settings, select **Review + Create**, and then select **Create**.
 
-   ![](./media/str1.png)
+   ![](./media/AZ-800-E2T1S51.png)
 
 1. After the storage account is created, on the **Deployment** page, select **Go to resource**.
 
 1. On the **storage account** page, select **File shares**, and then select **+ File share**.
 
-1. On the **New file share** tab, enter **share1** in the **Name** text box, and then select **Review + Create**.
+1. On the **New file share** tab, enter **share1** in the **Name** text box, and then select **Review + Create** and then select **Create**.
 
-   ![](./media/share1.png)
+   ![](./media/T2S81.png)
 
 ### Task 2: Use an Azure file share
 
@@ -152,21 +150,21 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. In the details pane, select **Upload**.
 
-   ![](./media/share2.png)
+   ![](./media/T2S21.png)
 
 1. On the **Upload files** tab, browse to **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10\File1.txt**, select **Upload**, and when the upload is complete, close the **Upload files** tab.
 
-1. On the **share1** page, select **Snapshots**, select **Add snapshot**, and then select **OK**.
-
-    ![](./media/snapshot.png)
+1. On the **share1** page, select **Snapshots** Under **Operations**,and select **Add snapshot**, and then select **OK**.
+   
+    ![](./media/snapu1.png)
 
 1. On the **share1** page, select **Overview**, select **Connect**.
 
-   ![](./media/share3.png)
+   ![](./media/connect1.png)
 
 1. select **Show Script**, use the **Copy to clipboard** button to copy the script, and then close the **Connect** tab.
 
-   ![](./media/z.png)
+   ![](./media/showscript1.png)
 
 1. On **SEA-ADM1**, switch to the **Windows PowerShell ISE** window, open another tab in the script pane, and paste the copied script into it.
 
@@ -208,13 +206,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. On the **Basics** tab of the **Deploy File Sync** page, select **Review + Create** and **Create**.
 
-     ![](./media/sy.png)
+    ![](./media/sy11.png)
 
 1. On the **Deployment** blade, once the File Sync is provisioned, select **Go to resource**.
 
-1. On the **FileSync1** **Storage Sync Service** page, select **Sync groups**, and then select **+ Sync group** to create a new File Sync group.
+1. On the **FileSync1** **Storage Sync Service** page, select **Sync groups**, and then select **+ Create a Sync group** to create a new File Sync group.
 
-    ![](./media/sy1.png)
+    ![](./media/csygrp.png)
 
 1. On the **Sync group** page, enter **Sync1 (1)** in the **Sync group name** text box.
 
@@ -224,11 +222,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. In the **Azure File Share** drop-down list, select **share1 (4)**, and then select **Create (5)**.
 
-   ![](./media/sy2.png)
+   ![](./media/sygrp1.png)
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select the **Storage Sync Service**. 
+1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select the **Storage Sync Services**. 
 
-1. On the **Storage Sync Service** page, under **Sync** section, select **Registered servers**, and verify that there are no currently registered servers.
+1. On the **Storage Sync Services** page, select **FileSync1** under **Sync** section, select **Registered servers**, and verify that there are no currently registered servers.
 
 ## Exercise 3: Replacing DFS Replication with File Sync-based replication
 
@@ -236,17 +234,27 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. On **SEA-ADM1**, in the Azure portal, on the **FileSync1 \| Registered servers** page, select the **Azure File Sync agent** link to go to the **Azure File Sync Agent** Microsoft Downloads page.  
 
-    ![](./media/sy3.png)
+    ![](./media/fsya.png)
 
 1. On the **Azure File Sync Agent** Microsoft Downloads page, select **Download**.
 
-    ![](./media/sy4.png)
+    ![](./media/d1.png)
 
 1. Select the checkbox next to the entry for File Sync agent for Windows Server 2022 (**StorageSyncAgent_WS2022.msi**), and select **Next** to start the download. After the download is complete, close the Microsoft Edge tab that opened for the download.
 
-    ![](./media/sy5.png)
+    ![](./media/d2.png)
 
 1. Use File Explorer to copy the downloaded file to the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10** folder.
+   
+   >**Note:** If you cannot copy StorageSyncAgent_WS2022.msi from the Downloads folder to C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10, please follow these steps:
+
+      * 1.Open two File Explorer windows.
+
+      * 2.In one window, navigate to the Downloads folder where **StorageSyncAgent_WS2022.msi** is located.
+
+      * 3.In the other window, navigate to **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10.**
+
+      * 4.Drag and drop the **StorageSyncAgent_WS2022.msi** file from the Downloads folder to the destination folder.
 
 1. In File Explorer displaying the content of the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10** folder, in the details pane, select the file **Install-FileSyncServerCore.ps1**, display its context-sensitive menu, and right click, in the menu, select **Edit**.
 
@@ -277,9 +285,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
    >**Note:** Monitor the script execution. This should take about 3 minutes.
 
-1. When prompted with a **WARNING** message to sign in, copy the nine-character code in the warning message to the Clipboard.
+1. After running the script, you will see a warning message. At the last line, you'll find a prompt saying:
+  "To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code."
+  you should ignore the first 2 characters of the code and enter only the next 9 characters.
 
-      ![](./media/1.png)
+     >**Note**:For example, if the code displayed is **4mAQ843GPMH**, you should enter **AQ843GPMH**. copy the nine-character code to the Clipboard.
+
+    ![](./media/poss.png)
 
 1. Switch to the Microsoft Edge window displaying the Azure portal, open a new tab by selecting **+**, and then, on the new tab, browse to **https://microsoft.com/devicelogin**.
 
@@ -299,15 +311,15 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. Switch to the Microsoft Edge window displaying the Azure portal, on the **FileSync1 \| Registered servers** page, under **Sync** section, select **Sync Groups**, select **Sync1**, and then, on the **Sync1** page, select **Add server endpoint**.
 
-1. On the **Add server endpoint** tab, select **SEA-SVR1.Contoso.com (1)** in the **Registered servers** list.
+1. On the **Add server endpoint** tab, select **SEA-SVR1.Contoso.com(1)** in the **Registered servers** list.
 
-1. In the **Path** text box, enter **S:\\Data (2)**, and then select **Create (3)**.
+1. In the **Path** text box, enter **S:\\Data(2)**, and then select **Create(3)**.
 
-   ![](./media/s1.png)
+   ![](./media/E3S171.png)
 
 1. Switch to the File Explorer window and verify that the **\\\\SEA-SVR1\\Data** folder now contains **File1.txt**.
 
-    ![](./media/file2.png)
+   ![](./media/file2.png)
 
    >**Note:** if you not able to see **File1.txt**, kindly close and open **File Explorer** window, browse for **\\\\SEA-SVR1\\Data** folder in **Quick access**.
    >**Note:** You uploaded **File1.txt** to the Azure file share, from where it was synced to **SEA-SVR1** by File Sync.
@@ -320,9 +332,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
    >**Note:** Monitor the script execution. This should take about 3 minutes.
 
-1. When prompted with a **WARNING** message to sign in, copy the nine-character code in the warning message to the Clipboard.
+1. After running the script, you will see a warning message. At the last line, you'll find a prompt saying:
+   "To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code."
+   you should ignore the first 2 characters of the code and enter only the next 9 characters.
 
-     ![](./media/1.png)
+   >**Note**:For example, if the code displayed is **4mAQ843GPMH**, you should enter **AQ843GPMH**. copy the nine-character code to the Clipboard.
+
+   ![](./media/poss.png)
 
 1. Switch to the Microsoft Edge window displaying the Azure portal, open a new tab by selecting **+**, and then, on the new tab, browse to **https://microsoft.com/devicelogin**.
 
@@ -350,7 +366,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. In the Add server endpoint pane, select **SEA-SVR2.Contoso.com (1)** in the **Registered servers** list, enter **S:\\Data (2)** in the **Path** text box, and then select **Create (3)**.
 
-    ![](./media/10-01.png)
+   ![](./media/SS2.png)
 
 ## Exercise 4: Verifying replication and enabling cloud tiering
 
@@ -415,7 +431,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. Switch to the Azure portal displaying **Sync1** under **Monitoring** section, select status and verify that the **INF** sync traffic is reflected in the **Files Synced** and **Bytes Synced** graphs. The **INF** folder has more than 800 files, and its size is more than 40 MB.
 
-    ![](./media/grp.png)
+    ![](./media/E5T1.png)
 
    >**Note:** You might need to refresh the page displaying the Azure portal to see the updated statistics.
 
