@@ -140,7 +140,7 @@ In this lab, you will perform:
 
 1. In the **Scope Options (1)** dialog box, select the **006 DNS Servers (2)** checkbox.
 
-   ![](media/scopeoptions.png)
+   ![](media/az800l07t3.png)
 
 1. In the **Server name** text box, enter **sea-dc1.contoso.com**, select **Resolve**, verify that the name resolves to **172.16.10.10**, select **Add**, and then select **OK**.
 
@@ -251,9 +251,13 @@ In this lab, you will perform:
 
 1. Verify that there is an entry representing the **SEA-ADM1.contoso.com** lease.
 
+   >**Note**: Please wait at least 10 minutes for the above entry, and make sure to refresh the page frequently..
+
 1. On **SEA-ADM1**, in the **DHCP** window, expand the **sea-dc1** node, expand the **IPv4** node, expand the **Scope [172.16.0.0] Contoso** node, and then select **Address Leases**.
 
 1. Verify that here as well there is an entry representing the **SEA-ADM1.contoso.com** lease.
+
+   >**Note**: Please wait at least 10 minutes for the above entry, and make sure to refresh the page frequently..
 
 1. On **SEA-ADM1**, in the **DHCP** window, select **sea-svr1**, in the Actions pane, select **More Actions**, select **All tasks**, and then select **Stop**.
 
