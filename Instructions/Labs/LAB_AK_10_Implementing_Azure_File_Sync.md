@@ -318,12 +318,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. In the **Path** text box, enter **S:\\Data(2)**, and then select **Create(3)**.
 
-
-    ![](./media/E3S171.png)
+   ![](./media/E3S171.png)
 
 1. Switch to the File Explorer window and verify that the **\\\\SEA-SVR1\\Data** folder now contains **File1.txt**.
 
-      ![](./media/file2.png)
+   ![](./media/file2.png)
 
    >**Note:** if you not able to see **File1.txt**, kindly close and open **File Explorer** window, browse for **\\\\SEA-SVR1\\Data** folder in **Quick access**.
    >**Note:** You uploaded **File1.txt** to the Azure file share, from where it was synced to **SEA-SVR1** by File Sync.
