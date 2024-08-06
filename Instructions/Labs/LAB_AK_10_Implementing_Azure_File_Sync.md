@@ -317,6 +317,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. In the **Path** text box, enter **S:\\Data(2)**, and then select **Create(3)**.
 
+
     ![](./media/E3S171.png)
 
 1. Switch to the File Explorer window and verify that the **\\\\SEA-SVR1\\Data** folder now contains **File1.txt**.

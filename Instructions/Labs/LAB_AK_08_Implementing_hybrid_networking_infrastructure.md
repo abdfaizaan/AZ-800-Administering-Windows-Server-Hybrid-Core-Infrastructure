@@ -39,33 +39,48 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 1. In the **Enter password** dialog box, copy and paste 
     - Password: <inject key="AzureAdUserPassword"></inject> and then select **Sign in**.
 
+1. If **Action Required** pop-up window appears, click on **Ask later**.
+   
+   ![](media/action.png)
+
 1. On the **Stay signed in?** dialog box, select the Don’t show this again check box and then select **No**.
+
+1. On the **Welcome to Microsoft Azure** page, select **Cancel**.
 
 1. In the Azure portal, open the Cloud Shell pane by selecting the toolbar icon next to the search text box.
 
-   ![](media/mod823.png)
+   ![](media/az1.png)
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-   ![](media/mod822.png)
+   ![](media/az2.png)
 
-   >**Note**: If this is the first time you are starting Cloud Shell and you are presented with the **You have no storage mounted** message, select **Show advanced settings**. 
+ 1. Intially you dont have a Mount Storage account, So follow the below steps to create a **Storage account**.
 
-   ![](media/mod821.png)
+      - Select the **Mount storage account**
+      - Select the available subscription from the drop down menu.
+      - Click on **Apply**.
 
-1. Now, fill out the details, and select **Create storage**:-
+      ![](media/az3.png)
+
+1. Select **I want to create a storage account** and then click on **Next**.
+
+   ![](media/az4.png)
+
+1. Now, fill out the details, and select **Create**:-
 
    |Settings|Value|
    |--------|-----|
    |Resource group| **Use existing > AZ800-L0801-RG (1)**|
-   |Storage account| **Create new > blob<inject key="DeploymentID" enableCopy="false"/> (2)**|
-   |File share| **Create new > fs<inject key="DeploymentID" enableCopy="false"/> (3)**|
+   |Storage account| **blob<inject key="DeploymentID" enableCopy="false"/> (2)**|
+   |File share| **fs<inject key="DeploymentID" enableCopy="false"/> (3)**|
+   |Region| **(US)East US (4)**|
 
-   ![](media/mod820.png)
+   ![](media/az5.png)
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**.
+1. In the toolbar of the Cloud Shell pane, Click on the **Manage files** drop down menu, select **Upload**.
 
-   ![](media/mod819.png)
+   ![](media/az6.png)
 
 1. Upload the files **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab08\L08-rg_template.json** and **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab08\L08-rg_template.parameters.json** into the Cloud Shell home directory.
 
@@ -120,21 +135,21 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
     | Setting | Value |
     | --- | --- |
-    | This virtual network: Peering link name | **az800l08-vnet0_to_az800l08-vnet1 (1)** |
-    | Allow 'az800l08-vnet0' to access the peered virtual network | **Select the checkbox (2)** |
-    |Allow 'az800l08-vnet0' to receive forwarded traffic from the peered virtual network| **Select the checkbox (3)** |
+    | Remote virtual network: Peering link name | **az800l08-vnet1_to_az800l08-vnet0** |
+    | Virtual network deployment model | **Resource manager** |
+    | Remote virtual network: Virtual network | **az800l08-vnet1** |
+    | Allow 'az800l08-vnet1' to access 'az800l08-vnet0' | **Select the checkbox** |
+    |Allow 'az800l08-vnet1' to receive forwarded traffic from 'az800l08-vnet0'| **Select the checkbox** |
 
-    ![](media/peering1.png)
+    ![](media/az7.png)
 
     | Setting | Value |
     | --- | --- |
-    | Remote virtual network: Peering link name | **az800l08-vnet1_to_az800l08-vnet0 (3)** |
-    | Virtual network deployment model | **Resource manager (4)** |
-    | Remote virtual network: Virtual network | **az800l08-vnet1 (5)** |
-    | Allow the peered virtual network to access 'az800l08-vnet0' | **Select the checkbox(6)** |
-    | Allow the peered virtual network to receive forwarded traffic from 'az800l08-vnet0'| **Select the checkbox (6)** |
-
-    ![](media/peering2.png)
+    | This virtual network: Peering link name | **az800l08-vnet0_to_az800l08-vnet1** |
+    | Allow 'az800l08-vnet0' to access 'az800l08-vnet1' | **Select the checkbox** |
+    |Allow 'az800l08-vnet0' to receive forwarded traffic from 'az800l08-vnet1'| **Select the checkbox** |
+    
+    ![](media/az8.png)
 
     >**Note**: Wait for the operation to complete.
 
@@ -167,7 +182,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. On the **Network Watcher** page, from the left navigation pane under **Network diagnostic tools** section, select **Connection troubleshoot**.
 
-    ![](media/mod816.png)
+    ![](media/az9.png)
 
 1. On the **Network Watcher | Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
 
@@ -185,6 +200,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 1. Select **Run diagnostic tests** and wait until results of the connectivity check are returned. Verify that the status is **Reachable (success)**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
     > **Note**: This is expected because the hub virtual network is peered directly with the first spoke virtual network.
+
+    ![](media/az10.png)
 
 1. On the **Network Watcher - Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
 
@@ -216,7 +233,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
-    ![](media/mod815.png)
+    ![](media/az11.png)
 
 1. Select **Run diagnostic tests** and wait until results of the connectivity check are returned. Note that the status is **Unreachable**.
 
@@ -232,11 +249,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. On the **az800l08-vm0** virtual machine page, from the left navigation pane, under the **Networking** section, select **Network settings**.
 
-1. Select the **az800l08-nic0** link next to the **Network interface** label, and then, on the **az800l08-nic0** network interface page, from the left navigation pane, under **Settings** section, select **IP configurations**.
+1. Select the **az800l08-nic0(primary)/ipconfig1(primaty)** link under **Network interface/IP configurations**.
+
+   ![](media/az12.png)
 
 1. Select checkbox **Enable IP forwarding**  and select **Apply** to save the change.
 
-     ![](media/mod813.png)
+     ![](media/az13.png)
 
    > **Note**: This setting is required in order for **az800l08-vm0** to function as a router, which will route traffic between two spoke virtual networks.
 
@@ -267,6 +286,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
    > **Note**: Now you need to create and configure user-defined routes on the spoke virtual networks.
 
+      ![](media/az15.png)
+
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Route tables**, and then, on the **Route tables** page, select **+ Create**.
 
 1. Create a route table with the following settings (leave others with their default values):
@@ -281,7 +302,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. Select **Review + create**, and then select **Create**.
 
-    ![](media/mod812.png)
+    ![](media/az16.png)
 
    > **Note**: Wait for the route table to be created. This should take about 1 minute.
 
@@ -314,7 +335,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | Virtual network | **az800l08-vnet1** |
     | Subnet | **subnet0** |
 
-     ![](media/mod810.png)
+     ![](media/az17.png)
 
 1. Select **OK**.
 
@@ -404,15 +425,17 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. Select **Review create**, and then select **Create**.
 
-    ![](media/mod808.png)
+    ![](media/az27.png)
 
     >**Note**: Wait for the private DNS zone to be created. This should take about 2 minutes.
 
 1. Select **Go to resource** to open the **contoso.org** DNS private zone page.
 
-1. On the **contoso.org** private DNS zone page, in the **Settings** section, select **Virtual network links**.
+1. On the **contoso.org** private DNS zone page, in the **DNS Management** section, select **Virtual network links** and then Click on **Add**.
 
-1. On the **contoso.org \| Virtual network links** page, select **+ Add**, specify the following settings (leave others with their default values), and select **OK** to create a virtual network link for the first virtual network you created in the previous exercise:
+   ![](media/az19.png)
+
+1. Specify the following settings (leave others with their default values), and select **OK** to create a virtual network link for the first virtual network you created in the previous exercise:
 
     | Setting | Value |
     | --- | --- |
@@ -421,15 +444,17 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | Virtual network | **az800l08-vnet0 (AZ800-L0801-RG)** |
     | Enable auto registration | selected |
 
-    ![](media/Ex-2-T1-S6.png)
+    ![](media/az20.png)
 
     >**Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
 
 1. Repeat the previous step to create virtual network links (with auto registration enabled) named **az800l08-vnet1-link** and **az800l08-vnet2-link** for the virtual networks **az800l08-vnet1** and **az800l08-vnet2**, respectively.
 
-   ![](media/mod807.png)
+   ![](media/az21.png)
 
-1. On the **contoso.org** private DNS zone page, in the vertical menu on the left, select **Overview**.
+1. On the **contoso.org** private DNS zone page, in the vertical menu on the left, select **Overview** and Click on **4** on the Recordsets.
+
+   ![](media/az22.png)
 
 1. In the **Overview** section of the **contoso.org** private DNS zone page, review the listing of DNS record sets and verify that the **A** records of **az800l08-vm0**, **az800l08-vm1**, and **az800l08-vm2** appear in the list as **Auto registered**.
 
@@ -453,7 +478,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
-    ![](media/Ex-2-T2-S2.png)
+    ![](media/az23.png)
 
 1. Select **Run diagnostic tests** and wait until the results of the connectivity check are returned. Verify that the status is **Reachable**. 
 
@@ -483,7 +508,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. Select **Go to resource** to open the page of the newly created DNS zone.
 
-1. On the DNS zone page, select **+ Record set**.
+1. On the DNS zone page, select **+ Recordset** and click on **Add**.
 
 1. In the Add a record set pane, specify the following settings (leave others with their default values):
 
@@ -496,7 +521,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | TTL unit | **Hours** |
     | IP address | 20.30.40.50 |
 
-    ![](media/Ex-2-T2-S6.png)
+    ![](media/az24.png)
 
     >**Note**: The IP address and the corresponding name are entirely arbitrary. They are meant to provide a very simple example illustrating implementing public DNS records, rather than emulate a real world scenario, which would require purchasing a namespace from a DNS registrar. 
 
@@ -504,7 +529,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. On the DNS zone page, identify the full name of **Name server 1**.
 
-    ![](media/mod802.png)
+    ![](media/az25.png)
 
     >**Note**: Record the full name of **Name server 1**. You will need it in the next task.
 
@@ -520,7 +545,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. Verify that the output of the command includes the public IP address of **20.30.40.50**.
 
-     ![](media/mod801.png)
+     ![](media/az26.png)
 
     >**Note**: The name resolution works as expected because the **nslookup** command allows you to specify the IP address of the DNS server to query for a record (which, in this case, is `<Name server 1>`). For the name resolution to work when querying any publicly accessible DNS server, you would need to register the domain name with a DNS registrar and configure the name servers listed on the public DNS zone page in the Azure portal as authoritative for the namespace corresponding to that domain.
 
