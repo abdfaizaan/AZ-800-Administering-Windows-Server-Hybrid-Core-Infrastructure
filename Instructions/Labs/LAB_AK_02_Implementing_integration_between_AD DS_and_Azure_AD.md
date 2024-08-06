@@ -367,7 +367,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/azz43.png)
 
-1. On the **Connect to Azure AD** page, enter the username and password of the Azure AD Global Administrator user account(ODL user)that is provided in the Environment details, and then select **Next**.
+1. On the **Connect to Azure AD** page, enter the following credentials, and then select **Next**.
+   
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
 
 1. On the **Connect your directories** page, select **Next**.
 
@@ -395,7 +399,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On the **Additional tasks** page, select **Change user sign-in**, then select **Next**.
 
-1. On the **Connect to Azure AD** page, enter the username and password of the Azure AD Global Administrator user account you created in exercise 1, and then select **Next**.
+1. On the **Connect to Azure AD** page, enter the following credentials, and then select **Next**.
+
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
 
 1. On the **User sign-in** page, select **Pass-through authentication**.
 
@@ -497,7 +505,10 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
    Enter-PSSession -ComputerName SEA-SVR1
    ```
 
-1. From the **[SEA-SVR1]** prompt, enter the following command and press Enter to register the proxy service with Active Directory (replace the `<Azure_AD_Global_Admin>` placeholder with the fully-qualified user principal name of the AD Global Administrator account (ODL user) that is present in the Environment tab of the lab guide):
+1. From the **[SEA-SVR1]** prompt, enter the following command and press Enter to register the proxy service with Active Directory (replace the `<Azure_AD_Global_Admin>` placeholder with the following 
+   credential):
+
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
    ```powershell
    Register-AzureADPasswordProtectionProxy -AccountUpn <Azure_AD_Global_Admin> -AuthenticateUsingDeviceCode
@@ -505,7 +516,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. As instructed, open another Microsoft Edge window, browse to **https://microsoft.com/devicelogin** and when prompted, enter the code included in the message displayed in the PowerShell Remoting session. 
 
-1. When prompted, authenticate by using the Azure AD Global Administrator ODL user account that is present in lab guide Environment tab, and then select **Continue**.
+1. When prompted, authenticate by using following credentials, and then select **Continue**.
+
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
 
 1. Switch back to the PowerShell Remoting session, enter the following command and press Enter to exit the PowerShell Remoting session to **SEA-SVR1**:
 
@@ -519,7 +534,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
    Enter-PSSession -ComputerName SEA-DC1
    ```
 
-1. From the **[SEA-DC1]** prompt, enter the following command and press Enter to register the proxy service with Active Directory (replace the `<Azure_AD_Global_Admin>` placeholder with the fully-qualified user principal name of the Azure AD Global Administrator user account(ODL user account) that is present in the Environment tab of the lab guide):
+1. From the **[SEA-DC1]** prompt, enter the following command and press Enter to register the proxy service with Active Directory (replace the `<Azure_AD_Global_Admin>` placeholder with the following 
+   credential):
+
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   
 
    ```powershell
    Register-AzureADPasswordProtectionForest -AccountUpn <Azure_AD_Global_Admin> -AuthenticateUsingDeviceCode
@@ -527,7 +546,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. As instructed, open another Microsoft Edge window, browse to **https://microsoft.com/devicelogin** and when prompted, enter the code included in the message displayed in the PowerShell Remoting session. 
 
-1. When prompted, authenticate by using the Azure AD Global Administrator ODL user account that is present in lab guide Environment tab, and then select **Continue**.
+1. When prompted, authenticate by using the following credentials, and then select **Continue**.
+
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
 
 1. Switch back to the PowerShell Remoting session, enter the following command, and then press Enter to exit the PowerShell Remoting session to **SEA-DC1**:
 
