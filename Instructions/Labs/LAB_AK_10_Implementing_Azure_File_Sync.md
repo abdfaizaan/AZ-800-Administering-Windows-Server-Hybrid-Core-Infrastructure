@@ -101,7 +101,6 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
    ![](./media/dfs8.png)
 
-
 1. In the first File Explorer instance, connect to **\\\\SEA-SVR1\\Data**, and then in the second File Explorer instance, connect to **\\\\SEA-SVR2\\Data**.
 
 1. Create a new file with your name in **\\\\SEA-SVR1\\Data**.
