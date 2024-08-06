@@ -250,14 +250,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
    
    >**Note:** If you cannot copy StorageSyncAgent_WS2022.msi from the Downloads folder to C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10, please follow these steps:
 
-    > 1.Open two File Explorer windows.
+      * 1.Open two File Explorer windows.
 
-    > 2.In one window, navigate to the Downloads folder where **StorageSyncAgent_WS2022.msi** is located.
+      * 2.In one window, navigate to the Downloads folder where **StorageSyncAgent_WS2022.msi** is located.
 
-    > 3.In the other window, navigate to **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10.**
+      * 3.In the other window, navigate to **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10.**
 
-    > 4.Drag and drop the **StorageSyncAgent_WS2022.msi** file from the Downloads folder to the destination folder.
-
+      * 4.Drag and drop the **StorageSyncAgent_WS2022.msi** file from the Downloads folder to the destination folder.
 
 1. In File Explorer displaying the content of the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10** folder, in the details pane, select the file **Install-FileSyncServerCore.ps1**, display its context-sensitive menu, and right click, in the menu, select **Edit**.
 
