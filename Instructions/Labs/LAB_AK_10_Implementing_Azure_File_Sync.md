@@ -454,7 +454,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
    >**Note:** You might need to wait a few minutes for the sync conflict to occur.
 
-  
+    <validation step="f75e9fe1-a77f-4ece-b64e-f02e20b24fde" />
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
