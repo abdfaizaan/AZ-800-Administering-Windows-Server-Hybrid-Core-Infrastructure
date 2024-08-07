@@ -230,7 +230,8 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. On the **Microsoft.Template \| Overview** page, select **Template**, and note that this is the same template you used for deployment.
    
-
+ <validation step="b33341ed-9083-4c7b-83db-8ba4fab02d26" />
+ 
  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -393,6 +394,8 @@ security rules**.
 
 1. Verify that you can successfully access via Remote Desktop the operating system running in the Azure VM and close the Remote Desktop session.
 
+ <validation step="e61e31af-224b-4ff6-94d4-b86acfa02071" />
+ 
  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
