@@ -52,11 +52,11 @@ In this lab, you will perform:
 
    ![](media/update1.png)
 
-1. In the **Add Servers** dialog box, maintain the default settings, and then select **Find Now(1)**.
+1. In the **Add Servers** dialog box, maintain the default settings, and then select **Find Now**.
 
 1. In the **Active Directory** list of servers, select **SEA-SVR1**, select the arrow to add it to the **Selected** list, and then select **OK**.
 
-1. On **SEA-ADM1**, ensure that the installation of the AD DS role on **SEA-SRV1(1)** is complete and that the server was added to **Server Manager**. Then select the **Notifications(2)** flag symbol.
+1. On **SEA-ADM1**, ensure that the installation of the **AD DS(1)** role on SEA-SRV1 is complete and that the server was added to **Server Manager**. Then select the **Notifications(2)** flag symbol.
    ![](media/update3.png)
 1. Note the post-deployment configuration of **SEA-SVR1**, and then select the **Promote this server to a domain controller** link.
    
