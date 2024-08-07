@@ -88,6 +88,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    > **Note**: While, in general, you would use DNS records to verify a domain, this lab doesn't require the use of a verified domain.
 
+   <validation step="b65ef28d-a185-42fd-a25f-5a18bb1b2903" /> 
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -131,6 +133,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 1. Once created you can see the created user in the **Users** page.
 
    ![](media/azz2.png)
+
+   <validation step="4ea1ff7e-4b7b-4fc0-bb83-fec04f01bdf9" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -348,6 +352,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 1. On the **All Users** page, search for the user **Jordan** and select it.
 
 1. Select **Edit properties**, select **All** tab, and review the attributes of the user account that was synced from Microsoft Entra ID.
+
+   <validation step="8e646bae-8cc0-4e44-8b11-fb2af82ffd89" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
