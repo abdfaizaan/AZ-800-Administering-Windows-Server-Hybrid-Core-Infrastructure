@@ -307,7 +307,7 @@ In this lab, you will perform:
 
 1. In Microsoft Edge window, disregard the message **Your connection isn't private**, select **Advanced**, and then select the link starting with the text **Continue to**.
 
-1. When prompted, in the **Sign in to access this site** dialog box, sign in with the **Student** as username and **Pa55w.rd** as password.
+1. When prompted, in the **Sign in to access this site** dialog box, sign in with the **Student** as username and **Pa55w.rd1234** as password.
 
 1. On the **All connections** page of Windows Admin Center, select **az800l04-vmwac [Gateway]**.
 
