@@ -86,7 +86,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/azz5.png)
 
-   > **Note**: While, in general, you would use DNS records to verify a domain, this lab doesn't require the use of a verified domain.
+   >**Note**: While, in general, you would use DNS records to verify a domain, this lab doesn't require the use of a verified domain.
 
    <validation step="b65ef28d-a185-42fd-a25f-5a18bb1b2903" /> 
 
@@ -94,39 +94,39 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On **SEA-ADM1**, navigate back to the **Microsoft Entra ID** page in the Azure portal, from the left-hand navigation pane select **Users**.
 
-   ![](media/azz22.png)
+    ![](media/azz22.png)
 
 1. On the **Users** page, select **+ New User** and in drop down select **Create new user**
 
-   ![](media/azz7.png)
+    ![](media/azz7.png)
 
 1. On the **Create new User** page, under **Basics**, in the **User principal name** and **Display Name** text boxes, enter **admin1**.
 
-   > **Note**: Ensure the domain name drop-down menu for the **User name** lists the default domain name ending with `onmicrosoft.com`.
+   >**Note**: Ensure the domain name drop-down menu for the **User name** lists the default domain name ending with `onmicrosoft.com`
 
 1. Under **Password**, select the **Auto generate** checkbox. Record the user name and password as you'll use it later in this lab.
 
-   ![](media/azz8.png)
+    ![](media/azz8.png)
 
 1. Select **Next: Properties>**
 
 1. Under **settings** in the **Usage location** drop-down list, select **United States**.
 
-   ![](media/azz23.png)
+    ![](media/azz23.png)
 
 1. Select **Next: Assignments>**
 
 1. Under **Assignments** tab , select **+ Add role** and on **Directory roles** page, from the list of roles, select **Global administrator**, and then select **Select**.
 
-   ![](media/azz10.png)
+    ![](media/azz10.png)
 
 1. On the **Create new user** page, select **Next: Review + Create** and **Create**.
 
-   ![](media/azz11.png)
+    ![](media/azz11.png)
 
 1. Once created you can see the created user in the **Users** page.
 
-   ![](media/azz2.png)
+    ![](media/azz2.png)
 
    <validation step="4ea1ff7e-4b7b-4fc0-bb83-fec04f01bdf9" />
 
