@@ -62,9 +62,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/action.png) 
  
-4. If prompted to stay signed in, you can click **No**.
+1. If prompted to stay signed in, you can click **No**.
 
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
 1. On the Azure portal, from the **Search resources, Services, and docs(G+/)** blade, search for and select **Microsoft Entra ID**.
 
