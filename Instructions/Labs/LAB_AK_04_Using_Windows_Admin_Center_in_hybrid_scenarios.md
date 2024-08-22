@@ -77,14 +77,7 @@ In this lab, you will perform:
 
 1. On the **Add subnet** page, set the **Starting address** to **10.4.3.224/27**, and then select **Save** to create the **GatewaySubnet**.
 
- <validation step="f7861d50-4d57-462e-9da5-c570cc410428" />
-
- > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
+  <validation step="f7861d50-4d57-462e-9da5-c570cc410428" />
 
 ## Exercise 2: Implementing hybrid connectivity by using the Azure Network Adapter
 
@@ -181,15 +174,9 @@ In this lab, you will perform:
 
 1. On the **Virtual network gateways** page, select **Refresh** and verify that the new entry with the name starting with **WAC-Created-vpngw-ID_NO** appears in the list of virtual network gateways.
 
->**Note**: The provisioning of the Azure virtual network gateway can take up to 45 minutes. Do not wait for the provisioning to complete but instead proceed to the next exercise.
+   >**Note**: The provisioning of the Azure virtual network gateway can take up to 45 minutes. Do not wait for the provisioning to complete but instead proceed to the next exercise.
 
- <validation step="6f6f3210-37a2-496d-a45e-c3a5940bc94d" />
-
- > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   <validation step="6f6f3210-37a2-496d-a45e-c3a5940bc94d" />
 
 ## Exercise 3: Deploying Windows Admin Center gateway in Azure
 
@@ -291,13 +278,7 @@ In this lab, you will perform:
 
 1. On the **az800l04-vmwac | Networking** page, on the **Inbound port rules** tab, note the entries representing the inbound port rule allowing connectivity on TCP port 5986 and the inbound rule allowing connectivity on TCP port 443.
 
-<validation step="e28d4114-d700-4946-b80d-7fc70ade9e46" />
-
- > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+  <validation step="e28d4114-d700-4946-b80d-7fc70ade9e46" />
 
 ## Exercise 4: Verifying functionality of the Windows Admin Center gateway in Azure
 
