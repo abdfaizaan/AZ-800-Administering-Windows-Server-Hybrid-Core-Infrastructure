@@ -230,15 +230,8 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. On the **Microsoft.Template \| Overview** page, select **Template**, and note that this is the same template you used for deployment.
    
- <validation step="b33341ed-9083-4c7b-83db-8ba4fab02d26" />
+  <validation step="b33341ed-9083-4c7b-83db-8ba4fab02d26" />
  
- > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-
 ## Exercise 4: Configuring administrative access to Azure VMs running Windows Server
 
 #### Task 1: Verify the status of Azure Microsoft Defender for Cloud
@@ -394,15 +387,8 @@ security rules**.
 
 1. Verify that you can successfully access via Remote Desktop the operating system running in the Azure VM and close the Remote Desktop session.
 
- <validation step="e61e31af-224b-4ff6-94d4-b86acfa02071" />
+  <validation step="e61e31af-224b-4ff6-94d4-b86acfa02071" />
  
- > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-
 ### Review
 In this lab, you have completed:
 - Connect to your Azure subscription and enable enhanced security of Microsoft Defender for Cloud.
