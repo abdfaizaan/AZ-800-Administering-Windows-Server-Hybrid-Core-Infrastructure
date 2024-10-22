@@ -47,7 +47,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. In File Explorer, browse to the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10** folder.
 
-1. In File Explorer, in the details pane, select the file **L10_DeployDFS.ps1**, display its context-sensitive menu, and then, in the menu, select **Edit**.
+1. In File Explorer, in the details pane, right-click on the file **L10_DeployDFS.ps1**, and then, in the menu, select **Edit**.
 
     ![](./media/ps1.png)
 
@@ -55,19 +55,23 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. In the **Windows PowerShell ISE** script pane, review the script, and then execute it by selecting the **Run Script** icon in the toolbar or by pressing F5. 
 
+   >**Note:** On the **Security warning** pop-up, select **Run once**.
+
 ### Task 2: Test DFS deployment
 
 1. On **SEA-ADM1**, select **Start**, enter **DFS (1)**, and then select **DFS Management (2)**.
 
     ![](./media/dfs.png)
 
-1. In **DFS Management**, in the navigation pane, right-click or access the context menu for **Namespaces(1)**, and then select **Add Namespaces to Display (2)**.
+1. In **DFS Management**, in the navigation pane, right-click or access the context menu for **Namespaces (1)**, and then select **Add Namespaces to Display (2)**.
 
     ![](./media/dfs1.png)
 
 1. In the **Add Namespaces to Display** dialog box, in the list of namespaces, select **\\\contoso.com\Root (1)**, and then select **OK (2)**.
 
     ![](./media/dfs2.png)
+
+    >**Note:** If you are unable to see the namespace, select **Show Namespaces**.
 
 1. In the navigation pane, right-click or access the context menu for **Replication (1)**, and then select **Add Replication Groups to Display (2)**.
 
@@ -77,7 +81,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
     ![](./media/dfs4.png)
 
-1. In the navigation pane, expand the **\\\contoso.com\Root** namespace, and then select the **Data** folder.
+1. In the navigation pane, expand the **Namespaces\\\contoso.com\Root** namespace, and then select the **Data** folder.
 
 1. In the details pane, verify that the **Data** folder has two referrals to the **Data** folder on **SEA-SVR1** and **SEA-SVR2**.
 

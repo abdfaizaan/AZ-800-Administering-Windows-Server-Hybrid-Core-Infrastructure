@@ -1,4 +1,3 @@
-
 # Lab 1: Implementing identity services and Group Policy
 
 ## Lab scenario
@@ -31,12 +30,12 @@ In this lab, you will perform:
 1. To install the AD DS server role, at the Windows PowerShell command prompt, enter the following command, and then press Enter:
 	
    ```powershell
-   Install-WindowsFeature –Name AD-Domain-Services –ComputerName SEA-SVR1
+   Install-WindowsFeature -Name AD-Domain-Services -ComputerName SEA-SVR1
    ```
 1. To verify that the AD DS role is installed on **SEA-SVR1**, enter the following command, and then press Enter:
 	
    ```powershell
-   Get-WindowsFeature –ComputerName SEA-SVR1
+   Get-WindowsFeature -ComputerName SEA-SVR1
    ```
 1. In the output of the previous command, search for the **Active Directory Domain Services** checkbox, and then verify that it is selected. Then, search for **Remote Server Administration Tools**. Notice the **Role Administration Tools** node below it, and then verify that the **AD DS and AD LDS Tools** node is also selected.
 
@@ -48,7 +47,7 @@ In this lab, you will perform:
 
 1.  On **SEA-ADM1**, on the **Start** menu, select **Server Manager**, and then, in **Server Manager**, select the **All Servers** view.
 
-1. On the **Manage(1)** menu, select **Add Servers(2)**.
+1. On the **Manage (1)** menu, select **Add Servers (2)**.
 
    ![](media/update1.png)
 
@@ -56,21 +55,23 @@ In this lab, you will perform:
 
 1. In the **Active Directory** list of servers, select **SEA-SVR1**, select the arrow to add it to the **Selected** list, and then select **OK**.
 
-1. On **SEA-ADM1**, ensure that the installation of the **AD DS(1)** role on SEA-SRV1 is complete and that the server was added to **Server Manager**. Then select the **Notifications(2)** flag symbol.
+1. On **SEA-ADM1**, ensure that the installation of the **AD DS (1)** role on SEA-SRV1 is complete and that the server was added to **Server Manager**. Then select the **Notifications (2)** flag symbol.
+   
    ![](media/update3.png)
+
 1. Note the post-deployment configuration of **SEA-SVR1**, and then select the **Promote this server to a domain controller** link.
    
    ![](media/update4.png)
 
-1. In the **Active Directory Domain Services Configuration Wizard**, on the **Deployment Configuration** page, under **Select the deployment operation**, verify that **Add a domain controller to an existing domain(1)** is selected.
+1. In the **Active Directory Domain Services Configuration Wizard**, on the **Deployment Configuration** page, under **Select the deployment operation**, verify that **Add a domain controller to an existing domain (1)** is selected.
 
-1. Ensure that the `Contoso.com`(2) domain is specified, and then in the **Supply the credentials to perform this operation** section, select **Change(3)**.
+1. Ensure that the `Contoso.com`(2) domain is specified, and then in the **Supply the credentials to perform this operation** section, select **Change (3)**.
 
    ![](media/update5.png)
 
-1. In the **Credentials for deployment operation** dialog box, in the **User name(1)** box, enter **CONTOSO\Administrator**, and then in the **Password(2)** box, enter **Pa55w.rd**.
+1. In the **Credentials for deployment operation** dialog box, in the **User name (1)** box, enter **CONTOSO\Administrator**, and then in the **Password (2)** box, enter **Pa55w.rd**.
 
-1. Select **OK(3)**, and then select **Next**.
+1. Select **OK (3)**, and then select **Next**.
 
    ![](media/update6.png)
 
@@ -106,13 +107,13 @@ In this lab, you will perform:
 1. At the Windows PowerShell command prompt, enter the following command:
 
    ```powershell
-   Invoke-Command –ComputerName SEA-SVR1 { }
+   Invoke-Command -ComputerName SEA-SVR1 { }
    ```
 
 1. Place the cursor between the braces (**{ }**), and then paste the content of the copied script line from the clipboard. The complete command should have the following format:
 	
    ```powershell
-   Invoke-Command –ComputerName SEA-SVR1 {Install-ADDSDomainController -NoGlobalCatalog:$false -CreateDnsDelegation:$false -Credential (Get-Credential) -CriticalReplicationOnly:$false -DatabasePath "C:\Windows\NTDS" -DomainName "Contoso.com" -InstallDns:$true -LogPath "C:\Windows\NTDS" -NoRebootOnCompletion:$false -SiteName "Default-First-Site-Name" -SysvolPath "C:\Windows\SYSVOL" -Force:$true}
+   Invoke-Command -ComputerName SEA-SVR1 {Install-ADDSDomainController -NoGlobalCatalog:$false -CreateDnsDelegation:$false -Credential (Get-Credential) -CriticalReplicationOnly:$false -DatabasePath "C:\Windows\NTDS" -DomainName "Contoso.com" -InstallDns:$true -LogPath "C:\Windows\NTDS" -NoRebootOnCompletion:$false -SiteName "Default-First-Site-Name" -SysvolPath "C:\Windows\SYSVOL" -Force:$true}
    ```
 1. To invoke the command, press Enter.
 
@@ -187,13 +188,14 @@ In this lab, you will perform:
 
    > **Note**: This is necessary to allow sign in with the **CONTOSO\\Ty** user account to **SEA-ADM1**.
 
-**Results**: After this exercise, you should have successfully created a new domain controller and managed objects in AD DS.
+
+> **Results**: After this exercise, you should have successfully created a new domain controller and managed objects in AD DS.
 
 ## Exercise 2: Configuring Group Policy
 
 #### Task 1: Create and edit a GPO
 
-1. On **SEA-ADM1**, from Server Manager, select **Tools(1)**, and then select **Group Policy Management(2)**.
+1. On **SEA-ADM1**, from Server Manager, select **Tools (1)**, and then select **Group Policy Management (2)**.
 
    ![](media/update21.png)
 
@@ -222,7 +224,7 @@ In this lab, you will perform:
 
 1. In the details pane, double-click or select the **Screen saver timeout** policy setting, and then press Enter.
 
-1. In the **Screen saver timeout** dialog box, select **Enabled(1)**. In the **Seconds** text box, enter **600(2)**, and then select **OK(3)**.
+1. In the **Screen saver timeout** dialog box, select **Enabled (1)**. In the **Seconds** text box, enter **600 (2)**, and then select **OK (3)**.
 
    ![](media/updateb28.png)
 
@@ -264,7 +266,7 @@ In this lab, you will perform:
 
 1. Right-click or access the context menu for **Start**, and then select **Run**.
 
-1. In the **Run** dialog box, in the **Open** text box, enter **regedit**, and then select **OK**. Note the error message stating **Registry editing has been disabled by your administrator**.
+1. In the **Run** dialog box, in the **Open** text box, enter **regedit**, and then select **Yes**. Note the error message stating **Registry editing has been disabled by your administrator**.
 
 1. In the **Registry Editor** dialog box, select **OK**.
 
@@ -365,7 +367,7 @@ In this lab, you will perform:
 
 1. Close the **Group Policy Management** console.
 
-**Results**: After this exercise, you should have successfully created and configured GPOs.
+> **Results**: After this exercise, you should have successfully created and configured GPOs.
 
 ### Review
 In this lab, you have completed:
