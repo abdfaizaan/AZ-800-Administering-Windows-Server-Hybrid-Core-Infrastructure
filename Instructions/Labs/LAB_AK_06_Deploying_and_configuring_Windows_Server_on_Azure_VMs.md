@@ -36,9 +36,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. Sign in using the following credentials:
 
-   - Username: **Administrator**
+   - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
-   - Domain: **CONTOSO**
 
 For this lab, you'll use the available VM environment and an Azure subscription. Before you begin the lab, ensure that you have an Azure subscription and a user account with the Owner or Contributor role in that subscription.
 
@@ -62,7 +61,7 @@ In this task, you will connect to your Azure subscription and enable enhanced se
 
 3. In the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Microsoft Defender for Cloud**.
 
-4. On the **Microsoft Defender for Cloud \| Getting started** page, select **Upgrade**, and then select **Install agents**.
+4. On the **Microsoft Defender for Cloud \| Getting started** page, select **Upgrade**.
 
 #### Task 2: Generate an ARM template and parameters files by using the Azure portal
 
@@ -79,7 +78,7 @@ In this task, you will use the Azure portal to create resource groups and create
    |Virtual machine name|**az800l06-vm0**|
    |Region|Use the name of an Azure region in which you can provision Azure virtual machines|
    |Availability options|No infrastructure redundancy required|
-   |Image|**Windows Server 2022 Datacenter: Azure Edition - Gen2**|
+   |Image|**Windows Server 2022 Datacenter: Azure Edition - x64 Gen2**|
    |Run with Azure Spot discount|No|
    |Size|**Standard_D2s_v3**|
    |Username|**Student**|
@@ -154,27 +153,28 @@ In this task, you will use the Azure portal to create resource groups and create
 #### Task 2: Add an Azure VM extension section to the existing template
 
 1. On **SEA-ADM1**, in the Notepad window displaying the content of the **template.json** file, insert the following code directly after the `    "resources": [` line):
+   
    >**Note**: If you are using a tool that pastes the code in line by line, intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into the JSON file.
 
    ```json
-        {
-           "type": "Microsoft.Compute/virtualMachines/extensions",
-           "name": "[concat(parameters('virtualMachineName'), '/customScriptExtension')]",
-           "apiVersion": "2018-06-01",
-           "location": "[resourceGroup().location]",
-           "dependsOn": [
-               "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
-           ],
-           "properties": {
-               "publisher": "Microsoft.Compute",
-               "type": "CustomScriptExtension",
-               "typeHandlerVersion": "1.7",
-               "autoUpgradeMinorVersion": true,
-               "settings": {
-                   "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
-              }
-           }
-        },
+   {
+      "type": "Microsoft.Compute/virtualMachines/extensions",
+      "name": "[concat(parameters('virtualMachineName'), '/customScriptExtension')]",
+      "apiVersion": "2018-06-01",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+         "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
+      ],
+      "properties": {
+         "publisher": "Microsoft.Compute",
+         "type": "CustomScriptExtension",
+         "typeHandlerVersion": "1.7",
+         "autoUpgradeMinorVersion": true,
+         "settings": {
+               "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
+         }
+      }
+   },
    ```
 
 1. Save the change and close the file.
@@ -229,8 +229,13 @@ In this task, you will use the Azure portal to create resource groups and create
    ![](media/az-800-lab06-12.png)
 
 1. On the **Microsoft.Template \| Overview** page, select **Template**, and note that this is the same template you used for deployment.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
    
-  <validation step="b33341ed-9083-4c7b-83db-8ba4fab02d26" />
+<validation step="b33341ed-9083-4c7b-83db-8ba4fab02d26" />
  
 ## Exercise 4: Configuring administrative access to Azure VMs running Windows Server
 
@@ -242,13 +247,13 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. On the **Environment settings** page, expand and select the entry representing your Azure subscription.
 
-   ![](media/az-800-lab06-10.png)
+      ![](media/az-800-lab06-10.png)
 
 1. On the **Settings \| Defender plans** page, select **Settings & monitoring**.
 
-1. On the **Settings & monitoring** page, in the list of extensions, to the right side of the **Log Analytics agent/Azure Monitor agent** entry, select the **Edit configuration** link.
+1. On the **Settings & monitoring** page, in the list of extensions, to the right side of the **Azure Monitoring Agent for SQL server on machines** entry, select **On (1)**, and select the **Edit configuration (2)** link.
 
-   ![](media/az-800-lab06-11.png)
+   ![](media/editconfiguration.png)
 
 1. On the **Auto-provisioning configuration**, in the **Workspace selection** ensure that the **Default workspace(s)** entry is selected, select **Apply**, and back on the **Settings & monitoring** page, select **Continue**.
 
@@ -264,9 +269,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. On the **Just-in-time VM access** page, review the **Configured**, **Not Configured**, and **Unsupported** tabs.
 
-   ![](media/az-800-lab06-08.png)
-
-   >**Note**: It might take up to 24 hours for the newly deployed VM to appear on the **Unsupported** tab. Rather than wait, continue to the next exercise.
+   >**Note**: If the newly created VM is not showing up in **Unsupported** tab, then it might take up to 24 hours for the newly deployed VM to appear on the **Unsupported** tab. Rather than wait, continue to the next exercise.
 
 ## Exercise 5: Configuring Windows Server security in Azure VMs
 
@@ -312,7 +315,7 @@ security rules**.
 
 1. On the **az800l06-vm0** page, under **Networking** section select **Network settings**.
 
-1. On the **az800l06-vm0 \| Network settings** page, select the link designating the network interface attached to **az800l06-vm0*****.
+1. On the **az800l06-vm0 \| Network settings** page, select the link designating the network interface attached to **az800l06-vm0**.
 
 1. On the page displaying the network interface properties, in the vertical menu on the left side, in the **Settings** section, select **Network security group**. 
 
@@ -328,7 +331,7 @@ security rules**.
    |Name|**az800l06-vm0-pip1**|
    |SKU|**Standard**|
       
-1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select **az800106-vm0-pip1**, click on **Associate**, select **Resource Type** as **Network interface** and select **Network interface** as **az800106-vm0*****, click **OK**.
+1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select **az800106-vm0-pip1**, click on **Associate**, select **Resource Type** as **Network interface** and select **Network interface** as **az800106-vm0**, click **OK**.
 
 1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the network interface, select **IP configurations** under **Settings**, and then select the **ipconfig1** entry.
 
@@ -387,7 +390,12 @@ security rules**.
 
 1. Verify that you can successfully access via Remote Desktop the operating system running in the Azure VM and close the Remote Desktop session.
 
-   <validation step="e61e31af-224b-4ff6-94d4-b86acfa02071" />
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+
+<validation step="e61e31af-224b-4ff6-94d4-b86acfa02071" />
  
 ### Review
 In this lab, you have completed:

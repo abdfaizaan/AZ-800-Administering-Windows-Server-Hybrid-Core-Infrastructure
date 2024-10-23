@@ -57,13 +57,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
  1. Intially you dont have a Mount Storage account, So follow the below steps to create a **Storage account**.
 
-      - Select the **Mount storage account**
-      - Select the available subscription from the drop down menu.
-      - Click on **Apply**.
+      - Select the **Mount storage account (1)**
+      - Select the available subscription from the drop down menu (2).
+      - Click on **Apply (3)**.
 
-      ![](media/az3.png)
+        ![](media/az3.png)
 
-1. Select **I want to create a storage account** and then click on **Next**.
+1. Select **I want to create a storage account (1)** and then click on **Next (2)**.
 
    ![](media/az4.png)
 
@@ -163,14 +163,12 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
     | Setting | Value |
     | --- | --- |
-    | This virtual network: Peering link name | **az800l08-vnet0_to_az800l08-vnet2** |
-    | Allow 'az800l08-vnet0' to access the peered virtual network | **Select the checkbox**|
-    | Allow 'az800l08-vnet0' to receive forwarded traffic from the peered virtual network| **Select the checkbox** |
-    | Remote virtual network: Peering link name | **az800l08-vnet2_to_az800l08-vnet0** |
+    | Remote virtual network: Peering link name | **az800l08-vnet0_to_az800l08-vnet2** |
     | Virtual network deployment model | **Resource manager** |
-    | Remote virtual network: Virtual network | **az800l08-vnet2** |
-    | Allow 'az800l08-vnet2' to access 'az800l08-vnet1'| **Select the checkbox**|
-    |Allow 'az800l08-vnet2' to receive forwarded traffic from 'az800l08-vnet1' | **Select the checkbox** |
+    | Virtual network | **az800l08-vnet2** |
+    |Local virtual network summary: Peering link name | **az800l08-vnet2_to_az800l08-vnet0** |
+    | Allow 'az800l08-vnet0' to access 'az800l08-vnet2' | **Select the checkbox** |
+    |
 
     >**Note**: This step establishes two peerings - one from **az800l08-vnet0** to **az800l08-vnet2** and the other from **az800l08-vnet2** to **az800l08-vnet0**. This completes setting up the hub and spoke topology (with the **az800l08-vnet0** virtual network serving the role of the hub, while **az800l08-vnet1** and **az800l08-vnet2** are its spokes).
 
@@ -180,7 +178,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Network Watcher**.
 
-1. On the **Network Watcher** page, from the left navigation pane under **Network diagnostic tools** section, select **Connection troubleshoot**.
+1. On the **Network Watcher** page, from the left navigation pane under **Network diagnostic tools (1)** section, select **Connection troubleshoot (2)**.
 
     ![](media/az9.png)
 
@@ -232,8 +230,6 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | URI, FQDN or IP address | **10.82.0.4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
-
-    ![](media/az11.png)
 
 1. Select **Run diagnostic tests** and wait until results of the connectivity check are returned. Note that the status is **Unreachable**.
 
@@ -308,23 +304,22 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. Select **Go to resource**.
 
-1. On the **az800l08-rt12** route table page, from the left-navigation menu, under the **Settings** section, select **Routes**, and then select **+ Add**.
+1. On the **az800l08-rt12** route table page, from the left-navigation menu, under the **Settings** section, select **Routes**, and then select **+ Add (1)**.
 
 1. Add a new route with the following settings:
 
     | Setting | Value |
     | --- | --- |
-    | Route name | **az800l08-route-vnet1-to-vnet2** |
-    | Destination Type | **IP Addresses** |
-    | Destination IP Address/CIDR ranges | **10.82.0.0/20** |
-    | Next hop type | **Virtual appliance** |
-    | Next hop address | **10.80.0.4** |
+    | Route name | **az800l08-route-vnet1-to-vnet2 (2)** |
+    | Destination Type | **IP Addresses (3)** |
+    | Destination IP Address/CIDR ranges | **10.82.0.0/20 (4)** |
+    | Next hop type | **Virtual appliance (5)** |
+    | Next hop address | **10.80.0.4 (6)** |
+    | Select **Add (7)**. |
 
     > **Note**: **10.80.0.4** represents the private IP address of **az800l08-vm0**. 
 
     ![](media/Ex-1-T4-S15.png)
-
-1. Select **Add**.
 
 1. Back on the **az800l08-rt12** route table page, from the left-navigation menu, under the **Settings** section, select **Subnets**, and then select **+ Associate**.
 
@@ -334,8 +329,6 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | --- | --- |
     | Virtual network | **az800l08-vnet1** |
     | Subnet | **subnet0** |
-
-     ![](media/az17.png)
 
 1. Select **OK**.
 
@@ -401,7 +394,12 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
     >**Note**: This is expected because the traffic between spoke virtual networks is now routed via the virtual machine located in the hub virtual network, which functions as a router.
 
-    <validation step="0ebb917b-c450-4512-b0e1-a353ee5517b8" />
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+
+<validation step="0ebb917b-c450-4512-b0e1-a353ee5517b8" />
 
 ### Exercise 2: Implement DNS name resolution in Azure
 
