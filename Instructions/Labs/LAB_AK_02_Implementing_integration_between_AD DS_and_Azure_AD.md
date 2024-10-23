@@ -88,7 +88,12 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    >**Note**: While, in general, you would use DNS records to verify a domain, this lab doesn't require the use of a verified domain.
 
-   <validation step="b65ef28d-a185-42fd-a25f-5a18bb1b2903" /> 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="b65ef28d-a185-42fd-a25f-5a18bb1b2903" /> 
 
 #### Task 2: Create a user with the Global Administrator role
 
@@ -128,7 +133,12 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
     ![](media/azz2.png)
 
-   <validation step="4ea1ff7e-4b7b-4fc0-bb83-fec04f01bdf9" />
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="4ea1ff7e-4b7b-4fc0-bb83-fec04f01bdf9" />
 
 #### Task 3: Change the password for the user with the Global Administrator role
 
@@ -347,7 +357,12 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. Select **Edit properties**, select **All** tab, and review the attributes of the user account that was synced from Microsoft Entra ID.
 
-   <validation step="8e646bae-8cc0-4e44-8b11-fb2af82ffd89" />
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="8e646bae-8cc0-4e44-8b11-fb2af82ffd89" />
 
 ## Exercise 5: Implementing Microsoft Entra ID integration features in AD DS
 
