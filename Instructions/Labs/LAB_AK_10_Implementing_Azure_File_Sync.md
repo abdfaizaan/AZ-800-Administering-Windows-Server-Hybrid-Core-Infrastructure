@@ -137,7 +137,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. Accept the default values for all other settings, select **Review + Create**, and then select **Create**.
 
-   ![](./media/AZ-800-E2T1S51.png)
+   ![](./media/strgacc.png)
 
 1. After the storage account is created, on the **Deployment** page, select **Go to resource**.
 
