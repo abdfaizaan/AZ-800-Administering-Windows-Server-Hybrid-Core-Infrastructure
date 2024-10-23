@@ -137,7 +137,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. Accept the default values for all other settings, select **Review + Create**, and then select **Create**.
 
-   ![](./media/strgacc.png)
+   ![](./media/strgacc1.png)
 
 1. After the storage account is created, on the **Deployment** page, select **Go to resource**.
 
@@ -444,9 +444,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. On **SEA-ADM1**, position the File Explorer windows displaying the content of **\\\\SEA-SVR1\Data\\** and **\\\\SEA-SVR2\Data\\** side-by-side.
 
-1. In the File Explorer window displaying the content of **\\\\SEA-SVR1\Data\\**, create a file named **Demo.txt**. 
-
 1. In the File Explorer window displaying the content of **\\\\SEA-SVR2\Data\\**, create a file named **Demo.txt**. 
+
+1. In the File Explorer window displaying the content of **\\\\SEA-SVR1\Data\\**, create a file named **Demo.txt**. 
 
 1. Add an arbitrary text to the first **Demo.txt** file and save the change.
 
