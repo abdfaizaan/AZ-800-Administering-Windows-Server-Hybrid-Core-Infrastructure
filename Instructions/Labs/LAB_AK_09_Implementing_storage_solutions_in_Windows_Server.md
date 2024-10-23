@@ -1,4 +1,4 @@
-# Lab 9: Implementing storage solutions in Windows Server
+<img width="486" alt="image" src="https://github.com/user-attachments/assets/14ea3311-f24c-44f9-bb06-0fd1ff182360"># Lab 9: Implementing storage solutions in Windows Server
 
 ## Lab scenario
 
@@ -29,15 +29,25 @@ In this lab, you will perform:
 
 1. On **SEA-ADM1**, select **Start**, and then select **Server Manager**.
 
+   ![](media/start-sm.png)
+
 1. In Server Manager, select **Manage**, and then select **Add Roles and Features**.
+
+   ![](media/add-features.png)
 
 1. In the **Add Roles and Features Wizard**, select **Next** twice.
 
 1. On the **Select destination server** page , in the Server Pool pane, select **SEA-SVR3.Contoso.com**, and then select **Next**.
 
+   ![](media/srvr-selection.png)
+
 1. On the **Select server roles** page, in the Roles pane, expand the **File and Storage Services** item, and then expand the **File and iSCSI Services** item, select the **Data Deduplication** item, and then select **Next**.
 
+   ![](media/srvr-roles.png)
+
 1. On the **Select features** page, select **Next**, and then in the **Confirm installation selections** page, select **Install**.
+
+   ![](media/confirm-install.png)
 
 1. While the role service is installing, on the taskbar, select the **File Explorer** icon.
 
@@ -45,11 +55,19 @@ In this lab, you will perform:
 
 1. Select the **Labfiles** directory, and then display the context-sensitive menu, right click and select **Give access to**, and then, in the cascading menu, select **Specific people...**.
 
+   ![](media/give-access.png)
+
 1. In the **Network access** window, in the **Type a name and then click Add, or click the arrow to find someone** text box, type **Users** and click **Add**.
+
+   ![](media/users-add.png)
 
 1. In the **Network access** window, select **Share**, and once you are presented with the **Your folder is shared** window, select **Done**.
 
+   ![](media/labfiles-shared.png)
+
 1. Switch back to the **Server Manager** window, and then, on the **Add Roles and Features Wizard installation succeeded** page, select **Close**.
+
+   ![](media/close-srvmngr.png)
 
 1. Switch to the **SEA-SVR3** console session, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 
@@ -88,21 +106,33 @@ In this lab, you will perform:
 
 1. In the Disks pane, browse to the list of disks of **SEA-SVR3** and select the entry representing the disk number **1**, which you configured in the previous task.
 
+   ![](media/disk-selection.png)
+
 1. In the Volumes pane, display the context-sensitive menu of the **M:** volume, and by right clicking on **M:** volume ,select **Configure Data Deduplication**.
 
+   ![](media/configure-ddl.png)
+
 1. In the **Volume (M:\\) Deduplication Settings** window, in the **Data deduplication** drop-down list, select the **General purpose file server** setting.
+
+   ![](media/ddl-gpfs.png)
 
 1. In the **Deduplicate files older than (in days):** text box, replace the default value of **3** with **0**.
 
 1. Select the **Set Deduplication Schedule** button.
 
+   ![](media/set-ddls.png)
+
 1. In the **SEA-SVR3 Deduplication Schedule** window, select **Enable throughput optimization**, and then select **OK**.
+
+   ![](media/enable-thrptopt.png)
 
 1. Back in the **Volume (M:\\) Deduplication Settings** window, select **OK**.
 
 #### Task 3: Test Data Deduplication
 
-1. On **SEA-ADM1**, select **Start**, and then select **Windows PowerShell (Admin)**.
+1. On **SEA-ADM1**, select **Start**, and right click on **Windows PowerShell**, and select **Run as Administrator**.
+
+   ![](media/powershell-admin.png)
 
    >**Note**: Perform the next two steps in case you have not already installed Windows Admin Center on **SEA-ADM1**.
 
@@ -140,8 +170,12 @@ In this lab, you will perform:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
+  
+	![](media/powershell-admin.png)
 
 1. On the **sea-svr3.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\Administrator** user with **Pa55w.rd** as its password.
+
+   ![](media/svm-loginpwsh.png)
 
 1. In the **Windows PowerShell** console, enter the following command and then press Enter to trigger deduplication:
 
@@ -171,9 +205,15 @@ In this lab, you will perform:
    ```
 1. On **SEA-ADM1**, switch to the Disks pane in **Server Manager**, and then, in the **TASKS** menu in the upper right corner, select **Refresh**.
 
-1. Select the **M:** volume in the **VOLUMES** section, right-click and select **Properties** from the menu. 
+   ![](media/disk-refresh.png)
+
+1. Select the **M:** volume in the **VOLUMES** section, right-click and select **Properties** from the menu.
+
+   ![](media/volume-prop.png)
 
 1. In the **Volume (M:\\) Properties** window, review the values for **Deduplication rate** and **Deduplication savings**.
+
+   ![](media/volume-proper.png)
 
 ## Exercise 2: Configuring iSCSI storage
 
@@ -231,41 +271,65 @@ In this lab, you will perform:
 
 1. On **SEA-ADM1**, switch to the Disks pane in **Server Manager**, and then, in the **TASKS** menu in the upper right corner, select **Refresh**.
 
+   ![](media/disk-refresh.png)
+
 1. In **Server Manager**, with **Disks** of **File and Storage Services** selected in the tree pane, in the **TASKS** menu in the upper right corner, select **Refresh**.
 
 1. Review the updated **SEA-SVR3** disk configuration with disks 2 and 3 online.
 
+   ![](media/disks.png)
+
 1. Browse to the **SEA-DC1** entry and review the disk configuration.
+
+   ![](media/disk.png)
 
    > **Note**: **SEA-DC1** has only a single disk hosting the boot and system volumes.
 
 1. In **Server Manager**, in **File and Storage Services**, select **iSCSI**, select **Tasks**, and then, in the drop-down menu, select **New iSCSI Virtual Disk**.
 
+   ![](media/iscsi-vd.png)
+
    >**Note**: Kindly refresh the page if you don't find option.
    
 1. In the **New iSCSI Virtual Disk Wizard**, on the **Select iSCSI virtual disk location** page, under the **SEA-SVR3** server, select the **E:** volume, and then select **Next**.
 
+   ![](media/iscsi-volselect.png)
+
 1. In the **Specify iSCSI virtual disk name** page, in the **Name** text box, enter **iSCSIDisk1**, and then select **Next**.
 
+   ![](media/iscsi-vdname.png)
+
 1. On the **Specify iSCSI virtual disk size** page, in the **Size** text box, enter **5**. Leave all other settings with their default values and then select **Next**.
+
+   ![](media/iscsi-vdsize.png)
 
 1. On the **Assign iSCSI target** page, ensure the **New iSCSI target** radio button is selected, and then select **Next**.
 
 1. In the **Specify target name** page, in the **Name** field, enter **iSCSIFarm**, and then select **Next**.
 
+   ![](media/iscsi-tgname.png)
+
 1. In the **Specify access servers** page, select the **Add** button.
 
 1. In the **Select a method to identify the initiator** window, select the **Browse** button.
 
+   ![](media/iscsi-browsesrvr.png)
+
 1. In the **Select Computer** window, in the **Enter the object name to select** text box, enter **SEA-DC1**, select **Check Names**, and then select **OK**.
+
+   ![](media/iscsi-selectcomp.png)
 
 1. In the **Select a method to identify the initiator** window, select **OK**.
 
 1. On the **Specify access servers** page, select **Next**.
 
+   ![](media/iscsi-server.png)
+
 1. On the **Enable Authentication** page, select **Next**.
 
 1. On the **Confirm selections** page, select **Create**.
+
+   ![](media/iscsi-create.png)
 
 1. On the **View results** page, select **Close**.
 
@@ -277,6 +341,8 @@ using the following settings:
    - Disk size: **5 GB**, **Dynamically Expanding**
    - iSCSI target: **iSCSIFarm**
    - On **Assign ISCSI Target**: select **Existing ISCSI target**
+  
+     ![](media/iscsi-create2.png)
      
 1. Switch to the **SEA-DC1** console session, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 
@@ -301,9 +367,13 @@ using the following settings:
 
 1. Switch back to the console session to **SEA-ADM1** with the **Server Manager** window active.
 
-1. In **Server Manager**, switch from the iSCSI pane in **File and Storage Services** to the Disks pane, and then, in the **TASKS** menu in the upper right corner, select **Refresh**. 
+1. In **Server Manager**, switch from the iSCSI pane in **File and Storage Services** to the Disks pane, and then, in the **TASKS** menu in the upper right corner, select **Refresh**.
 
-1. Review the **SEA-DC1** disk configuration and verify that it includes two **5 GB** disks with the **Offline** status and the **iSCSI** bus type.
+   ![](media/disk-refresh.png)
+
+1. Review the **SEA-DC1** disk configuration and verify that it includes two **5 GB** disks with the **Offline** status and the **iSCSI** bus type too.
+
+   ![](media/disks-iscsi.png)
 
 1. Switch to the **SEA-DC1** console session. 
 
@@ -331,9 +401,13 @@ using the following settings:
    ```
 1. Switch back to the console session to **SEA-ADM1** with the **Server Manager** window active.
 
-1. In **Server Manager**, refresh the Disks pane in **File and Storage Services** by selecting **Refresh** in the **TASKS** menu in the upper right corner of the window. 
+1. In **Server Manager**, refresh the Disks pane in **File and Storage Services** by selecting **Refresh** in the **TASKS** menu in the upper right corner of the window.
+
+   ![](media/disk-refresh.png) 
 
 1. Review the **SEA-DC1** disk configuration and verify that both drives are now **Online**.
+
+   ![](media/disks-iscsionline.png)
 
 #### Task 4: Revert disk configuration 
 
@@ -354,7 +428,9 @@ using the following settings:
 
 1. Switch back to the console session to **SEA-ADM1** with the **Server Manager** window active.
 
-1. In **Server Manager**, refresh the Disks pane in **File and Storage Services** by selecting **Refresh** in the **TASKS** menu in the upper right corner of the window. 
+1. In **Server Manager**, refresh the Disks pane in **File and Storage Services** by selecting **Refresh** in the **TASKS** menu in the upper right corner of the window.
+
+   ![](media/disk-refresh.png)
 
 1. In the Disks pane, scroll down, and note that the **SEA-SVR3** disks 1 through 4 are listed with **Unknown** partitions and the **Offline** status. 
 
@@ -362,15 +438,23 @@ using the following settings:
 
 1. Verify that all disks are listed with the **Online** status. In **Server Manager**, in the navigation pane, select **Storage Pools**.
 
-1. In **Server Manager**, in the **STORAGE POOLS** area, in the **TASKS** list, select **New Storage Pool**. 
+1. In **Server Manager**, in the **STORAGE POOLS** area, in the **TASKS** list, select **New Storage Pool**.
+
+   ![](media/new-strpool.png)
 
 1. In the **New Storage Pool Wizard**, on the **Before you begin** page, select **Next**.
 
 1. On the **Specify a storage pool name and subsystem** page, in the **Name** text box, enter **SP1**. In the **Description** text box, enter **Storage Pool 1**. In the **Select the group of available disks (also known as a primordial pool) that you want to use** listing, select the **SEA-SVR3** entry, and then select **Next**.
 
+   ![](media/spl-name.png)
+
 1. On the **Select physical disks for the storage pool** page, select the check boxes next to the three disks of **127 GB** size, and then select **Next**.
 
+   ![](media/spl-disks.png)
+
 1. On the **Confirm selections** page, review the settings, and then select **Create**.
+
+   ![](media/spl-create.png)
 
 1. Select **Close**.
 
@@ -380,21 +464,33 @@ using the following settings:
 
 1. In the **VIRTUAL DISKS** area, select **TASKS**, and then select **New Virtual Disk**.
 
+   ![](media/spl-vd.png)
+
 1. In the **Select the storage pool** dialog box, select **SP1**, and then select **OK**.
 
 1. In the **New Virtual Disk Wizard**, on the **Before you begin** page, select **Next**.
 
 1. On the **Specify the virtual disk name** page, in the **Name** text box, enter **Three-Mirror**, and then select **Next**.
 
+   ![](media/spl-vdname.png)
+
 1. On the **Specify enclosure resiliency** page, select **Next**.
 
 1. On the **Select the storage layout** page, select **Mirror**, and then select **Next**.
 
+   ![](media/spl-vdlayout.png)
+
 1. On the **Specify the provisioning type** page, select **Thin**, and then select **Next**.
+
+   ![](media/spl-vdtype.png)
 
 1. On the **Specify the size of the virtual disk** page, in the **Specify size** text box, enter **25**, and then select **Next**.
 
+   ![](media/spl-vdsize.png)
+
 1. On the **Confirm selections** page, review the settings, and then select **Create**.
+
+   ![](media/spl-vdcreate.png)
 
 1. On the **View results** page, **clear** the **Create a volume when this wizard closes** check box, and then select **Close**.
 
@@ -402,19 +498,29 @@ using the following settings:
 
 1. In the **VOLUMES** area, select **TASKS**, and then select **New Volume**.
 
+   ![](media/srvm-volcreate.png)
+
 1. In the **New Volume Wizard**, on the **Before you begin** page, select **Next**.
 
 1. On the **Select the server and disk** page, select **SEA-SVR3**, select **Three-Mirror**, and then select **Next**.
+
+   ![](media/srvm-voldisk.png)
 
 1. On the **Specify the size of the volume** page, select **Next**.
 
 1. On the **Assign to a drive letter or folder** page, select **Drive letter**, select **T**, and then select **Next**.
 
+   ![](media/srvm-volletter.png)
+
 1. On the **Select file system settings** page, in the **File system** drop-down list, select **ReFS**. In the **Volume label** text box, enter **TestData**, and then select **Next**.
+
+   ![](media/srvm-volsystem.png)
 
 1. On the **Enable Data Deduplication** page, select **Next**.
 
 1. On the **Confirm selections** page, select **Create**.
+
+   ![](media/srvm-volmcreate.png)
 
 1. On the **Completion** page, select **Close**.
 
@@ -438,15 +544,25 @@ using the following settings:
 
 1. In File Explorer, in the Details pane, display context-sensitive menu, and then, in the menu, select **New**, and then select **Text Document**. Replace the default name assigned to the new file with **TestDocument**, and then press Enter.
 
+   ![](media/testdocument.png)
+
 #### Task 4: Disconnect a disk from the storage pool and verify volume availability 
 
 1. On **SEA-ADM1**, switch to **Server Manager**. In the **File and Storage Services** tree pane, select **Storage Pools**, and then select **SP1**.
 
+   ![](media/stpools.png)
+
 1. In the Physical Disks pane, select the **TASKS** drop-down list, and then select **Add Physical Disk**.
+
+   ![](media/srvm-pdisk.png)
 
 1. In the **Add Physical Disk** dialog box, in the row representing the fourth disk to be added to the pool, select the check box next to the disk name. In the **Allocation** drop-down list, ensure that the **Automatic** entry is selected, and then select **OK**.
 
+   ![](media/srvm-addpd.png)
+
 1. In the PHYSICAL DISKS pane, right-click the top disk in the list, and then select **Remove disk**.
+
+   ![](media/srvm-rmpd.png)
 
 1. In the **Remove Physical Disk** window, select **Yes**.
 
@@ -454,19 +570,29 @@ using the following settings:
 
 1. Switch back to the **File Explorer** window displaying the content of the **TestData** folder.
 
-1. Open **TestDocument.txt** and verify that its content is still available.
+1. Check **TestDocument.txt** and verify that it is still available.
+
+   ![](media/testdocument.png)
 
 #### Task 5: Add a disk to the storage pool and verify volume availability 
 
 1. On **SEA-ADM1**, switch to **Server Manager**. In **File and Storage Services** tree pane, with the **Storage Pools** entry selected, in the **TASKS** menu in the upper right corner, select **Rescan Storage**.
 
+   ![](media/rescan-storage.png)
+
 1. When prompted, in the **Rescan Storage** dialog box, select **Yes**.
 
 1. In the Physical Disks pane, select **TASKS**, and then, in the drop-down menu, select **Add Physical Disk**.
 
+   ![](media/add-pd.png)
+
 1. In the **Add Physical Disk** window, in the row representing the fourth disk to be added to the pool, select the check box next to the disk name. In the **Allocation** drop-down list, ensure that the **Automatic** entry is selected, and then select **OK**.
 
+   ![](media/add-pdisk.png)
+
 1. On **SEA-ADM1**, switch to the **File Explorer** window and verify that the **TestData** folder and its content are still available.
+
+   ![](media/testdocument.png)
 
 #### Task 6: Revert disk configuration 
 
@@ -491,21 +617,35 @@ using the following settings:
 
 1. On **SEA-ADM1**, in **Server Manager**, in the console tree, select **All Servers**, and verify that **SEA-SVR1**, **SEA-SVR2**, and **SEA-SVR3** have the **Manageability** status of **Online – Performance counters not started** before continuing.
 
+   ![](media/allservers.png)
+
 1. In **Server Manager**, in the navigation pane, select **File and Storage Services**, and then select **Disks**.
 
 1. With the Disks pane selected, in its upper right corner, in the **TASKS** menu, select **Refresh**.
 
+   ![](media/disk-refresh.png)
+
 1. In the Disks pane, scroll down to the listing of **SEA-SVR3** disks 1 through 4, and verify that their respective entries in the **Partition** column are listed as **Unknown**.
+
+   ![](media/disks-offline2.png)
 
 1. Select each of the four disks in sequence, and right-click. In the menu, select the **Bring Online** option, and then in the **Bring Disk Online** window, select **Yes**.
 
+   ![](media/disk-online.png)
+
 1. Use the same method to bring online all disks of **SEA-SVR1** and **SEA-SVR2**.
 
+   ![](media/disks-online.png)
+
 1. On **SEA-ADM1**, select **Start**, and in the **Start** menu, select **Windows PowerShell ISE**.
+
+   ![](media/ps-ise.png)
 
 1. In **Windows PowerShell ISE**, select the **File** menu. In the **File** menu, select **Open**, and then, in the **Open** dialog box, go to **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab09**.
 
 1. Select **Implement-StorageSpacesDirect.ps1**, and then select **Open**.
+
+   ![](media/psfile-open.png)
 
    > **Note**: The script is divided into numbered steps. There are eight steps, and each step has a number of commands. To execute an individual line, you can place the cursor anywhere within that line and press F8 or select the **Run Selection** in the toolbar of the **Windows PowerShell ISE** window. To execute multiple lines, select all of them in their entirety, and then use either F8 or the **Run Selection** toolbar icon. The sequence of steps is described in the instructions of this exercise. Ensure that each step completes before starting the next one.
 
@@ -527,6 +667,8 @@ using the following settings:
 
 1. In **Server Manager**, select **Tools**, and then select **Failover Cluster Manager** to verify that its installation completed successfully.
 
+   ![](media/fcm.png)
+
 1. On **SEA-ADM1**, switch to the **Administrator: Windows PowerShell ISE** window, select the line in step 2 starting with **Test-Cluster**, and then press F8 to invoke cluster validation tests.
 
    >**Note**: Wait until the tests complete. This should take about 2 minutes. Verify that none of the tests fail. Ignore any warnings since these are expected. 
@@ -538,6 +680,8 @@ using the following settings:
    >**Note**: if cluster creation fail switch to **SEA-SVR1**, **SEA-SVR2**, and **SEA-SVR3**, run **clean-ClusterNodes** command and then switch back to **SEA-ADM1** open new powershell ISE open as administrator and run step 2 and step 3 of script again. 
    
 1. On **SEA-ADM1**, switch to the **Failover Cluster Manager** window. In the Actions pane, select **Connect to Cluster**, enter **S2DCluster.Contoso.com**, and then select **OK**.
+
+   ![](media/createcluster.png)
 
 #### Task 3: Enable Storage Spaces Direct
 
@@ -553,6 +697,8 @@ using the following settings:
 
 1. Verify the existence of **Cluster Pool 1**.
 
+   ![](media/clusterpool1.png)
+
 1. In the **Administrator: Windows PowerShell ISE** window, select the line in step 6 starting with **Invoke-Command**, and then press F8 to create virtual disks.
 
    > **Note**: Wait until the step completes. This should take less than 1 minute. 
@@ -560,6 +706,8 @@ using the following settings:
 1. Switch to the **Failover Cluster Manager** window, and then, within the **Storage** node, select **Disks**.
 
 1. Verify the existence of **Cluster Virtual Disk (CSV)**.
+
+   ![](media/csv.png)
 
 #### Task 4: Create a storage pool, a virtual disk, and a share
 
@@ -573,17 +721,19 @@ using the following settings:
 
 1. Verify the existence of the S2D-SOFS role. This also verifies that the command completed successfully.
 
+   ![](media/s2d-role.png)
+
 1. In the **Administrator: Windows PowerShell ISE** window, select the three lines in step 8, starting with **Invoke-Command**, and then press F8 to create a file share.
 
    > **Note**: Wait until the step completes. This should take less than 1 minute. 
 
 1. Verify that the output of the command includes definition of a file share, with the attribute **Path** set to **C:\\ClusterStorage\\CSV\\VM01**. This validates that the command completed successfully.
 
-1. In the **Failover Cluster Manager** window, in the **Roles** pane, select **S2D-SOFS (1)** under the **Name** column, and then select the **Shares (2)** tab below.
-
-    ![](./media/az-800-1.png)
+1. In the **Failover Cluster Manager** window, in the **Roles** pane, select **S2D-SOFS** under the **Name** column, and then select the **Shares** tab below.
      
 1. Verify the existence of the share named **VM01**. This also verifies that the command completed successfully.
+
+   ![](media/cluster-share.png)
 
 #### Task 5: Verify Storage Spaces Direct functionality
 
@@ -592,6 +742,8 @@ using the following settings:
 1. In **File Explorer**, in the address bar, enter **\\\\S2D-SOFS.contoso.com\\VM01**, and then press Enter to open the target file share.
 
 1. In **File Explorer**, in the details pane, display the context-sensitive menu, and then, in the menu, select **New Folder**. Replace the default name assigned to the new folder with **VMFolder**, and then press Enter.
+
+   ![](media/vmfolder.png)
 
 1. On **SEA-ADM1**, switch to the **Administrator: Windows PowerShell ISE** window.
 
@@ -603,19 +755,29 @@ using the following settings:
 
 1. On **SEA-ADM1**, switch to the **Server Manager** window, select **All Servers**, and then, in the **TASKS** menu in the upper right corner, select **Refresh**.
 
+   ![](media/servers-refresh.png)
+
 1. Verify that the **SEA-SVR3** entry has the **Target computer not accessible** entry in the **Manageability** column.
 
+   ![](media/server-inaccessible.png)
+
 1. Switch back to the **File Explorer** window and verify that the **VMFolder** remains accessible.
+
+   ![](media/vmfolder.png)
 
 1. Switch to **Failover Cluster Manager**, select **Disks**, and then select **Cluster Virtual Disk (CSV)**.
 
 1. Verify that for the **Cluster Virtual Disk (CSV)**, the **Health Status** is set to **Warning** and **Operational Status** to **Degraded** (**Operational Status** might also be listed as **Incomplete**.)
+
+   ![](media/csv-health.png)
 
 1. On **SEA-ADM1**, switch to the **Microsoft Edge** window displaying Windows Admin Center. 
 
 1. Browse to the All connections pane and select **+ Add**.
 
 1. In the **Add or create resources** pane, in the **Server clusters** pane, select **Add**.
+
+   ![](media/add-srvcluster.png)
 
 1. In the **Cluster name** text box, enter **S2DCluster.Contoso.com**.
 
@@ -626,9 +788,13 @@ using the following settings:
    
 1. Select checkbox **Add the server name exactly as enter** and select **Add**.
 
+   ![](media/add-cluster.png)
+
 1. Back on the **All connections** page, select **s2dcluster.contoso.com**.
 
-1. Verify that when the page loads, the Dashboard pane has an alert indicating that **SEA-SVR3** is not reachable. 
+1. Verify that when the page loads, the Dashboard pane has an alert indicating that **SEA-SVR3** is not reachable.
+
+   ![](media/server2alert.png)
 
 1. Switch to the console session to **SEA-SVR3** and start it. 
 
