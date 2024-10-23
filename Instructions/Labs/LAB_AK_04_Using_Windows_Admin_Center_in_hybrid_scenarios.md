@@ -34,7 +34,7 @@ In this lab, you will perform:
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-   >**Note**: If this is the first time you are starting Cloud Shell and you are presented with the **Getting started** page, select the subscription you are using in this lab, and then select **No storage account required**.
+   >**Note**: If this is the first time you are starting Cloud Shell and you are presented with the **Getting started** page, select the subscription you are using in this lab, then select **No storage account required**, and **Apply**.
 
 1. In the toolbar of the Cloud Shell pane, select the **Manage Files** icon, in the drop-down menu, select **Upload**, and then upload the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\L04-sub_template.json** file to the Cloud Shell home directory.
 
@@ -77,7 +77,12 @@ In this lab, you will perform:
 
 1. On the **Add subnet** page, set the **Starting address** to **10.4.3.224/27**, and then select **Save** to create the **GatewaySubnet**.
 
-  <validation step="f7861d50-4d57-462e-9da5-c570cc410428" />
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+
+<validation step="f7861d50-4d57-462e-9da5-c570cc410428" />
 
 ## Exercise 2: Implementing hybrid connectivity by using the Azure Network Adapter
 
@@ -113,13 +118,19 @@ In this lab, you will perform:
 
 1. In **Windows Admin Center**, select **Settings** (from the upper-right corner of the page) > **Extensions**. Then select **Extensions**:
 
-   ![](media/extended-network.png) 
+   ![](media/extensions.png) 
 
-1. On the **Available extensions** tab, select **Azure Extended network**, and then select **Install**.
+1. On the **Installed extensions** tab, check **Azure Extended network** is installed.
 
-   >**Note**: After a few seconds you should see a message indicating a successful installation.
+   >**Note:** If it is not installed then follow the below steps:
+   
+   > 1. On the **Available extensions** tab, select **Azure Extended network**, and then select **Install**.
+   
+   > 2. After a few seconds you should see a message indicating a successful installation.
 
-1. Navigate to **All connections** page from dropdown, select the **sea-adm1.contoso.com** entry. 
+1. Select **Settings (1)** dropdown, and from the dropdown select **All connections (2)**, select the **sea-adm1.contoso.com** entry. 
+
+   ![](media/settingsallconnections.png)
 
 1. In Windows Admin Center, from left pane, in the list of Tools, select **Networks**, and then select **+ Add Azure Network Adapter (Preview)**.
 
@@ -146,11 +157,12 @@ In this lab, you will perform:
 1. In Windows Admin Center, verify that the sign in was successful and close the newly opened tab of the Microsoft Edge window.
 
 1. In the **Get started with Azure in Windows Admin Center** pane, ensure that **Microsoft Entra application** is set to **Create new**, and then select **Connect**.
->**Note**: Please wait until it successfully connected to Azure AD.
 
-1. In the listing of the steps of the registration procedure, select **Sign in**. This will open a pop-up window labeled **Permissions requested**.
+   >**Note**: Please wait until it successfully connected to Azure AD.
 
-1. In the **Permissions requested** pop-up window, select **Consent on behalf of your organization**, and then select **Accept**.
+1. In the listing of the steps of the registration procedure, select **Sign in**.
+
+1. In the **Permissions requested** pop-up window, select **Accept**.
 
 #### Task 2: Create an Azure Network Adapter
 
@@ -176,7 +188,12 @@ In this lab, you will perform:
 
    >**Note**: The provisioning of the Azure virtual network gateway can take up to 45 minutes. Do not wait for the provisioning to complete but instead proceed to the next exercise.
 
-   <validation step="6f6f3210-37a2-496d-a45e-c3a5940bc94d" />
+<validation step="6f6f3210-37a2-496d-a45e-c3a5940bc94d" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
 
 ## Exercise 3: Deploying Windows Admin Center gateway in Azure
 
@@ -248,9 +265,7 @@ In this lab, you will perform:
 
 1. Navigate to Virtual machines in the Azure portal and select **az800l04-vmwac**.
 
-1. On the left under **Settings**, click **Connect**.
-
-1. Click on **Download RDP file**.
+1. From the top navigation menu, select **Connect** dropdown and select **Connect**. Click on **Download RDP file**.
 
 1. Select **Open File**, then proceed by clicking **Connect** in the warning popup window.
 
@@ -260,7 +275,9 @@ In this lab, you will perform:
 
 1. Click the **Start** button and type **Edge**, click **Microsoft edge** and complete the Edge setup wizard.
 
-1. Enter **Windows Admin Center** in the URL field of Microsoft Edge, then click on the first link displayed in the search results.
+1. Enter **Windows Admin Center (1)** in the URL field of Microsoft Edge, then click on the first **link (2)** displayed in the search results.
+
+   ![](media/windows-admin-center.png)
 
 1. Select the **Download Windows Admin Center** button, then choose **Open file**. Close the Microsoft Edge browser. Proceed by checking the **I accept these terms** box, click **Next** five times, followed by **Install**. Finally, click **Finish** to complete the installation.
 
@@ -274,11 +291,16 @@ In this lab, you will perform:
 
 1. Copy the **Public IP Address** displayed on the Overview page. Next, open the Edge browser, right-click on the URL field, and choose the paste option. Ensure to prepend "https://" to the URL, and append the port number you configured for WAC, such as **443**. The resulting final URL should resemble this: **https://20.232.18.205:443/**. Finally, press the **Enter** key.
 
-1. Navigate back to Azure portal, select the Azure VM **az800l04-vmwac** entry, and then, on the **az800l04-vmwac** page, under **Settings** section select **Networking**.
+1. Navigate back to Azure portal, select the Azure VM **az800l04-vmwac** entry, and then, on the **az800l04-vmwac** page, under **Networking** section select **Network settings**.
 
-1. On the **az800l04-vmwac | Networking** page, on the **Inbound port rules** tab, note the entries representing the inbound port rule allowing connectivity on TCP port 5986 and the inbound rule allowing connectivity on TCP port 443.
+1. On the **az800l04-vmwac | Network settings** page, on the **Inbound port rules** tab, note the entries representing the inbound port rule allowing connectivity on TCP port 5986 and the inbound rule allowing connectivity on TCP port 443.
 
-  <validation step="e28d4114-d700-4946-b80d-7fc70ade9e46" />
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+
+<validation step="e28d4114-d700-4946-b80d-7fc70ade9e46" />
 
 ## Exercise 4: Verifying functionality of the Windows Admin Center gateway in Azure
 
@@ -300,7 +322,7 @@ In this lab, you will perform:
 
 1. On the **Virtual machines** page, select **az800l04-vm0**.
 
-1. On the **az800l04-vm0** page, in the **Operations** section, select **Run command**, and then select **RunPowerShellScript**.
+1. On the **az800l04-vm0** page, from the left navigation menu, under **Operations** section, select **Run command**, and then select **RunPowerShellScript**.
 
 1. If Windows Remote Management is disabled, on the **Run Command Script** page, in the **PowerShell Script** section, enter the following command, and then select **Run** to enable it.
 
@@ -329,6 +351,8 @@ In this lab, you will perform:
 1. On the **Add or create resources** page, in the **Servers** section, select **Add**.
 
 1. In the **Server name** text box, enter **az800l04-vm0**.
+
+   >**Note:** If you are getting any errors, ignore it and proceed with the next steps.
 
 1. Select the **Use another account for this connection** option, provide the **Student** username and **Pa55w.rd1234** password, and then select **Add with Credentials**.
 
