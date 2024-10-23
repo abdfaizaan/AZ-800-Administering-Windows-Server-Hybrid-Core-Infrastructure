@@ -72,20 +72,32 @@ For this lab, you'll use the available VM environment.
 
 #### Task 2: Create a virtual hard disk
 
-1. On **SEA-ADM1**, in Hyper-V Manager connected to **SEA-SVR1**, under **Action** pane, select **New**, and then select **Hard Disk**. The **New Virtual Hard Disk Wizard** starts.
+1. On **SEA-ADM1**, in Hyper-V Manager connected to **SEA-SVR1**, under **Action (1)** pane, select **New (2)**, and then select **Hard Disk (3)**. The **New Virtual Hard Disk Wizard** starts.
+
+   ![](media/lab5-task2-1.png)
 
 1. On the **Before You Begin** page, select **Next >**.
 
-1. On the **Choose Disk Format** page, select **VHD** and then select **Next >**.
+   ![](media/lab5-task2-2.png)
 
-1. On the **Choose Disk Type** page, select **Differencing**, and then select **Next >**.
+1. On the **Choose Disk Format** page, select **VHD (1)** and then select **Next > (2)**.
 
-1. On the **Specify Name and Location** page, specify the following settings, and then select **Next >**:
+   ![](media/lab5-task2-3.png)
 
-   - Name: **SEA-VM1**
-   - Location: **C:\Base**
+1. On the **Choose Disk Type** page, select **Differencing (1)**, and then select **Next > (2)**.
 
-1. On the **Configure Disk** page, in the **Location** box, enter **C:\Base\BaseImage.vhd**, and then select **Next >**.
+   ![](media/lab5-task2-4.png)
+
+1. On the **Specify Name and Location** page, specify the following settings, and then select **Next > (3)**:
+
+   - Name: **SEA-VM1 (1)**
+   - Location: **C:\Base (2)**
+
+   ![](media/lab5-task2-5.png)
+
+1. On the **Configure Disk** page, in the **Location** box, enter **C:\Base\BaseImage.vhd (1)**, and then select **Next > (2)**.
+
+   ![](media/lab5-task2-6.png)
 
 1. On the **Summary** page, select **Finish**.
 
@@ -93,39 +105,55 @@ For this lab, you'll use the available VM environment.
 
 #### Task 3: Create a virtual machine
 
-1. On **SEA-ADM1**, in Hyper-V Manager, select **New**, and then select **Virtual Machine**. The **New Virtual Machine Wizard** starts.
+1. On **SEA-ADM1**, in Hyper-V Manager,under **Action (1)** pane, select **New (2)**, and then select **Virtual Machine (3)**. The **New Virtual Machine Wizard** starts.
+
+   ![](media/lab5-task3-1.png)
 
 1. On the **Before You Begin** page, select **Next >**.
 
-   ![](media/next1.png) 
+   ![](media/lab5-task3-2.png)
 
 1. On the **Specify Name and Location** page, enter **SEA-VM1 (1)**, and then select the check box next to **Store the virtual machine in a different location (2)**.
 
 1. In the **Location** box, enter **C:\Base (3)**, and then select **Next > (4)**.
 
-   ![](media/next2.png)
+   ![](media/lab5-task3-4.png)
 
 1. On the **Specify Generation** page, select **Generation 1**, and then select **Next >**.
 
+   ![](media/lab5-task3-5.png)
+
 1. On the **Assign Memory** page, enter **4096**, and then select **Next >**.
+
+   ![](media/lab5-task3-6.png)
 
 1. On the **Configure Networking** page, select the Connection drop-down menu, select **Contoso Private Switch**, and then select **Next >**.
 
-1. On the **Connect Virtual Hard Disk** page, select **Use an existing virtual hard disk**, and then select **Browse**.
+   ![](media/lab5-task3-7.png)
+
+1. On the **Connect Virtual Hard Disk** page, select **Use an existing virtual hard disk (1)**, and then select **Browse (2)**.
+
+   ![](media/lab5-task3-8.png)
 
 1. Browse to **C:\Base**, select **SEA-VM1.vhd**, select **Open**, and then select **Next >**.
 
+   ![](media/lab5-task3-9.png)
+
 1. On the **Summary** page, select **Finish**. Notice that **SEA-VM1** displays in the Virtual Machines list.
 
-   ![](media/seavm1.png)
+   ![](media/lab5-task3-10.png)
 
 1. Select **SEA-VM1**, and then in the Actions pane, under **SEA-VM1**, select **Settings**.
 
+   ![](media/lab5-task3-11.png)
+
 1. In the **Hardware** list, select **Memory**.
 
-1. In the **Dynamic Memory** section, select the check box next to **Enable Dynamic Memory**.
+   ![](media/lab5-task3-12.png)
 
-1. Next to **Maximum RAM**, enter **4096**, and then select **OK**.
+1. In the **Dynamic Memory** section, select the check box next to **Enable Dynamic Memory (1)**. Next to **Maximum RAM**, enter **4096 (2)**, and then select **OK (3)**.
+
+   ![](media/lab5-task3-14.png)
 
 1. Close Hyper-V Manager.
 
@@ -165,16 +193,20 @@ For this lab, you'll use the available VM environment.
 
 1. On the **All connections** pane, select **+ Add**.
 
-   ![](media/add1.png)
+   ![](media/lab5-task4-6.png)
 
 1. On the **Add or create resources** pane, on the **Servers** tile, select **Add**.
 
+   ![](media/lab5-task4-7.png)
+
 1. In the **Server name** text box, enter **sea-svr1.contoso.com**.
 
-1. Ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
+1. Ensure that the **Use another account for this connection (1)** option is selected, enter the following credentials, and then select **Add with credentials (4)**:
 
-   - Username: **CONTOSO\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: **CONTOSO\Administrator (2)**
+   - Password: **Pa55w.rd (3)**
+
+   ![](media/lab5-task4-9.png)
 
    > **Note**: After performing step 8, if an error message that says **You can add this server to your list of connections, but we can't confirm it's available.** appears, select **Add**. In the All Connections pane,  select **sea-svr1.contoso.com**, and then select **Manage as**. In the **Specify your credentials** dialog box, ensure that the **Use another account for this connection** option is selected, enter the Administrator credentials, and then select **Continue**.
 
@@ -182,19 +214,27 @@ For this lab, you'll use the available VM environment.
 
 1. Select **sea-svr1.contoso.com**, from the left navigation menu, in the **Tools** list, select **Virtual machines (1)**, select the **Summary (2)** tab, and then review its content.
 
-   ![](media/virtualmachines1.png)
+   ![](media/lab5-task4-10.png)
 
 1. Select the **Inventory** tab and verify that it contains SEA-VM1.
 
+   ![](media/lab5-task4-11.png)
+
 1.  Select **SEA-VM1** and review its Properties pane.
+
+   ![](media/lab5-task4-12.png)
 
 1. Select **Settings**, and then select **Disks**.
 
 1. Scroll to the bottom of the pane and select **+ Add disk**.
 
+   ![](media/lab5-task4-14.png)
+
 1. Select **New Virtual Hard Disk**.
 
 1. On the **New Virtual Hard Disk** pane, in the **Size (GB)** text box, type **5**, leave other settings with their default values, and then select **Create**.
+
+   ![](media/lab5-task4-16.png)
 
 1. Select **Save disks settings**, and then select **Close**.
 
@@ -202,13 +242,15 @@ For this lab, you'll use the available VM environment.
 
 1. On the **Properties** pane of **SEA-VM1**, select **Power**, and then select **Start** to start **SEA-VM1**.
 
+   ![](media/lab5-task4-19.png)
+
 1. Scroll down and display the statistics for the running VM.
 
 1. Refresh the page, select **Power**, select **Shut down**, and then select **Yes** to confirm.
 
 1. From the lefy navigation menu, in the **Tools** list, select **Virtual switches (1)** and identify the **existing switches (2)**.
 
-   ![](media/virtualswitch.png)
+   ![](media/lab5-task4-22.png)
 
 ### Exercise 1 results
 
@@ -265,6 +307,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
    ```powershell
    Restart-Computer -Force
    ```
+
 #### Task 2: Install and run a Windows container
 
 1. After **SEA-SVR1** restarts, use the below PowerShell command again to establish a new PowerShell Remoting session to **SEA-SVR1**.
@@ -288,7 +331,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 1. Enter the following command, and then press Enter to download a Nano Server image containing an Internet Information Services (IIS) installation:
 
    ```powershell
-   docker pull nanoserver/iis
+   docker pull mcr.microsoft.com/windows/servercore/iis
    ```
 
    > **Note**: The time it takes to complete the download will depend on the available bandwidth of the network connection from the lab VM to the Microsoft container registry.
@@ -301,7 +344,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 1. Enter the following command, and then press Enter to launch a container based on the downloaded image:
 
    ```powershell
-   docker run --isolation=hyperv -d -t --name nano -p 80:80 nanoserver/iis 
+   docker run --isolation=hyperv -d -t --name nano -p 80:80 mcr.microsoft.com/windows/servercore/iis 
    ```
 
    > **Note**: The docker command starts a container in the Hyper-V isolation mode (which addresses any host operating system incompatibility issues) as a background service (`-d`) and configures networking such that port 80 of the container host maps to port 80 of the container. 
