@@ -34,7 +34,7 @@ In this lab, you will perform:
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-   >**Note**: If this is the first time you are starting Cloud Shell and you are presented with the **Getting started** page, select the subscription you are using in this lab, then select **No storage account required**, and apply **Apply**.
+   >**Note**: If this is the first time you are starting Cloud Shell and you are presented with the **Getting started** page, select the subscription you are using in this lab, then select **No storage account required**, and **Apply**.
 
 1. In the toolbar of the Cloud Shell pane, select the **Manage Files** icon, in the drop-down menu, select **Upload**, and then upload the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab04\L04-sub_template.json** file to the Cloud Shell home directory.
 
