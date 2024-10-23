@@ -1,4 +1,4 @@
-<img width="486" alt="image" src="https://github.com/user-attachments/assets/14ea3311-f24c-44f9-bb06-0fd1ff182360"># Lab 9: Implementing storage solutions in Windows Server
+# Lab 9: Implementing storage solutions in Windows Server
 
 ## Lab scenario
 
@@ -164,6 +164,8 @@ In this lab, you will perform:
 
 1. On the Add or create resources pane, on the **Servers** tile, select **Add**.
 
+   ![](media/add-server.png)
+
 1. In the **Server name** text box, enter **sea-svr3.contoso.com**. 
 
 1. If needed, ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
@@ -171,7 +173,7 @@ In this lab, you will perform:
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
   
-	![](media/powershell-admin.png)
+	![](media/add-with-creds.png)
 
 1. On the **sea-svr3.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\Administrator** user with **Pa55w.rd** as its password.
 
@@ -271,9 +273,9 @@ In this lab, you will perform:
 
 1. On **SEA-ADM1**, switch to the Disks pane in **Server Manager**, and then, in the **TASKS** menu in the upper right corner, select **Refresh**.
 
-   ![](media/disk-refresh.png)
-
 1. In **Server Manager**, with **Disks** of **File and Storage Services** selected in the tree pane, in the **TASKS** menu in the upper right corner, select **Refresh**.
+
+   ![](media/disk-refresh.png)
 
 1. Review the updated **SEA-SVR3** disk configuration with disks 2 and 3 online.
 
