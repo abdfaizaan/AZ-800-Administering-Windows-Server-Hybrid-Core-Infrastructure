@@ -159,18 +159,20 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. On the **az800l08-vnet0 | Peerings** virtual network page, select **+ Add**.
 
+    ![](media/second_peering_add.png)
+
 1. Specify the following settings (leave others with their default values), and then select **Add**:
 
     | Setting | Value |
     | --- | --- |
-    | This virtual network: Peering link name | **az800l08-vnet0_to_az800l08-vnet2** |
-    | Allow 'az800l08-vnet0' to access the peered virtual network | **Select the checkbox**|
-    | Allow 'az800l08-vnet0' to receive forwarded traffic from the peered virtual network| **Select the checkbox** |
-    | Remote virtual network: Peering link name | **az800l08-vnet2_to_az800l08-vnet0** |
+    | This virtual network: Peering link name | **az800l08-vnet2_to_az800l08-vnet0** |
     | Virtual network deployment model | **Resource manager** |
-    | Remote virtual network: Virtual network | **az800l08-vnet2** |
-    | Allow 'az800l08-vnet2' to access 'az800l08-vnet1'| **Select the checkbox**|
-    |Allow 'az800l08-vnet2' to receive forwarded traffic from 'az800l08-vnet1' | **Select the checkbox** |
+    | Virtual network | **az800l08-vnet2** |    
+    | Allow 'az800l08-vnet2' to access 'az800l08-vnet0' | **Select the checkbox**|
+    | Allow 'az800l08-vnet2' to receive forwarded traffic from 'az800l08-vnet0'| **Select the checkbox** |
+    | Local virtual network summary: Peering link name | **az800l08-vnet0_to_az800l08-vnet2** |
+    | Allow 'az800l08-vnet0' to access 'az800l08-vnet2'| **Select the checkbox**|
+    | Allow 'az800l08-vnet0' to receive forwarded traffic from 'az800l08-vnet2' | **Select the checkbox** |
 
     >**Note**: This step establishes two peerings - one from **az800l08-vnet0** to **az800l08-vnet2** and the other from **az800l08-vnet2** to **az800l08-vnet0**. This completes setting up the hub and spoke topology (with the **az800l08-vnet0** virtual network serving the role of the hub, while **az800l08-vnet1** and **az800l08-vnet2** are its spokes).
 
@@ -243,7 +245,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 #### Task 4: Configure routing in the hub and spoke topology
 
-1. In the Azure portal, In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Virtual machines**.
+1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Virtual machines**.
 
 1. On the **Virtual machines** page, in the list of virtual machines, select **az800l08-vm0**.
 
@@ -257,9 +259,25 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
      ![](media/az13.png)
 
-   > **Note**: This setting is required in order for **az800l08-vm0** to function as a router, which will route traffic between two spoke virtual networks.
+    > **Note**: This setting is required in order for **az800l08-vm0** to function as a router, which will route traffic between two spoke virtual networks.
 
-   > **Note**: Now you need to configure the operating system of the **az800l08-vm0** virtual machine to support routing.
+1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Network interfaces**.
+
+1. Select **az800l08-nic1** from the list.
+
+    ![](media/nic1_select.png)
+
+1. From the left panel, under **Settings**, select **IP Configurations**.
+
+    ![](media/nic1_settings.png)
+
+1. Select **Enable IP forwarding** check box and click on **Apply** to apply changes.
+
+    ![](media/nic1_apply_changes.png)
+
+    >**Note**: Follow the same process for **az800l08-nic2** network interface and enable IP forwarding.
+
+    > **Note**: Now you need to configure the operating system of the **az800l08-vm0** virtual machine to support routing.
 
 1. In the Azure portal, browse back to the **az800l08-vm0** Azure virtual machine page.
 
