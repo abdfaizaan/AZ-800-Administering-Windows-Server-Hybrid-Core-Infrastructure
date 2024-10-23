@@ -232,11 +232,17 @@ In this lab, you will perform:
 
 1. On **SEA-ADM1**, select **Start**, and then select **Settings**.
 
-1. In the **Settings** window, select **Network & Internet**, and then select **Network and Sharing Center**.
+1. In the **Settings** window, select **Network & Internet**.
 
    ![](media/az800lab7img24.png)
 
+1. In **Network & Internet** pane, select **Network and Sharing Center**.
+
+   ![](media/az800lab7img43.png)
+
 1. In **Network and Sharing Center**, select **Ethernet**, and then select **Properties**.
+
+   ![](media/az800lab7img44.png)
 
 1. In the **Ethernet Properties** dialog box, select **Internet Protocol Version 4 (TCP/IPv4)**, and then select **Properties**.
 
