@@ -43,7 +43,7 @@ For this lab, you'll use the available VM environment and an Azure AD tenant.
 
 1. Connect to **SEA-ADM1**, and if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 
-1. On **SEA-ADM1**, select **Start**, and then select **Windows PowerShell (Admin)**.
+1. On **SEA-ADM1**, select **Start**, and then right click on **Windows PowerShell** and select **Run as Administrator**.
 
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to download the latest version of Windows Admin Center:
 	
@@ -100,15 +100,17 @@ For this lab, you'll use the available VM environment and an Azure AD tenant.
 
    ![](media/lab3-t3-1.png) 
 
-1. Select the **Security (Preview) and DNS** extension, then right click and select **Install**. The extension will install and Windows Admin Center will refresh.
+1. Select the **Security (Preview)** extension, then right click and select **Install**. The extension will install and Windows Admin Center will refresh.
 
    ![](media/lab3-t3-2.png) 
 
-   ![](media/lab3-t3-3.png) 
-
    > **Note**: If the **Security (Preview)** extension is not available, choose another Microsoft extension.
 
-1. In the details pane, select **Installed extensions** and verify that the list includes the extension you just installed.
+1. In the details pane, select **Installed extensions** and verify that the list includes the **Security (Preview)** extension you just installed, and another extension named **DNS** as shown below:
+
+   ![](media/sec-preexten.png)
+
+   ![](media/dns-extension.png) 
 
 1. On the top menu, next to **Settings**, select the drop-down arrow, and then select **Server Manager**.
 

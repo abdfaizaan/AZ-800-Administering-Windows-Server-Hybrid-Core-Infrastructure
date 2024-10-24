@@ -80,9 +80,9 @@ By following this workaround, you can ensure accurate execution of the PowerShel
  
       ![Enter Your Password](media/sc900-image-2.png)
 
-4.If **Action required** pop-up window appears, click on **Ask later**
+4. If **Action required** pop-up window appears, click on **Ask later**
 
-   ![](media/getting_started_ask_later_sc.png)
+    ![](media/getting_started_ask_later_sc.png)
        
 5. If prompted to stay signed in, you can click "No."
  
@@ -93,3 +93,5 @@ By following this workaround, you can ensure accurate execution of the PowerShel
     ![Start Your Azure Journey](media/sc900-image(3).png)
  
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
+
+>**NOTE:** If you encounter any issues where a webpage attempts to download instead of opening in your browser, then press and hold **Ctrl/Cmd** key on your keyboard, and **click the link**. This will force the page to open in a new tab and may resolve the issue of the page being downloaded.
