@@ -175,6 +175,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. Specify the following settings for **Local virtual network** (leave others with their default values), and then select **Add**:
 
+    | Setting | Value |
+    | --- | --- |
     | Peering link name | **az800l08-vnet0_to_az800l08-vnet2** |
     | Allow 'az800l08-vnet0' to access 'az800l08-vnet2'| **Select the checkbox**|
     | Allow 'az800l08-vnet0' to receive forwarded traffic from 'az800l08-vnet2' | **Select the checkbox** |
