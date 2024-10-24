@@ -264,24 +264,6 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
     > **Note**: This setting is required in order for **az800l08-vm0** to function as a router, which will route traffic between two spoke virtual networks.
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Network interfaces**.
-
-1. Select **az800l08-nic1** from the list.
-
-    ![](media/nic1_select.png)
-
-1. From the left panel, under **Settings**, select **IP Configurations**.
-
-    ![](media/nic1_settings.png)
-
-1. Select **Enable IP forwarding** check box and click on **Apply** to apply changes.
-
-    ![](media/nic1_apply_changes.png)
-
-    >**Note**: Follow the same process for **az800l08-nic2** network interface and enable IP forwarding.
-
-    > **Note**: Now you need to configure the operating system of the **az800l08-vm0** virtual machine to support routing.
-
 1. In the Azure portal, browse back to the **az800l08-vm0** Azure virtual machine page.
 
 1. On the **az800l08-vm0** page, from the left navigation pane, under the **Operations** section, select **Run command**, and then, in the list of commands, select **RunPowerShellScript**.
