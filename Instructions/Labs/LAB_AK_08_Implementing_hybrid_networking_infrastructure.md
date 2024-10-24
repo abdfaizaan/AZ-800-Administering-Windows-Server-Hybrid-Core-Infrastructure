@@ -131,11 +131,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
      ![](media/mod817.png)
 
-1. Specify the following settings (leave others with their default values), and then select **Add**:
+1. Specify the following settings for **Remote virtual network** (leave others with their default values)
 
     | Setting | Value |
     | --- | --- |
-    | Remote virtual network: Peering link name | **az800l08-vnet1_to_az800l08-vnet0** |
+    | Peering link name | **az800l08-vnet1_to_az800l08-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | Remote virtual network: Virtual network | **az800l08-vnet1** |
     | Allow 'az800l08-vnet1' to access 'az800l08-vnet0' | **Select the checkbox** |
@@ -143,11 +143,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
     ![](media/az7.png)
 
+1. Specify the following settings for **Local virtual network** (leave others with their default values), and then select **Add**:
+
     | Setting | Value |
     | --- | --- |
-    | This virtual network: Peering link name | **az800l08-vnet0_to_az800l08-vnet1** |
+    | Peering link name | **az800l08-vnet0_to_az800l08-vnet1** |
     | Allow 'az800l08-vnet0' to access 'az800l08-vnet1' | **Select the checkbox** |
-    |Allow 'az800l08-vnet0' to receive forwarded traffic from 'az800l08-vnet1'| **Select the checkbox** |
+    | Allow 'az800l08-vnet0' to receive forwarded traffic from 'az800l08-vnet1'| **Select the checkbox** |
     
     ![](media/az8.png)
 
@@ -161,16 +163,19 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
     ![](media/second_peering_add.png)
 
-1. Specify the following settings (leave others with their default values), and then select **Add**:
+1. Specify the following settings for **Remote virtual network** (leave others with their default values)
 
     | Setting | Value |
     | --- | --- |
-    | This virtual network: Peering link name | **az800l08-vnet2_to_az800l08-vnet0** |
+    | Peering link name | **az800l08-vnet2_to_az800l08-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | Virtual network | **az800l08-vnet2** |    
     | Allow 'az800l08-vnet2' to access 'az800l08-vnet0' | **Select the checkbox**|
     | Allow 'az800l08-vnet2' to receive forwarded traffic from 'az800l08-vnet0'| **Select the checkbox** |
-    | Local virtual network summary: Peering link name | **az800l08-vnet0_to_az800l08-vnet2** |
+
+1. Specify the following settings for **Local virtual network** (leave others with their default values), and then select **Add**:
+
+    | Peering link name | **az800l08-vnet0_to_az800l08-vnet2** |
     | Allow 'az800l08-vnet0' to access 'az800l08-vnet2'| **Select the checkbox**|
     | Allow 'az800l08-vnet0' to receive forwarded traffic from 'az800l08-vnet2' | **Select the checkbox** |
 
