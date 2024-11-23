@@ -5,7 +5,7 @@
       "BaseURL": "https://github.com/CloudLabs-MOC/AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure/tree/master",
       "Files": [
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure/self-paced/Instructions/Labs/Lab-Scenario-Preview/Module08.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure/refs/heads/selfpaced/Instructions/Labs/Lab-Scenario-Preview/Module08.md",
           "Order": 1
         }
       ]
