@@ -34,8 +34,6 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. Select **SEA-ADM1**.
 
-   ![](media/az-1.png) 
-
 1. Sign in using the following credentials:
 
    - Username: **Administrator**
