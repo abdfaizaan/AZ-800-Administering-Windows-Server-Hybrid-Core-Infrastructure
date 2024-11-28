@@ -2,7 +2,7 @@
 
 ## Lab scenario
 
-To address concerns regarding management and monitoring overhead resulting from using Microsoft Microsoft Entra ID (Azure AD) to authenticate and authorize access to Azure resources, you decide to test integration between on-premises Active Directory Domain Services (AD DS) and Azure AD to verify that this will address business concerns about managing multiple user accounts by using a mix of on-premises and cloud resources.
+To address concerns regarding management and monitoring overhead resulting from using Microsoft Microsoft Entra ID (Azure AD) to authenticate and authorize access to Azure resources, you decide to test integration between on-premises Active Directory Domain Services (AD DS) and Entra ID to verify that this will address business concerns about managing multiple user accounts by using a mix of on-premises and cloud resources.
 
 Additionally, you want to make sure that your approach addresses the Information Security team's concerns and preserves existing controls applied to Active Directory users, such as sign-in hours and password policies. Finally, you want to identify Azure AD integration features that allow you to further enhance on-premises Active Directory security and minimize its management overhead, including Azure AD Password Protection for Windows Server Active Directory and Self-Service Password Reset (SSPR) with password writeback.
 
