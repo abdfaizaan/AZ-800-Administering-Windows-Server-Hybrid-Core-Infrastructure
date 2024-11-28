@@ -257,6 +257,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/az-11.png)
 
+    >**Note:** If you encounter the message **Directory synchronization is enabled for this directory, but has not taken effect. Please wait untill directory synchronization is ready** in the configuration window, allow up to 30 minutes for the synchronization process to complete.      
+ 
 ## Exercise 4: Verifying integration between AD DS and Microsoft Entra ID
 
 ### Task 1: Verify synchronization in the Azure portal
