@@ -101,11 +101,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On **SEA-ADM1**, navigate back to the **Microsoft Entra ID** page in the Azure portal, from the left-hand navigation pane select **Users**.
 
-   ![](media/azz22.png)
+    ![](media/azz22.png)
 
 1. On the **Users** page, select **+ New User (1)** and in drop down select **Create new user (2)**
 
-   ![](media/az-4.png)
+    ![](media/az-4.png)
 
 1. On the **Create new User** page, under **Basics** tab, provide the below details and then click on **Next: Properties> (4)**.
 
@@ -119,19 +119,19 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. Under **settings** in the **Usage location** drop-down list, select **United States (1)** and then click on **Next: Assignments> (2)**.
 
-   ![](media/az-6.png)
+    ![](media/az-6.png)
 
 1. Under **Assignments** tab , select **+ Add role** and on **Directory roles** page, from the list of roles, select **Global administrator (1)**, and then select **Select (2)**.
 
-   ![](media/az-7.png)
+    ![](media/az-7.png)
 
 1. On the **Create new user** page, select **Next: Review + Create** and **Create**.
 
-   ![](media/azz11.png)
+    ![](media/azz11.png)
 
 1. Once created you can see the created user in the **Users** page.
 
-   ![](media/azz2.png)
+    ![](media/azz2.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -232,7 +232,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/az-10.png)
 
-   >**Note**: If a Microsoft Sign-in pop appears, please click on Add account and sign-in using your credentials.
+   >**Note**: If a Microsoft Sign-in pop appears, please sign-in using your credentials.
 
 1. On the **Connect to AD DS** page, enter the following credentials, and then select **Next (3)**:
 
@@ -333,7 +333,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
      ![](media/az-18.png)
 
-1. In the **Password** and **Confirm password** fields, enter **Pa55w.rd**, and then select **Next >**.
+1. In the **Password** and **Confirm password** fields, enter `Pa55w.rd`, and then select **Next >**.
 
    ![](media/azz33.png)
 
@@ -402,7 +402,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/az-26.png)   
 
-1. On the **Additional tasks** page, select **Customize synchronization options**, and then select **Next**.
+1. On the **Additional tasks** page, select **Customize synchronization options (1)**, and then select **Next (2)**.
 
    ![](media/az--27.png)
 
@@ -440,11 +440,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/az-33.png)
 
+    >**Note:** If you encounter the message **Directory synchronization is enabled for this directory, but has not taken effect. Please wait untill directory synchronization is ready** in the configuration window, allow up to 30 minutes for the synchronization process to complete.   
+
 ### Task 2: Enable pass-through authentication in Microsoft Entra Connect
 
 1. On **SEA-ADM1**, on the **Start** menu, expand **Azure AD Connect**, and then select **Azure AD Connect**.
 
-1. In the **Azure AD Connect** window, select **Configure**.
+1. In the **Welcome to Microsoft Entra Connect Sync** window, select **Configure**.
 
 1. On the **Additional tasks** page, select **Change user sign-in (1)**, then select **Next (2)**.
 
@@ -484,6 +486,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 1. On the **Configuration complete** page, select **Exit**.
 
    ![](media/az-39.png)
+
+    >**Note:** If you encounter the message **Directory synchronization is enabled for this directory, but has not taken effect. Please wait untill directory synchronization is ready** in the configuration window, allow up to 30 minutes for the synchronization process to complete.      
 
 ### Task 3: Verify pass-through authentication in Azure
 
@@ -570,6 +574,8 @@ Under **User Sign-In**, select **Seamless single sign-on (2)**.
 
    > **Note**: Verify that each service has the **Running** status.
 
+   >**Note:** If you encounter any error, please re run the command.
+
 1. In the **Windows PowerShell** console, enter the following command and press Enter to start a PowerShell Remoting session to **SEA-SVR1**:
 
    ```powershell
@@ -588,6 +594,8 @@ Under **User Sign-In**, select **Seamless single sign-on (2)**.
    ```
 
    ![](media/az-50.png)   
+
+   >**Note:** If you encounter any error, please re run the command.
 
 1. As instructed, open another Microsoft Edge window, browse to **https://microsoft.com/devicelogin** and when prompted, enter the code included in the message displayed in the PowerShell Remoting session. 
 
@@ -659,10 +667,10 @@ Under **User Sign-In**, select **Seamless single sign-on (2)**.
 
    - In the **Custom banned password list** text box, enter the following words (one per line): **(2)**
  
-   - **Contoso**
-   - **London**
+      - **Contoso**
+      - **London**
 
-     > **Note**: The list of banned passwords should be words that are relevant to your organization.
+        > **Note**: The list of banned passwords should be words that are relevant to your organization.
 
    - Verify that the slider for **Enable password protection on Windows Server Active Directory** is set to **Yes (3)**.
 
