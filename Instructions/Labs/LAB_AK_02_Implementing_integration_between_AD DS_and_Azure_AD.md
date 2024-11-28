@@ -34,6 +34,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. Select **SEA-ADM1**.
 
+   ![](media/az-1.png) 
+
 1. Sign in using the following credentials:
 
    - Username: **Administrator**
@@ -42,7 +44,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 ## Exercise 1: Preparing Microsoft Entra ID for AD DS integration
 
-#### Task 1: Create a custom domain in Azure
+### Task 1: Create a custom domain in Azure
 
 1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 
@@ -62,21 +64,21 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/action.png) 
  
-1. If prompted to stay signed in, you can click **No**.
+4. If prompted to **Stay signed in**, you can click **No**.
 
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
-1. On the Azure portal, from the **Search resources, Services, and docs(G+/)** blade, search for and select **Microsoft Entra ID**.
+1. On the Azure portal, from the **Search resources, Services, and docs(G+/)** blade, search for **Microsoft Entra ID (1)** and select **Microsoft Entra ID (2)** from the services.
 
-1. On the **Microsoft Entra ID** page, from the left-hand navigation pane, under **Manage** select **Custom domain names**.
+   ![](media/az--2.png) 
 
-1. On the **Custom domain names** page, select **+ Add custom domain**.
+1. On the **Microsoft Entra ID** page, from the left-hand navigation pane, under **Manage** select **Custom domain names (1)** and then select **+ Add custom domain (2)**.
 
-   ![](media/azz1.png) 
+   ![](media/az-2.png) 
 
-1. In the **Custom domain name** pane, in the **Custom domain name** text box, enter **contoso.com**, and then select **Add domain**.
+1. In the **Custom domain name** pane, in the **Custom domain name** text box, enter **contoso.com (1)**, and then select **Add domain (2)**.
 
-   ![](media/azz4.png)
+   ![](media/az-3.png)
 
 1. On the `contoso.com` custom domain name page, review the Domain Name System (DNS) record types that you would use to verify the domain.
 
@@ -86,7 +88,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/azz5.png)
 
-   >**Note**: While, in general, you would use DNS records to verify a domain, this lab doesn't require the use of a verified domain.
+   > **Note**: While, in general, you would use DNS records to verify a domain, this lab doesn't require the use of a verified domain.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -95,43 +97,41 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 <validation step="b65ef28d-a185-42fd-a25f-5a18bb1b2903" /> 
 
-#### Task 2: Create a user with the Global Administrator role
+### Task 2: Create a user with the Global Administrator role
 
 1. On **SEA-ADM1**, navigate back to the **Microsoft Entra ID** page in the Azure portal, from the left-hand navigation pane select **Users**.
 
-    ![](media/azz22.png)
+   ![](media/azz22.png)
 
-1. On the **Users** page, select **+ New User** and in drop down select **Create new user**
+1. On the **Users** page, select **+ New User (1)** and in drop down select **Create new user (2)**
 
-    ![](media/azz7.png)
+   ![](media/az-4.png)
 
-1. On the **Create new User** page, under **Basics**, in the **User principal name** and **Display Name** text boxes, enter **admin1**.
+1. On the **Create new User** page, under **Basics** tab, provide the below details and then click on **Next: Properties> (4)**.
 
-   >**Note**: Ensure the domain name drop-down menu for the **User name** lists the default domain name ending with `onmicrosoft.com`
+   - In the **User principal name** and **Display Name** text boxes, enter **admin1 (1)(2)**.
 
-1. Under **Password**, select the **Auto generate** checkbox. Record the user name and password as you'll use it later in this lab.
+     >**Note**: Ensure the domain name drop-down menu for the **User name** lists the default domain name ending with `onmicrosoft.com`.
 
-    ![](media/azz8.png)
+   - Under **Password**, select the **Auto generate (2)** checkbox. Record the user name and password as you'll use it later in this lab.
 
-1. Select **Next: Properties>**
+     ![](media/az-5.png)
 
-1. Under **settings** in the **Usage location** drop-down list, select **United States**.
+1. Under **settings** in the **Usage location** drop-down list, select **United States (1)** and then click on **Next: Assignments> (2)**.
 
-    ![](media/azz23.png)
+   ![](media/az-6.png)
 
-1. Select **Next: Assignments>**
+1. Under **Assignments** tab , select **+ Add role** and on **Directory roles** page, from the list of roles, select **Global administrator (1)**, and then select **Select (2)**.
 
-1. Under **Assignments** tab , select **+ Add role** and on **Directory roles** page, from the list of roles, select **Global administrator**, and then select **Select**.
-
-    ![](media/azz10.png)
+   ![](media/az-7.png)
 
 1. On the **Create new user** page, select **Next: Review + Create** and **Create**.
 
-    ![](media/azz11.png)
+   ![](media/azz11.png)
 
 1. Once created you can see the created user in the **Users** page.
 
-    ![](media/azz2.png)
+   ![](media/azz2.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -140,7 +140,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 <validation step="4ea1ff7e-4b7b-4fc0-bb83-fec04f01bdf9" />
 
-#### Task 3: Change the password for the user with the Global Administrator role
+### Task 3: Change the password for the user with the Global Administrator role
 
 1. On the Azure portal, select your user account, and then select **Sign out**.
 
@@ -148,7 +148,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On the **Pick an account** page, select **+ Use another account**.
 
-1. On the **Sign in** page, enter the fully-qualified username of the user account you previously created, and then select **Next**.
+1. On the **Sign in** page, enter the fully-qualified username of the user account you previously created , and then select **Next**.
+
+    >**Note**: It looks similar to **admin1@otuwamocXXXX.onmicrosoft.com**
 
 1. For the current password, use the password that you copied in the previous step.
 
@@ -164,7 +166,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 ## Exercise 2: Preparing on-premises AD DS for Microsoft Entra ID integration
 
-#### Task 1: Install IdFix
+### Task 1: Install IdFix
 
 1. On **SEA-ADM1**, open a new tab in Microsoft Edge, and then browse to **https://github.com/microsoft/idfix**.
 
@@ -180,17 +182,17 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. In the **IdFix Privacy Statement** dialog box, review the disclaimer, and then select **OK**.
 
-#### Task 2: Run IdFix
+### Task 2: Run IdFix
 
 1. In the **IdFix** window, select **Query**.
 
-   ![](media/az800lab2img1.png)
-
 1. If presented with the **Schema Warning** dialog box, select **Yes**.
 
-   ![](media/az800lab2img2.png)
+   ![](media/az-8.png) 
 
 1. Review the list of objects from Microsoft Entra ID, and observe the **ERROR** and **ATTRIBUTE** columns. In this scenario, the value of **displayName** for **ContosoAdmin** is blank, and the tool's recommended new value appears in the **UPDATE** column.
+
+   ![](media/az-9.png) 
 
 1. In the **IdFix** window, from the **ACTION** drop-down menu **(1)**, select **Edit(2)**, and then select **Apply(3)** to automatically implement the recommended changes.
 
@@ -204,7 +206,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 ## Exercise 3: Downloading, installing, and configuring Microsoft Entra Connect
 
-#### Task 1: Install and configure Microsoft Entra Connect
+### Task 1: Install and configure Microsoft Entra Connect
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to **Microsoft Entra ID**.
 
@@ -220,44 +222,46 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On the status bar, select **Open file**.
 
-1. On the **Microsoft Microsoft Entra ID Connect** page, select the **I agree to the license terms and privacy notice** checkbox, and then select **Continue**.
+1. On the **Welcome to Microsoft Microsoft Entra Connect Sync** page, select the **I agree to the license terms and privacy notice (1)** checkbox, and then select **Continue (2)**.
 
-   ![](media/azz17.png)
+   ![](media/za1.png)
 
 1. On the **Express Settings** page, select **Use express settings**.
 
-1. On the **Connect to Azure AD** page, enter the username and password of the Azure AD Global Administrator user account you created in exercise 1, and then select **Next**.
+1. On the **Connect to Microsoft Entra ID** page, enter the username of the Azure AD Global Administrator user account you created in exercise 1 **(1)**, and then select **Next (2)**.
 
-   ![](media/azz18.png)
+   ![](media/az-10.png)
 
-   >**Note:** If a Microsoft Sign-in pop appears, please click on Add account and sign-in using your credentials.
+   >**Note**: If a Microsoft Sign-in pop appears, please click on Add account and sign-in using your credentials.
 
-1. On the **Connect to AD DS** page, enter the following credentials, and then select **Next**:
+1. On the **Connect to AD DS** page, enter the following credentials, and then select **Next (3)**:
 
-   - Username: **CONTOSO\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: **CONTOSO\Administrator (1)**
+   - Password: **Pa55w.rd (2)**
      
-   ![](media/azz19.png)
+     ![](media/za2.png)
 
-1. On the **Azure AD sign-in configuration** page, note that the new domain you added is in the list of Active Directory UPN Suffixes, but its status is listed as **Not verified**.
+1. On the **Microsoft Entra sign-in configuration** page, note that the new domain you added is in the list of Active Directory UPN Suffixes, but its status is listed as **Not verified**.
 
    > **Note**: The domain name provided does not have to be a verified domain. While you typically would verify a domain prior to installing Microsoft Entra Connect, this lab doesn't require that verification step.
 
-1. Select the **Continue without matching all UPN suffixes to verified domains** checkbox, and then select **Next**.
+1. Select the **Continue without matching all UPN suffixes to verified domains (1)** checkbox, and then select **Next (2)**.
 
-   ![](media/azz20.png)
+   ![](media/za3.png)
 
 1. On the **Ready to configure** page, review the list of actions, and then select **Install**.
 
-   ![](media/azz21.png)
+   ![](media/za4.png)
 
    >**Note:** Wait for the installation to get completed.
 
 1. On the **Configuration complete** page, select **Exit**.
 
+   ![](media/az-11.png)
+
 ## Exercise 4: Verifying integration between AD DS and Microsoft Entra ID
 
-#### Task 1: Verify synchronization in the Azure portal
+### Task 1: Verify synchronization in the Azure portal
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal. 
 
@@ -273,11 +277,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On the **Microsoft Entra ID** page, select **Groups**.
 
-1. Note the list of groups synced from Microsoft Entra ID.
+   ![](media/az-12.png)
 
-   ![](media/azz25.png)
+1. Navigate to **All groups**, note the list of groups synced from Microsoft Entra ID.
 
-#### Task 2: Verify synchronization in the Synchronization Service Manager
+   ![](media/az-13.png)
+
+### Task 2: Verify synchronization in the Synchronization Service Manager
 
 1. On **SEA-ADM1**, on the **Start** menu, expand **Azure AD Connect**, and then select **Synchronization Service**.
 
@@ -295,31 +301,37 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. Close the **Synchronization Service Manager** window.
 
-#### Task 3: Update a user account in Active Directory
+### Task 3: Update a user account in Active Directory
 
-1. On **SEA-ADM1**, search and select **Server Manager**, click on the **Tools** menu from top right, select **Active Directory Users and Computers**.
+1. On **SEA-ADM1**, search and select **Server Manager**.
+
+   ![](media/az-14.png)
+
+1. Click on the **Tools** menu from top right, select **Active Directory Users and Computers**.
 
    ![](media/azz30.png) 
 
-1. In **Active Directory Users and Computers**, expand the **Sales**, and then open the properties for **Sumesh Rajan** by right clicking on the user.
+1. In **Active Directory Users and Computers**, expand the **Sales (1)**, and then open the properties **(3)** for **Sumesh Rajan** by right clicking on the user **(2)**.
 
-1. In the properties of the user, select the **Organization** tab.
+   ![](media/az-15.png)
 
-1. In the **Job Title** text box, enter **Manager**, and then select **OK**.
+1. In the properties of the user, select the **Organization (1)** tab. In the **Job Title** text box, enter **Manager (2)**, and then select **OK (3)**.
 
-#### Task 4: Create a user account in Active Directory
+   ![](media/az-16.png)
 
-1. In **Active Directory Users and Computers**, right-click or access the context menu for the **Sales**, select **New**, and then select **User**.
+### Task 4: Create a user account in Active Directory
 
-   ![](media/azz31.png)
+1. In **Active Directory Users and Computers**, right-click or access the context menu for the **Sales (1)**, select **New (2)**, and then select **User (3)**.
 
-1. In the **New Object - User** window, enter the following user details for each field, and then select **Next >**:
+   ![](media/az-17.png)
 
-   - First name: **Jordan**
-   - Last name: **Mitchell**
-   - User logon name: **Jordan**
+1. In the **New Object - User** window, enter the following user details for each field, and then select **Next > (4)**:
 
-   ![](media/azz32.png)
+   - First name: **Jordan (1)**
+   - Last name: **Mitchell (2)**
+   - User logon name: **Jordan (3)**
+
+     ![](media/az-18.png)
 
 1. In the **Password** and **Confirm password** fields, enter **Pa55w.rd**, and then select **Next >**.
 
@@ -327,9 +339,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. Select **Finish**.
 
-#### Task 5: Sync changes to Azure AD
+### Task 5: Sync changes to Azure AD
 
 1. On **SEA-ADM1**, on the **Start** menu, select **Windows PowerShell**.
+
+   ![](media/az--19.png)
 
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to trigger synchronization:
 
@@ -337,9 +351,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
    Start-ADSyncSyncCycle
    ```
 
+   ![](media/az-20.png)   
+
    > **Note**: Once the synchronization cycle starts, it can take 15 minutes for Microsoft Entra ID objects to appear in the Microsoft Entra ID portal.
 
-#### Task 6: Verify changes in Microsoft Entra ID
+### Task 6: Verify changes in Microsoft Entra ID
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal and go back to the **Microsoft Entra ID** page.
 
@@ -349,13 +365,23 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/azz34.png)
 
-1. Select the **Edit properties**, select **All**, tab and then verify that the **Job title** attribute has been synced from Microsoft Entra ID.
+1. Select the **Edit properties**.
+
+   ![](media/az-21.png)   
+
+1. Select **All (1)**, tab and then verify that the **Job title (2)** attribute has been synced from Microsoft Entra ID.
+
+   ![](media/az-22.png)   
 
 1. In Microsoft Edge, go back to the **All Users** page.
 
 1. On the **All Users** page, search for the user **Jordan** and select it.
 
-1. Select **Edit properties**, select **All** tab, and review the attributes of the user account that was synced from Microsoft Entra ID.
+   ![](media/az-23.png)   
+
+1. Select **Edit properties**, select **All (1)** tab, and review the attributes of the user account that was synced from Microsoft Entra ID **(2)**.
+
+   ![](media/az-24.png)   
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -366,111 +392,136 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 ## Exercise 5: Implementing Microsoft Entra ID integration features in AD DS
 
-#### Task 1: Enable password writeback in Microsoft Entra Connect
+### Task 1: Enable password writeback in Microsoft Entra Connect
 
-1. On **SEA-ADM1**, on the **Start** menu, expand **Azure AD Connect**, and then select **Azure AD Connect**.
+1. On **SEA-ADM1**, on the **Start** menu, expand **Azure AD Connect (1)**, and then select **Azure AD Connect (2)**.
 
-1. In the **Azure AD Connect** window, select **Configure**.
+   ![](media/az-25.png)   
+
+1. In the **Welcome to Microsoft Entra Connect Sync** window, select **Configure**.
+
+   ![](media/az-26.png)   
 
 1. On the **Additional tasks** page, select **Customize synchronization options**, and then select **Next**.
 
-   ![](media/azz43.png)
+   ![](media/az--27.png)
 
-1. On the **Connect to Azure AD** page, enter the following credentials, and then select **Next**.
+1. On the **Connect to Microsoft Entra ID** page, enter the **Email/Username:** given below, and then select **Next**.
    
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+     ![](media/az-27.png)      
    
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-     >**Note:** If a Microsoft sign-in pop up appears, please use the same credentials and add your account.
+     >**Note**: If a Microsoft Sign-in pop appears, please click on **+ Use another account** and sign-in using your credentials.
 
 1. On the **Connect your directories** page, select **Next**.
 
-   ![](media/azz44.png)
+   ![](media/az-29.png)
 
 1. On the **Domain and OU filtering** page, select **Next**.
 
-1. On the **Optional features** page, select **Password writeback**, and then select **Next**.
+   ![](media/az-30.png)
 
-   ![](media/azz45.png)
+1. On the **Optional features** page, select **Password writeback (1)**, and then select **Next (2)**.
+
+   ![](media/az-31.png)
 
    > **Note**: Password writeback is required for self-service password reset of Active Directory users. This allows passwords changed by users in Azure AD to sync to the Active Directory.
 
 1. On the **Ready to configure** page, review the list of actions to be performed, and then select **Configure**.
 
+   ![](media/az-32.png)
+
    >**Note:** Wait for the configurations to get completed.
 
 1. On the **Configuration complete** page, select **Exit**.
 
-#### Task 2: Enable pass-through authentication in Microsoft Entra Connect
+   ![](media/az-33.png)
+
+### Task 2: Enable pass-through authentication in Microsoft Entra Connect
 
 1. On **SEA-ADM1**, on the **Start** menu, expand **Azure AD Connect**, and then select **Azure AD Connect**.
 
 1. In the **Azure AD Connect** window, select **Configure**.
 
-1. On the **Additional tasks** page, select **Change user sign-in**, then select **Next**.
+1. On the **Additional tasks** page, select **Change user sign-in (1)**, then select **Next (2)**.
 
-1. On the **Connect to Azure AD** page, enter the following credentials, and then select **Next**.
+   ![](media/az-34.png)
+
+1. On the **Connect to Microsoft Entra ID** page, enter the following credentials, and then select **Next**.
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
    
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-1. On the **User sign-in** page, select **Pass-through authentication**.
+     >**Note**: If a Microsoft Sign-in pop appears, please select the above account and sign-in using your credentials.
 
-   ![](media/azz46.png)
+1. On the **User sign-in** page, select **Pass-through authentication (1)**. Verify that the **Enable single sign-on (2)** checkbox is selected, and then select **Next (3)**.
 
-1. Verify that the **Enable single sign-on** checkbox is selected, and then select **Next**.
+   ![](media/az-35.png)
 
 1. On the **Enable single sign-on** page, select **Enter credentials**.
 
-1. In the **Forest credentials** dialog box, enter the following credentials, and then select **OK**:
+   ![](media/az-36.png)
 
-   - Username: **Administrator**
-   - Password: **Pa55w.rd**
+1. In the **Forest credentials** dialog box, enter the following credentials, and then select **OK (3)**:
 
-1. On the **Enable single sign-on** page, verify that there's a green check mark next to **Enter credentials**, and then select **Next**.
+   - Username: **Administrator (1)**
+   - Password: **Pa55w.rd (2)**
 
-   ![](media/azz47.png)
+     ![](media/az-37.png)   
+
+1. On the **Enable single sign-on** page, verify that there's a green check mark next to **Enter credentials (1)**, and then select **Next (2)**.
+
+   ![](media/az-38.png)
 
 1. On the **Ready to configure** page, review the list of actions to be performed, and then select **Configure**.
 
    >**Note:** Wait for the configurations to get completed.
 
-   >**Note:** If you are facing an error as **Directory synchronization is enabled for this directory, but has not yet taken effect. Please wait until directory synchronization is ready** please wait, it may take up to 30 mins to get the Synchronization ready.
-
 1. On the **Configuration complete** page, select **Exit**.
 
-#### Task 3: Verify pass-through authentication in Azure
+   ![](media/az-39.png)
+
+### Task 3: Verify pass-through authentication in Azure
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal and go back to the **Microsoft Entra ID** page.
 
 1. On the **Microsoft Entra ID** page in the Azure portal, select **Microsoft Entra Connect**.
 
-1. On the **Microsoft Entra Connect** page, in left navigation pane select **Connect Sync** and review the information under **User Sign-In**.
+1. On the **Microsoft Entra Connect** page, in left navigation pane select **Connect Sync (1)** and review the information under **User Sign-In**.
+Under **User Sign-In**, select **Seamless single sign-on (2)**.
 
-1. Under **User Sign-In**, select **Seamless single sign-on**.
-
-   ![](media/azz48.png)
+   ![](media/az-40.png)
 
 1. On the **Seamless single sign-on** page, note the on-premises domain name.
+
+   ![](media/az-41.png)
 
 1. In Microsoft Edge, go back to the **Microsoft Entra Connect** page.
 
 1. On the **Microsoft Entra Connect** page, select **Connect sync**, under **User Sign-In**, select **Pass-through authentication**.
 
+   ![](media/az-42.png)
+
 1. On the **Passthrough Authentication** page, note the **SEA-ADM1** server name under **Authentication Agent**.
+
+   ![](media/az-43.png)
 
    > **Note**: If you're not able see on-premises domain name and **SEA-ADM1** server name, kindly sign-in to azure portal in private window and perform above steps.
    > **Note**: To install the Azure AD Authentication Agent on multiple servers in your environment, you can download its binaries from the **Pass-through authentication** page in the Azure portal. 
 
-#### Task 4: Install and register the Azure AD Password Protection proxy service and DC agent
+### Task 4: Install and register the Azure AD Password Protection proxy service and DC agent
 
-1. On **SEA-ADM1**, start Microsoft Edge, go to the Microsoft Downloads website, browse to the **[Azure AD Password Protection for Windows Server Active Directory](https://www.microsoft.com/en-us/download/details.aspx?id=57071)** page where you can download installers, and then select **Download**.
+1. On **SEA-ADM1**, start Microsoft Edge, browse to the **[Azure AD Password Protection for Windows Server Active Directory](https://www.microsoft.com/en-us/download/details.aspx?id=57071)** page where you can download installers, and then select **Download**.
 
-1. On the **Choose the download you want** page, select the **AzureADPasswordProtectionProxySetup.exe** and the **AzureADPasswordProtectionDCAgentSetup.msi** files, and then select **Download**.
+   ![](media/az-44.png)
 
-   ![](media/azz49.png)
+1. On the **Choose the download you want** page, select the **AzureADPasswordProtectionProxySetup.exe (1)** and the **AzureADPasswordProtectionDCAgentSetup.msi (2)** files, and then select **Download (3)**.
+
+   ![](media/az-45.png)
 
 1. In the **Download multiple files** dialog box, select **Allow**.
 
@@ -492,6 +543,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
    Copy-Item -Path "$env:USERPROFILE\Downloads\AzureADPasswordProtectionProxySetup.exe" -Destination '\\SEA-SVR1.contoso.com\C$\Temp\'
    Invoke-Command -ComputerName SEA-SVR1.contoso.com -ScriptBlock { Start-Process -FilePath C:\Temp\AzureADPasswordProtectionProxySetup.exe -ArgumentList '/quiet /log C:\Temp\AzureADPPProxyInstall.log' -Wait }
    ```
+   
+   ![](media/az-46.png)   
 
    >**Note:** If it shows errors then wait for sometime and again perform the step-6.
 
@@ -503,6 +556,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
    Invoke-Command -ComputerName SEA-DC1.contoso.com -ScriptBlock { Start-Process msiexec.exe -ArgumentList '/i C:\Temp\AzureADPasswordProtectionDCAgentSetup.msi /quiet /qn /norestart /log C:\Temp\AzureADPPInstall.log' -Wait }
    Restart-Computer -ComputerName SEA-DC1.contoso.com -Force
    ```
+
+   ![](media/az-47.png)
+
 1. Run the following commands to validate that the installations resulted in the creation of services necessary to implement Azure AD Password Protection:
 
    ```powershell
@@ -510,15 +566,17 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
    Get-Service -Computer SEA-DC1 -Name AzureADPasswordProtectionDCAgent | fl
    ```
 
-   > **Note**: Verify that each service has the **Running** status.
+   ![](media/az-48.png)   
 
-   ![](media/az800lab2img5.png)
+   > **Note**: Verify that each service has the **Running** status.
 
 1. In the **Windows PowerShell** console, enter the following command and press Enter to start a PowerShell Remoting session to **SEA-SVR1**:
 
    ```powershell
    Enter-PSSession -ComputerName SEA-SVR1
    ```
+
+   ![](media/az-49.png)   
 
 1. From the **[SEA-SVR1]** prompt, enter the following command and press Enter to register the proxy service with Active Directory (replace the `<Azure_AD_Global_Admin>` placeholder with the following 
    credential):
@@ -529,13 +587,19 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
    Register-AzureADPasswordProtectionProxy -AccountUpn <Azure_AD_Global_Admin> -AuthenticateUsingDeviceCode
    ```
 
+   ![](media/az-50.png)   
+
 1. As instructed, open another Microsoft Edge window, browse to **https://microsoft.com/devicelogin** and when prompted, enter the code included in the message displayed in the PowerShell Remoting session. 
+
+   ![](media/az-52.png)
 
 1. When prompted, authenticate by using following credentials, and then select **Continue**.
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+1. When prompted **Are you trying to sign in to Microsoft Azure Powershell**, click on **Continue**.   
 
 1. Switch back to the PowerShell Remoting session, enter the following command and press Enter to exit the PowerShell Remoting session to **SEA-SVR1**:
 
@@ -567,38 +631,44 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
+1. When prompted **Are you trying to sign in to Microsoft Azure Powershell**, click on **Continue**.   
+
 1. Switch back to the PowerShell Remoting session, enter the following command, and then press Enter to exit the PowerShell Remoting session to **SEA-DC1**:
 
    ```powershell
    Exit-PSsession
    ```
 
-#### Task 5: Enable password protection in Azure
+### Task 5: Enable password protection in Azure
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal, go back to the **Microsoft Entra ID** page, and then, on the **Microsoft Entra ID** page, under **Manage** section, select **Security**.
 
-   ![](media/az800lab2img3.png)
+   ![](media/az-53.png)
 
 1. On the **Security** page, under **Manage** section, select **Authentication methods**.
 
-   ![](media/az800lab2img4.png)
+   ![](media/az-54.png)
 
 1. On the **Authentication methods** page, under **Manage** section, select **Password protection**.
 
-1. On the **Password protection** page, change the slider for **Enforce custom list** to **Yes**.
+   ![](media/az-55.png)
 
-1. In the **Custom banned password list** text box, enter the following words (one per line):
+1. On the **Password protection** page, 
+
+   - Change the slider for **Enforce custom list** to **Yes (1)**.
+
+   - In the **Custom banned password list** text box, enter the following words (one per line): **(2)**
  
    - **Contoso**
    - **London**
 
-   > **Note**: The list of banned passwords should be words that are relevant to your organization.
+     > **Note**: The list of banned passwords should be words that are relevant to your organization.
 
-1. Verify that the slider for **Enable password protection on Windows Server Active Directory** is set to **Yes**.
+   - Verify that the slider for **Enable password protection on Windows Server Active Directory** is set to **Yes (3)**.
 
-1. Verify that the slider for **Mode** is set to **Audit**, and then select **Save**.
+   - Verify that the slider for **Mode** is set to **Audit (4)**, and then select **Save (5)**.
 
-   ![](media/azz50.png)
+     ![](media/az-56.png)
 
 
 ### Review
