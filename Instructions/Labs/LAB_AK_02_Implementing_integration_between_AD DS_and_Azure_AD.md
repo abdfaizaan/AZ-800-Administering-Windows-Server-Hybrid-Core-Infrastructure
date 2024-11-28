@@ -62,9 +62,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/action.png) 
  
-4. If prompted to **Stay signed in**, you can click **No**.
+1. If prompted to **Stay signed in**, you can click **No**.
 
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
 1. On the Azure portal, from the **Search resources, Services, and docs(G+/)** blade, search for **Microsoft Entra ID (1)** and select **Microsoft Entra ID (2)** from the services.
 
@@ -113,7 +113,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    - Under **Password**, select the **Auto generate (2)** checkbox. Record the user name and password as you'll use it later in this lab.
 
-     ![](media/az-5.png)
+   ![](media/az-5.png)
 
 1. Under **settings** in the **Usage location** drop-down list, select **United States (1)** and then click on **Next: Assignments> (2)**.
 
