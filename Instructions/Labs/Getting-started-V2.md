@@ -32,7 +32,11 @@ For convenience, you can open the lab guide in a separate window by selecting th
 
 2. To Switch between the Virtual Machines, select the required VM from the dropdown.
 
-    ![Manage Your Virtual Machine](media/switch.png)
+    ![Manage Your Virtual Machine](media/gs2.png)
+
+    >**Note**: If this dropdown is not visible, please refresh the browser.
+
+    >**Note**: If you find any issue while connecting any VM as specified in the labguide, Please connect the **AZURE:HostVM-<inject key="DeploymentID" enableCopy="false"/>** first and try connecting the required VM from the dropdown.
 
 ## **Lab Duration Extension**
 
