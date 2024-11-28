@@ -6,7 +6,7 @@ To address concerns regarding management and monitoring overhead resulting from 
 
 Additionally, you want to make sure that your approach addresses the Information Security team's concerns and preserves existing controls applied to Active Directory users, such as sign-in hours and password policies. Finally, you want to identify Azure AD integration features that allow you to further enhance on-premises Active Directory security and minimize its management overhead, including Azure AD Password Protection for Windows Server Active Directory and Self-Service Password Reset (SSPR) with password writeback.
 
-Your goal is to implement pass-through authentication between on-premises AD DS and Azure AD.
+Your goal is to implement pass-through authentication between on-premises AD DS and Entra ID.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20integration%20between%20AD%20DS%20and%20Azure%20AD)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
