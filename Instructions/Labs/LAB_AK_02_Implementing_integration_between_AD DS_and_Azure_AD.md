@@ -107,13 +107,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On the **Create new User** page, under **Basics** tab, provide the below details and then click on **Next: Properties> (4)**.
 
-   - In the **User principal name** and **Display Name** text boxes, enter **admin1 (1)(2)**.
+    - In the **User principal name** and **Display Name** text boxes, enter **admin1 (1)(2)**.
 
-     >**Note**: Ensure the domain name drop-down menu for the **User name** lists the default domain name ending with `onmicrosoft.com`.
+      >**Note**: Ensure the domain name drop-down menu for the **User name** lists the default domain name ending with `onmicrosoft.com`.
 
-   - Under **Password**, select the **Auto generate (2)** checkbox. Record the user name and password as you'll use it later in this lab.
+    - Under **Password**, select the **Auto generate (2)** checkbox. Record the user name and password as you'll use it later in this lab.
 
-   ![](media/az-5.png)
+      ![](media/az-5.png)
 
 1. Under **settings** in the **Usage location** drop-down list, select **United States (1)** and then click on **Next: Assignments> (2)**.
 
@@ -148,13 +148,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On the **Sign in** page, enter the fully-qualified username of the user account you previously created , and then select **Next**.
 
-    >**Note**: It looks similar to **admin1@otuwamocXXXX.onmicrosoft.com**
+   >**Note**: It looks similar to **admin1@otuwamocXXXX.onmicrosoft.com**
 
 1. For the current password, use the password that you copied in the previous step.
 
 1. It asks you to change current password, enter a complex password twice, and then select **Sign in**.
 
-   > **Note**: Record the complex password you used as you'll use it later in this lab.
+   >**Note**: Record the complex password you used as you'll use it later in this lab.
 
 1. If you see the pop-up **Action Required**, click **Ask Later**.
  
@@ -271,7 +271,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/azz26.png)
 
-   > **Note**: After the directory synchronization starts, it can take 15 minutes for Microsoft Entra ID objects to appear in the Microsoft Entra ID portal.
+   >**Note**: After the directory synchronization starts, it can take 15 minutes for Microsoft Entra ID objects to appear in the Microsoft Entra ID portal.
 
 1. In Microsoft Edge, go back to the **Microsoft Entra ID** page.
 
@@ -295,7 +295,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. Select the **Connectors** tab and note the two connectors.
 
-   > **Note**: One connector is for AD DS and the other is for the Microsoft Entra ID tenant.
+   >**Note**: One connector is for AD DS and the other is for the Microsoft Entra ID tenant.
 
    ![](media/azz29.png)
 
