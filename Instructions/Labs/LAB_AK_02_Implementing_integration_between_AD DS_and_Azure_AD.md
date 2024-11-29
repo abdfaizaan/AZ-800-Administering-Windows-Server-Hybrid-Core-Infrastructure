@@ -390,7 +390,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 <validation step="8e646bae-8cc0-4e44-8b11-fb2af82ffd89" />
 
-## Exercise 5: Implementing Microsoft Entra ID integration features in AD DS
+## Exercise 5: Implementing Microsoft Entra ID integration features in AD DS - Read Only
 
 ### Task 1: Enable password writeback in Microsoft Entra Connect
 
