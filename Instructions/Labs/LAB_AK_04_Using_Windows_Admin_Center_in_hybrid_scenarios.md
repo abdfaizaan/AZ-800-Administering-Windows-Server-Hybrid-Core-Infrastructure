@@ -77,6 +77,9 @@ In this lab, you will perform:
 
 1. On the **Add subnet** page, set the **Starting address** to **10.4.3.224/27**, and then select **Add** to create the **GatewaySubnet**.
 
+
+<!-- 
+
 ## Exercise 2: Implementing hybrid connectivity by using the Azure Network Adapter
 
 #### Task 1: Register Windows Admin Center with Azure
@@ -187,6 +190,8 @@ In this lab, you will perform:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+
+-->
 
 ## Exercise 3: Deploying Windows Admin Center gateway in Azure
 
