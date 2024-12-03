@@ -392,6 +392,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 ## Exercise 5: Implementing Microsoft Entra ID integration features in AD DS - Read Only
 
+This exercise has been set to **Read-Only** mode because Microsoft Entra Connect synchronization can take up to 72 hours to apply the changes.
+
 ### Task 1: Enable password writeback in Microsoft Entra Connect
 
 1. On **SEA-ADM1**, on the **Start** menu, expand **Azure AD Connect (1)**, and then select **Azure AD Connect (2)**.
