@@ -442,7 +442,9 @@ This exercise has been set to **Read-Only** mode because Microsoft Entra Connect
 
    ![](media/az-33.png)
 
-    >**Note:** If you encounter the message **Directory synchronization is enabled for this directory, but has not taken effect. Please wait untill directory synchronization is ready** in the configuration window, allow up to 30 minutes for the synchronization process to complete. If the synchronization is not ready even after 30 minutes, follow the steps below to uninstall Microsoft Azure AD Connect.
+    >**Note:** If you encounter the message **Directory synchronization is enabled for this directory, but has not taken effect. Please wait untill directory synchronization is ready** in the configuration window, allow up to 30 minutes for the synchronization process to complete. 
+
+1. If the synchronization is not ready even after 30 minutes, follow the steps below to uninstall Microsoft Azure AD Connect.
 
    i. Click on **Start (1)** then **Control Panel (2)**.
 
@@ -462,7 +464,7 @@ This exercise has been set to **Read-Only** mode because Microsoft Entra Connect
 
    v. Once the program is uninstalled, perform the **Exercise 3 Task 1** to install and configure **Microsoft Azure AD Connect**.
 
-   vi. Post it, re-perform the **Exercise 5** from the start. 
+   vi. After completing the task, restart Exercise 5 from the beginning and ensure the configuration is completed. If you still encounter the message Directory synchronization is enabled for this directory, but has not taken effect. Please wait until directory synchronization is ready in the configuration window, do not proceed further. This is a known issue with Microsoft, and synchronization may take up to 72 hours to complete.
    
 ### Task 2: Enable pass-through authentication in Microsoft Entra Connect
 
