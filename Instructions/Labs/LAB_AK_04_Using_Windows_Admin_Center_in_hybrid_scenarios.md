@@ -75,7 +75,7 @@ In this lab, you will perform:
 
 1. On the **az800l04-vnet** page, under **Settings** section, select **Subnets**, and then, on the **Subnets** page, select **+ Gateway subnet**.
 
-1. On the **Add subnet** page, set the **Starting address** to **10.4.3.224/27**, and then select **Save** to create the **GatewaySubnet**.
+1. On the **Add subnet** page, set the **Starting address** to **10.4.3.224/27**, and then select **Add** to create the **GatewaySubnet**.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
