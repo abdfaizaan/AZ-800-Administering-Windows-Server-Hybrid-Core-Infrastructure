@@ -184,13 +184,6 @@ In this lab, you will perform:
 
    >**Note**: The provisioning of the Azure virtual network gateway can take up to 45 minutes. Do not wait for the provisioning to complete but instead proceed to the next exercise.
 
-<validation step="6f6f3210-37a2-496d-a45e-c3a5940bc94d" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
-
 -->
 
 ## Exercise 3: Deploying Windows Admin Center gateway in Azure
