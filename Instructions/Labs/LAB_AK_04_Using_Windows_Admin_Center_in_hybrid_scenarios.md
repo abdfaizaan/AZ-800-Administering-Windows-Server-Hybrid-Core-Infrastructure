@@ -168,7 +168,7 @@ In this lab, you will perform:
    |Setting|Value|
    |---|---|
    |Subscription|The name of the Azure subscription you are using in this lab|
-   |Location|eastus|
+   |Location|East US|
    |Virtual network|az800l04-vnet|
    |Gateway subnet|10.4.3.224/27|
    |Gateway SKU|VpnGw1|
