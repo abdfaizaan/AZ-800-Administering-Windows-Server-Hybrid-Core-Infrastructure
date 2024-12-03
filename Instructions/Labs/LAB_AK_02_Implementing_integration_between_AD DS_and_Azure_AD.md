@@ -390,9 +390,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 <validation step="8e646bae-8cc0-4e44-8b11-fb2af82ffd89" />
 
-## Exercise 5: Implementing Microsoft Entra ID integration features in AD DS - Read Only
-
-This exercise has been set to **Read-Only** mode because Microsoft Entra Connect synchronization can take up to 72 hours to apply the changes.
+## Exercise 5: Implementing Microsoft Entra ID integration features in AD DS 
 
 ### Task 1: Enable password writeback in Microsoft Entra Connect
 
@@ -464,7 +462,7 @@ This exercise has been set to **Read-Only** mode because Microsoft Entra Connect
 
    v. Once the program is uninstalled, perform the **Exercise 3 Task 1** to install and configure **Microsoft Azure AD Connect**.
 
-   vi. After completing the task, restart Exercise 5 from the beginning and ensure the configuration is completed. If you still encounter the message Directory synchronization is enabled for this directory, but has not taken effect. Please wait until directory synchronization is ready in the configuration window, do not proceed further. This is a known issue with Microsoft, and synchronization may take up to 72 hours to complete.
+   vi. After completing the task, restart Exercise 5 from the beginning and ensure the configuration is completed. If you still encounter the message **Directory synchronization is enabled for this directory, but has not taken effect. Please wait until directory synchronization is ready** in the configuration window, **do not proceed further**. This is a known issue with Microsoft, and synchronization may take up to 72 hours to complete.
    
 ### Task 2: Enable pass-through authentication in Microsoft Entra Connect
 
