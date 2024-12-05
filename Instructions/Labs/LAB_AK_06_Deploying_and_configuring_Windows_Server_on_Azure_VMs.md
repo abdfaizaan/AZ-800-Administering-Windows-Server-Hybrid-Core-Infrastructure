@@ -250,11 +250,11 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. On the **Environment settings** page, expand and select the entry representing your Azure subscription.
 
-   ![](media/az-800-lab06-10.png)
+    ![](media/az-800-lab06-10.png)
 
 1. On the **Settings | Defender plans** page, ensure that the Servers plan is configured with **Microsoft Defender for Plan 2**(1) and the status is set to **On**(2). If not, update the pricing to Plan 2, enable the status by setting it to On, and then click **Save**(3)
 
-   ![](media/az800l6yh.png).
+    ![](media/az800l6yh.png).
 
 ### Task 2: Review the Just-in-time VM access settings
 
