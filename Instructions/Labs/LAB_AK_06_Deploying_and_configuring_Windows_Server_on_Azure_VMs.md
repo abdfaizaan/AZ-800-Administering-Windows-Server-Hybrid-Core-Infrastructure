@@ -336,7 +336,7 @@ security rules**.
 
 1. Open another browser tab, browse to that IP address, and verify that a webpage opens, displaying **Hello World from az800l06-vm0**.
 
-   ![](media/az-800-lab06-07.png)
+    ![](media/az-800-lab06-07.png)
 
 1. From the lab computer, start the Remote Desktop app, and try connecting to the same IP address. Verify that the connection fails.
 
@@ -352,7 +352,7 @@ security rules**.
 
 1. On the **az800l06-vm0 \| Configuration** page, select **Enable just-in-time** VM access and select the **Open Microsoft Defender for Cloud** link.
 
-   ![](media/az-800-lab06-01.png)
+     ![](media/az-800-lab06-01.png)
 
 1. On the **Just-in-time VM access** page, verify that the entry representing the **az800l06-vm0** Azure VM appears on the **Configured** tab.
 
@@ -372,15 +372,15 @@ security rules**.
 
 1. Open the RDP file you downloaded in the previous step and select the **Connect** option in the Remote Desktop Connection tab.
 
-    ![](media/az-800-lab06-05.png)
+     ![](media/az-800-lab06-05.png)
 
 1. When **Enter your credentials** window prompted, click **More Choices** and select **Use a different acount**, specify the following values, and then select **OK** and then select **Yes** from the Remote Desktop Connection tab:
 
-   |Setting|Value|
-   |---|---|
-   |Username|**.\Student**|
-   |Password|**Pa55w.rd1234**|
-
+      |Setting|Value|
+      |---|---|
+      |Username|**.\Student**|
+      |Password|**Pa55w.rd1234**|
+   
     ![](media/az-800-lab06-06.png)
 
 1. Verify that you can successfully access via Remote Desktop the operating system running in the Azure VM and close the Remote Desktop session.
@@ -394,7 +394,6 @@ security rules**.
  
 ### Review
 In this lab, you have completed:
-- Connect to your Azure subscription and enable enhanced security of Microsoft Defender for Cloud.
 - Generate and download an ARM template and parameters files by using the Azure portal.
 - Review the ARM template and parameters files for Azure VM deployment.
 - Add an Azure VM extension section to the existing template.
