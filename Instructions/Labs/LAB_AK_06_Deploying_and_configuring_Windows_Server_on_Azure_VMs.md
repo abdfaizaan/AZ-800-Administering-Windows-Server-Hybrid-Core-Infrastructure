@@ -368,7 +368,7 @@ security rules**.
 
 1. On **Native RDP**, select **Download RDP File**,  follow prompts to connect to the target Azure VM.
 
-   >**Note**: If you receive a pop-up asking if you want to keep the file while downloading the RDP file, select the **Keep** option.
+    >**Note**: If you receive a pop-up asking if you want to keep the file while downloading the RDP file, select the **Keep** option.
 
 1. Open the RDP file you downloaded in the previous step and select the **Connect** option in the Remote Desktop Connection tab.
 
