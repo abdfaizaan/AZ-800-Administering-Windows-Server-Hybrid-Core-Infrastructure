@@ -262,7 +262,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. On the **Microsoft Defender for Cloud \| Workload protections** page, select **Just-in-time VM access**.
 
-   ![](media/az-800-lab06-09.png)
+    ![](media/az-800-lab06-09.png)
 
 1. On the **Just-in-time VM access** page, review the **Configured**, **Not Configured**, and **Unsupported** tabs.
 
@@ -278,12 +278,12 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. On the **Basics** tab of the **Create network security group** page, specify the following settings (leave others with their default values):
 
-   |Setting|Value|
-   |---|---|
-   |Subscription|the name of the Azure subscription you are using in this lab|
-   |Resource group|**AZ800-L0601-RG**|
-   |Name|**az800l06-vm0-nsg1**|
-   |Region|the name of the Azure region into which you provisioned the Azure VM **az800l06-vm0**|
+      |Setting|Value|
+      |---|---|
+      |Subscription|the name of the Azure subscription you are using in this lab|
+      |Resource group|**AZ800-L0601-RG**|
+      |Name|**az800l06-vm0-nsg1**|
+      |Region|the name of the Azure region into which you provisioned the Azure VM **az800l06-vm0**|
 
 1. On the **Create network security group** page, on the **Basics** tab, select **Review + create**, and then select **Create**.
 
@@ -296,15 +296,15 @@ security rules**.
 
 1. On the **Add inbound security rule** page, specify the following settings, leaving all others with their default values, and then select **Add**:
 
-   |Setting|Value|
-   |---|---|
-   |Source|**Any**|
-   |Source port ranges|*|
-   |Destination|**Any**|
-   |Service|**HTTP**|
-   |Action|**Allow**|
-   |Priority|**300**|
-   |Name|**AllowHTTPInBound**|
+      |Setting|Value|
+      |---|---|
+      |Source|**Any**|
+      |Source port ranges|*|
+      |Destination|**Any**|
+      |Service|**HTTP**|
+      |Action|**Allow**|
+      |Priority|**300**|
+      |Name|**AllowHTTPInBound**|
 
 ### Task 2: Configure Inbound HTTP access to an Azure VM
 
@@ -322,11 +322,11 @@ security rules**.
 
 1. On Basis tab of create public ip address specify the following and select **Review + create** and **Create**.
      
-   |Setting|Value|
-   |---|---|
-   |Resource group|**AZ800-L0601-RG**|
-   |Name|**az800l06-vm0-pip1**|
-   |SKU|**Standard**|
+      |Setting|Value|
+      |---|---|
+      |Resource group|**AZ800-L0601-RG**|
+      |Name|**az800l06-vm0-pip1**|
+      |SKU|**Standard**|
       
 1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the network interface, select **IP configurations** under **Settings**, and then select the **ipconfig1** entry.
 
