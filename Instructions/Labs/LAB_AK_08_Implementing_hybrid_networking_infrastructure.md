@@ -203,6 +203,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | URI, FQDN or IP address | **10.81.0.4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
+    | Diagnostic tests | Select **Connectivity** and **Next hop** from the list |
 
     > **Note**: **10.81.0.4** represents the private IP address of **az800l08-vm1**. The test uses the **TCP** port **3389** because Remote Desktop is by default enabled on Azure virtual machines and accessible within and between virtual networks.
 
@@ -222,6 +223,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | URI, FQDN or IP address | **10.82.0.4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
+    | Diagnostic tests | Select **Connectivity** and **Next hop** from the list |
 
     > **Note**: **10.82.0.4** represents the private IP address of **az800l08-vm2**. 
 
@@ -241,6 +243,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | URI, FQDN or IP address | **10.82.0.4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
+    | Diagnostic tests | Select **Connectivity** and **Next hop** from the list |
 
 1. Select **Run diagnostic tests** and wait until results of the connectivity check are returned. Note that the status is **Unreachable**.
 
@@ -396,6 +399,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | URI, FQDN or IP address | **10.82.0.4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
+    | Diagnostic tests | Select **Connectivity** and **Next hop** from the list |
 
 1. Select **Run diagnostic tests** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the traffic was routed via **10.80.0.4**, assigned to the **az800l08-nic0** network adapter. 
 
@@ -479,6 +483,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | Preferred IP Version | **IPv4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
+    | Diagnostic tests | Select **Connectivity** and **Next hop** from the list |
 
     ![](media/az23.png)
 
