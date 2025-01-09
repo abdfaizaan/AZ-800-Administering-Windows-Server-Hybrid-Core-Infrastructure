@@ -94,19 +94,19 @@ For this lab, you'll use the available VM environment and an Azure AD tenant.
 
 #### Task 3: Configure Windows Admin Center extensions
 
-1. On **SEA-ADM1**, in the upper-right corner of the Microsoft Edge window displaying Windows Admin Center, select the **Settings** icon (the cog wheel).
+1. On **SEA-ADM1**, in the upper-right corner of the Microsoft Edge window displaying Windows Admin Center, select the **Settings(1)** icon (the cog wheel).
 
-1. In the left pane, under **Gateway** section, select **Extensions**. Review the available extensions.
+1. In the left pane, under **Gateway** section, select **Extensions(2)**. Review the available extensions.
 
    ![](media/lab3-t3-1upd.png) 
 
-1. Select the **Security (Preview)** extension, then click on **Install**. The extension will install and Windows Admin Center will refresh.
+1. Select the **Security (Preview)** (1) extension, then click on **Install**(2). The extension will install and Windows Admin Center will refresh.
 
    ![](media/lab3-t3-2upd.png) 
 
    > **Note**: If the **Security (Preview)** extension is not available, choose another Microsoft extension.
 
-1. In the details pane, select **Installed extensions** and verify that the list includes the **Security (Preview)** extension you just installed, and another extension named **DNS** as shown below:
+1. In the details pane, select **Installed extensions** (1) and verify that the list includes the **Security (Preview)**(2) extension you just installed, and another extension named **DNS** as shown below:
 
    ![](media/sec-preextenupd.png)
 
@@ -125,7 +125,7 @@ For this lab, you'll use the available VM environment and an Azure AD tenant.
 
 1. To install the DNS PowerShell tools, in the left pane, in the list of **Tools**, select **DNS**, and then select **Install**. The tools will take less than a minute to install.
 
-1. Select the **Contoso.com** zone and review the list of its DNS records.
+1. Select the **Contoso.com** (2) zone and review the list of its DNS records.
 
    ![](media/lab3-t3-7upd.png)
 
