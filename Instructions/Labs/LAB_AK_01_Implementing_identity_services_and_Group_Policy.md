@@ -98,6 +98,8 @@ In this lab, you will perform:
    - Remove the grave accents (**`**) at the end of each line.
    - Remove the line breaks.
 
+   ![](media/addscontrol.png)
+
 1. Now the **Install-ADDSDomainController** command and all the parameters are on one line. Place the cursor in front of the line, and then, on the **Edit** menu, select **Select All** to select the whole line. On the menu, select **Edit**, and then select **Copy**.
 
 1. Minimize the **Notepad**.
