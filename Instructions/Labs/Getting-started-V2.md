@@ -33,7 +33,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
 2. To Switch between the Virtual Machines, select the required VM from the dropdown.
 
     ![Manage Your Virtual Machine](media/gs2.png)
-    >**Note**: If the dropdown is not visible, you can manually select and launch the required VMs directly from the desktop of the lab VM.
+    >**Note**: If the dropdown is not visible, you can manually select and launch the required VMs directly from the desktop of the HostVM.
     ![Manage Your Virtual Machine](media/vmselect.png)
 
 ## **Lab Duration Extension**
