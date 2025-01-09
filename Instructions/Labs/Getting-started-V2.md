@@ -36,8 +36,8 @@ For convenience, you can open the lab guide in a separate window by selecting th
     >**Note**: If this dropdown is not visible, please refresh the browser.
 
     >**Note**: If you find any issue while connecting any VM as specified in the labguide, Please connect the **AZURE:HostVM-<inject key="DeploymentID" enableCopy="false"/>** first and try connecting the required VM from the dropdown.
-    
-    >**Note**: If both the attempts fail, navigate to the desktop of HostVM and choose the desired VM that you want to connect.
+
+    >**Note**: If both the attempts donot work, navigate to the desktop of HostVM and choose the desired VM that you want to connect.
     ![Manage Your Virtual Machine](media/vmselect.png)
 
 ## **Lab Duration Extension**
