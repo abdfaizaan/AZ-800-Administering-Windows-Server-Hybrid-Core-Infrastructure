@@ -292,7 +292,7 @@ In this lab, you will perform:
 
    ![](media/msi.png) 
 
-1. Select the **Download now**, then choose **Open file**. Close the Microsoft Edge browser.Click on **Next** and Proceed by checking the **I accept these terms** box, click **Next** twice. Select the available thumbprint from the dropdown and click on **Next** twice followed by **Install**. Finally, click **Finish** to complete the installation.
+1. Select the **Download now**, then choose **Open file**. Close the Microsoft Edge browser.Click on **Next** and Proceed by checking the **I accept these terms** box, click **Next**, then select **Generate a self-signed certificate** and click on **Next** thrice followed by **Install**. Finally, click **Finish** to complete the installation.
 
    ![](media/dwnloadnw.png) 
 
