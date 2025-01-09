@@ -282,11 +282,19 @@ In this lab, you will perform:
 
 1. Enter **Windows Admin Center (1)** in the URL field of Microsoft Edge, then click on the first **link (2)** displayed in the search results.
 
-   ![](media/windows-admin-center.png)
+   ![](media/windows-admin-center-1.png)
 
-1. Select the **Download Windows Admin Center** button, then choose **Open file**. Close the Microsoft Edge browser. Proceed by checking the **I accept these terms** box, click **Next** five times, followed by **Install**. Finally, click **Finish** to complete the installation.
+1. Select the **Download Windows Admin Center**(1) button.
 
-   ![](media/windows_admin_center.png) 
+   ![](media/download-agent.png)
+
+1. Select the **Download the MSI**(1) and fill in the required details and then click on **Download Now**.
+
+   ![](media/msi.png) 
+
+1. Select the **Download now**, then choose **Open file**. Close the Microsoft Edge browser.Click on **Next** and Proceed by checking the **I accept these terms** box, click **Next** twice. Select the available thumbprint from the dropdown and click on **Next** twice followed by **Install**. Finally, click **Finish** to complete the installation.
+
+   ![](media/dwnloadnw.png) 
 
 1. Navigate to the **Start** menu, right-click, go to **Shut down** or **sign out**, and select **Disconnect**.
 
