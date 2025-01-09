@@ -36,6 +36,14 @@ For convenience, you can open the lab guide in a separate window by selecting th
     >**Note**: If the dropdown is not visible, you can manually select and launch the required VMs directly from the desktop of the HostVM.
     ![Manage Your Virtual Machine](media/vmselect.png)
 
+3. When logging into the Hyper-V virtual machines, if a message appears stating **"Press Ctrl+Alt+Delete to unlock"**, navigate to the **Actions** menu in the Virtual Machine Connection window and select the **Ctrl+Alt+Delete** option, as shown in the image below.
+
+    ![Manage Your Virtual Machine](media/login.png)
+
+4. To copy content from the lab guide and paste it into the Hyper-V virtual machines, navigate to the **Clipboard** option in the Virtual Machine Connection window and select **Type Clipboard Text**.
+
+    ![Manage Your Virtual Machine](media/clipboard.png)
+
 ## **Lab Duration Extension**
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
