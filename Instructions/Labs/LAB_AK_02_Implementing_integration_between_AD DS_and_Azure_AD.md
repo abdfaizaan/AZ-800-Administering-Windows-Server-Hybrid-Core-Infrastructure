@@ -442,27 +442,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
     >**Note:** If you encounter the message **Directory synchronization is enabled for this directory, but has not taken effect. Please wait untill directory synchronization is ready** in the configuration window, allow up to 30 minutes for the synchronization process to complete. 
 
-1. If the synchronization is not ready even after 30 minutes, follow the steps below to uninstall Microsoft Azure AD Connect.
-
-   i. Click on **Start (1)** then **Control Panel (2)**.
-
-   ![](media/Exe5T1Si.png)
-
-   ii. Select **Uninstall a program** under **Programs**.
-
-   ![](media/Exe5T1Sii.png)
-
-   iii. On the Uninstall or change a program page, select **Microsoft Azure AD Connect (1)** and then **Unistall (2)**.
-
-   ![](media/Exe5T1Siii.png)
-
-   iv. Select **Uninstall** to uninstall Microsoft Azure AD Connect and then **Close**.
-
-   ![](media/Exe5T1Siv.png)
-
-   v. Once the program is uninstalled, perform the **Exercise 3 Task 1** to install and configure **Microsoft Azure AD Connect**.
-
-   vi. After completing the task, restart Exercise 5 from the beginning and ensure the configuration is completed. If you still encounter the message **Directory synchronization is enabled for this directory, but has not taken effect. Please wait until directory synchronization is ready** in the configuration window, **do not proceed further**. This is a known issue with Microsoft, and synchronization may take up to 72 hours to complete.
+1. If you still encounter the message **Directory synchronization is enabled for this directory, but has not taken effect. Please wait until directory synchronization is ready** in the configuration window, **do not proceed further**. This is a known issue with Microsoft, and synchronization may take up to 72 hours to complete.
    
 ### Task 2: Enable pass-through authentication in Microsoft Entra Connect
 
