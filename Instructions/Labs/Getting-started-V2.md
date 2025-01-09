@@ -41,7 +41,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
     ![Manage Your Virtual Machine](media/login.png)
     >**Note**: This step only applies if you are using Hyper-V virtual machines from the HostVM.
 
-4. To copy content from the lab guide and paste it into the Hyper-V virtual machines, navigate to the **Clipboard** option in the Virtual Machine Connection window and select **Type Clipboard Text**.
+4. If you face an issue while copying the content from the lab guide and pasting it into the Hyper-V virtual machines, navigate to the **Clipboard** option in the Virtual Machine Connection window and select **Type Clipboard Text**.
 
     ![Manage Your Virtual Machine](media/clipboard.png)
     >**Note**: This step only applies if you are using Hyper-V virtual machines from the HostVM.
