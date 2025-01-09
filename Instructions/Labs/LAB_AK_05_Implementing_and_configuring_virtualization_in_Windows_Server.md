@@ -222,7 +222,7 @@ For this lab, you'll use the available VM environment.
 
 1.  Select **SEA-VM1** and review its Properties pane.
 
-   ![](media/lab5-task4-12.png)
+    ![](media/lab5-task4-12.png)
 
 1. Select **Settings**, and then select **Disks**.
 
