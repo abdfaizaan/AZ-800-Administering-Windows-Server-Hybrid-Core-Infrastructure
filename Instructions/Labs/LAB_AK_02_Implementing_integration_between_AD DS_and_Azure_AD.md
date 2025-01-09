@@ -196,7 +196,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/azz24.png)
 
-1. In the **Apply Pending** dialog box, select **Yes**.
+1. In the **Apply Pending** dialog box, select **Yes**(1).
 
    ![](media/azz15.png)
 
