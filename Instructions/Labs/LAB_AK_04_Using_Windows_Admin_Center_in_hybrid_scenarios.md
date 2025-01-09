@@ -76,9 +76,14 @@ In this lab, you will perform:
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select the virtual network, and then on the **Virtual network** page select **az800l04-vnet**.
 
-1. On the **az800l04-vnet** page, under **Settings** section, select **Subnets**, and then, on the **Subnets** page, select **+ Gateway subnet**.
+1. On the **az800l04-vnet** page, under **Settings** section, select **Subnets**, and then, on the **Subnets** page, select **+ subnet**.
 
-1. On the **Add subnet** page, set the **Starting address** to **10.4.3.224/27**, and then select **Add** to create the **GatewaySubnet**.
+1. On the **Add subnet** page, set the 
+   - **Subnet Purpose** to **Virtual Network Gateway** (1)
+   - **Starting address** to **10.4.3.224** (2)
+   - **Size** to **/27** (3) , and then select **Add** to create the **GatewaySubnet**.
+
+     ![](media/gateway-sub.png) 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
