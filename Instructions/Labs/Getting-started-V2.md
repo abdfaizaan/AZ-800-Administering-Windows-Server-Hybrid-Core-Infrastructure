@@ -33,10 +33,18 @@ For convenience, you can open the lab guide in a separate window by selecting th
 2. To Switch between the Virtual Machines, select the required VM from the dropdown.
 
     ![Manage Your Virtual Machine](media/gs2.png)
+    >**Note**: If the dropdown is not visible, you can manually select and launch the required VMs directly from the desktop of the HostVM.
+    ![Manage Your Virtual Machine](media/vmselect.png)
 
-    >**Note**: If this dropdown is not visible, please refresh the browser.
+3. When logging into the Hyper-V virtual machines, if a message appears stating **"Press Ctrl+Alt+Delete to unlock"**, navigate to the **Actions** menu in the Virtual Machine Connection window and select the **Ctrl+Alt+Delete** option, as shown in the image below.
 
-    >**Note**: If you find any issue while connecting any VM as specified in the labguide, Please connect the **AZURE:HostVM-<inject key="DeploymentID" enableCopy="false"/>** first and try connecting the required VM from the dropdown.
+    ![Manage Your Virtual Machine](media/login.png)
+    >**Note**: This step only applies if you are using Hyper-V virtual machines from the HostVM.
+
+4. If you face an issue while copying the content from the lab guide and pasting it into the Hyper-V virtual machines, navigate to the **Clipboard** option in the Virtual Machine Connection window and select **Type Clipboard Text**.
+
+    ![Manage Your Virtual Machine](media/clipboard.png)
+    >**Note**: This step only applies if you are using Hyper-V virtual machines from the HostVM.
 
 ## **Lab Duration Extension**
 
