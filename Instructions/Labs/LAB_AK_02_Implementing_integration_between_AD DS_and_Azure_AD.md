@@ -230,7 +230,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/az-10.png)
 
-   >**Note**: If a Microsoft Sign-in pop appears, please sign-in using your credentials.
+   >**Note**: If a Microsoft Sign-in pop appears, please sign-in using admin1 user account credentials that you created in exercise 1.
 
 1. On the **Connect to AD DS** page, enter the following credentials, and then select **Next (3)**:
 
