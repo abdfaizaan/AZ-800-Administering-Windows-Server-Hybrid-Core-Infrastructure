@@ -39,10 +39,12 @@ For convenience, you can open the lab guide in a separate window by selecting th
 3. When logging into the Hyper-V virtual machines, if a message appears stating **"Press Ctrl+Alt+Delete to unlock"**, navigate to the **Actions** menu in the Virtual Machine Connection window and select the **Ctrl+Alt+Delete** option, as shown in the image below.
 
     ![Manage Your Virtual Machine](media/login.png)
+    >**Note**: This step only applies if you are using Hyper-V virtual machines from the HostVM.
 
 4. To copy content from the lab guide and paste it into the Hyper-V virtual machines, navigate to the **Clipboard** option in the Virtual Machine Connection window and select **Type Clipboard Text**.
 
     ![Manage Your Virtual Machine](media/clipboard.png)
+    >**Note**: This step only applies if you are using Hyper-V virtual machines from the HostVM.
 
 ## **Lab Duration Extension**
 
