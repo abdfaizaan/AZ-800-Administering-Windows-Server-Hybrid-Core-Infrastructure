@@ -2,9 +2,9 @@
 
 ## Lab scenario
 
-To address concerns regarding management and monitoring overhead resulting from using Microsoft Microsoft Entra ID (Azure AD) to authenticate and authorize access to Azure resources, you decide to test integration between on-premises Active Directory Domain Services (AD DS) and Entra ID to verify that this will address business concerns about managing multiple user accounts by using a mix of on-premises and cloud resources.
+To address concerns regarding management and monitoring overhead resulting from using Microsoft Entra ID to authenticate and authorize access to Azure resources, you decide to test integration between on-premises Active Directory Domain Services (AD DS) and Entra ID to verify that this will address business concerns about managing multiple user accounts by using a mix of on-premises and cloud resources.
 
-Additionally, you want to make sure that your approach addresses the Information Security team's concerns and preserves existing controls applied to Active Directory users, such as sign-in hours and password policies. Finally, you want to identify Azure AD integration features that allow you to further enhance on-premises Active Directory security and minimize its management overhead, including Azure AD Password Protection for Windows Server Active Directory and Self-Service Password Reset (SSPR) with password writeback.
+Additionally, you want to make sure that your approach addresses the Information Security team's concerns and preserves existing controls applied to Active Directory users, such as sign-in hours and password policies. Finally, you want to identify Azure AD integration features that allow you to further enhance on-premises Active Directory security and minimize its management overhead, including Microsoft Entra ID Password Protection for Windows Server Active Directory and Self-Service Password Reset (SSPR) with password writeback.
 
 Your goal is to implement pass-through authentication between on-premises AD DS and Entra ID.
 
@@ -226,7 +226,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On the **Express Settings** page, select **Use express settings**.
 
-1. On the **Connect to Microsoft Entra ID** page, enter the username of the Azure AD Global Administrator user account you created in exercise 1 **(1)**, and then select **Next (2)**.
+1. On the **Connect to Microsoft Entra ID** page, enter the username of the Microsoft Entra ID Global Administrator user account you created in exercise 1 **(1)**, and then select **Next (2)**.
 
    ![](media/az-10.png)
 
@@ -339,7 +339,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. Select **Finish**.
 
-### Task 5: Sync changes to Azure AD
+### Task 5: Sync changes to Microsoft Entra ID
 
 1. On **SEA-ADM1**, on the **Start** menu, select **Windows PowerShell**.
 
@@ -428,7 +428,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/az-31.png)
 
-   > **Note**: Password writeback is required for self-service password reset of Active Directory users. This allows passwords changed by users in Azure AD to sync to the Active Directory.
+   > **Note**: Password writeback is required for self-service password reset of Active Directory users. This allows passwords changed by users in Microsoft Entra ID to sync to the Active Directory.
 
 1. On the **Ready to configure** page, review the list of actions to be performed, and then select **Configure**.
 
@@ -517,7 +517,7 @@ Under **User Sign-In**, select **Seamless single sign-on (2)**.
    > **Note**: If you're not able see on-premises domain name and **SEA-ADM1** server name, kindly sign-in to azure portal in private window and perform above steps.
    > **Note**: To install the Azure AD Authentication Agent on multiple servers in your environment, you can download its binaries from the **Pass-through authentication** page in the Azure portal. 
 
-### Task 4: Install and register the Azure AD Password Protection proxy service and DC agent
+### Task 4: Install and register the Microsoft Entra ID Password Protection proxy service and DC agent
 
 1. On **SEA-ADM1**, start Microsoft Edge, browse to the **[Azure AD Password Protection for Windows Server Active Directory](https://www.microsoft.com/en-us/download/details.aspx?id=57071)** page where you can download installers, and then select **Download**.
 
