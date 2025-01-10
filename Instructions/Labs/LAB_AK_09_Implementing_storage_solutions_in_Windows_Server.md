@@ -87,7 +87,7 @@ In this lab, you will perform:
 3. At the **Windows PowerShell** prompt, enter the following commands, and press Enter after each to copy from **SEA-ADM1** a script that creates sample files to be deduplicated, execute it, and identify the outcome:
 
    ```powershell
-   New-PSDrive –Name 'X' –PSProvider FileSystem –Root '\\SEA-ADM1\Labfiles'
+   New-PSDrive -Name 'X' -PSProvider FileSystem -Root '\\SEA-ADM1\Labfiles'
    New-Item -Type Directory -Path 'M:\Data' -Force
    Copy-Item -Path X:\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab09\CreateLabFiles.cmd -Destination M:\Data\ -PassThru
    Start-Process -FilePath M:\Data\CreateLabFiles.cmd -PassThru
@@ -173,11 +173,9 @@ In this lab, you will perform:
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
   
-	![](media/add-with-creds.png)
+     ![](media/add-with-creds.png)
 
-   > **Note**: After performing step 8, if an error message that says **You can add this server to your list of connections, but we can't confirm it's available.** appears, select **Add**. In the All Connections pane,  select **sea-svr1.contoso.com**, and then select **Manage as**. In the **Specify your credentials** dialog box, ensure that the **Use another account for this connection** option is selected, enter the Administrator credentials, and then select **Continue**.
-
-   > **Note**: To perform single sign-on, you would need to set up Kerberos constrained delegation.
+     > **Note**: After performing step 8, if an error message that says **You can add this server to your list of connections, but we can't confirm it's available.** appears, select **Add**. In the All Connections pane,  select **sea-svr1.contoso.com**, and then select **Manage as**. In the **Specify your credentials** dialog box, ensure that the **Use another account for this connection** option is selected, enter the Administrator credentials, and then select **Continue**.
 
 1. On the **sea-svr3.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\Administrator** user with **Pa55w.rd** as its password.
 
@@ -791,6 +789,8 @@ using the following settings:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
+  
+   > **Note**: After performing step 8, if an error message that says **You can add this server to your list of connections, but we can't confirm it's available.** appears, select **Add**. In the All Connections pane,  select **sea-svr1.contoso.com**, and then select **Manage as**. In the **Specify your credentials** dialog box, ensure that the **Use another account for this connection** option is selected, enter the Administrator credentials, and then select **Continue**.
    
 1. Select checkbox **Add the server name exactly as enter** and select **Add**.
 
