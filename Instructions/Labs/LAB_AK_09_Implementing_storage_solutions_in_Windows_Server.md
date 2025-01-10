@@ -790,7 +790,7 @@ using the following settings:
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
   
-   > **Note**: After performing step 8, if an error message that says **You can add this server to your list of connections, but we can't confirm it's available.** appears, select **Add**. In the All Connections pane,  select **sea-svr1.contoso.com**, and then select **Manage as**. In the **Specify your credentials** dialog box, ensure that the **Use another account for this connection** option is selected, enter the Administrator credentials, and then select **Continue**.
+     > **Note**: After performing step 14, if an error message that says **You can add this server to your list of connections, but we can't confirm it's available.** appears, select **Add**. In the All Connections pane,  select **sea-svr1.contoso.com**, and then select **Manage as**. In the **Specify your credentials** dialog box, ensure that the **Use another account for this connection** option is selected, enter the Administrator credentials, and then select **Continue**.
    
 1. Select checkbox **Add the server name exactly as enter** and select **Add**.
 
@@ -808,7 +808,8 @@ using the following settings:
 
 1. Refresh the browser page displaying Windows Admin Center and verify that all servers are healthy.
 
-## Review
+## Summary
+
 In this lab, you have completed:
 - Tested the implementation of Data Deduplication
 - Installed and configured iSCSI storage
