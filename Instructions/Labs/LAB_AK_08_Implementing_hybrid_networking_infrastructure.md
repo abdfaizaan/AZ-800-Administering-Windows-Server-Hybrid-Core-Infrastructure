@@ -141,7 +141,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | Allow 'az800l08-vnet1' to access 'az800l08-vnet0' | **Select the checkbox** |
     |Allow 'az800l08-vnet1' to receive forwarded traffic from 'az800l08-vnet0'| **Select the checkbox** |
 
-    ![](media/az7.png)
+    ![](media/az7upd.png)
 
 1. Specify the following settings for **Local virtual network** (leave others with their default values), and then select **Add**:
 
@@ -151,7 +151,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | Allow 'az800l08-vnet0' to access 'az800l08-vnet1' | **Select the checkbox** |
     | Allow 'az800l08-vnet0' to receive forwarded traffic from 'az800l08-vnet1'| **Select the checkbox** |
     
-    ![](media/az8.png)
+    ![](media/az8upd.png)
 
     >**Note**: Wait for the operation to complete.
 
@@ -310,7 +310,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. Select **Review + create**, and then select **Create**.
 
-    ![](media/az16.png)
+    ![](media/az16upd.png)
 
    > **Note**: Wait for the route table to be created. This should take about 1 minute.
 
@@ -433,7 +433,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. Select **Review create**, and then select **Create**.
 
-    ![](media/az27.png)
+    ![](media/az27upd.png)
 
     >**Note**: Wait for the private DNS zone to be created. This should take about 2 minutes.
 
@@ -441,7 +441,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. On the **contoso.org** private DNS zone page, in the **DNS Management** section, select **Virtual network links** and then Click on **Add**.
 
-   ![](media/az19.png)
+   ![](media/az19upd.png)
 
 1. Specify the following settings (leave others with their default values), and select **OK** to create a virtual network link for the first virtual network you created in the previous exercise:
 
@@ -452,7 +452,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | Virtual network | **az800l08-vnet0 (AZ800-L0801-RG)** |
     | Enable auto registration | selected |
 
-    ![](media/az20.png)
+    ![](media/az20upd.png)
 
     >**Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
 
@@ -462,7 +462,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. On the **contoso.org** private DNS zone page, in the vertical menu on the left, select **Overview** and Click on **4** on the Recordsets.
 
-   ![](media/az22.png)
+   ![](media/az22upd.png)
 
 1. In the **Overview** section of the **contoso.org** private DNS zone page, review the listing of DNS record sets and verify that the **A** records of **az800l08-vm0**, **az800l08-vm1**, and **az800l08-vm2** appear in the list as **Auto registered**.
 
@@ -487,7 +487,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | Destination Port | **3389** |
     | Diagnostic tests | Select **Connectivity** and **Next hop** from the list |
 
-    ![](media/az23.png)
+    ![](media/az23upd.png)
 
 1. Select **Run diagnostic tests** and wait until the results of the connectivity check are returned. Verify that the status is **Reachable**. 
 
@@ -528,7 +528,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | TTL unit | **Hours** |
     | IP address | 20.30.40.50 |
 
-    ![](media/az24.png)
+    ![](media/az24upd.png)
 
     >**Note**: The IP address and the corresponding name are entirely arbitrary. They are meant to provide a very simple example illustrating implementing public DNS records, rather than emulate a real world scenario, which would require purchasing a namespace from a DNS registrar. 
 
