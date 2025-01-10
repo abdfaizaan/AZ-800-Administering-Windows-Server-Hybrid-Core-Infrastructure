@@ -28,7 +28,10 @@ In this lab, you will perform:
 
 1. Connect to **SEA-ADM1**, and if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 
-1. On **SEA-ADM1**, start Microsoft Edge, go to the [Azure portal](https://portal.azure.com), and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
+1. On **SEA-ADM1**, start Microsoft Edge, go to the [Azure portal](https://portal.azure.com), and sign in by using the following credentials : 
+
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
 
 1. In the Azure portal, open the Cloud Shell pane by selecting the toolbar icon directly next to the search text box.
 
@@ -73,9 +76,14 @@ In this lab, you will perform:
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select the virtual network, and then on the **Virtual network** page select **az800l04-vnet**.
 
-1. On the **az800l04-vnet** page, under **Settings** section, select **Subnets**, and then, on the **Subnets** page, select **+ Gateway subnet**.
+1. On the **az800l04-vnet** page, under **Settings** section, select **Subnets**, and then, on the **Subnets** page, select **+ subnet**.
 
-1. On the **Add subnet** page, set the **Starting address** to **10.4.3.224/27**, and then select **Add** to create the **GatewaySubnet**.
+1. On the **Add subnet** page, set the 
+   - **Subnet Purpose** to **Virtual Network Gateway** (1)
+   - **Starting address** to **10.4.3.224** (2)
+   - **Size** to **/27** (3) , and then select **Add** to create the **GatewaySubnet**.
+
+     ![](media/gateway-sub.png) 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -274,11 +282,19 @@ In this lab, you will perform:
 
 1. Enter **Windows Admin Center (1)** in the URL field of Microsoft Edge, then click on the first **link (2)** displayed in the search results.
 
-   ![](media/windows-admin-center.png)
+   ![](media/windows-admin-center-1.png)
 
-1. Select the **Download Windows Admin Center** button, then choose **Open file**. Close the Microsoft Edge browser. Proceed by checking the **I accept these terms** box, click **Next** five times, followed by **Install**. Finally, click **Finish** to complete the installation.
+1. Select the **Download Windows Admin Center**(1) button.
 
-   ![](media/windows_admin_center.png) 
+   ![](media/download-agent.png)
+
+1. Select the **Download the MSI**(1) and fill in the required details and then click on **Download Now**.
+
+   ![](media/msi.png) 
+
+1. Select the **Download now**, then choose **Open file**. Close the Microsoft Edge browser.Click on **Next** and Proceed by checking the **I accept these terms** box, click **Next**, then select **Generate a self-signed certificate** and click on **Next** thrice followed by **Install**. Finally, click **Finish** to complete the installation.
+
+   ![](media/dwnloadnw.png) 
 
 1. Navigate to the **Start** menu, right-click, go to **Shut down** or **sign out**, and select **Disconnect**.
 
