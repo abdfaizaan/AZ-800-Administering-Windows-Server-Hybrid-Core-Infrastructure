@@ -473,7 +473,7 @@ In this lab, you will perform:
 
 1. In the **Ethernet Properties** dialog box, select **Internet Protocol Version 4 (TCP/IPv4)**, and then select **Properties**.
 
-1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, change the currently assigned IP address (**172.16.10.11**) to an IP address **172.16.11.11** that is not within the IP address range of the **HeadOfficeSubnet**, and then select **OK**.
+1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, change the currently assigned IP address (**172.16.10.11**) to an IP address **172.16.11.11** (1) that is not within the IP address range of the **HeadOfficeSubnet**, and then select **OK** (2).
 
    ![](media/az800lab7img42.png)
 
