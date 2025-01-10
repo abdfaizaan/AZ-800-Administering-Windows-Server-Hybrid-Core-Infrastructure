@@ -51,9 +51,9 @@ In this task, you will connect to your Azure subscription and enable enhanced se
 
 1. On **SEA-ADM1**, start Microsoft Edge, go to the [Azure portal](https://portal.azure.com).
 
-1. In the **Sign in** dialog box, copy and paste * Email/Username: <inject key="AzureAdUserEmail"></inject> and then select Next.
+1. In the **Sign in** dialog box, copy and paste  **Email/Username**: <inject key="AzureAdUserEmail"></inject> and then select **Next**.
 
-1. In the **Enter password** dialog box, copy and paste * Password: <inject key="AzureAdUserPassword"></inject> and then select **Sign in**.
+1. In the **Enter password** dialog box, copy and paste **Password**: <inject key="AzureAdUserPassword"></inject> and then select **Sign in**.
 
 1. On the **Stay signed in?** dialog box, select the Don’t show this again check box and then select **No**.
 
@@ -78,6 +78,7 @@ In this task, you will use the Azure portal to create resource groups and create
    |Virtual machine name|**az800l06-vm0**|
    |Region|Use the name of an Azure region in which you can provision Azure virtual machines|
    |Availability options|No infrastructure redundancy required|
+   |Security type|Standard|
    |Image|**Windows Server 2022 Datacenter: Azure Edition - x64 Gen2**|
    |Run with Azure Spot discount|No|
    |Size|**Standard_D2s_v3**|
@@ -130,11 +131,13 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. In the Azure portal, on the **Create a virtual machine** page, select **Download a template for automation** from the bottom right corner.
 
+   ![](media/lab6-10.png)
+
 1. On the **Template** page, select **Download**.
 
 1. Select the ellipsis button next to the **template.zip**, and then in the pop-up menu, select **Show in folder**. This will automatically open File Explorer displaying the content of the **Downloads** folder.
 
-1. In File Explorer, copy **template.zip** to the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab06** folder on **SEA-ADM1** (create a new folder if needed).
+1. In File Explorer, copy **template.zip** to the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab06** folder on **SEA-ADM1** (create a new folder **Lab06** if needed).
 
 1. From the **Template** page, browse back to the **Create a virtual machine** page, and close it without completing the deployment.
 
@@ -263,6 +266,8 @@ In this task, you will use the Azure portal to create resource groups and create
 1. On the **Microsoft Defender for Cloud \| Workload protections** page, select **Just-in-time VM access**.
 
     ![](media/az-800-lab06-09.png)
+
+   >**Note**: If ypu see a pop-up to enable Microsoft Defender for cloud, please select the enable option and select **Upgrade** and refresh the page.
 
 1. On the **Just-in-time VM access** page, review the **Configured**, **Not Configured**, and **Unsupported** tabs.
 
