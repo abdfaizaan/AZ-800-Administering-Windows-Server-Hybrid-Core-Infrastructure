@@ -23,7 +23,7 @@ In this lab, you will perform:
 
 ## Exercise 1: Implementing Data Deduplication
 
-#### Task 1: Install the Data Deduplication role service
+### Task 1: Install the Data Deduplication role service
 
 1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 
@@ -87,7 +87,7 @@ In this lab, you will perform:
 3. At the **Windows PowerShell** prompt, enter the following commands, and press Enter after each to copy from **SEA-ADM1** a script that creates sample files to be deduplicated, execute it, and identify the outcome:
 
    ```powershell
-   New-PSDrive –Name 'X' –PSProvider FileSystem –Root '\\SEA-ADM1\Labfiles'
+   New-PSDrive -Name 'X' -PSProvider FileSystem -Root '\\SEA-ADM1\Labfiles'
    New-Item -Type Directory -Path 'M:\Data' -Force
    Copy-Item -Path X:\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab09\CreateLabFiles.cmd -Destination M:\Data\ -PassThru
    Start-Process -FilePath M:\Data\CreateLabFiles.cmd -PassThru
@@ -98,7 +98,7 @@ In this lab, you will perform:
 
    > **Note**: Record the free space on drive **M**. 
 
-#### Task 2: Enable and configure Data Deduplication
+### Task 2: Enable and configure Data Deduplication
 
 1. Switch back to the console session to **SEA-ADM1**, and then, within the console session, switch to **Server Manager**.
 
@@ -128,7 +128,7 @@ In this lab, you will perform:
 
 1. Back in the **Volume (M:\\) Deduplication Settings** window, select **OK**.
 
-#### Task 3: Test Data Deduplication
+### Task 3: Test Data Deduplication
 
 1. On **SEA-ADM1**, select **Start**, and right click on **Windows PowerShell**, and select **Run as Administrator**.
 
@@ -173,7 +173,9 @@ In this lab, you will perform:
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
   
-	![](media/add-with-creds.png)
+     ![](media/add-with-creds.png)
+
+     > **Note**: After performing step 8, if an error message that says **You can add this server to your list of connections, but we can't confirm it's available.** appears, select **Add**. In the All Connections pane,  select **sea-svr1.contoso.com**, and then select **Manage as**. In the **Specify your credentials** dialog box, ensure that the **Use another account for this connection** option is selected, enter the Administrator credentials, and then select **Continue**.
 
 1. On the **sea-svr3.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\Administrator** user with **Pa55w.rd** as its password.
 
@@ -219,7 +221,7 @@ In this lab, you will perform:
 
 ## Exercise 2: Configuring iSCSI storage
 
-#### Task 1: Install iSCSI and configure targets
+### Task 1: Install iSCSI and configure targets
 
 1. On **SEA-ADM1**, switch to the **Windows PowerShell** window.
 
@@ -267,7 +269,7 @@ In this lab, you will perform:
 
    > **Note**: The instructions assume that drive letters are **E** and **F** respectively. If your drive letter assignments are different, take this into account as you follow instructions in this exercise.
 
-#### Task 2: Connect to and configure iSCSI targets
+### Task 2: Connect to and configure iSCSI targets
 
 1. On **SEA-ADM1**, switch to **Server Manager**.
 
@@ -365,7 +367,7 @@ using the following settings:
 
 1. In the **iSCSI Initiator Properties** dialog box, select **OK**.
 
-#### Task 3: Verify iSCSI disk configuration
+### Task 3: Verify iSCSI disk configuration
 
 1. Switch back to the console session to **SEA-ADM1** with the **Server Manager** window active.
 
@@ -411,7 +413,7 @@ using the following settings:
 
    ![](media/disks-iscsionline.png)
 
-#### Task 4: Revert disk configuration 
+### Task 4: Revert disk configuration 
 
 1. Switch back to the console session to **SEA-SVR3**.
 
@@ -426,7 +428,7 @@ using the following settings:
 
 ## Exercise 3: Configuring redundant Storage Spaces
 
-#### Task 1: Create a storage pool
+### Task 1: Create a storage pool
 
 1. Switch back to the console session to **SEA-ADM1** with the **Server Manager** window active.
 
@@ -460,7 +462,7 @@ using the following settings:
 
 1. Select **Close**.
 
-#### Task 2: Create a volume based on a three-way mirrored disk 
+### Task 2: Create a volume based on a three-way mirrored disk 
 
 1. On **SEA-ADM1**, in **Server Manager**, on the Storage Pools pane, select **SP1**.
 
@@ -526,7 +528,7 @@ using the following settings:
 
 1. On the **Completion** page, select **Close**.
 
-#### Task 3: Manage a volume in File Explorer
+### Task 3: Manage a volume in File Explorer
 
 1. On **SEA-ADM1**, switch to the **Windows PowerShell** hosting PowerShell Remoting session to **SEA-SVR3**.
 
@@ -548,7 +550,7 @@ using the following settings:
 
    ![](media/testdocument.png)
 
-#### Task 4: Disconnect a disk from the storage pool and verify volume availability 
+### Task 4: Disconnect a disk from the storage pool and verify volume availability 
 
 1. On **SEA-ADM1**, switch to **Server Manager**. In the **File and Storage Services** tree pane, select **Storage Pools**, and then select **SP1**.
 
@@ -576,7 +578,7 @@ using the following settings:
 
    ![](media/testdocument.png)
 
-#### Task 5: Add a disk to the storage pool and verify volume availability 
+### Task 5: Add a disk to the storage pool and verify volume availability 
 
 1. On **SEA-ADM1**, switch to **Server Manager**. In **File and Storage Services** tree pane, with the **Storage Pools** entry selected, in the **TASKS** menu in the upper right corner, select **Rescan Storage**.
 
@@ -596,7 +598,7 @@ using the following settings:
 
    ![](media/testdocument.png)
 
-#### Task 6: Revert disk configuration 
+### Task 6: Revert disk configuration 
 
 1. Switch back to the console session to **SEA-SVR3**.
 
@@ -613,7 +615,7 @@ using the following settings:
 
 ## Exercise 4: Implementing Storage Spaces Direct
 
-#### Task 1: Prepare for installation of Storage Spaces Direct 
+### Task 1: Prepare for installation of Storage Spaces Direct 
 
 1. Switch back to the console session to **SEA-ADM1** and select **All Servers**.
 
@@ -663,7 +665,7 @@ using the following settings:
 
    > **Note**: Wait a few minutes while the servers restart and the **Failover Cluster Manager** tool is installed on **SEA-ADM1**.
 
-#### Task 2: Create and validate a failover cluster 
+### Task 2: Create and validate a failover cluster 
 
 1. On **SEA-ADM1**, switch to the **Server Manager** window.
 
@@ -685,7 +687,7 @@ using the following settings:
 
    ![](media/createcluster.png)
 
-#### Task 3: Enable Storage Spaces Direct
+### Task 3: Enable Storage Spaces Direct
 
 1. On **SEA-ADM1**, switch to the **Administrator: Windows PowerShell ISE** window, select the line in step 4 starting with **Invoke-Command**, and then press F8 to enable Storage Spaces Direct on the newly installed cluster.
 
@@ -711,7 +713,7 @@ using the following settings:
 
    ![](media/csv.png)
 
-#### Task 4: Create a storage pool, a virtual disk, and a share
+### Task 4: Create a storage pool, a virtual disk, and a share
 
 1. In the **Administrator: Windows PowerShell ISE** window, select the line in step 7 starting with **Invoke-Command**, and then press F8 to create a File Server cluster role.
 
@@ -737,7 +739,7 @@ using the following settings:
 
    ![](media/cluster-share.png)
 
-#### Task 5: Verify Storage Spaces Direct functionality
+### Task 5: Verify Storage Spaces Direct functionality
 
 1. On **SEA-ADM1**, on the taskbar, select the **File Explorer** icon.
 
@@ -787,6 +789,8 @@ using the following settings:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
+  
+   > **Note**: After performing step 8, if an error message that says **You can add this server to your list of connections, but we can't confirm it's available.** appears, select **Add**. In the All Connections pane,  select **sea-svr1.contoso.com**, and then select **Manage as**. In the **Specify your credentials** dialog box, ensure that the **Use another account for this connection** option is selected, enter the Administrator credentials, and then select **Continue**.
    
 1. Select checkbox **Add the server name exactly as enter** and select **Add**.
 
@@ -804,7 +808,7 @@ using the following settings:
 
 1. Refresh the browser page displaying Windows Admin Center and verify that all servers are healthy.
 
-### Review
+## Review
 In this lab, you have completed:
 - Tested the implementation of Data Deduplication
 - Installed and configured iSCSI storage
