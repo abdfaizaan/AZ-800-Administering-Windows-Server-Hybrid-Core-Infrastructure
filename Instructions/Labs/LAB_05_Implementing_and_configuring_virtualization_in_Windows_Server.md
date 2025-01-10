@@ -61,7 +61,8 @@ The main tasks for this exercise are as follows:
 
 1. In Server Manager, select **All Servers**. 
 
-1. In the Servers list, select **SEA-SVR1** and use its context-sensitive menu to start **Hyper-V Manager** targeting that server. 
+1. In the Servers list, select **SEA-SVR1** and use its context-sensitive menu to start **Hyper-V Manager** targeting that server.
+> **Note**: Please wait until the manageability of **SEA-SVR1** changes to **Online**.
 
 1. In **Hyper-V Manager**, use the **Virtual Switch Manager** to create on **SEA-SVR1** a virtual switch with the following settings:
 

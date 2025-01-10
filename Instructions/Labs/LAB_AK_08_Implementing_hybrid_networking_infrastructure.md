@@ -74,7 +74,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
    |Resource group| **Use existing > AZ800-L0801-RG (1)**|
    |Storage account| **blob<inject key="DeploymentID" enableCopy="false"/> (2)**|
    |File share| **fs<inject key="DeploymentID" enableCopy="false"/> (3)**|
-   |Region| **(US)East US (4)**|
+   |Region| **East US (4)**|
 
    ![](media/az5.png)
 
@@ -135,23 +135,23 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
     | Setting | Value |
     | --- | --- |
-    | Peering link name | **az800l08-vnet1_to_az800l08-vnet0** |
-    | Virtual network deployment model | **Resource manager** |
-    | Remote virtual network: Virtual network | **az800l08-vnet1** |
-    | Allow 'az800l08-vnet1' to access 'az800l08-vnet0' | **Select the checkbox** |
-    |Allow 'az800l08-vnet1' to receive forwarded traffic from 'az800l08-vnet0'| **Select the checkbox** |
+    | Peering link name | **az800l08-vnet1_to_az800l08-vnet0 (1)** |
+    | Virtual network deployment model | **Resource manager (2)** |
+    | Remote virtual network: Virtual network | **az800l08-vnet1(4)** |
+    | Allow 'az800l08-vnet1' to access 'az800l08-vnet0' | **Select the checkbox (5)** |
+    |Allow 'az800l08-vnet1' to receive forwarded traffic from 'az800l08-vnet0'| **Select the checkbox (6)** |
 
-    ![](media/az7.png)
+    ![](media/az7upd.png)
 
-1. Specify the following settings for **Local virtual network** (leave others with their default values), and then select **Add**:
+1. Specify the following settings for **Local virtual network** (leave others with their default values), and then select **Add (4)**:
 
     | Setting | Value |
     | --- | --- |
-    | Peering link name | **az800l08-vnet0_to_az800l08-vnet1** |
-    | Allow 'az800l08-vnet0' to access 'az800l08-vnet1' | **Select the checkbox** |
-    | Allow 'az800l08-vnet0' to receive forwarded traffic from 'az800l08-vnet1'| **Select the checkbox** |
+    | Peering link name | **az800l08-vnet0_to_az800l08-vnet1 (1)** |
+    | Allow 'az800l08-vnet0' to access 'az800l08-vnet1' | **Select the checkbox (2)** |
+    | Allow 'az800l08-vnet0' to receive forwarded traffic from 'az800l08-vnet1'| **Select the checkbox (3)** |
     
-    ![](media/az8.png)
+    ![](media/az8upd.png)
 
     >**Note**: Wait for the operation to complete.
 
@@ -263,9 +263,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
    ![](media/az12.png)
 
-1. Select checkbox **Enable IP forwarding**  and select **Apply** to save the change.
+1. Select checkbox **Enable IP forwarding (1)**  and select **Apply (2)** to save the change.
 
-     ![](media/az13.png)
+     ![](media/az13upd2.png)
 
     > **Note**: This setting is required in order for **az800l08-vm0** to function as a router, which will route traffic between two spoke virtual networks.
 
@@ -305,12 +305,12 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **AZ800-L0801-RG** |
     | Location | the name of the Azure region in which you created the virtual networks |
-    | Name | **az800l08-rt12** |
-    | Propagate gateway routes | **No** |
+    | Name | **az800l08-rt12 (1)** |
+    | Propagate gateway routes | **No (2)** |
 
-1. Select **Review + create**, and then select **Create**.
+1. Select **Review + create (3)**, and then select **Create**.
 
-    ![](media/az16.png)
+    ![](media/az16upd2.png)
 
    > **Note**: Wait for the route table to be created. This should take about 1 minute.
 
@@ -389,19 +389,21 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. In the Azure portal, browse back to the **Network Watcher - Connection troubleshoot** page.
 
-1. On the **Network Watcher - Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
+1. On the **Network Watcher - Connection troubleshoot (1)** page, initiate a check with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | Source type | **Virtual machine** |
-    | Virtual machine | **az800l08-vm1** |
-    | Destination | **Specify manually** |
-    | URI, FQDN or IP address | **10.82.0.4** |
-    | Protocol | **TCP** |
-    | Destination Port | **3389** |
-    | Diagnostic tests | Select **Connectivity** and **Next hop** from the list |
+    | Source type | **Virtual machine (2)** |
+    | Virtual machine | **az800l08-vm1 (3)** |
+    | Destination | **Specify manually (4)** |
+    | URI, FQDN or IP address | **10.82.0.4 (5)** |
+    | Protocol | **TCP (6)** |
+    | Destination Port | **3389 (7)** |
+    | Diagnostic tests | Select **Connectivity** and **Next hop** from the list (8) |
 
-1. Select **Run diagnostic tests** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the traffic was routed via **10.80.0.4**, assigned to the **az800l08-nic0** network adapter. 
+     ![](media/Ex-1-T4-networkwatcher-1.png)
+
+1. Select **Run diagnostic tests (9)** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the traffic was routed via **10.80.0.4**, assigned to the **az800l08-nic0** network adapter. 
 
      ![](media/Ex-1-T4-S32-1.png)
 
@@ -424,33 +426,33 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | select **AZ800-L0802-RG** |
-    | Name | **contoso.org** |
+    | Subscription | the name of the Azure subscription you are using in this lab (1) |
+    | Resource group | select **AZ800-L0802-RG (2)** |
+    | Name | **contoso.org (3)** |
     | Resource group location | the same Azure region into which you deploy resources in the previous exercise of this lab |
 
-1. Select **Review create**, and then select **Create**.
+1. Select **Review create (4)**, and then select **Create**.
 
-    ![](media/az27.png)
+    ![](media/az27upd.png)
 
     >**Note**: Wait for the private DNS zone to be created. This should take about 2 minutes.
 
 1. Select **Go to resource** to open the **contoso.org** DNS private zone page.
 
-1. On the **contoso.org** private DNS zone page, in the **DNS Management** section, select **Virtual network links** and then Click on **Add**.
+1. On the **contoso.org** private DNS zone page, in the **DNS Management (1)** section, select **Virtual network links (2)** and then Click on **Add (3)**.
 
-   ![](media/az19.png)
+   ![](media/az19upd.png)
 
-1. Specify the following settings (leave others with their default values), and select **OK** to create a virtual network link for the first virtual network you created in the previous exercise:
+1. Specify the following settings (leave others with their default values), and select **Create(5)** to create a virtual network link for the first virtual network you created in the previous exercise:
 
     | Setting | Value |
     | --- | --- |
-    | Link name | **az800l08-vnet0-link** |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az800l08-vnet0 (AZ800-L0801-RG)** |
-    | Enable auto registration | selected |
+    | Link name | **az800l08-vnet0-link (1)** |
+    | Subscription | the name of the Azure subscription you are using in this lab (2)|
+    | Virtual network | **az800l08-vnet0 (AZ800-L0801-RG) (3)** |
+    | Enable auto registration | selected (4)|
 
-    ![](media/az20.png)
+    ![](media/az20upd.png)
 
     >**Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
 
@@ -458,9 +460,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
    ![](media/az21.png)
 
-1. On the **contoso.org** private DNS zone page, in the vertical menu on the left, select **Overview** and Click on **4** on the Recordsets.
+1. On the **contoso.org** private DNS zone page, in the vertical menu on the left, select **Overview (1)** and Click on **4 (2)** on the Recordsets.
 
-   ![](media/az22.png)
+   ![](media/az22upd.png)
 
 1. In the **Overview** section of the **contoso.org** private DNS zone page, review the listing of DNS record sets and verify that the **A** records of **az800l08-vm0**, **az800l08-vm1**, and **az800l08-vm2** appear in the list as **Auto registered**.
 
@@ -472,22 +474,22 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse back to the **Network Watcher** page.
 
-1. On the **Network Watcher** under **Network diagnostic tools** section, select **Connection troubleshoot** option, initiate a check with the following settings (leave others with their default values):
+1. On the **Network Watcher** under **Network diagnostic tools** section, select **Connection troubleshoot (1)** option, initiate a check with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | Source type | **Virtual machine** |
-    | Virtual machine | **az800l08-vm1** |
-    | Destination | **Specify manually** |
-    | URI, FQDN or IP address | **az800l08-vm2.contoso.org** |
-    | Preferred IP Version | **IPv4** |
+    | Source type | **Virtual machine (2)** |
+    | Virtual machine | **az800l08-vm1 (3)** |
+    | Destination | **Specify manually (4)** |
+    | URI, FQDN or IP address | **az800l08-vm2.contoso.org (5)** |
+    | Preferred IP Version | **IPv4 (6)** |
     | Protocol | **TCP** |
-    | Destination Port | **3389** |
+    | Destination Port | **3389 (7)** |
     | Diagnostic tests | Select **Connectivity** and **Next hop** from the list |
 
-    ![](media/az23.png)
+    ![](media/az23upd.png)
 
-1. Select **Run diagnostic tests** and wait until the results of the connectivity check are returned. Verify that the status is **Reachable**. 
+1. Select **Run diagnostic tests (8)** and wait until the results of the connectivity check are returned. Verify that the status is **Reachable**. 
 
      ![](media/Ex-2-T2-S3-1.png)
 
@@ -503,9 +505,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | **AZ800-L0802-RG** |
-    | Name | Provide unique DNS domain name |
-
-    >**Note**: Try to give unique DNS names like dns.com.
+    | Name | **mydns<inject key="DeploymentID" enableCopy="false"/>** |
 
 1. Select **Review + create**, and then select **Create**.
 
@@ -515,24 +515,24 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. Select **Go to resource** to open the page of the newly created DNS zone.
 
-1. On the DNS zone page, select **+ Recordset** and click on **Add**.
+1. On the DNS zone page, under **DNS management**, select **Recordset (1)** and click on **+ Add (2)**.
 
 1. In the Add a record set pane, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | Name | **www** |
-    | Type | **A** |
-    | Alias record set | **No** |
-    | TTL | **1** |
-    | TTL unit | **Hours** |
-    | IP address | 20.30.40.50 |
+    | Name | **www (3)** |
+    | Type | **A (4)** |
+    | Alias record set | **No (5)** |
+    | TTL | **1 (6)** |
+    | TTL unit | **Hours (7)** |
+    | IP address | 20.30.40.50 (8) |
 
-    ![](media/az24.png)
+    ![](media/az24upd.png)
 
     >**Note**: The IP address and the corresponding name are entirely arbitrary. They are meant to provide a very simple example illustrating implementing public DNS records, rather than emulate a real world scenario, which would require purchasing a namespace from a DNS registrar. 
 
-1. Select **OK**
+1. Select **Add (9)**
 
 1. On the DNS zone page, identify the full name of **Name server 1**.
 
