@@ -389,19 +389,21 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. In the Azure portal, browse back to the **Network Watcher - Connection troubleshoot** page.
 
-1. On the **Network Watcher - Connection troubleshoot** page, initiate a check with the following settings (leave others with their default values):
+1. On the **Network Watcher - Connection troubleshoot (1)** page, initiate a check with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | Source type | **Virtual machine** |
-    | Virtual machine | **az800l08-vm1** |
-    | Destination | **Specify manually** |
-    | URI, FQDN or IP address | **10.82.0.4** |
-    | Protocol | **TCP** |
-    | Destination Port | **3389** |
-    | Diagnostic tests | Select **Connectivity** and **Next hop** from the list |
+    | Source type | **Virtual machine (2)** |
+    | Virtual machine | **az800l08-vm1 (3)** |
+    | Destination | **Specify manually (4)** |
+    | URI, FQDN or IP address | **10.82.0.4 (5)** |
+    | Protocol | **TCP (6)** |
+    | Destination Port | **3389 (7)** |
+    | Diagnostic tests | Select **Connectivity** and **Next hop** from the list (8) |
 
-1. Select **Run diagnostic tests** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the traffic was routed via **10.80.0.4**, assigned to the **az800l08-nic0** network adapter. 
+     ![](media/Ex-1-T4-networkwatcher-1.png)
+
+1. Select **Run diagnostic tests (9)** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the traffic was routed via **10.80.0.4**, assigned to the **az800l08-nic0** network adapter. 
 
      ![](media/Ex-1-T4-S32-1.png)
 
@@ -513,7 +515,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. Select **Go to resource** to open the page of the newly created DNS zone.
 
-1. On the DNS zone page, select **+ Recordset** and click on **Add**.
+1. On the DNS zone page, under **DNS management**, select **+ Recordset** and click on **Add**.
 
 1. In the Add a record set pane, specify the following settings (leave others with their default values):
 
