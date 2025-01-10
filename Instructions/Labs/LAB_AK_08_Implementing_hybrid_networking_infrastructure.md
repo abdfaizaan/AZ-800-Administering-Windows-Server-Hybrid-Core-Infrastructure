@@ -265,7 +265,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. Select checkbox **Enable IP forwarding**  and select **Apply** to save the change.
 
-     ![](media/az13.png)
+     ![](media/az13upd.png)
 
     > **Note**: This setting is required in order for **az800l08-vm0** to function as a router, which will route traffic between two spoke virtual networks.
 
