@@ -175,6 +175,10 @@ In this lab, you will perform:
   
 	![](media/add-with-creds.png)
 
+   > **Note**: After performing step 8, if an error message that says **You can add this server to your list of connections, but we can't confirm it's available.** appears, select **Add**. In the All Connections pane,  select **sea-svr1.contoso.com**, and then select **Manage as**. In the **Specify your credentials** dialog box, ensure that the **Use another account for this connection** option is selected, enter the Administrator credentials, and then select **Continue**.
+
+   > **Note**: To perform single sign-on, you would need to set up Kerberos constrained delegation.
+
 1. On the **sea-svr3.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\Administrator** user with **Pa55w.rd** as its password.
 
    ![](media/svm-loginpwsh.png)
