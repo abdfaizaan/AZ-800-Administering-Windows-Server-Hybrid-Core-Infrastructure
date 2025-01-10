@@ -390,7 +390,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 <validation step="8e646bae-8cc0-4e44-8b11-fb2af82ffd89" />
 
-## Exercise 5: Implementing Microsoft Entra ID integration features in AD DS 
+## Exercise 5: Implementing Microsoft Entra ID integration features in AD DS (READ ONLY)
+
+This exercise has been made read-only, as synchronization may take up to 72 hours to fully take effect.
 
 ### Task 1: Enable password writeback in Microsoft Entra Connect
 
@@ -440,9 +442,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/az-33.png)
 
-    >**Note:** If you encounter the message **Directory synchronization is enabled for this directory, but has not taken effect. Please wait untill directory synchronization is ready** in the configuration window, allow up to 30 minutes for the synchronization process to complete. 
+    <!-- >**Note:** If you encounter the message **Directory synchronization is enabled for this directory, but has not taken effect. Please wait untill directory synchronization is ready** in the configuration window, allow up to 30 minutes for the synchronization process to complete.  -->
 
-   >**Note:** If you still encounter the message "Directory synchronization is enabled for this directory, but has not taken effect. Please wait until directory synchronization is ready" in the configuration window, even after waiting 30 minutes, **do not proceed further** with the below tasks. This is a known issue with Microsoft, and synchronization may take up to 72 hours to complete.
+   <!-- >**Note:** If you still encounter the message "Directory synchronization is enabled for this directory, but has not taken effect. Please wait until directory synchronization is ready" in the configuration window, even after waiting 30 minutes, **do not proceed further** with the below tasks. This is a known issue with Microsoft, and synchronization may take up to 72 hours to complete. -->
    
 ### Task 2: Enable pass-through authentication in Microsoft Entra Connect
 
