@@ -127,25 +127,25 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. On the **Basics** tab of the **Create a storage account** page, specify the following settings:
 
-   - Resource group: Select **AZ800-L1001-RG** resource group.
-   - Storage account name: storage<inject key="DeploymentID" enableCopy="false"/>
-   - Region: Any Azure region in your geographical area in which you can create storage accounts.
+   - Resource group: Select **AZ800-L1001-RG (1)** resource group.
+   - Storage account name: **storage<inject key="DeploymentID" enableCopy="false"/> (2)**
+   - Region: Any Azure region in your geographical area in which you can create storage accounts (4).
 
      >**Note:** Use the same region for deploying all resources in this lab.
 
-   - Redundancy: **Locally-redundant storage (LRS)**
+   - Redundancy: **Locally-redundant storage (LRS) (6)**
 
 1. Accept the default values for all other settings, select **Review + Create**, and then select **Create**.
 
-   ![](./media/strgacc1.png)
+   ![](./media/strgacc1upd.png)
 
 1. After the storage account is created, on the **Deployment** page, select **Go to resource**.
 
 1. On the **storage account** page, select **File shares**, and then select **+ File share**.
 
-1. On the **New file share** tab, enter **share1** in the **Name** text box, and then select **Review + Create** and then select **Create**.
+1. On the **New file share** tab, enter **share1 (1)** in the **Name** text box, and then select **Review + Create (2)** and then select **Create**.
 
-   ![](./media/T2S81.png)
+   ![](./media/T2S81upd.png)
 
 ### Task 2: Use an Azure file share
 
@@ -153,13 +153,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. In the details pane, select **Upload**.
 
-   ![](./media/T2S21.png)
+   ![](./media/T2S21upd.png)
 
-1. On the **Upload files** tab, browse to **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10\File1.txt**, select **Upload**, and when the upload is complete, close the **Upload files** tab.
+1. On the **Upload files** tab, browse to **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10**, select **File1.txt** and select **Open**, and then **Upload**. When the upload is complete, close the **Upload files** tab.
 
-1. On the **share1** page, select **Snapshots** Under **Operations**,and select **Add snapshot**, and then select **OK**.
+1. On the **share1** page, select **Snapshots (1)** Under **Operations**,and select **Add snapshot (2)**, and then select **OK**.
    
-    ![](./media/snapu1.png)
+    ![](./media/snapu1upd.png)
 
 1. On the **share1** page, select **Overview**, select **Connect**.
 
@@ -187,11 +187,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. Use Notepad to modify the file content by appending your name in the last line, save the change, and close Notepad.
 
-1. Right-click or access the context menu for **File1**, select **Properties**, and then, in the **File1 Properties** window, select the **Previous Versions** tab.
+1. Right-click or access the context menu for **File1**, select **Properties**, and then, in the **File1 Properties** window, select the **Previous Versions(1)** tab.
 
-1. Verify that one previous file version is available. Select that version (**File1.txt**), select **Restore** twice, and then select **OK** twice.
+1. Verify that one previous file version is available. Select that version (**File1.txt**), select **Restore(2)** twice, and then select **OK(3)** twice.
 
-   ![](./media/re.png)
+   ![](./media/reupd.png)
 
 1. Double-click or select **File1.txt**, select Enter, and then confirm that it doesn't include your name. This is because you restored the snapshot created before you modified the file.
 
@@ -201,15 +201,15 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. On **SEA-ADM1**, in the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Azure File Sync**.
 
-1. On the **Basics** tab of the **Deploy File Sync** page, in the **Resource Group** drop-down list, select **AZ800-L1001-RG**. 
+1. On the **Basics** tab of the **Deploy File Sync** page, in the **Resource Group** drop-down list, select **AZ800-L1001-RG (2)**. 
 
-1. In the **Storage Sync Service name** text box, enter **FileSync1**. 
+1. In the **Storage Sync Service name** text box, enter **FileSync1 (3)**. 
 
-1. In the **Region** drop-down list, select the same region in which you created the storage account. 
+1. In the **Region (4)** drop-down list, select the same region in which you created the storage account. 
 
-1. On the **Basics** tab of the **Deploy File Sync** page, select **Review + Create** and **Create**.
+1. On the **Basics** tab of the **Deploy File Sync** page, select **Review + Create (5)** and **Create**.
 
-    ![](./media/sy11.png)
+    ![](./media/sy11upd.png)
 
 1. On the **Deployment** blade, once the File Sync is provisioned, select **Go to resource**.
 
@@ -245,21 +245,21 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
     ![](./media/d1.png)
 
-1. Select the checkbox next to the entry for File Sync agent for Windows Server 2022 (**StorageSyncAgent_WS2022.msi**), and select **Next** to start the download. After the download is complete, close the Microsoft Edge tab that opened for the download.
+1. Select the checkbox next to the entry for File Sync agent for Windows Server 2025 (**StorageSyncAgent_WS2025.msi**), and select **Next** to start the download. After the download is complete, close the Microsoft Edge tab that opened for the download.
 
-    ![](./media/d2.png)
+    ![](./media/strgsync.png)
 
 1. Use File Explorer to copy the downloaded file to the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10** folder.
    
-   >**Note:** If you cannot copy StorageSyncAgent_WS2022.msi from the Downloads folder to C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10, please follow these steps:
+   >**Note:** If you cannot copy StorageSyncAgent_WS2025.msi from the Downloads folder to C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10, please follow these steps:
 
       * 1.Open two File Explorer windows.
 
-      * 2.In one window, navigate to the Downloads folder where **StorageSyncAgent_WS2022.msi** is located.
+      * 2.In one window, navigate to the Downloads folder where **StorageSyncAgent_WS2025.msi** is located.
 
       * 3.In the other window, navigate to **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10.**
 
-      * 4.Drag and drop the **StorageSyncAgent_WS2022.msi** file from the Downloads folder to the destination folder.
+      * 4.Drag and drop the **StorageSyncAgent_WS2025.msi** file from the Downloads folder to the destination folder.
 
 1. In File Explorer displaying the content of the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10** folder, in the details pane, select the file **Install-FileSyncServerCore.ps1**, display its context-sensitive menu, and right click, in the menu, select **Edit**.
 
@@ -273,13 +273,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
       $fsName = 'FileSync1'
       
       New-Item -Type Directory -Path "\\$srvName\c$\Temp" -Force
-      Copy-Item -Path C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10\StorageSyncAgent_WS2022.msi -Destination "\\$srvName\c$\Temp\" -PassThru
+      Copy-Item -Path C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10\StorageSyncAgent_WS2025.msi -Destination "\\$srvName\c$\Temp\" -PassThru
       
       Invoke-Command -ComputerName $srvName -ArgumentList ($rgName, $fsName) {
       	param($rgName, $fsName)
       	Install-PackageProvider -Name NuGet -Force; 
       	Install-Module az.StorageSync -Force;
-      	Start-Process -FilePath "C:\Temp\StorageSyncAgent_WS2022.msi" -ArgumentList "/quiet" -Wait;
+      	Start-Process -FilePath "C:\Temp\StorageSyncAgent_WS2025.msi" -ArgumentList "/quiet" -Wait;
       	Connect-AzAccount -UseDeviceAuthentication; 
       	Register-AzStorageSyncServer -ResourceGroupName $rgName -StorageSyncServiceName $fsName | Out-Null;
       	Write-Output "Script finished"
@@ -413,6 +413,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
       ![](./media/2.png)
 
 1. In the File Explorer window, add the **Attributes** column in the details pane by right-clicking or accessing the context menu for the **Title** column in the details pane; for example, in the **Name** column, select **More**, select the **Attributes** checkbox, and then select **OK**.
+
+      ![](./media/dataimg.png)
 
 1. Drag the **Attributes** column to be next to the **Name** column, and then note the file dates and their attributes.
 

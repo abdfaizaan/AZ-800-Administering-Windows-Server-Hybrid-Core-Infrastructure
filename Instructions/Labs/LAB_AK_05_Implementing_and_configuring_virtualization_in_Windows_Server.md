@@ -232,9 +232,9 @@ For this lab, you'll use the available VM environment.
 
 1. Select **New Virtual Hard Disk**.
 
-1. On the **New Virtual Hard Disk** pane, in the **Size (GB)** text box, type **5**, leave other settings with their default values, and then select **Create**.
+1. On the **New Virtual Hard Disk** pane,Change the disk type to **fixed size** and in the **Size (GB)** text box, type **5** , leave other settings with their default values, and then select **Create**.
 
-   ![](media/lab5-task4-16upd.png)
+   ![](media/lab5-task4-16upd2.png)
 
 1. Select **Save disks settings**, and then select **Close**.
 
