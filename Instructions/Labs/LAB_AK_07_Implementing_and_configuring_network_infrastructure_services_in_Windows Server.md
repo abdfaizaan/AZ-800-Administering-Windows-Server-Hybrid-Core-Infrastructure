@@ -74,6 +74,8 @@ In this lab, you will perform:
    - Username: **CONTOSO\Administrator (3)**
    - Password: **Pa55w.rd (4)**
 
+      > **Note**: After performing step 9, if an error message that says **You can add this server to your list of connections, but we can't confirm it's available.** appears, select **Add**. In the All Connections pane,  select **sea-svr1.contoso.com**, and then select **Manage as**. In the **Specify your credentials** dialog box, ensure that the **Use another account for this connection** option is selected, enter the Administrator credentials, and then select **Continue**.
+
       > **Note**: To perform single sign-on, you would need to set up a Kerberos constrained delegation.
 
       ![](media/addcreds.png)
@@ -473,7 +475,7 @@ In this lab, you will perform:
 
 1. In the **Ethernet Properties** dialog box, select **Internet Protocol Version 4 (TCP/IPv4)**, and then select **Properties**.
 
-1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, change the currently assigned IP address (**172.16.10.11**) to an IP address **172.16.11.11** that is not within the IP address range of the **HeadOfficeSubnet**, and then select **OK**.
+1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, change the currently assigned IP address (**172.16.10.11**) to an IP address **172.16.11.11** (1) that is not within the IP address range of the **HeadOfficeSubnet**, and then select **OK** (2).
 
    ![](media/az800lab7img42.png)
 

@@ -2,9 +2,9 @@
 
 ## Lab scenario
 
-To address concerns regarding management and monitoring overhead resulting from using Microsoft Microsoft Entra ID (Azure AD) to authenticate and authorize access to Azure resources, you decide to test integration between on-premises Active Directory Domain Services (AD DS) and Entra ID to verify that this will address business concerns about managing multiple user accounts by using a mix of on-premises and cloud resources.
+To address concerns regarding management and monitoring overhead resulting from using Microsoft Entra ID to authenticate and authorize access to Azure resources, you decide to test integration between on-premises Active Directory Domain Services (AD DS) and Entra ID to verify that this will address business concerns about managing multiple user accounts by using a mix of on-premises and cloud resources.
 
-Additionally, you want to make sure that your approach addresses the Information Security team's concerns and preserves existing controls applied to Active Directory users, such as sign-in hours and password policies. Finally, you want to identify Azure AD integration features that allow you to further enhance on-premises Active Directory security and minimize its management overhead, including Azure AD Password Protection for Windows Server Active Directory and Self-Service Password Reset (SSPR) with password writeback.
+Additionally, you want to make sure that your approach addresses the Information Security team's concerns and preserves existing controls applied to Active Directory users, such as sign-in hours and password policies. Finally, you want to identify Azure AD integration features that allow you to further enhance on-premises Active Directory security and minimize its management overhead, including Microsoft Entra ID Password Protection for Windows Server Active Directory and Self-Service Password Reset (SSPR) with password writeback.
 
 Your goal is to implement pass-through authentication between on-premises AD DS and Entra ID.
 
@@ -196,7 +196,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/azz24.png)
 
-1. In the **Apply Pending** dialog box, select **Yes**.
+1. In the **Apply Pending** dialog box, select **Yes**(1).
 
    ![](media/azz15.png)
 
@@ -226,11 +226,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. On the **Express Settings** page, select **Use express settings**.
 
-1. On the **Connect to Microsoft Entra ID** page, enter the username of the Azure AD Global Administrator user account you created in exercise 1 **(1)**, and then select **Next (2)**.
+1. On the **Connect to Microsoft Entra ID** page, enter the username of the Microsoft Entra ID Global Administrator user account you created in exercise 1 **(1)**, and then select **Next (2)**.
 
    ![](media/az-10.png)
 
-   >**Note**: If a Microsoft Sign-in pop appears, please sign-in using your credentials.
+   >**Note**: If a Microsoft Sign-in pop appears, please sign-in using admin1 user account credentials that you created in exercise 1.
 
 1. On the **Connect to AD DS** page, enter the following credentials, and then select **Next (3)**:
 
@@ -339,7 +339,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. Select **Finish**.
 
-### Task 5: Sync changes to Azure AD
+### Task 5: Sync changes to Microsoft Entra ID
 
 1. On **SEA-ADM1**, on the **Start** menu, select **Windows PowerShell**.
 
@@ -390,7 +390,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 <validation step="8e646bae-8cc0-4e44-8b11-fb2af82ffd89" />
 
-## Exercise 5: Implementing Microsoft Entra ID integration features in AD DS 
+## Exercise 5: Implementing Microsoft Entra ID integration features in AD DS (READ ONLY)
+
+This exercise has been made read-only, as synchronization may take up to 72 hours to fully take effect.
 
 ### Task 1: Enable password writeback in Microsoft Entra Connect
 
@@ -428,7 +430,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/az-31.png)
 
-   > **Note**: Password writeback is required for self-service password reset of Active Directory users. This allows passwords changed by users in Azure AD to sync to the Active Directory.
+   > **Note**: Password writeback is required for self-service password reset of Active Directory users. This allows passwords changed by users in Microsoft Entra ID to sync to the Active Directory.
 
 1. On the **Ready to configure** page, review the list of actions to be performed, and then select **Configure**.
 
@@ -440,29 +442,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/az-33.png)
 
-    >**Note:** If you encounter the message **Directory synchronization is enabled for this directory, but has not taken effect. Please wait untill directory synchronization is ready** in the configuration window, allow up to 30 minutes for the synchronization process to complete. 
+    <!-- >**Note:** If you encounter the message **Directory synchronization is enabled for this directory, but has not taken effect. Please wait untill directory synchronization is ready** in the configuration window, allow up to 30 minutes for the synchronization process to complete.  -->
 
-1. If the synchronization is not ready even after 30 minutes, follow the steps below to uninstall Microsoft Azure AD Connect.
-
-   i. Click on **Start (1)** then **Control Panel (2)**.
-
-   ![](media/Exe5T1Si.png)
-
-   ii. Select **Uninstall a program** under **Programs**.
-
-   ![](media/Exe5T1Sii.png)
-
-   iii. On the Uninstall or change a program page, select **Microsoft Azure AD Connect (1)** and then **Unistall (2)**.
-
-   ![](media/Exe5T1Siii.png)
-
-   iv. Select **Uninstall** to uninstall Microsoft Azure AD Connect and then **Close**.
-
-   ![](media/Exe5T1Siv.png)
-
-   v. Once the program is uninstalled, perform the **Exercise 3 Task 1** to install and configure **Microsoft Azure AD Connect**.
-
-   vi. After completing the task, restart Exercise 5 from the beginning and ensure the configuration is completed. If you still encounter the message **Directory synchronization is enabled for this directory, but has not taken effect. Please wait until directory synchronization is ready** in the configuration window, **do not proceed further**. This is a known issue with Microsoft, and synchronization may take up to 72 hours to complete.
+   <!-- >**Note:** If you still encounter the message "Directory synchronization is enabled for this directory, but has not taken effect. Please wait until directory synchronization is ready" in the configuration window, even after waiting 30 minutes, **do not proceed further** with the below tasks. This is a known issue with Microsoft, and synchronization may take up to 72 hours to complete. -->
    
 ### Task 2: Enable pass-through authentication in Microsoft Entra Connect
 
@@ -537,7 +519,7 @@ Under **User Sign-In**, select **Seamless single sign-on (2)**.
    > **Note**: If you're not able see on-premises domain name and **SEA-ADM1** server name, kindly sign-in to azure portal in private window and perform above steps.
    > **Note**: To install the Azure AD Authentication Agent on multiple servers in your environment, you can download its binaries from the **Pass-through authentication** page in the Azure portal. 
 
-### Task 4: Install and register the Azure AD Password Protection proxy service and DC agent
+### Task 4: Install and register the Microsoft Entra ID Password Protection proxy service and DC agent
 
 1. On **SEA-ADM1**, start Microsoft Edge, browse to the **[Azure AD Password Protection for Windows Server Active Directory](https://www.microsoft.com/en-us/download/details.aspx?id=57071)** page where you can download installers, and then select **Download**.
 
