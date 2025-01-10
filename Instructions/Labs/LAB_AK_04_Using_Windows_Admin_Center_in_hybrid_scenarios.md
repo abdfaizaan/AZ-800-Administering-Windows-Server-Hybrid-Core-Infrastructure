@@ -280,17 +280,10 @@ In this lab, you will perform:
 
 1. Click the **Start** button and type **Edge**, click **Microsoft edge** and complete the Edge setup wizard.
 
-1. Enter **Windows Admin Center (1)** in the URL field of Microsoft Edge, then click on the first **link (2)** displayed in the search results.
-
-   ![](media/windows-admin-center-1.png)
-
-1. Select the **Download Windows Admin Center**(1) button.
-
-   ![](media/download-agent.png)
-
-1. Select the **Download the MSI**(1) and fill in the required details and then click on **Download Now**.
-
-   ![](media/msi.png) 
+1. Navigate to below link to download the Windows Admin Center:
+   ```
+   https://www.microsoft.com/en-us/evalcenter/download-windows-admin-center
+   ```
 
 1. Select the **Download now**, then choose **Open file**. Close the Microsoft Edge browser.Click on **Next** and Proceed by checking the **I accept these terms** box, click **Next**, then select **Generate a self-signed certificate** and click on **Next** thrice followed by **Install**. Finally, click **Finish** to complete the installation.
 
