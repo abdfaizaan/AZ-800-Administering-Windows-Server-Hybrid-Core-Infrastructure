@@ -310,7 +310,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 
 1. Select **Review + create**, and then select **Create**.
 
-    ![](media/az16upd.png)
+    ![](media/az16upd1.png)
 
    > **Note**: Wait for the route table to be created. This should take about 1 minute.
 
