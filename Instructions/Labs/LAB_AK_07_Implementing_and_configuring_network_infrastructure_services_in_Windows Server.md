@@ -74,6 +74,8 @@ In this lab, you will perform:
    - Username: **CONTOSO\Administrator (3)**
    - Password: **Pa55w.rd (4)**
 
+      > **Note**: After performing step 9, if an error message that says **You can add this server to your list of connections, but we can't confirm it's available.** appears, select **Add**. In the All Connections pane,  select **sea-svr1.contoso.com**, and then select **Manage as**. In the **Specify your credentials** dialog box, ensure that the **Use another account for this connection** option is selected, enter the Administrator credentials, and then select **Continue**.
+
       > **Note**: To perform single sign-on, you would need to set up a Kerberos constrained delegation.
 
       ![](media/addcreds.png)
