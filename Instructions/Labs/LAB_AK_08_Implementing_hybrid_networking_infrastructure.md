@@ -503,9 +503,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | **AZ800-L0802-RG** |
-    | Name | Provide unique DNS domain name |
-
-    >**Note**: Try to give unique DNS names like dns.com.
+    | Name | **mydns<inject key="DeploymentID" enableCopy="false"/>** |
 
 1. Select **Review + create**, and then select **Create**.
 
