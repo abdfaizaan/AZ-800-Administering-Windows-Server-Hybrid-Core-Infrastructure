@@ -30,21 +30,18 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
     ![Manage Your Virtual Machine](media/res.png)
 
-2. To Switch between the Virtual Machines, select the required VM from the dropdown.
+2. To initiate the required VMs, manually select and launch them directly from the Lab VM's desktop.
 
-    ![Manage Your Virtual Machine](media/gs2.png)
-    >**Note**: If the dropdown is not visible, you can manually select and launch the required VMs directly from the desktop of the HostVM.
     ![Manage Your Virtual Machine](media/vmselect.png)
 
 3. When logging into the Hyper-V virtual machines, if a message appears stating **"Press Ctrl+Alt+Delete to unlock"**, navigate to the **Actions** menu in the Virtual Machine Connection window and select the **Ctrl+Alt+Delete** option, as shown in the image below.
 
     ![Manage Your Virtual Machine](media/login.png)
-    >**Note**: This step only applies if you are using Hyper-V virtual machines from the HostVM.
 
 4. If you face an issue while copying the content from the lab guide and pasting it into the Hyper-V virtual machines, navigate to the **Clipboard** option in the Virtual Machine Connection window and select **Type Clipboard Text**.
 
     ![Manage Your Virtual Machine](media/clipboard.png)
-    >**Note**: This step only applies if you are using Hyper-V virtual machines from the HostVM.
+  
 
 ## **Lab Duration Extension**
 
