@@ -256,6 +256,10 @@ In this lab, you will perform:
 
 1. Sign out, and then sign in as **CONTOSO\\Ty** with the password **Pa55w.rd**.
 
+   > **Note:** while logging into the Hyper-V virtual machines, if a message appears stating **"Press Ctrl+Alt+Delete to unlock"**, navigate to the **Actions** menu in the Virtual Machine Connection window and select the **Ctrl+Alt+Delete** option, as shown in the image below and you will find the Other User option to Sign in
+   
+    ![Manage Your Virtual Machine](media/login.png)
+
 1. In the search box on the taskbar, enter **Control Panel**.
 
 1. In the **Best match** list, select **Control Panel**.
