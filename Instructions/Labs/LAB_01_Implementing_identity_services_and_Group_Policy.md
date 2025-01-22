@@ -48,8 +48,11 @@ The main tasks for this exercise are as follows:
 #### Task 1: Deploy AD DS on a new Windows Server Core server
 
 1. Switch to **SEA-ADM1** and from **Server Manager**, open Windows PowerShell.
+
 1. Use the **Install-WindowsFeature** cmdlet in Windows PowerShell to install the AD DS role on **SEA-SVR1**.
+
 1. Use the **Get-WindowsFeature** cmdlet to verify the installation.
+
 1. Ensure that you select the **Active Directory Domain Services**, **Remote Server Administration Tools**, and **Role Administration Tools** checkboxes. For the **AD DS** and **AD LDS Tools** nodes, only the **Active Directory module for Windows PowerShell** should be installed, and not the graphical tools, such as the Active Directory Administrative Center.
 
 > **Note**: If you centrally manage your servers, you will not usually need GUI tools on each server. If you want to install them, you need to specify the AD DS tools by running the **Add-WindowsFeature** cmdlet with the **RSAT-ADDS** command.
@@ -99,6 +102,7 @@ The main tasks for this exercise are as follows:
 #### Task 3: Manage objects in AD DS
 
 1. On **SEA-ADM1**, switch to the **Windows PowerShell** console.
+
 1. To create an organizational unit (OU) called **Seattle**, in the **Windows PowerShell** console, run the following command:
 
    ```powershell
@@ -115,7 +119,7 @@ The main tasks for this exercise are as follows:
    Set-ADAccountPassword Ty
    ```
 
-> **Note**: The current password is blank.
+   > **Note**: The current password is blank.
 
 1. To enable the user account, run the following command:
 
@@ -176,10 +180,19 @@ The main tasks for this exercise are as follows:
 #### Task 3: Review the effects of the GPO’s settings
 
 1. On **SEA-ADM1**, open **Control Panel**.
+
 1. Use the **Windows Defender Firewall** interface to enable **Remote Event Log Management** domain traffic. 
-1. Sign out, and then sign in as **CONTOSO\\Ty** with the password **Pa55w.rd**.
+
+1. Sign out, and then sign in as Other user as **CONTOSO\\Ty** with the password **Pa55w.rd**.
+
+   > **Note:** while logging into the Hyper-V virtual machines, if a message appears stating **"Press Ctrl+Alt+Delete to unlock"**, navigate to the **Actions** menu in the Virtual Machine Connection window and select the **Ctrl+Alt+Delete** option, as shown in the image below and you will find the Other User option to Sign in
+   
+    ![Manage Your Virtual Machine](media/login.png)
+
 1. Attempt to change the screen saver wait time and resume settings. Verify that Group Policy blocks these actions.
-1. Attempt to run Registry Editor. Verify that Group Policy blocks this action. 
+
+1. Attempt to run Registry Editor. Verify that Group Policy blocks this action.
+
 1. Sign out and then sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
 
 #### Task 4: Create and link the required GPOs
