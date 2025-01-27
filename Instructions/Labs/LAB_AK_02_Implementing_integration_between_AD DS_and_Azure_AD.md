@@ -62,8 +62,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
    ![](media/action.png) 
 
-   >**Note** : Kindly follow the steps outlined on page 1 to set up MFA if the "Ask Later" option is not visible. Once MFA setup is complete, please enter the number displayed on the screen in the Authenticator app and proceed.
- 
+   >**Note** : Please follow the steps outlined on page 1 to set up MFA if the **Ask Later** option is not visible. Once MFA setup is complete, please enter the number displayed on the screen in the Authenticator app and proceed. 
+
 1. If prompted to **Stay signed in**, you can click **No**.
 
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
@@ -89,6 +89,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
    ![](media/azz5.png)
 
    > **Note**: While, in general, you would use DNS records to verify a domain, this lab doesn't require the use of a verified domain.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="b65ef28d-a185-42fd-a25f-5a18bb1b2903" /> 
 
 ### Task 2: Create a user with the Global Administrator role
 
@@ -126,6 +133,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
     ![](media/azz2.png)
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="4ea1ff7e-4b7b-4fc0-bb83-fec04f01bdf9" />
+
 ### Task 3: Change the password for the user with the Global Administrator role
 
 1. On the Azure portal, select your user account, and then select **Sign out**.
@@ -146,7 +160,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 1. If you see the pop-up **Action Required**, click **Ask Later**.
 
-   >**Note** : Kindly follow the steps outlined on page 1 to set up MFA if the "Ask Later" option is not visible. Once MFA setup is complete, please enter the number displayed on the screen in the Authenticator app and proceed.
+   >**Note** : Please follow the steps outlined on page 1 to set up MFA if the **Ask Later** option is not visible. Once MFA setup is complete, please enter the number displayed on the screen in the Authenticator app and proceed. 
  
 1. If prompted to stay signed in, you can click **No**.
 
@@ -372,6 +386,13 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 1. Select **Edit properties**, select **All (1)** tab, and review the attributes of the user account that was synced from Microsoft Entra ID **(2)**.
 
    ![](media/az-24.png)   
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="8e646bae-8cc0-4e44-8b11-fb2af82ffd89" />
 
 ## Exercise 5: Implementing Microsoft Entra ID integration features in AD DS (READ ONLY)
 
