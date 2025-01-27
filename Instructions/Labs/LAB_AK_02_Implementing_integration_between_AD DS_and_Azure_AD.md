@@ -61,6 +61,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 1. If you see the pop-up **Action Required**, click **Ask Later**.
 
    ![](media/action.png) 
+
+   >**Note** : Kindly follow the steps outlined on page 1 to set up MFA if the "Ask Later" option is not visible. Once MFA setup is complete, please enter the number displayed on the screen in the Authenticator app and proceed.
  
 1. If prompted to **Stay signed in**, you can click **No**.
 
@@ -143,10 +145,12 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
    >**Note**: Record the complex password you used as you'll use it later in this lab.
 
 1. If you see the pop-up **Action Required**, click **Ask Later**.
- 
-4. If prompted to stay signed in, you can click **No**.
 
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+   >**Note** : Kindly follow the steps outlined on page 1 to set up MFA if the "Ask Later" option is not visible. Once MFA setup is complete, please enter the number displayed on the screen in the Authenticator app and proceed.
+ 
+1. If prompted to stay signed in, you can click **No**.
+
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
 ## Exercise 2: Preparing on-premises AD DS for Microsoft Entra ID integration
 
