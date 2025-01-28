@@ -48,7 +48,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
 
    ![](media/zoom.png)
 
-## **Lab Duration Extension**
+## Lab Duration Extension
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
 
