@@ -6,7 +6,7 @@ Welcome to your AZ-800: Administering Windows Server Hybrid Core Infrastructure 
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](media/labguide-1.png)
+![Access Your VM and Lab Guide](media/g132.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -16,19 +16,19 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment Details** tab.
  
-![Explore Lab Resources](media/env-1.png)
+![Explore Lab Resources](media/g133.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](media/spl.png)
+![Use the Split Window Feature](media/g134.png)
  
 ## Managing Your Virtual Machine
  
 1. Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-    ![Manage Your Virtual Machine](media/res.png)
+    ![Manage Your Virtual Machine](media/g135.png)
 
 2. To initiate the required VMs, manually select and launch them directly from the Lab VM's desktop.
 
@@ -41,9 +41,14 @@ For convenience, you can open the lab guide in a separate window by selecting th
 4. If you face an issue while copying the content from the lab guide and pasting it into the Hyper-V virtual machines, navigate to the **Clipboard** option in the Virtual Machine Connection window and select **Type Clipboard Text**.
 
     ![Manage Your Virtual Machine](media/clipboard.png)
-  
 
-## **Lab Duration Extension**
+## Lab Guide Zoom In/Zoom Out
+ 
+1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+   ![](media/zoom.png)  
+
+## Lab Duration Extension
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
 
@@ -131,5 +136,3 @@ By following this workaround, you can ensure accurate execution of the PowerShel
     ![Start Your Azure Journey](media/sc900-image(3).png)
  
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
-
->**NOTE:** If you encounter any issues where a webpage attempts to download instead of opening in your browser, then press and hold **Ctrl/Cmd** key on your keyboard, and **click the link**. This will force the page to open in a new tab and may resolve the issue of the page being downloaded.
