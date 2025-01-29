@@ -238,6 +238,10 @@ For this lab, you'll use the available VM environment.
 
 1. Select **Save disks settings**, and then select **Close**.
 
+    >**Note:** If you face an error as "Couldn't save disk settings", then updating the Windows admin center should resolve this issue. In the Windows admin center go to **Settings (1) > Updates (2) > Install Updates (3)**
+
+     >   ![](media/disk-settings-error2.png)
+
 1. Back on the **Inventory** page, select **SEA-VM1**.
 
 1. On the **Properties** pane of **SEA-VM1**, select **Power**, and then select **Start** to start **SEA-VM1**.
